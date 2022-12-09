@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+}
+body{
+    padding:0px;
+    background-color:rgba(128,128,128,255);
+    width: 100%;
+}
+.main img{
+    width:250px;
+    margin-left: 650px;
+    margin-bottom: 70px;
+    
+}
+.content{
+    background-color: rgba(255,215,6,255);
+    width: 400px;
+    height: 530px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 600px;
+    margin-bottom: 300px;
+    position: relative;
+    bottom: 100px; 
+}
+.form{
+    margin-top: 60px;
+    margin-right: 20px;
+}
+label{
+    font-size: 20px;
+    margin-left: 20px;
+    
+    margin-bottom: 30px;
+}
+#email{
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
+button{
+    margin-top: 10px;
+    padding: 15px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border-width: 1px;
+    color: black;
+    
+}
+
+p{
+    color: white;
+    margin-left: 130px;
+}
+a #button2{
+    margin-top: 15px;
+    padding: 15px;
+    width: 120px;
+    border-radius: 20px;
+    background-color:black;
+    color:whitesmoke;
+    margin-left: 80px;
+    cursor: pointer;
+}
+.last{
+    position: relative;
+    bottom: 380px;
+    /* left: 580px; */
+    margin-left: 690px;
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    position: relative;
+    bottom: 950px;
+    /* left: 670px; */
+    margin-left: 740px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+

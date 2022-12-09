@@ -1,0 +1,62 @@
+*{ 
+    margin: 0px;
+}
+body{
+    background-color:white;
+}
+header{
+    background-color:#edd605;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+header img{
+    width: 120px;
+    margin-bottom:20px;
+    bottom: 20px;
+    height: 130px;
+}
+.moviename{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+   color: white;
+   background-color: black;
+   width: 70%;
+   border-radius: 20px;
+   margin-left: 15%;
+   margin-top: 20px;
+   height: 100px;
+   font-size: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.moviename h2{
+    padding-left: 10px;
+    margin-top: 7px;
+
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.payment{
+    background-color: black;
+    width: 800px;
+    border-radius: 20px;
+    height: 1000px;
+    margin-top: 30px;
+}
+.payment h1{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 200px;
+}
+.ticket{
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
