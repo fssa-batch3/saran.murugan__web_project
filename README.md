@@ -1,6 +1,6 @@
 # Lets-show-100-days-project
 About my project: this my 100 days project ,
-i helping to peoples easy to get tickets in online ,
+i helping to peoples easy to get cinema tickets in online ,
 and i add new feature cab also book there.
 Problem statement: https://docs.google.com/document/d/1ZCUK13nDjeW96mNd92nMW-dIo1SmQQxrFlsQaPwkwOs/edit?usp=sharing
 Market Research:https://docs.google.com/document/d/1w4iDjmDV4GU1iq43FA7roebex8IrtpstP-UFlFFIB0s/edit?usp=sharing
