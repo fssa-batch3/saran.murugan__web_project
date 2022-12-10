@@ -17,11 +17,12 @@ header img{
     height: 130px;
 }
 .mainimg{
-    background-image: url(../images/Varisu/about\ varisu.jpeg);
+    background-image: url(../../images/Thiruchitrambalam/Thiruchitrambalam-release-date-1.jpg);
     background-size: 100%;
     height: 500px;
     background-repeat: no-repeat;
     opacity:80% black;
+    padding-top: 60px;
     
 }
 .time{
@@ -31,7 +32,6 @@ header img{
     width: 500px;
     height: 350px;
     border-radius: 10px;
-
 }
 .lan{
     display: flex;
@@ -118,4 +118,10 @@ h1{
     margin-left: 20px;
     margin-top: 40px;
     border-radius: 200px;
+}
+.cast h2 {
+    text-align:center;
+}
+.cast p{
+    text-align: center;
 }
