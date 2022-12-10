@@ -17,11 +17,12 @@ header img{
     height: 130px;
 }
 .mainimg{
-    background-image: url(../images/Varisu/about\ varisu.jpeg);
+    background-image: url(../../images/poniyan_selvan/poniyan\ selvan\ about.png);
     background-size: 100%;
-    height: 500px;
+    height: 700px;
     background-repeat: no-repeat;
     opacity:80% black;
+    padding-top: 110px;
     
 }
 .time{
@@ -118,4 +119,10 @@ h1{
     margin-left: 20px;
     margin-top: 40px;
     border-radius: 200px;
+}
+.cast h2{
+    text-align: center;
+}
+.cast p{
+    text-align: center;
 }
