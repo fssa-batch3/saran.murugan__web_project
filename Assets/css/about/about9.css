@@ -17,15 +17,15 @@ header img{
     height: 130px;
 }
 .mainimg{
-    background-image: url(../images/Varisu/about\ varisu.jpeg);
+    background-image: url(../../images/vada_chennai/vadachennai\ about.jpg);
     background-size: 100%;
     height: 500px;
     background-repeat: no-repeat;
     opacity:80% black;
+    padding-top: 150px;
     
 }
 .time{
-
     margin-left: 40px;
     background-color: black;
     width: 500px;
@@ -92,7 +92,15 @@ hr{
 }
 .cast{
     display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    width: 100%;
+   
 }
+.cast::-webkit-scrollbar{
+    display: none;
+}
+
 h1{
     margin-left: 40px;
     margin-top: 50px;
@@ -118,4 +126,10 @@ h1{
     margin-left: 20px;
     margin-top: 40px;
     border-radius: 200px;
+}
+.cast h2{
+    text-align: center;
+}
+.cast p{
+    text-align: center;
 }
