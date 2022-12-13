@@ -30,6 +30,9 @@ header img{
    font-size: 20px;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.main{
+    display: flex;
+}
 .name1{
     display: flex;
     justify-content: center;
@@ -60,13 +63,14 @@ header img{
 }
 .allseat{
     background-color: black;
-    width: 800px;
+    width: 750px;
     margin-left: 350px;
     border-radius: 20px;
     margin-top: 50px;
     padding: 2px;
     
 }
+
 select {
     margin-right: 100px;
     border-radius: 20px;
