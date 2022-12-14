@@ -43,6 +43,9 @@ header img{
 }
 .payment{
     background-color: black;
+    background: linear-gradient(rgb(92,92, 92, 0.7), rgb(92, 92, 92, 0.7)), url(../../images/logo/moneybackground.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 800px;
     border-radius: 20px;
     height: 1000px;
@@ -61,16 +64,35 @@ header img{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left: 90px;
 }
-/* .ticket{
-    background-color: black;
-    width: 500px;
-    height: 500px;
-    margin-top: 160px;
-    border-radius: 20px;
-} */
+
+.main{
+    margin: 30px;
+}
+.main{
+    display: flex;
+    justify-content:space-between;
+}
+.cab{
+     margin-top: 30px;
+}
+.cab h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cab button{
+    padding: 7px;
+    font-size: 20px;
+    width: 150px;
+    margin-left: 150px;
+    background-color: #edd605;
+    border-radius: 10px;
+}
 .ticket{
-    background-image: url(../../images/logo/blank-ticket-template-png.webp);
+    background-image: url(../../images/logo/ticketlogo.png);
+    background-size:cover;
     background-repeat: no-repeat;
-    background-size: 500px;
-    margin-right: 30px;
+    width: 600px;
+    height: 800px;
+    margin-top: 100px;
+    border-radius: 10px;
+    margin-right: 50px;
 }
