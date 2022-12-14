@@ -53,17 +53,7 @@ header img{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 200px;
 }
-.cab button{
-    margin-left: 160px;
-    padding: 16px;
-    width: 130px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
-    border-radius: 7px;
-    background-color: #edd605;
-    position: relative;
-    bottom: 100px;
-}
+
 .cab p{
     position: relative;
     bottom: 120px;
