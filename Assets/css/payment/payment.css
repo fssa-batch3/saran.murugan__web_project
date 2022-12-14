@@ -1,3 +1,6 @@
+body{
+    width:100%
+}
 *{ 
     margin: 0px;
 }
@@ -10,6 +13,7 @@ header{
     display: flex;
     align-items: center;
     padding: 0px;
+    position:sticky;
 }
 
 header img{
@@ -44,11 +48,11 @@ header img{
 .payment{
     background-color: black;
     background: linear-gradient(rgb(92,92, 92, 0.7), rgb(92, 92, 92, 0.7)), url(../../images/logo/moneybackground.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat; */
+     /* background-size: cover;  */
     width: 800px;
     border-radius: 20px;
-    height: 1000px;
+    height:2000px ;
     margin-top: 30px;
 }
 .payment h1{
@@ -56,10 +60,170 @@ header img{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 200px;
 }
-
-.cab p{
+.payment h2{
+    font-family: sans-serif;
+    margin-left: 50px;
+    font-size: 25px;
     position: relative;
-    bottom: 120px;
+    top:20px; 
+}
+.credit{
+    background-color:darkgray;
+    width: 270px;
+    margin-left: 6%;
+    margin-top: 5%;
+    padding: 4%;
+}
+.credit .input1{
+    padding: 7%;
+    margin-top: 3%;
+    margin-left: 10px;
+}
+.credit h3{
+    font-family:sans-serif;
+    margin-left: 10px;
+}
+.cvv{
+    display: flex;
+    margin-top: 20%;
+}
+.cvv .input1{
+    width:25px;
+    height: 10px;
+    margin-right: 10px;
+    margin-top: 10%;
+    position: relative;
+    right:30px; 
+}
+.cvv p{
+ position: relative;
+left:25px; 
+    
+}
+.cvv .input2{
+    width:50px;
+    height: 40px;
+    margin-top: 11%;
+     position: relative;
+    right:20px;  
+    
+}
+.credit button{
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width:250px;
+    background-color: #edd605;
+    border-color: #edd605;
+    border-radius: 10px;
+}
+
+.netbank{
+    background-color:darkgray;
+    width: 650px;
+    height: 300px;
+    margin-left: 6%;
+    margin-top: 5%;
+    padding: 4%;
+}
+.netbank h3{
+    font-family: sans-serif;
+    margin-left: 20px;
+    font-size: 25px;
+}
+.netbank p{
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.banks1{
+    display: flex;
+    justify-content:space-evenly;
+}
+.banks1 .img1 img{
+    width:150px;
+}
+.banks2{
+    display: flex;
+    justify-content: space-evenly;
+}
+.banks2 .img2 img{
+    width:100px;
+    height: 40px;
+    
+}
+
+ .button1{
+     position: relative;
+    top:50px;
+    right: 15px;
+     
+}
+.button2{
+     position: relative;
+    right: 20px;
+    top:60px; 
+}
+.button3{
+    padding: 20px;
+}
+.button4{
+     position: relative;
+    bottom: 15px; 
+} 
+.netbank button{
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 150px;
+    width:280px;
+    background-color: #edd605;
+    border-color: #edd605;
+    border-radius: 10px;
+}
+.upi{
+    background-color:darkgray;
+    width: 650px;
+    height: 300px;
+    margin-left: 6%;
+    margin-top: 5%;
+    padding: 4%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.upi input{
+    position: relative;
+    bottom: 35px; 
+    padding-left: 10px;
+}
+.img1{
+    width:120px;
+}
+.img2{
+    width:140px;
+}
+.img3{
+    width:100px;
+}
+.img4{
+    width:100px;
+}
+.img5{
+    width:80px;
+}
+.upi button{
+    padding: 10px;
+    margin-top: 130px;
+    margin-left: 20px;
+    height: 40px;
+    width:250px;
+    background-color: #edd605;
+    border-color: #edd605;
+    border-radius: 10px;
+}
+.cab p{
+     position: relative;
+    bottom: 120px; 
     font-size: 23px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left: 90px;
@@ -88,10 +252,10 @@ header img{
 }
 .ticket{
     background-image: url(../../images/logo/ticketlogo.png);
-    background-size:cover;
+    background-size:80%;
     background-repeat: no-repeat;
     width: 600px;
-    height: 800px;
+    height: 100%;
     margin-top: 100px;
     border-radius: 10px;
     margin-right: 50px;

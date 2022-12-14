@@ -28,6 +28,7 @@ header img{
 
 }
 .cab{
+    padding-top: 10px;
     background-color:white;
     width: 30%;
     margin-left: 3%;
@@ -37,7 +38,7 @@ header img{
 }
 .cab h1{
     margin-left: 30%;
-    margin-top: 5px;
+    margin-top: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .cab p{
@@ -53,6 +54,7 @@ header img{
     margin-left: 70px;
     position: relative;
     top:50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .pickup{
     display: flex;
@@ -63,6 +65,11 @@ header img{
     padding: 10px;
     background-color: #f6f6f6;
 }
+.pickup input:hover{
+    transition:0.5s;
+    transform: scale(1.2);
+}
+
 .cab button{
     margin-top: 80px;
     padding: 15px;
@@ -75,5 +82,5 @@ header img{
 }
 .cab button:hover{
     transition:0.5s;
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
