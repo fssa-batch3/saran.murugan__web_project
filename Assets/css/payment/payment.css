@@ -1,11 +1,10 @@
-body{
-    width:100%
-}
+
 *{ 
     margin: 0px;
 }
 body{
     background-color:white;
+    width:100%
 }
 header{
     background-color:#edd605;
@@ -44,6 +43,9 @@ header img{
 .main{
     display: flex;
     justify-content: space-around;
+    display: flex;
+    margin: 30px;
+    justify-content:space-between;
 }
 .payment{
     background-color: black;
@@ -238,13 +240,7 @@ left:25px;
     margin-left: 90px;
 }
 
-.main{
-    margin: 30px;
-}
-.main{
-    display: flex;
-    justify-content:space-between;
-}
+
 .cab{
      margin-top: 30px;
 }
@@ -272,12 +268,8 @@ left:25px;
     flex-direction: column;
   justify-content:center;
 padding-left: 50px;
-  margin-top: 50px;
+
   border: 1px solid black;
 
 }
 
-.ticket2{
-    
- 
-}
