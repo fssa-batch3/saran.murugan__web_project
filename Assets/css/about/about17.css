@@ -73,6 +73,10 @@ header img{
     margin-top: 20px;
     cursor: pointer;
 }
+.time button:hover{
+    transform: scale(1.2);
+    transition: 1.4s;
+}
 .aboutmovie h2{
     margin-left: 60px;
     font-size: 30px;

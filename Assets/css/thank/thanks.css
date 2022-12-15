@@ -1,0 +1,39 @@
+*{
+    
+    margin: 0px;
+}
+body{
+    background-color:white;
+}
+header{
+    background-color:#edd605;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    
+}
+
+header img{
+    width: 120px;
+    margin-bottom:20px;
+    bottom: 20px;
+    height: 130px;
+}
+.thankall{
+    background-color: black;
+    width: 500px;
+    height: 300px;
+    margin-left: 400px;
+    margin-top: 200px;
+    border-radius: 10px;
+}
+.thankall h1{
+    color:aliceblue;
+    margin-left: 30px;
+
+}
+.thankall:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+}

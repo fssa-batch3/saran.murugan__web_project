@@ -97,7 +97,7 @@ header img{
     position: relative;
     right:30px; 
 }
-.cvv p{
+.cvv >p{
  position: relative;
 left:25px; 
     
@@ -133,7 +133,7 @@ left:25px;
     margin-left: 20px;
     font-size: 25px;
 }
-.netbank p{
+.netbank >p{
     font-family: sans-serif;
     margin-top: 10px;
     margin-left: 20px;
@@ -232,7 +232,7 @@ left:25px;
     border-color: #edd605;
     border-radius: 10px;
 }
-.cab p{
+.cab >p{
      position: relative;
     bottom: 120px; 
     font-size: 23px;
@@ -267,9 +267,28 @@ left:25px;
     display: flex;
     flex-direction: column;
   justify-content:center;
-padding-left: 50px;
-
+  padding-left: 50px;
   border: 1px solid black;
-
 }
-
+ .tickettotal{
+    display: flex;
+    justify-content:space-evenly;
+}
+.cabtotal{
+    display: flex;
+    justify-content:space-evenly ;
+} 
+.total{
+    display: flex;
+}
+.ticket button{
+    background-color:black;
+    color:#edd605;
+    width:250px;
+    height: 50px;
+    border-radius: 20px;
+}
+.ticket button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
