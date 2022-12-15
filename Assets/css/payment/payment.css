@@ -36,7 +36,7 @@ header img{
    font-size: 20px;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.moviename h2{
+.moviename> h2{
     padding-left: 10px;
     margin-top: 7px;
 
@@ -55,12 +55,12 @@ header img{
     height:2000px ;
     margin-top: 30px;
 }
-.payment h1{
+.payment >h1{
     color:white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 200px;
 }
-.payment h2{
+.payment >h2{
     font-family: sans-serif;
     margin-left: 50px;
     font-size: 25px;
@@ -126,7 +126,7 @@ left:25px;
     margin-top: 5%;
     padding: 4%;
 }
-.netbank h3{
+.netbank >h3{
     font-family: sans-serif;
     margin-left: 20px;
     font-size: 25px;
@@ -260,12 +260,24 @@ left:25px;
     border-radius: 10px;
 }
 .ticket{
-    background-image: url(../../images/logo/ticketlogo.png);
-    background-size:80%;
+    background-image: url(../../images/logo/yellowticket-.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 100%;
+    width: 350px;
+    height: 750px;
     margin-top: 100px;
     border-radius: 10px;
-    margin-right: 50px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+  justify-content:center;
+padding-left: 50px;
+  margin-top: 50px;
+  border: 1px solid black;
+
+}
+
+.ticket2{
+    
+ 
 }
