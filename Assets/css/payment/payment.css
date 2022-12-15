@@ -152,26 +152,14 @@ left:25px;
     height: 40px;
     
 }
+.banks1 .img1{
+    display: flex;
+}
+.banks1 .img2{
+    display: flex;
+}
 
- .button1{
-     position: relative;
-    top:50px;
-    right: 15px;
-     
-}
-.button2{
-     position: relative;
-    right: 20px;
-    top:60px; 
-}
-.button3{
-    padding: 20px;
-}
-.button4{
-     position: relative;
-    bottom: 15px; 
-} 
-.netbank button{
+ .netbank button{
     padding: 10px;
     margin-top: 30px;
     margin-left: 150px;
@@ -191,10 +179,19 @@ left:25px;
     justify-content: space-around;
 
 }
-.upi input{
+/* .upi input{
     position: relative;
     bottom: 35px; 
     padding-left: 10px;
+} */
+.paytm{
+    display: flex;
+}
+.gpay{
+    display: flex;
+}
+.amazon{
+    
 }
 .img1{
     width:120px;
