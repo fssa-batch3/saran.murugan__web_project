@@ -233,27 +233,35 @@ left:25px;
     border-radius: 10px;
 }
 .cab >p{
-     position: relative;
+    position: relative;
     bottom: 120px; 
     font-size: 23px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left: 90px;
 }
-
-
 .cab{
-     margin-top: 30px;
+    margin-top: 30px;
+    background-color: #edd605;
+    width: 400px;
+    height: 100px;
+    padding-left: 40px;
+    border-radius: 20px;
 }
 .cab h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 .cab button{
     padding: 7px;
     font-size: 20px;
     width: 150px;
-    margin-left: 150px;
-    background-color: #edd605;
+    margin-left: 100px;
+    background-color:white;
     border-radius: 10px;
+}
+.cab button:hover{
+    transition: 0.4s;
+    transform: scale(1.2);
 }
 .ticket{
     background-image: url(../../images/logo/yellowticket-.png);
@@ -266,9 +274,9 @@ left:25px;
     margin-right: 150px;
     display: flex;
     flex-direction: column;
-  justify-content:center;
-  padding-left: 50px;
-  border: 1px solid black;
+    justify-content:center;
+    padding-left: 50px;
+
 }
  .tickettotal{
     display: flex;
