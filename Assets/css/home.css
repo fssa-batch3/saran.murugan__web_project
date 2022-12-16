@@ -47,6 +47,10 @@ a  button {
     font-size: 18px;
     display: inline;
 }
+a button :hover{
+    transition: 1.3s;
+    transform: scale(1.1);
+}
 select {
     padding: 10px;
     color: black;
