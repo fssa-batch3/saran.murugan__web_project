@@ -18,15 +18,26 @@ header img{
     bottom: 20px;
     height: 130px;
 }
-.reviewhead{
+.mainhead{
     display: flex;
-    align-items:center;
-    justify-content: center;
+}
+.mainhead input{
+    width: 350px;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+.reviewhead{
+   display: flex;
+   align-items:center;
+   justify-content: center;
    color: black;
    background-color:#edd605;
    width: 50%;
    border-radius: 20px;
-   margin-left: 25%;
+   margin-left: 22%;
    margin-top: 20px;
    height: 70px;
    font-size: 20px;
@@ -59,6 +70,7 @@ header img{
 }
 iframe{
     margin-top: 20px;
+    border-radius: 20px;
 }
 .imdb{
     display: flex;
@@ -103,4 +115,30 @@ iframe{
     color: white;
     margin-top: 10px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.reviewmember img{
+    width:220px;
+    height: 220px;
+    margin-left: 20px;
+    margin-top: 40px;
+    border-radius: 200px;
+}
+.review h1{
+    color:white;
+}
+.man h2 {
+    color:white;
+
+}
+.man p{
+    color:white;
+}
+/* .man{
+    text-align: center;
+} */
+
+.review{
+    display: flex;
+    margin-top: 50px;
+    font-family:Arial, Helvetica, sans-serif;
 }
