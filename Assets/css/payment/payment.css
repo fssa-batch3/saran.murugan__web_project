@@ -43,9 +43,8 @@ header img{
 .main{
     display: flex;
     justify-content: space-around;
-    display: flex;
     margin: 30px;
-    justify-content:space-between;
+
 }
 .payment{
     background-color: black;
