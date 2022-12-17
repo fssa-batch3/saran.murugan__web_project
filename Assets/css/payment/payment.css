@@ -53,7 +53,7 @@ header img{
      /* background-size: cover;  */
     width: 800px;
     border-radius: 10px;
-    height:2000px ;
+    height:2100px ;
     margin-top: 30px;
 }
 .payment >h1{
@@ -141,22 +141,22 @@ left:25px;
     display: flex;
     justify-content:space-evenly;
 }
-.banks1 .img1 img{
+.banks1 .bankimg1 img{
     width:150px;
 }
 .banks2{
     display: flex;
     justify-content: space-evenly;
 }
-.banks2 .img2 img{
+.banks2 .bankimg2 img{
     width:100px;
     height: 40px;
     
 }
-.banks1 .img1{
+.banks1 .bankimg1{
     display: flex;
 }
-.banks1 .img2{
+.banks1 .bankimg2{
     display: flex;
 }
 
@@ -191,10 +191,15 @@ left:25px;
 }
 .gpay{
     display: flex;
+    margin-top: 30px;
+}
+#g-pay{
+    margin-bottom: 30px;
 }
 .amazon{
     display: flex;
 }
+
 
 .phonepe{
     display: flex;
@@ -207,7 +212,8 @@ left:25px;
     width:120px
 }
 .img1{
-    width:120px;
+    width:100px;
+    height: 50px;
 }
 .img2{
     width:700px;
@@ -217,6 +223,7 @@ left:25px;
 }
 .img4{
     width:100px;
+    height: 50px;
 }
 .img5{
     width:80px;
@@ -230,6 +237,54 @@ left:25px;
     background-color: #edd605;
     border-color: #edd605;
     border-radius: 10px;
+}
+
+.upigive{
+    background-color:darkgray;
+    width: 650px;
+    height: 650px;
+    margin-left: 6%;
+    margin-top: 5%;
+    padding: 4%;
+    
+}
+
+/* .phone {
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-top: 40px;
+} */
+.phone h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 130px;
+}
+.phone input{
+    font-size: 20px;
+    width:250px;
+    margin-left: 180px;
+    height: 30px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.phone button{
+    width:150px;
+    margin-top: 25px;
+    height: 50px;
+    margin-left: 240px;
+    border-radius: 10px;
+    background-color: #edd605;
+    border-color: #edd605;
+}
+.upigive h3{
+    margin-left: 300px;
+    margin-top: 40px;
+}
+.upigive img{
+    width:230px;
+    margin-left: 200px;
+    margin-top: 90px;
 }
 .cab >p{
     position: relative;
@@ -273,28 +328,19 @@ left:25px;
     margin-right: 150px;
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    padding-left: 50px;
-
-}
- .tickettotal{
-    display: flex;
     justify-content:space-evenly;
+    align-items: center;
+    padding-left: 50px;
+    padding: 100px 20px;
+    box-sizing: border-box;
 }
-.cabtotal{
+.tickettotal ,.cabtotal ,.total{
     display: flex;
-    justify-content:space-evenly ;
+    justify-content:space-between ;
+    width: 75%;
 } 
-.total{
-    display: flex;
-}
-.ticket button{
-    background-color:black;
-    color:#edd605;
-    width:250px;
-    height: 50px;
-    border-radius: 20px;
-}
+
+
 .ticket button:hover{
     transform: scale(1.1);
     transition: 0.3s;

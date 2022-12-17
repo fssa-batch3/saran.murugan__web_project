@@ -142,3 +142,10 @@ iframe{
     margin-top: 50px;
     font-family:Arial, Helvetica, sans-serif;
 }
+hr{
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+    border: bold;
+    color: white;
+}
