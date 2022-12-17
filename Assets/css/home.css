@@ -44,8 +44,8 @@ header input {
 }
 .image-slider img{
     position: relative;
-    width: 500%;
-    animation-name: slide;
+    width:500%;
+    animation-name:slide;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
