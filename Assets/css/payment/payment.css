@@ -47,7 +47,7 @@ header img{
 
 }
 .payment{
-    background-color: black;
+    /* background-color: black; */
     background: linear-gradient(rgb(92,92, 92, 0.7), rgb(92, 92, 92, 0.7)), url(../../images/logo/moneybackground.jpeg);
     /* background-repeat: no-repeat; */
      /* background-size: cover;  */
