@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color:#edd605;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+body{
+    background-color: black;
+}
+header img{
+    width: 120px;
+    margin-bottom:20px;
+    bottom: 20px;
+    height: 130px;
+} 
+header input {
+      padding-left: 50px;
+    height:50px;
+    background-image: url(../images/logo/search.png);
+    background-size: 50px;
+ background-repeat: no-repeat;
+      width:600px;
+      border-radius: 10px;
+      margin-left: 100px;
+      font-size: 18px;
+
+      
+}
+a  button {
+    margin-left: 80px;
+    padding: 20px;
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    background-color:black;
+    color: white;
+    font-size: 18px;
+    display: inline;
+}
+a button:hover{
+    transition: 1.3s;
+    transform: scale(1.1);
+}
+select {
+    padding: 10px;
+    color: black;
+    width: 150px;
+    height: 100px;
+    background-color:#edd605;
+    border-color:#edd605;
+    font-size: 20px;
+    
+}
+option{
+    font-size: 35px;
+}
+#menu{
+    width: 50px;
+    height: 50px;
+    margin-left: 200px;
+}
+
+ .various{
+    background-color:white;
+    width: 700px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 400px;
+    margin-top: 20px;
+}
+.various a{
+    text-decoration: none;
+    color:black;
+    border-color:white;
+    margin-top: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Island Moments', cursive;
+    font-family: 'Londrina Solid', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;  
+    
+}
+.various a:hover{
+    transform: scale(1.5);
+    color: tomato;
+}
+.movie{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 50px;
+}
+.movie img{
+    width:290px;
+    border-radius: 20px;
+}
+.movie img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.movie p{
+    color:white;
+    font-size: 40px;
+}
+.about{
+    color:white;
+}
+.about h2{
+    font-family:'Acme', sans-serif;
+    font-size: 50px;
+    padding-top: 10px;
+}
+.about p{
+    font-size: 30px;
+    padding-top: 10px;
+    font-family: 'Caveat', cursive;
+}
+.about h4{
+    font-size: 30px;
+    padding-top: 20px;
+    font-family: 'Caveat', cursive;
+}

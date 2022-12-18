@@ -34,7 +34,7 @@ header input {
 
       
 }
-/* .image-slider{
+ .image-slider{
     width: 80%;
     height: 370px;
     margin: 50px auto;
@@ -57,41 +57,7 @@ header input {
     35% {left: -100%;}
     40% {left: -200%;}
     60% {left: -200%;}
-} */
-.image-slider {
-    width: 80%;
-    height: 400px;
-    margin: 50px auto;
-    box-shadow: -7px 7px 3px 0px #00000021;
-    border-radius: 30px;
-    overflow: hidden;
-    position: relative;
-  
-  }
-  
-.image-slider img {
-    width: 500px;
-    height: 400px;
-    float: left;
-  
-  }
-  
-.image-slider img {
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0px;
-    animation: webzone 10s infinite linear;
-  }
-    
-  @keyframes webzone {
-    0%{left:0%;}
-    15%{left:0%;}
-    20%{left: -100%;}
-    35%{left: -100%;}
-    40%{left: -200%;}
-    60%{left: -200%;}
-  }
+} 
 a  button {
     margin-left: 80px;
     padding: 20px;

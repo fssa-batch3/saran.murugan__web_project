@@ -18,6 +18,33 @@ header img{
     bottom: 20px;
     height: 130px;
 }
+
+.various{
+    background-color:white;
+    width: 700px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 340px;
+    margin-top: 20px;
+}
+.various a{
+    text-decoration: none;
+    color:black;
+    border-color:white;
+    margin-top: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Island Moments', cursive;
+    font-family: 'Londrina Solid', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;  
+    
+}
+.various a:hover{
+    transform: scale(1.5);
+    color: tomato;
+}
 .mainhead{
     display: flex;
 }
