@@ -1,0 +1,53 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background-color:#edd605;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    width: 70px;
+    margin-bottom:20px;
+    bottom: 20px;
+    height: 70px;
+}
+.name{
+    background-image: url(../images/logo/profilesettings.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 500px;
+    border-radius: 10px;
+    margin-right: 150px;
+    padding: 30px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+.name p{
+    font-family: sans-serif;
+}
+input{
+    padding: 5px;
+    border-radius: 5px;
+}
+.save {
+    display: flex;
+    justify-content: space-evenly;
+}
+ button{
+    background-color: black;
+    color: white;
+    width:100px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 10px;
+    
+}

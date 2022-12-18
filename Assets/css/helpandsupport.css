@@ -1,0 +1,29 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background-color:#edd605;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.main{
+    margin-left: 30%;
+    margin-top: 10%;
+}
+.main img{
+    width:200px;
+    margin-left: 130px;
+}
+.main h1{
+    font-family: sans-serif;
+    font-size: 27px;
+}
+input{
+    width:500px;
+    height: 300px;
+    margin-top: 10px;
+    text-align: start;
+   
+}

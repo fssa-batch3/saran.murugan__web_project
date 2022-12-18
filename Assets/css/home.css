@@ -51,8 +51,8 @@ header input {
     width:500%;
     animation-name:slide;
     animation-duration: 10s;
-animation-direction: alternate;
-   animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 @keyframes slide{
