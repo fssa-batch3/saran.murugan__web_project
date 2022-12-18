@@ -1,0 +1,90 @@
+*{
+    
+    margin: 0px;
+}
+body{
+    background-color:white;
+}
+header{
+    background-color:#edd605;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    
+}
+header h1{
+    font-size: 40px;
+    margin-left: 410px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header img{
+    width: 120px;
+    margin-bottom:20px;
+    bottom: 20px;
+    height: 130px;
+}
+.all{
+    display: flex;
+}
+.main{
+    background-color:black;
+    width: 50%;
+    height: 690px;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-top: 40px;
+    padding-top: 70px;
+}
+.showtime {
+    display: flex;
+    justify-content:space-evenly;
+}
+.showtime img{
+    width:180px;
+    border-radius: 10px;
+}
+.showname{
+    color: white;
+    font-size: 30px;
+    font-family:sans-serif;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+hr{
+    color:white solid;
+    width:450px;
+}
+.qrcode img{
+    width:200px;
+    margin-left: 37%;
+    margin-top: 70px;
+}
+.qrcode h2{
+    color: white;
+    font-family: sans-serif;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+.main2{
+    display: flex;
+}
+a button{
+    background-color:#edd605;
+    border-color: black;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 20px;
+    color: black;
+   margin-top: 730px;
+   margin-left: 20px;
+}
+/* .showtime{
+    background-color:white;
+    width:50%;
+    height: 500px;
+    margin-left: 25%8
+} */
