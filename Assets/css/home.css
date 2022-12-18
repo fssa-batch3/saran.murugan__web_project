@@ -42,12 +42,17 @@ header input {
     border-radius: 30px;
      overflow: hidden; 
 }
-.image-slider img{
+.image-slider figure img{
+    float: left;
+    width: 20%;
+}
+.image-slider figure{
     position: relative;
     width:500%;
     animation-name:slide;
     animation-duration: 10s;
-    animation-timing-function: linear;
+animation-direction: alternate;
+   animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 @keyframes slide{

@@ -1,0 +1,29 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background-color:#edd605;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    width: 120px;
+    margin-bottom:20px;
+    bottom: 20px;
+    height: 130px;
+}
+.main{
+    background-color: black;
+    width:50%;
+    margin-left: 25%;
+    height: 700px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+.profile{
+    color:white;
+    border: 2px ;
+}
