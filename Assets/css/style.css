@@ -23,6 +23,7 @@ body{
     margin-bottom: 300px;
     position: relative;
     bottom: 100px; 
+    padding-left: 10px;
 }
 .form{
     margin-top: 60px;
@@ -48,6 +49,7 @@ button{
     background-color: white;
     border-radius: 10px;
     cursor: pointer;
+    margin-left: 30px;
     border-width: 1px;
     color: black;
     
@@ -64,7 +66,7 @@ a #button2{
     border-radius: 20px;
     background-color:black;
     color:whitesmoke;
-    margin-left: 80px;
+    margin-left: 100px;
     cursor: pointer;
 }
 .last{
