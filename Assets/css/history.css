@@ -8,3 +8,11 @@ header{
     display: flex;
     align-items: center;
 }
+header h1{
+    margin-left: 500px;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.main img{
+    margin-left: 280px;
+}

@@ -32,6 +32,10 @@ header input {
 
       
 }
+.head h1{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 a  button {
     margin-left: 80px;
     padding: 20px;
