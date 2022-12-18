@@ -150,6 +150,9 @@ iframe{
     margin-top: 40px;
     border-radius: 200px;
 }
+.review{
+    text-align: center;
+}
 .review h1{
     color:white;
 }
