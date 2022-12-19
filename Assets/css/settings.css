@@ -55,8 +55,8 @@ header img{
     text-decoration: none;
 }
 .profile :hover{
-    transform: scale(1.2);
-    transition: 0.3s;
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 a button{
     padding: 10px;
