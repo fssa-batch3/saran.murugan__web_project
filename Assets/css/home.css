@@ -22,15 +22,15 @@ header img{
     height: 130px;
 } 
 header input {
-      padding-left: 50px;
+    padding-left: 50px;
     height:50px;
     background-image: url(../images/logo/search.png);
     background-size: 50px;
- background-repeat: no-repeat;
-      width:600px;
-      border-radius: 10px;
-      margin-left: 100px;
-      font-size: 18px;
+    background-repeat: no-repeat;
+    width:100%;
+    border-radius: 10px;
+    margin-left: 100px;
+    font-size: 18px;
 
       
 }
@@ -45,9 +45,10 @@ header input {
 .image-slider figure img{
     float: left;
     width: 20%;
+    border-radius: 10px;
 }
 .image-slider figure{
-    position: relative;
+     position: relative; 
     width:500%;
     animation-name:slide;
     animation-duration: 10s;
@@ -66,7 +67,6 @@ header input {
     70% {left: -300%;}
 } 
 a  button {
-    margin-left: 80px;
     padding: 20px;
     width: 100px;
     height: 60px;
@@ -83,7 +83,7 @@ a button:hover{
 select {
     padding: 10px;
     color: black;
-    width: 150px;
+    width: 15%;
     height: 100px;
     background-color:#edd605;
     border-color:#edd605;
@@ -101,13 +101,13 @@ option{
 
  .various{
     background-color:white;
-    width: 700px;
+    width: 50%;
     height: 40px;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
-    margin-left: 400px;
-    margin-top: 20px;
+    margin-left: 25%;
+    margin-top: 10%;
 }
 .various a{
     text-decoration: none;
@@ -247,4 +247,40 @@ footer >img{
 #logo2{
     padding: 10px;
     border-radius: 10px;
+}
+
+@media screen and( max-width:1200px) {
+
+    .header{
+        width:100%;
+        text-align: center;
+    }
+    .movies img{
+        width: 100%;
+    }
+    
+}
+
+@media screen and( max-width:576px) {
+
+    .header{
+        width:100%;
+        text-align: center;
+    }
+    .movies img{
+        width:30px;
+    }
+    input{
+        width:50%;
+    }
+    .various a{
+        width:60%;
+        margin-bottom: 200px;
+    }
+    footer img{
+        width:20px;
+    }
+    .image-slider figure img{
+        width:100%;
+    }
 }
