@@ -267,7 +267,7 @@ footer >img{
         width:100%;
         text-align: center;
     }
-    .movies img{
+    .movies #img{
         width:30px;
     }
     input{
