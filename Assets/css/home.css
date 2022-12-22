@@ -249,26 +249,25 @@ footer >img{
     border-radius: 10px;
 }
 
-@media screen and( max-width:1200px) {
+
+
+@media ( max-width:768px) {
 
     .header{
         width:100%;
         text-align: center;
     }
-    .movies img{
-        width: 100%;
-    }
-    
-}
+    .movies #img1{
+        width:230px;
+        height:300px;
 
-@media screen and( max-width:576px) {
-
-    .header{
-        width:100%;
-        text-align: center;
     }
-    .movies #img{
-        width:30px;
+    .movies{
+        display: flex;  
+        gap: 30px;
+        justify-content: space-between; 
+        overflow: hidden;
+        overflow-x: scroll;
     }
     input{
         width:50%;
@@ -276,11 +275,15 @@ footer >img{
     .various a{
         width:60%;
         margin-bottom: 200px;
+        text-align: center;
     }
     footer img{
         width:20px;
     }
     .image-slider figure img{
         width:100%;
+    }
+    #menu{
+        background-color: #edd605;
     }
 }
