@@ -252,7 +252,7 @@ footer >img{
 
 
 
-@media ( max-width:768px) {
+@media (max-width:768px) {
 
     .header{
         width:100%;
@@ -261,7 +261,6 @@ footer >img{
     .movies #img1{
         width:230px;
         height:300px;
-
     }
     .movies{
         display: flex;  
