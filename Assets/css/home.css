@@ -10,7 +10,8 @@ header{
     background-color:#edd605;
     height: 100px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
 }
 body{
@@ -23,17 +24,15 @@ header img{
     height: 130px;
 } 
 header input {
-    padding-left: 50px;
+    padding-left:50px;
     height:50px;
     background-image: url(../images/logo/search.png);
     background-size: 50px;
     background-repeat: no-repeat;
-    width:100%;
+    width:80%;
     border-radius: 10px;
-    margin-left: 100px;
-    font-size: 18px;
-
-      
+    margin-left: 50px;
+    font-size: 18px;    
 }
 
 a  button {
@@ -53,7 +52,7 @@ a button:hover{
 select {
     padding: 10px;
     color: black;
-    width: 15%;
+    width: 10%;
     height: 100px;
     background-color:#edd605;
     border-color:#edd605;
@@ -66,7 +65,7 @@ option{
 #menu{
     width: 50px;
     height: 50px;
-    margin-left: 200px;
+    margin-top: 25px;
 }
 .image-slider{
     width: 80%;
@@ -78,12 +77,12 @@ option{
 }
 .image-slider figure img{
     float: left;
-    width: 20%;
+    width: 50%;
     border-radius: 10px;
 }
 .image-slider figure{
      position: relative; 
-    width:500%;
+    width:450%;
     animation-name:slide;
     animation-duration: 10s;
     animation-direction: alternate;
@@ -91,7 +90,7 @@ option{
     animation-iteration-count: infinite;
 }
 @keyframes slide{
-    0% {left: 0%;}
+     0% {left: 0%;}
     15% {left: 0%;}
     20% {left: -100%;}
     35% {left: -100%;}
@@ -131,14 +130,9 @@ option{
     border: 2px solid black;
     margin-top: 10px;
     margin-left: 50px;
-    
-    
 }
-
-
 .main{
     display: flex;
-     
 }
 
 .now  button {
@@ -256,34 +250,54 @@ footer >img{
 
     .header{
         width:100%;
-        text-align: center;
+        display: flex;
+        justify-content:space-evenly;
     }
     .movies #img1{
         width:230px;
         height:300px;
     }
     .movies{
-        display: flex;  
         gap: 30px;
-        justify-content: space-between; 
         overflow: hidden;
         overflow-x: scroll;
     }
+    .dubmovies #img1{
+        gap: 30px;
+        width:230px;
+        height:300px;
+    }
     input{
-        width:50%;
+         margin-right:10px;
+         text-align: start;
+    }
+    a button{
+        width:60px;
+        height: 30px;
+
     }
     .various a{
         width:60%;
         margin-bottom: 200px;
         text-align: center;
     }
-    footer img{
+    
+    .image-slider{
+        width:90%;
+        height: 260px;
+    }
+    .image-slider figure img {
+        width:30%;
+    }
+    .image-slider figure {
+        width:600%;
+        background-repeat: no-repeat;
+    }
+    footer #logo1{
+         width:120px;
+    }
+    footer #logo2{
         width:20px;
-    }
-    .image-slider figure img{
-        width:100%;
-    }
-    #menu{
-        background-color: #edd605;
+        height: 30px;
     }
 }
