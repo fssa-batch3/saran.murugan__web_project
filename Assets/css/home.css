@@ -10,6 +10,7 @@ header{
     background-color:#edd605;
     height: 100px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 body{
@@ -34,38 +35,7 @@ header input {
 
       
 }
- .image-slider{
-    width: 80%;
-    height: 370px;
-    margin: 50px auto;
-    box-shadow: -1px 1px 10px #00000021;
-    border-radius: 30px;
-     overflow: hidden; 
-}
-.image-slider figure img{
-    float: left;
-    width: 20%;
-    border-radius: 10px;
-}
-.image-slider figure{
-     position: relative; 
-    width:500%;
-    animation-name:slide;
-    animation-duration: 10s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-@keyframes slide{
-    0% {left: 0%;}
-    15% {left: 0%;}
-    20% {left: -100%;}
-    35% {left: -100%;}
-    40% {left: -200%;}
-    60% {left: -200%;}
-    65% {left: -300%;}
-    70% {left: -300%;}
-} 
+
 a  button {
     padding: 20px;
     width: 100px;
@@ -98,7 +68,38 @@ option{
     height: 50px;
     margin-left: 200px;
 }
-
+.image-slider{
+    width: 80%;
+    height: 370px;
+    margin: 50px auto;
+    box-shadow: -1px 1px 10px #00000021;
+    border-radius: 30px;
+     overflow: hidden; 
+}
+.image-slider figure img{
+    float: left;
+    width: 20%;
+    border-radius: 10px;
+}
+.image-slider figure{
+     position: relative; 
+    width:500%;
+    animation-name:slide;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slide{
+    0% {left: 0%;}
+    15% {left: 0%;}
+    20% {left: -100%;}
+    35% {left: -100%;}
+    40% {left: -200%;}
+    60% {left: -200%;}
+    65% {left: -300%;}
+    70% {left: -300%;}
+} 
  .various{
     background-color:white;
     width: 50%;
