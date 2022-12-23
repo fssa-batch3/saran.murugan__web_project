@@ -130,25 +130,38 @@ h1{
   padding-left: 140px;
   font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.casteh h2{
+/* .casteh h2{
     color:white;
 }
 .casteh p{
      color:white;
-} 
+}  */
+.cast h2{
+    color:white;
+    text-align: center;
+}
+.cast p{
+    color:white;
+    text-align: center;
+}
 .crew{
     display: flex;
 }
+.crew h2 {
+    color:white;
+    text-align: center;
+}
+.crew p{
+    color:white;
+    text-align: center;
+}
+
 .crew img{
     width:180px;
     height: 180px;
     margin-left: 20px;
     margin-top: 40px;
     border-radius: 200px;
-}
-.casteh {
-    text-align: center;
-    color:white;
 }
 .content {
      background-color: black; 
