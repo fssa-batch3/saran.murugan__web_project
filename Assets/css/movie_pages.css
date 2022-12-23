@@ -10,6 +10,7 @@ header{
 }
 
 header img{
+
     width: 120px;
     margin-bottom:20px;
     bottom: 20px;
@@ -91,6 +92,7 @@ header img{
 .aboutmovie h2{
     margin-left: 60px;
     font-size: 30px;
+    color:white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .aboutmovie p{
@@ -98,10 +100,11 @@ header img{
     margin-left: 20px;
     padding-top: 20px;
     font-family: cursive;
+    color: white;
 }
 hr{
     width: 1400px;
-    border: 2px solid black;
+    border: 1px solid white;
     margin-top: 10px;
     margin-left: 50px;
 }
@@ -111,10 +114,11 @@ hr{
 h1{
     margin-left: 40px;
     margin-top: 50px;
+    color: white;
 }
 .cast img{
-    width:220px;
-    height: 220px;
+    width:180px;
+    height: 180px;
     margin-left: 20px;
     margin-top: 40px;
     border-radius: 200px;
@@ -125,18 +129,30 @@ h1{
 .castname h2{
   padding-left: 140px;
   font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
 }
+.casteh h2{
+    color:white;
+}
+.casteh p{
+     color:white;
+} 
 .crew{
     display: flex;
 }
 .crew img{
-    width:220px;
-    height: 220px;
+    width:180px;
+    height: 180px;
     margin-left: 20px;
     margin-top: 40px;
     border-radius: 200px;
 }
-.casteh{
+.casteh {
     text-align: center;
+    color:white;
+}
+.content {
+     background-color: black; 
+}
+iframe{
+    margin-top: 100px;
 }
