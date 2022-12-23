@@ -77,7 +77,7 @@ option{
 }
 .image-slider figure img{
     float: left;
-    width: 50%;
+    width:1190px;
     border-radius: 10px;
 }
 .image-slider figure{
@@ -148,6 +148,7 @@ option{
     margin-left: 20px;
     margin-top: 30px;
     color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .movies a{
     padding-top:0px;
@@ -267,31 +268,41 @@ footer >img{
         width:230px;
         height:300px;
     }
-    input{
-         margin-right:10px;
+    header input{
+         margin-right:40px;
+         position:relative;
+         right: 30px;
          text-align: start;
     }
     a button{
-        width:60px;
+        width:70px;
+        padding-right: 10px;
+        display: block;
+        text-align: center;
         height: 30px;
-
+        font-size: 12px;
     }
     .various a{
         width:60%;
         margin-bottom: 200px;
         text-align: center;
     }
-    
     .image-slider{
         width:90%;
         height: 260px;
     }
     .image-slider figure img {
-        width:30%;
+        width:440px
     }
     .image-slider figure {
         width:600%;
         background-repeat: no-repeat;
+    }
+    .now button{
+        font-size: 18px;
+    }
+    .now h2 {
+        font-size: 20px;
     }
     footer #logo1{
          width:120px;
