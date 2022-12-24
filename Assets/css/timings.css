@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Puritan:ital@1&display=swap');
 *{
     
     margin: 0px;
@@ -29,12 +30,12 @@ header img{
     padding-bottom: 20px;
 }
 .banner h1{
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Puritan', sans-serif;
     color:#edd605;
     font-size: 50px;
 }
 .banner h3{
-    font-family: 'Patrick Hand', cursive;
+    font-family:'Puritan', sans-serif;
     color:white;
     font-size: 30px;
 }
