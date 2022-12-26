@@ -1,15 +1,13 @@
-*{ 
+@import url('https://fonts.googleapis.com/css2?family=Puritan:ital@1&display=swap');
+*{
+    padding: 0px;
     margin: 0px;
-}
-body{
-    background-color:white;
 }
 header{
     background-color:#edd605;
     height: 100px;
     display: flex;
     align-items: center;
-    padding: 0px;
 }
 
 header img{
@@ -18,67 +16,106 @@ header img{
     bottom: 20px;
     height: 130px;
 }
-
-.moviename{
-   color: white;
-   background-color: black;
-   width: 70%;
-   border-radius: 20px;
-   margin-left: 15%;
-   margin-top: 20px;
-   height: 170px;
-   font-size: 20px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.main{
-    display: flex;
-}
-.name1{
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-}
-.name2{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-.moviename h2{
-    padding-left: 10px;
-    margin-top: 7px;
-}
-.seat1{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-
-}
-.seat1 img{
-    width:50px;
-    transition: 0.5s;
-    -webkit-backdrop-filter:#edd605;
-}
-.seat1 img:hover{
-    transform: scale(1.3);
-}
-.allseat{
+body{
     background-color: black;
-    width: 750px;
-    margin-left: 350px;
-    border-radius: 20px;
-    margin-top: 50px;
-    padding: 2px;
-    
+    padding-bottom: 50px;
 }
-
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.banner h1{
+    font-family: 'Puritan', sans-serif;
+    color:#edd605;
+}
+.banner h2{
+    font-family: 'Puritan', sans-serif;
+    color:whitesmoke;
+}
+.screen{
+    display: flex;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 20px;
+}
 select {
-    margin-right: 100px;
+    margin-left: 150px;
     border-radius: 20px;
     padding: 10px;
     color: white;
     background-color: black;
-    width: 200px;
-    height: 100px;
+    width: 175px;
+    height: 60px;
     font-size: 20px;
-    border: none;
+    border: 1px solid #edd605;
+}
+.screen img{
+    width:30px;
+}
+.screen h3{
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.seatcost{
+    color:white;
+    font-size: 12px;
+    margin-top: 40px;
+    margin-left: 43%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.seatbudget{
+    display: flex;
+    gap:10px;
+    margin-left: 27%;
+    margin-top: 25px;
+}
+.seatbudget h3{
+    color:white;
+    margin-top: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.seatbudget a {
+    border: 1px solid white;
+    color: #edd605;
+    width:30px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Puritan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30px;
+}
+a:hover{
+    background-color: #edd605;
+    color:black;
+}
+.seatprime{
+    display: flex;
+    gap:10px;
+    margin-left: 20%;
+    margin-top: 25px;
+}
+.seatprime h3{
+    color:white;
+    margin-top: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.seatprime a {
+    
+    border: 1px solid white;
+    color: #edd605;
+    font-family: 'Puritan', sans-serif;
+    width:30px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30px;
+}
+a:hover{
+    background-color: #edd605;
+    color:black;
 }
