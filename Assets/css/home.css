@@ -227,10 +227,10 @@ footer >img{
     margin:0px 20px;
 }
 
-#logo1:hover{
+/* #logo1:hover{
     background-color:whitesmoke;
     transform: scale(1.1);
-}
+} */
 
 #logo2:hover{
     background-color: whitesmoke;
@@ -270,16 +270,20 @@ footer >img{
     }
     header input{
          margin-right:40px;
-         position:relative;
-         right: 30px;
+         font-size: 20px;
          text-align: start;
+    }
+    select{
+          font-size:10px;
+          width: 100%;
     }
     a button{
         width:70px;
-        padding-right: 10px;
+        padding-right: 9px;
+        padding-left: 10px;
         display: block;
-        text-align: center;
-        height: 30px;
+        padding-bottom: 30px;
+        height: 20px;
         font-size: 12px;
     }
     .various a{
