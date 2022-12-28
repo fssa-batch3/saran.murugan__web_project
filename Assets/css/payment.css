@@ -3,7 +3,7 @@
     margin: 0px;
 }
 body{
-    background-color:white;
+    background-color:black;
     width:100%
 }
 header{
@@ -21,20 +21,7 @@ header img{
     bottom: 20px;
     height: 130px;
 }
-.moviename{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-   color: white;
-   background-color: black;
-   width: 70%;
-   border-radius: 20px;
-   margin-left: 15%;
-   margin-top: 20px;
-   height: 100px;
-   font-size: 20px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 .moviename> h2{
     padding-left: 10px;
     margin-top: 7px;
@@ -326,12 +313,13 @@ left:25px;
     height: 750px;
     margin-top: 100px;
     border-radius: 10px;
-    margin-right: 150px;
+    margin-right: 90px;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
     align-items: center;
     padding: 100px 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-sizing: border-box;
 }
 .tickettotal ,.cabtotal ,.total{
