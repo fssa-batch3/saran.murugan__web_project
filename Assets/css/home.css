@@ -29,7 +29,7 @@ header input {
     background-image: url(../images/logo/search.png);
     background-size: 50px;
     background-repeat: no-repeat;
-    width:80%;
+    width:50%;
     border-radius: 10px;
     margin-left: 50px;
     font-size: 18px;    
@@ -107,7 +107,6 @@ option{
     display: flex;
     justify-content: space-around;
     margin-left: 25%;
-    margin-top: 10%;
 }
 .various a{
     text-decoration: none;
