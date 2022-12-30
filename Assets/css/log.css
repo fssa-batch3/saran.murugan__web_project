@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&display=swap');
+*{box-sizing: border-box;}
+html,body{
+    height: 100%;
+}
+body{
+    margin: 0;
+    display: grid;
+    place-items:center;
+    background: #1a1a1a;
+    color:#f9f9f9;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.email{
+    position: relative;
+}
+.main h1{
+    font-family: 'Andika', sans-serif;
+    position: relative;
+    right: 90px;
+}
+.main h2{
+    font-family: 'Andika', sans-serif;
+    margin-left: 100px;
+}
+.email input {
+    width:300px;
+    height: 70px;
+    margin-top: 30px;
+    border-radius: 30px;
+    background: #313136;
+    border: 0;
+    padding-left: 126px;
+    font-size: 16px;
+    font-family: inherit;
+    color:rgb(255,255,255/96%);
+    transition: 0.3s;
+}
+.email label{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transform-origin: 0% 0%;
+    pointer-events: none;
+    top:4px;
+    margin-top: 30px;
+    left:4px;
+    height: 52px;
+    width:110px;
+    border-radius: 27px;
+    background:#edd605;
+    color:black;
+    transition: 0.3s;
+}
+.email input::placeholder {
+    color:rgb(255,255,255 / 50%);
+}
+.email
+:is(input:focus,  input:valid) {
+    padding-left:20px;
+}
+
+.email
+:is(input:focus, input:valid)
+~  label {
+    translate: 0 -54px;
+    scale:0.825;
+}
+.check{
+ display: flex;
+ margin-left: 50px;
+}
+button{
+    padding: 10px;
+    background-color: #edd605;
+    width: 100px;
+    border-radius: 20px;
+    margin-left: 20%;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: inherit;
+}
+button:hover{
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+.google{
+    background-image: url(../images/logo/google---.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    width:100%;
+    border-radius: 10px;
+    margin-left: 25px;
+    font-size: 18px;
+    background-color: #313136;
+    width:270px;
+    height: 50px;
+    
+}
+.google h3{
+    padding-left: 40px;
+}
+.apple {
+    background-image: url(../images/logo/apple-emblem-removebg-preview.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    width:100%;
+    border-radius: 10px;
+    margin-left: 28px;
+    font-size: 18px;
+    background-color: #313136;
+
+    width:270px;
+    height: 50px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+.apple  h3{
+    padding-left: 35px;
+}
+.apple:hover{
+    background-color: #edd605;
+    color:black;
+    width:270px;
+    height: 50px;
+}
+.google:hover{
+    background-color:#edd605;
+    color:black;
+    width:250px;
+    height: 50px;
+}
+a:hover{
+    color:black;
+}
