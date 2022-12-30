@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Puritan:ital@1&display=swap');
 *{ 
     margin: 0px;
 }
@@ -21,7 +21,10 @@ header img{
     bottom: 20px;
     height: 130px;
 }
-
+.banner h1{
+    font-family: 'Puritan', sans-serif;
+    color:white;
+}
 .moviename> h2{
     padding-left: 10px;
     margin-top: 7px;
@@ -313,7 +316,7 @@ left:25px;
     height: 750px;
     margin-top: 100px;
     border-radius: 10px;
-    margin-right: 90px;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
