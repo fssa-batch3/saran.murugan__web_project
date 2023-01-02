@@ -248,10 +248,13 @@ footer >img{
 
 @media (max-width:768px) {
 
-    .header{
+    header{
         width:100%;
         display: flex;
-        justify-content:space-evenly;
+    }
+    header img{
+        width:70px;
+        height: 70px;
     }
     .movies #img1{
         width:230px;
@@ -268,22 +271,27 @@ footer >img{
         height:300px;
     }
     header input{
-         margin-right:40px;
+        width:60px;
+        height: 45px;
+         margin: 0px;
          font-size: 20px;
          text-align: start;
     }
     select{
           font-size:10px;
-          width: 100%;
+          width: 22%;
     }
     a button{
-        width:70px;
+        width:60px;
+        height: 15px;
         padding-right: 9px;
         padding-left: 10px;
-        display: block;
-        padding-bottom: 30px;
-        height: 20px;
-        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
     }
     .various a{
         width:60%;
