@@ -169,3 +169,23 @@ h1{
 iframe{
     margin-top: 100px;
 }
+@media (max-width:768px){
+
+.time{
+    width:200px;
+    height: 180px;
+}
+.time h2 {
+    font-size: 20px;
+}
+.time h3{
+
+}
+.time h4{
+
+}
+.time p{
+    
+}
+
+}
