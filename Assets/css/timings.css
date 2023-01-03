@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Puritan:ital@1&display=swap');
 *{
-    
     margin: 0px;
+    padding: 0px;
 }
 body{
     background-color:white;
 }
 header{
     background-color:#edd605;
+    width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -22,7 +23,7 @@ header img{
     bottom: 20px;
     height: 130px;
 }
-.banner{
+ .banner{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -32,7 +33,7 @@ header img{
 .banner h1{
     font-family: 'Puritan', sans-serif;
     color:#edd605;
-    font-size: 50px;
+    font-size:50px;
 }
 .banner h3{
     font-family:'Puritan', sans-serif;
@@ -41,9 +42,9 @@ header img{
 }
 .main{
     background-color: black;
-    height: 100%;
-    padding-top: 50px;
-}
+    height:100%;
+     padding-top: 50px; 
+} 
 .theatre{
     padding-top: 20px;
 }
@@ -83,9 +84,42 @@ header img{
     transform: scale(1.2);
     transition: 1.1s;
 }
+
 hr{
     border:1px solid white;
-    width:100%;
+    width:95%;
     margin-left: 3%;
     margin-top: 40px;
 }
+
+@media (max-width:768px){
+
+    header img{
+        width:90px;
+        height:90px;
+    }
+    header{
+        width:123%;
+    }
+
+    .banner{
+        background-repeat: no-repeat;
+        width:115%;
+        height: 180px;
+    }
+    .banner h1{
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        font-size: 30px;
+    }
+    .banner h3{
+        font-size: 20px;
+    }
+    .main{
+       width:123%;
+    }
+    .time{
+      margin-left: 20px;
+    }
+} 
