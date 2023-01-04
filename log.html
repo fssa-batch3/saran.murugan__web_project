@@ -19,17 +19,17 @@
         <h2>Log in</h2>
 
     <div class="email">
-        <input required type="email" placeholder="Enter your email or phone"/>
+        <input required type="email" placeholder="Enter your email or phone" value="saransaran32866@gmail.com" id="emailid"/>
         <label>Email</label>
     </div>
     
     <div class="email">
-        <input required type="password" placeholder="Enter your password"/>
+        <input required type="password" placeholder="Enter your password" value="saran12345" id="password"/>
         <label>Password</label>
     </div>
        
     <div class="check">
-    <input type="checkbox" required >
+    <input type="checkbox" required>
     <h4>Terms and conditions</h4>
     </div>
 
@@ -46,5 +46,16 @@
     </div>
      
    </div>
+
+   <script>
+    // cammel case 
+     const emailid = (document.getElementById("emailid") .value);
+     const password = (document.getElementById("password") .value);
+
+     console.log(emailid)
+     console.log(password)
+     
+   </script>
+
 </body>
 </html>

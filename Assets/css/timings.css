@@ -92,7 +92,7 @@ hr{
     margin-top: 40px;
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
     header img{
         width:90px;
