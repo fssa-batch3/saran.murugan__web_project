@@ -98,3 +98,10 @@ a{
     border-radius: 10px;
     padding: 5px;
 }
+
+@media screen (max-width:768px){
+    
+    .banner{
+        background-image:103%;
+    }
+}
