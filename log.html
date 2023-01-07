@@ -14,17 +14,16 @@
 
     <h1>Lets starts! to book your tickets</h1>
    
-
     <div class="input">
         <h2>Log in</h2>
 
     <div class="email">
-        <input required type="email" placeholder="Enter your email or phone" value="saransaran32866@gmail.com" id="emailid"/>
+        <input required type="email" placeholder="Enter your email or phone"  id="emailid"/>
         <label>Email</label>
     </div>
     
     <div class="email">
-        <input required type="password" placeholder="Enter your password" value="saran12345" id="password"/>
+        <input required type="password" placeholder="Enter your password" id="password"/>
         <label>Password</label>
     </div>
        
@@ -33,7 +32,7 @@
     <h4>Terms and conditions</h4>
     </div>
 
-    <a href="index.html"><button>Submit</button></a>  
+    <button onclick="submit()">Submit</button> 
 
      <div class="google">
      <a href="index.html"><h3>Continue with google</h3></a>    
@@ -49,11 +48,23 @@
 
    <script>
     // cammel case 
-     const emailid = (document.getElementById("emailid") .value);
-     const password = (document.getElementById("password") .value);
 
-     console.log(emailid)
-     console.log(password)
+
+    function submit(){
+
+        const emailid = (document.getElementById("emailid") .value);
+        const password = (document.getElementById("password") .value);
+
+        console.log(emailid)
+        console.log(password)
+
+        localStorage.setItem("user_email" , emailid );
+
+        localStorage.setItem("user_password" , password)
+
+        window.location.href="profilesettings.html"
+    }
+    
      
    </script>
 
