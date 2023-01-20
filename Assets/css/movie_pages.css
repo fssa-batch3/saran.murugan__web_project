@@ -74,8 +74,7 @@ header img{
     cursor: pointer;
 }
 .time button:hover{
-    transform: scale(1.2);
-    transition: 1.4s;
+    transform: scale(1.1); 
 }
  a button{
     background-color: #edd605;
