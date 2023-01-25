@@ -59,10 +59,9 @@
       <h2>Tamil movies <button>Now showing</button></h2>
     </div>
 <div class="all">
-    <div class="main">
+  
       <!-- all movie images  -->
-      <div class="movies">
-
+      <!-- <div class="movies">
         <a href="Pages/movie_pages/naane_varuven.html"><img src="Assets/images/naane_varuven/naane varuven.jpg" alt="img1"id="img1"></a>
         <a href="Pages/movie_pages/petta.html"> <img src="Assets/images/petta/petta.jpg" alt="img2" id="img1"> </a>
         <a href="Pages/movie_pages/varisu.html"> <img src="Assets/images/Varisu/Varisu.jpg" alt="img3" id="img1"></a>
@@ -70,11 +69,8 @@
         <a href="Pages/movie_pages/Vikram.html"><img src="Assets/images/vikram/vikram.jpg" alt="img5" id="img1"></a>
         <a href="Pages/movie_pages/vaathi.html"><img src="Assets/images/Vaathi/vaathi_20221024.jpg" id="img1" alt="img6"></a>
         <a href="Pages/movie_pages/poniyan_selvan.html"><img src="Assets/images/poniyan_selvan/poniyan selvan.jpg" id="img1"alt="img7"></a>
-
-
       </div>
 
-    </div>
 
     <div class="movies">
 
@@ -86,7 +82,7 @@
       <a href="Pages/movie_pages/Asuran.html"><img src="Assets/images/Asuran/Asuran.jpg" alt="img13" id="img1">
         <a href="Pages/movie_pages/Kaithi.html"><img src="Assets/images/kaithi/kaithi.jpg" alt="img14" id="img1"></a>
 
-    </div>
+    </div> -->
 
     <div class="now">
       <h2>Tamil Dubbed movies <button>Now showing</button></h2>
@@ -118,6 +114,71 @@
       </div>
     </footer>
 
+    <script>
+    
+        let div_all;
+        let div_movies;
+        let div_dubmovies;
+        let img_movies;
+        let h5_card_title;
+        let p_card_text;
+          
+        const movies_img =["Assets/images/naane_varuven/naane varuven.jpg", "Assets/images/petta/petta.jpg"]
+
+         //  <div class="col"> </div>
+         div_col = document.createElement("div");
+        div_col.setAttribute("class", "all");
+        console.log(div_all);
+
+        //  <div class="card"> </div>
+        div_card = document.createElement("div");
+        div_card.setAttribute("class", "movies");
+        div_movies.append(div_all);
+
+
+        div_dubmovies = document.createElement("div");
+        div_dubmovies.setAttribute("class", "dubmovies");
+        div_dubmovies.append(div_all);
+
+
+    for(i=0; i<=2; i++){
+        //  <img src="" class="card-img-top" alt=""/>
+        img_movies = document.createElement("img");
+        img_movies.setAttribute("src", movies_img[i]);
+        img_movies.setAttribute("alt", "image_placeholder");
+        img_movies.setAttribute("class", "movies");
+        div_movies.append(img_movies);
+      }
+
+      // for(i=0;i<=6;i++)
+      //   //  <img src="" class="card-img-top" alt=""/>
+      //   img_dubmovies = document.createElement("img");
+      //   img_dubmovies.setAttribute("src", "");
+      //   img_dubmovies.setAttribute("alt", "image_placeholder");
+      //   img_dubmovies.setAttribute("class", "-");
+      //   div_dubmovies.append(img_dubmovies);
+
+        // //  <div class="card-body"> </div>
+        // div_card_body = document.createElement("div");
+        // div_card_body.setAttribute("class", "card-body");
+        // div_card.append(div_card_body);
+
+
+        // //  <h5 class="card-title"> </h5>
+        // h5_card_title = document.createElement("h5");
+        // h5_card_title.setAttribute("class", "card-title");
+        // h5_card_title.innerText = "Card title"
+        // div_card_body.append(h5_card_title);
+
+        // //  <p class="card-text"> </p>
+        // p_card_text = document.createElement("p");
+        // p_card_text.setAttribute("class", "card-text");
+        // p_card_text.innerText = "This is a longer card with supporting text below as a natural lead-in to additional content.This content is a little bit longer.";
+        // div_card_body.append(p_card_text);
+
+        document.querySelector("div.all.movies.dubmovies").append(div_all);
+
+    </script>
 
 
 
