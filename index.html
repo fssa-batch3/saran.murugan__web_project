@@ -123,7 +123,7 @@
         let h5_card_title;
         let p_card_text;
           
-        const movies_img =["Assets/images/naane_varuven/naane varuven.jpg", "Assets/images/petta/petta.jpg"]
+        const movies_img =["Assets/images/naane_varuven/naane varuven.jpg","Assets/images/petta/petta.jpg"]
 
          //  <div class="col"> </div>
          div_col = document.createElement("div");
@@ -132,16 +132,14 @@
 
         //  <div class="card"> </div>
         div_card = document.createElement("div");
-        div_card.setAttribute("class", "movies");
-        div_movies.append(div_all);
+        div_card.setAttribute("class","movies");
+        div_movies.prepend(div_all);
 
 
-        div_dubmovies = document.createElement("div");
-        div_dubmovies.setAttribute("class", "dubmovies");
-        div_dubmovies.append(div_all);
+        
 
 
-    for(i=0; i<=2; i++){
+    for(i=1; i<=2; i++){
         //  <img src="" class="card-img-top" alt=""/>
         img_movies = document.createElement("img");
         img_movies.setAttribute("src", movies_img[i]);
@@ -150,6 +148,10 @@
         div_movies.append(img_movies);
       }
 
+
+        div_dubmovies = document.createElement("div");
+        div_dubmovies.setAttribute("class","dubmovies");
+        div_dubmovies.append(div_all);
       // for(i=0;i<=6;i++)
       //   //  <img src="" class="card-img-top" alt=""/>
       //   img_dubmovies = document.createElement("img");
