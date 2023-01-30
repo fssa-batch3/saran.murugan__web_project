@@ -61,28 +61,28 @@
 <div class="all">
   
       <!-- all movie images  -->
-      <!-- <div class="movies">
-        <a href="Pages/movie_pages/naane_varuven.html"><img src="Assets/images/naane_varuven/naane varuven.jpg" alt="img1"id="img1"></a>
+       <div class="movies">
+       <!-- <a href="Pages/movie_pages/naane_varuven.html"><img src="Assets/images/naane_varuven/naane varuven.jpg" alt="img1"id="img1"></a>
         <a href="Pages/movie_pages/petta.html"> <img src="Assets/images/petta/petta.jpg" alt="img2" id="img1"> </a>
         <a href="Pages/movie_pages/varisu.html"> <img src="Assets/images/Varisu/Varisu.jpg" alt="img3" id="img1"></a>
         <a href="Pages/movie_pages/Thiruchitrambalam.html"><img src="Assets/images/Thiruchitrambalam/Thiruchitrambalam.jpg" alt="img4"id="img1"></a>
         <a href="Pages/movie_pages/Vikram.html"><img src="Assets/images/vikram/vikram.jpg" alt="img5" id="img1"></a>
         <a href="Pages/movie_pages/vaathi.html"><img src="Assets/images/Vaathi/vaathi_20221024.jpg" id="img1" alt="img6"></a>
-        <a href="Pages/movie_pages/poniyan_selvan.html"><img src="Assets/images/poniyan_selvan/poniyan selvan.jpg" id="img1"alt="img7"></a>
+         <a href="Pages/movie_pages/poniyan_selvan.html"><img src="Assets/images/poniyan_selvan/poniyan selvan.jpg" id="img1"alt="img7"></a> --> -->
       </div>
 
 
-    <div class="movies">
+   <div class="movies2"> 
 
-      <a href="Pages/movie_pages/thunivu.html"> <img src="Assets/images/Thunivu/Thunivu.jpg" alt="img8" id="img1"></a>
+      <!-- <a href="Pages/movie_pages/thunivu.html"><img src="Assets/images/Thunivu/Thunivu.jpg" alt="img8" id="img1"></a>
       <a href="Pages/movie_pages/vada_chennai.html"><img src="Assets/images/vada_chennai/vadachennai.jpg" alt="img9" id="img1"></a>
       <a href="Pages/movie_pages/jailer.html"><img src="Assets/images/Jailer/jailer.jpg" alt="img10" id="img1"></a>
       <a href="Pages/movie_pages/love_today.html"><img src="Assets/images/love_today/love-today.jpg" alt="img11" id="img1"></a>
       <a href="Pages/movie_pages/master.html"><img src="Assets/images/master/Master.jpg" alt="img12" id="img1"></a>
       <a href="Pages/movie_pages/Asuran.html"><img src="Assets/images/Asuran/Asuran.jpg" alt="img13" id="img1">
-        <a href="Pages/movie_pages/Kaithi.html"><img src="Assets/images/kaithi/kaithi.jpg" alt="img14" id="img1"></a>
+      <a href="Pages/movie_pages/Kaithi.html"><img src="Assets/images/kaithi/kaithi.jpg" alt="img14" id="img1"></a> -->
 
-    </div> -->
+    </div> 
 
     <div class="now">
       <h2>Tamil Dubbed movies <button>Now showing</button></h2>
@@ -123,35 +123,40 @@
         let h5_card_title;
         let p_card_text;
           
-        const movies_img =["Assets/images/naane_varuven/naane varuven.jpg","Assets/images/petta/petta.jpg"]
+        const movies_img =["Assets/images/naane_varuven/naane varuven.jpg","Assets/images/petta/petta.jpg","Assets/images/Varisu/Varisu.jpg","Assets/images/Thiruchitrambalam/Thiruchitrambalam.jpg","Assets/images/vikram/vikram.jpg","Assets/images/Vaathi/vaathi_20221024.jpg","Assets/images/poniyan_selvan/poniyan selvan.jpg"]
+        const movies2_img = ["Assets/images/Thunivu/Thunivu.jpg","Assets/images/vada_chennai/vadachennai.jpg","Assets/images/Jailer/jailer.jpg","Assets/images/love_today/love-today.jpg","Assets/images/master/Master.jpg","Assets/images/Asuran/Asuran.jpg","Assets/images/kaithi/kaithi.jpg"]
+        const dubmovies_img =["Assets/images/endgame/endgame.jpg","Assets/images/avatar/avatar.jpg","Assets/images/kgf2/kgf2-.jpg","Assets/images/no_way_home/no-way-home.jpg","Assets/images/kantara/Kantara.jpg","Assets/images/sita_ramam/sitaramam.jpg"]
+       
 
-         //  <div class="col"> </div>
-         div_col = document.createElement("div");
-        div_col.setAttribute("class", "all");
-        console.log(div_all);
-
-        //  <div class="card"> </div>
-        div_card = document.createElement("div");
-        div_card.setAttribute("class","movies");
-        div_movies.prepend(div_all);
-
-
-        
-
-
-    for(i=1; i<=2; i++){
+    for(i=6; 0<=i; i--){
         //  <img src="" class="card-img-top" alt=""/>
         img_movies = document.createElement("img");
         img_movies.setAttribute("src", movies_img[i]);
         img_movies.setAttribute("alt", "image_placeholder");
-        img_movies.setAttribute("class", "movies");
-        div_movies.append(img_movies);
+        img_movies.setAttribute("id","img1")
+        document.querySelector(".movies").prepend(img_movies)
       }
+   for(i=6; 0<=i; i--){
+    img_movies2 = document.createElement("img");
+    img_movies2.setAttribute("src", movies2_img[i]);
+    img_movies2.setAttribute("alt", "image_placeholder");
+    img_movies2.setAttribute("id","img1")
+    document.querySelector(".movies2").prepend(img_movies2)
+
+}
 
 
-        div_dubmovies = document.createElement("div");
-        div_dubmovies.setAttribute("class","dubmovies");
-        div_dubmovies.append(div_all);
+  for(i=6;0<=i; i++){
+    img_dubmovies = document.createElement("img");
+    img_dubmovies.setAttribute("src", dubmovies_img[i]);
+    img_dubmovies.setAttribute("alt", "image_placeholder");
+    img_dubmovies.setAttribute("id","img1")
+    document.querySelector(".dubmovies").prepend(img_dubmovies)
+
+}
+        // div_dubmovies = document.createElement("div");
+        // div_dubmovies.setAttribute("class","dubmovies");
+        // div_dubmovies.append(div_all);
       // for(i=0;i<=6;i++)
       //   //  <img src="" class="card-img-top" alt=""/>
       //   img_dubmovies = document.createElement("img");
