@@ -15,16 +15,31 @@
     <h1>Lets starts! to book your tickets</h1>
    
     <div class="input">
-        <h2>Log in</h2>
+        <h2>Sign up</h2>
+
+        <div class="email">
+            <input required type="text" placeholder="Enter your name"  required id="emailid"/>
+            <label>Name</label>
+        </div>
+
+        <div class="email">
+            <input required type="number" placeholder="Enter your phone number"  required id="emailid"/>
+            <label>Number</label>
+        </div>
 
     <div class="email">
-        <input required type="email" placeholder="Enter your email or phone"  id="emailid"/>
+        <input required type="email" placeholder="Enter your email"  required  id="emailid"/>
         <label>Email</label>
     </div>
     
     <div class="email">
-        <input required type="password" placeholder="Enter your password" id="password"/>
+        <input required type="password" placeholder="Enter your password"  required id="password"/>
         <label>Password</label>
+    </div>
+
+    <div class="email">
+        <input required type="password" placeholder="Confirm your password"  required id="emailid"/>
+        <label>Confirm </label>
     </div>
        
     <div class="check">
@@ -43,11 +58,19 @@
    <script>
     // cammel case 
 
+    
 
     function submit(){
 
         const emailid = (document.getElementById("emailid") .value);
         const password = (document.getElementById("password") .value);
+
+        if(password === ""){
+        alert("password poduda ***");
+        }
+        if(email ===""){
+            alert("email podua ***")
+        }
 
         console.log(emailid)
         console.log(password)
@@ -56,7 +79,7 @@
 
         localStorage.setItem("user_password" , password)
 
-        window.location.href="profilesettings.html"
+        window.location.href="index.html"
     }
     
      

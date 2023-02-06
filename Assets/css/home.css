@@ -39,10 +39,12 @@ a  button {
     padding: 20px;
     width: 100px;
     height: 60px;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 10px;
     background-color:black;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     display: inline;
 }
 a button:hover{
