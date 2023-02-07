@@ -38,7 +38,7 @@
     </div>
 
     <div class="email">
-        <input required type="password" placeholder="Confirm your password"  required id="emailid"/>
+        <input required type="password" placeholder="Confirm your password"  required id="confirm_password"/>
         <label>Confirm </label>
     </div>
        
@@ -64,12 +64,14 @@
 
         const emailid = (document.getElementById("emailid") .value);
         const password = (document.getElementById("password") .value);
+        const confirm_password = (document.getElementById("confirm_password") .value);
+        
 
-        if(password === ""){
-        alert("password poduda ***");
+        if(password !== confirm_password){
+        alert("enter password was worng");
         }
         if(email ===""){
-            alert("email podua ***")
+            alert("please enter your email")
         }
 
         console.log(emailid)
