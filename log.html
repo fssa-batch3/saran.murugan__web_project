@@ -49,15 +49,27 @@
         const emailid = (document.getElementById("emailid") .value);
         const password = (document.getElementById("password") .value);
 
-        console.log(emailid)
-        console.log(password)
+        // console.log(emailid)
+        // console.log(password)
 
-        localStorage.setItem("user_email" , emailid );
+        // localStorage.setItem("user_email" , emailid );
 
-        localStorage.setItem("user_password" , password)
+        // localStorage.setItem("user_password" , password)
 
-        window.location.href="profilesettings.html"
+        // window.location.href="profilesettings.html"
     }
+    
+
+
+    let user_data={
+            "email":emailid, 
+            "password":password       
+}
+    let arr= localStorage.getItem("arr")
+        ?JSON.parse(localStorage.getItem("arr")):
+         [];
+            arr.push(user_data)
+        localStorage.setItem("arr",JSON.stringify(arr))
     
      
    </script>
