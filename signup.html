@@ -60,39 +60,35 @@
     
         function submit() {
 
-            const emailid = (document.getElementById("emailid").value);
-            const password = (document.getElementById("password").value);
-            // const confirm_password = (document.getElementById("confirm_password").value);
+            const number = document.getElementById("number").value;
+            const name = document.getElementById("name").value;
+            const emailid = document.getElementById("emailid").value;
+            const password = document.getElementById("password").value;
+            const confirm_password = document.getElementById("confirm_password").value;
 
 
             if (password != confirm_password) {
                 alert("enter password was worng");
             } else {
-                alert("password is correct")
-            }
-            if (email !== "") {
-                alert("please enter your email")
-            }
-
-            // console.log(emailid)
-            // console.log(password)
-
-            // localStorage.setItem("user_email", emailid);
-            // localStorage.setItem("user_password", pa
-
-            window.location.href = "index.html"
-
-            let user_data = {
+                let user_data = {
                 "email": emailid,
-                "password": password
+                "password": password,
+                "name":name,
+                "number":number,
             }
-            let arr = localStorage.getItem("arr")
-                ? JSON.parse(localStorage.getItem("arr")) :
-                [];
-            arr.push(user_data)
-            localStorage.setItem("arr", JSON.stringify(arr))
 
+            let arr = localStorage.getItem("arr")// ARR = FALSE
 
+                ? JSON.parse(localStorage.getItem("arr")) //IF CRT            // true
+                :  [];//IF WRONG   // ARR= []                                 //false
+
+            arr.push(user_data) //arr =[{}]// arr =[{},{}]
+
+            localStorage.setItem("arr", JSON.stringify(arr))  // arr= key...."[{}]"
+
+            window.location.href = "log.html"
+                // alert("password is correct")
+            }
         }
 
     </script>

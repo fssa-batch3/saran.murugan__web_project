@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head lan="eng">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="Assets/css/profilesettings.css">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="main1">
+
+        <div class="head">
+            <p id="name" style="color:white;" ></p>
+            
+            <img src="Assets/images/logo/edit.png" alt="image">
+        </div>
+
+        <div class="main">
+            <div class="email">
+                <h3>Email:</h3> <p id="email" style="color:white;" ></p>
+            </div>
+
+            <div class="password">
+                <h3>Phone:</h3> <p id="number" ></p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="main2">
+
+        <h1>Personal details</h1>
+
+        <!-- <div class="personal-detail">
+            <h3>Name</h3><input type="text"  id="name">
+        </div> -->
+        <div class="personal-detail">
+            <h3>Birthdate(optional)</h3><input type="text" value="9.11.2004">
+        </div>
+
+        <div class="personal-detail">
+            <h3>Identity(Optional)</h3>
+            <div class="gender">
+                <button>Male</button><button>Female</button>
+            </div>
+        </div>
+        <div class="personal-detail">
+            <h3>Age (optional)</h3><input type="text" value="18">
+        </div>
+        
+        <div class="edit">
+        <button>Edit</button>
+        <button>Save</button>
+        </div>
+    </div>
+
+
+    <script>
+
+   let arr = JSON.parse(localStorage.getItem("profile_details"));
+   document.getElementById("name").innerText = arr["name"]
+   document.getElementById("email").innerText = arr["email"]
+   document.getElementById("number").innerText = arr["number"]
+
+
+
+
+
+
+
+    </script>
+
+  
+</body>
+
+</html>

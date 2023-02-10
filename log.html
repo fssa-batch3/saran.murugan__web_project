@@ -32,7 +32,7 @@
     <h4>Terms and conditions</h4>
     </div>
 
-    <button onclick="submit()">Submit</button> 
+    <button onclick="check()">Submit</button> 
 
     
    
@@ -44,34 +44,40 @@
     // cammel case 
 
 
-    function submit(){
-
-        const emailid = (document.getElementById("emailid") .value);
-        const password = (document.getElementById("password") .value);
-
-        // console.log(emailid)
-        // console.log(password)
-
-        // localStorage.setItem("user_email" , emailid );
-
-        // localStorage.setItem("user_password" , password)
-
-        // window.location.href="profilesettings.html"
+   
+    function check(){
+        let email=document.getElementById("emailid").value
+        let pass=document.getElementById("password").value
+        let details=JSON.parse(localStorage.getItem("arr"))
+        let datas={
+            "email":email,
+            "password":pass
+        }
+        let res;
+        details.find(element=>{
+            if(element["email"]==email && element["password"]==pass){
+                 localStorage.setItem("profile_details",JSON.stringify(element))
+                 console.log(element);
+                return res=1;
+            }
+            else{
+                return res=0;
+            }
+        })
+        if(res==1){
+            // alert("logged in")
+            window.location.href="profile.html"
+        }
+        else{
+            alert("error")
+        }
     }
-    
 
 
-    let user_data={
-            "email":emailid, 
-            "password":password       
-}
-    let arr= localStorage.getItem("arr")
-        ?JSON.parse(localStorage.getItem("arr")):
-         [];
-            arr.push(user_data)
-        localStorage.setItem("arr",JSON.stringify(arr))
-    
-     
+
+
+
+         
    </script>
 
 </body>

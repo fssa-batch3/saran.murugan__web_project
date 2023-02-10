@@ -1,0 +1,34 @@
+.main{
+    background-color: black;
+    width:30%;
+    height: 890px;
+    /* display: none; */
+    transform: translateX(-500px);
+    
+}
+.content{
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin-left: 60px;
+    
+}
+.hide{
+    /* animation-name: move; */
+    transform: translateX(0px);
+    transition: 3s;
+    
+}
+@keyframes move {
+    0%{transform: translateX(-500px);}
+    100%{transform: translateX(0px);}
+    
+}
+.content h3{
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.content h3:hover{
+    color: yellow;
+}

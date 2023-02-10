@@ -1,53 +1,124 @@
-*{
-    padding: 0px;
-    margin: 0px;
+body{
+    background-image: linear-gradient(rgb(4,9,30,0.7),rgb(4,9,30,0.7)),url(../images/logo/profile_banner.jpg);
+    /* mix-blend-mode: darken; */
 }
-header{
-    background-color:#edd605;
-    height: 100px;
-    display: flex;
-    align-items: center;
-}
-
-header img{
-    width: 70px;
-    margin-bottom:20px;
-    bottom: 20px;
-    height: 70px;
-}
-.name{
-    background-image: url(../images/logo/profilesettings.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 550px;
+.main1{
+    background-color:#181818;
+    width:70%;
+    height: 200px;
+    margin-left: 15%;
     margin-top: 100px;
-    margin-left: 500px;
     border-radius: 10px;
-    margin-right: 150px;
-    padding: 30px 90px;
+    
+}
+.head img{
+    width:25px;
+    height: 25px;
+    margin-top: 10px;
+}
+.head{
     display: flex;
-    flex-direction: column;
-    justify-content:space-around;
+}
+.head p{
+      background-color:#181818;
+      border: none;
+      font-size: 30px;
+      color: #d2d2d2;
+      margin-left: 30px;
+      width: 23%;
+      margin-top: 2%;
+}
+.main{
+    display: flex;
+    gap: 80px;
+    margin-top: 40px;
+}
+.main h3{
+    color:#d2d2d2;
+    font-family:sans-serif;
+    font-size: 18px;
+}
+.email p{
+    font-size: 18px;
+    border: none;
+    color: #d2d2d2;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.password p{
+    font-size: 18px;
+    border: none;
+    color: #d2d2d2;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.main2, .main3{
+    background-color:#181818;
+    width:40%;
+    height: 500px;
+    margin-left: 25%;
+    margin-top: 50px;
+    padding-left: 200px;
+}
+.email{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin-left: 100px;
+}
+.password{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 100px;
+}
+#email{
+    width: 200px;
+    height: 20px;
+    margin-left: 20px;
+}
+.main2{
+    background-color:#181818;
+    width:57%;
+    height: 400px;
+    margin-left: 15%;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+.main2 h1{
+    color:#d2d2d2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.personal-detail{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-.name p{
-    font-family: sans-serif;
+.personal-detail h3{
+    color:#d2d2d2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-input{
-    padding: 5px;
-    border-radius: 5px;
-}
-.save {
-    display: flex;
-    justify-content: space-evenly;
-}
- button{
-    background-color: black;
-    color: white;
-    width:100px;
-    padding: 5px;
+.personal-detail input{
+    height: 40px;
     border-radius: 10px;
-    margin-left: 10px;
+    width:300px;
+    margin-right:200px;
+}
+.gender{
+    display: flex;
+    justify-content:space-between;
+    margin-right: 380px;
+    gap: 20px;
+}
+.edit button{
+    background-color: #edd605;
+    color:black;
+    padding: 10px;
+    width:100px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.edit{
+    display: flex;
+    margin-left: 400px;
     
 }
