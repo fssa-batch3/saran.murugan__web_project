@@ -62,7 +62,8 @@ select {
     
 }
 option{
-    font-size: 35px;
+    font-size: 15px;
+
 }
 #menu{
     width: 50px;
@@ -71,11 +72,11 @@ option{
 }
 .image-slider{
     width: 80%;
-    height: 450px;
+    height: 500px;
     margin: 50px auto;
     box-shadow: -1px 1px 10px #00000021;
     border-radius: 30px;
-     overflow: hidden; 
+    overflow: hidden; 
 }
 .image-slider figure img{
     float: left;

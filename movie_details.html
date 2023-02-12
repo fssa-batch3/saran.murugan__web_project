@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Assets/css/movie_pages.css">
+\
+</head>
+<body>
+
+    <header>
+        <img src="../../Assets/images/logo/logo.png"alt="Error image">
+      </header>
+
+      <div class="content">
+
+        <div class="mainimg">
+
+        </div>
+
+    
+    <div class="time">
+
+    </div>
+
+      </div>
+
+    <script>
+        const name_list = [
+            {
+                name: "Asuran",
+                language:"Tamil",
+                frame: "2D",
+                movie_time:"2h 44mins - UA - jan18",
+                movie_type:"Action-drama-fantacy",
+                Description_head:"About movie",
+                Description: "The teenage son of a farmer frmo an underprivileged caste kills a rich, upper caste landlord. Will the farmer, a loving father and a pacifist by heart, be able to save his hot-blood son? ",
+                Cast : "cast",
+                Actor_name:"Dhanush",
+                Actress_name:"Manju warrior",
+                Actor_name:"Teejay Arunachalam",
+                cast_category:"Actor",
+                cast_category:"Actress",
+                cast_category:"Actor",
+                crew : "crew",
+                crew_name:"Vetrimaran",
+                crew_name:"G V Prakash",
+                crew_name:"S thaanu",
+                crew_category:"Director",
+                crew_category:"Music Director",
+                crew_category:"Producer",
+            },
+            {
+                name: "Thunivu",
+                language:"Tamil",
+                frame: "2D",
+                movie_time:"2h 50mins - UA - jan11",
+                movie_type:"Action-drama-thriller",
+                Description_head:"About movie",
+                Description: "Thunivu is a Tamil movie starring Ajith Kumar in a prominent role. It is directed by H. Vinoth forming part of the crew.",
+                Cast : "cast",
+                Actor_name:"Ajith kumar",
+                Actress_name:"Manju warrior",
+                Actor_name:"Samuthirakani",
+                cast_category:"Actor",
+                cast_category:"Actress",
+                cast_category:"Actor",
+                crew : "crew",
+                crew_name:"H.vinoth",
+                crew_name:"M.Ghibran",
+                crew_name:"Zee studios",
+                crew_category:"Director",
+                crew_category:"Music Director",
+                crew_category:"Producer",
+            },
+            
+        ]
+
+                const url = window.location.search;                // ?name=Arun
+                const urlParams = new URLSearchParams(url);        // converting string into key value pair
+                const username = urlParams.get("name")             // return value of the "name" key
+                console.log(urlParams);
+
+
+
+                // Array.find(  function(variableName){} )
+                const user = name_list.find(
+                        function (userObj) {  //   userObj = {name : "Bala", "image": {}, "text": ""}
+
+                                const name = userObj["name"];
+
+                                // username = "Bala"
+                                // name =     "Bala"
+                                if (username === name) {
+                                        return true;
+                                } else {
+                                        return false;
+                                }
+
+                        }
+                )
+
+                // console.log(user)
+                // console.log(user["name"])
+                // console.log(user["image"])
+                // console.log(user["text"])
+
+
+                 mainimg= document.querySelector(".mainimg");
+                 time = document.querySelector(".time");
+                 time = document.createElement("h2");
+                 time.innerText = user["text"];
+                 time.innerText="HI";
+                 time = document.createElement("p");
+                 time = document.createElement("h4");
+                 document.querySelector(".mainimg").append(time)
+
+
+
+                // const user_description = document.getElementById("description");
+                // user_description.innerText = user["text"]
+
+                // const username_h4 = document.getElementById("username");
+                // username_h4.innerText = user["name"]
+
+
+                // const user_avatar = document.getElementById("avatar");
+                // user_avatar.setAttribute("src", user["image"]["source"])
+                // user_avatar.setAttribute("alt", user["image"]["alt"])
+
+    </script>
+</body>
+</html>

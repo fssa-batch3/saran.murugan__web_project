@@ -25,17 +25,17 @@
             </div>
 
             <div class="email">
-                <input required type="number" placeholder="Enter your phone number" required id="number" />
+                <input required type="text" inputmode="numeric" placeholder="Enter your phone number" required="true" id="number" />
                 <label>Number</label>
             </div>
 
             <div class="email">
-                <input required type="email" placeholder="Enter your email" required id="emailid" />
+                <input required type="email" placeholder="Enter your email" required="true" id="emailid" />
                 <label>Email</label>
             </div>
 
             <div class="email">
-                <input required type="password" placeholder="Enter your password" required id="password" />
+                <input required type="password" title="please enter your password" placeholder="Enter your password" required id="password" />
                 <label>Password</label>
             </div>
             <div class="email">
@@ -57,7 +57,7 @@
     </div>
 
     <script>
-    
+
         function submit() {
 
             const number = document.getElementById("number").value;

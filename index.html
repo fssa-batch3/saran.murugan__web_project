@@ -23,7 +23,7 @@
       <option>Villupuram</option>
       <option>Madurai</option>
       <option>Ramanathapuram</option>
-      <option>Coimbature</option>
+      <option>Coimbatore</option>
       <option>Thirunelveli</option>
       <option>Kallakuruchi</option>
       <option>Kanyakumari</option>
@@ -109,7 +109,7 @@
       // const dubmovies_img = ["Assets/images/endgame/endgame.jpg", "Assets/images/avatar/avatar.jpg", "Assets/images/kgf2/kgf2-.jpg", "Assets/images/no_way_home/no-way-home.jpg", "Assets/images/kantara/Kantara.jpg", "Assets/images/sita_ramam/sitaramam.jpg"]
 
       const movies = [
-        {
+        {"name": "Naanevaruven",
           movies1: {
             "source": "Assets/images/naane_varuven/naane varuven.jpg",
             "alt": "movie image"
@@ -118,6 +118,7 @@
         },
 
         {
+          "name": "Petta",
           movies1: {
             "source": "Assets/images/petta/petta.jpg",
             "alt": "movie image"
@@ -125,6 +126,7 @@
         },
 
         {
+          "name": "Varisu",
           movies1: {
             "source": "Assets/images/Varisu/Varisu.jpg",
             "alt": "movie image"
@@ -132,6 +134,7 @@
         },
 
         {
+          "name": "Thiruchitrambalam",
           movies1: {
             "source": "Assets/images/Thiruchitrambalam/Thiruchitrambalam.jpg",
             "alt": "movie image"
@@ -139,6 +142,7 @@
         },
 
         {
+          "name": "Vikram",
           movies1: {
             "source": "Assets/images/vikram/vikram.jpg",
             "alt": "movie image"
@@ -146,6 +150,7 @@
         },
 
         {
+          "name": "vathi",
           movies1: {
             "source": "Assets/images/Vaathi/vaathi_20221024.jpg",
             "alt": "movie image"
@@ -153,6 +158,7 @@
         },
 
         {
+          "name": "PoniyanSelvan",
           movies1: {
             "source": "Assets/images/poniyan_selvan/poniyan selvan.jpg",
             "alt": "movie image"
@@ -171,7 +177,11 @@
           img_movies.setAttribute("src", movies[i]["movies1"]["source"]);
           img_movies.setAttribute("alt", "image_placeholder");
           img_movies.setAttribute("id", "img1")
-          document.querySelector(".movies").prepend(img_movies)
+          a = document.createElement("a");
+            //  url.html?key=value&key=value
+            a.setAttribute("href", "./movie_details.html?name=" + movies[i]["name"]);
+            a.append(img_movies)
+          document.querySelector(".movies").prepend(a)
 
         }
       
@@ -180,6 +190,7 @@
 
       const movie = [
         {
+          name:"kaithi",
           movies2: {
             "source": "Assets/images/kaithi/kaithi.jpg",
             "alt": "movie image"
@@ -188,6 +199,7 @@
         },
 
         {
+          name:"Asuran",
           movies2: {
             "source": "Assets/images/Asuran/Asuran.jpg",
             "alt": "movie image"
@@ -195,6 +207,7 @@
         },
 
         {
+          name:"Master",
           movies2: {
             "source": "Assets/images/master/Master.jpg",
             "alt": "movie image"
@@ -202,6 +215,7 @@
         },
 
         {
+          name:"Lovetoday",
           movies2: {
             "source": "Assets/images/love_today/love-today.jpg",
             "alt": "movie image"
@@ -209,6 +223,7 @@
         },
 
         {
+          name:"Jailer",
           movies2: {
             "source": "Assets/images/Jailer/jailer.jpg",
             "alt": "movie image"
@@ -216,6 +231,7 @@
         },
 
         {
+          name:"Vadachennai",
           movies2: {
             "source": "Assets/images/vada_chennai/vadachennai.jpg",
             "alt": "movie image"
@@ -223,6 +239,7 @@
         },
 
         {
+          name:"Thinuvu",
           movies2: {
             "source": "Assets/images/Thunivu/Thunivu.jpg",
             "alt": "movie image"
@@ -239,70 +256,171 @@
           img_movies2.setAttribute("src", movie[i]["movies2"]["source"]);
           img_movies2.setAttribute("alt", "image_placeholder");
           img_movies2.setAttribute("id", "img1");
-          document.querySelector(".movies2").prepend(img_movies2)
+          a = document.createElement("a");
+            //  url.html?key=value&key=value
+            a.setAttribute("href", "./movie_details.html?name=" + movie[i]["name"]);
+            a.append(img_movies2)
+          document.querySelector(".movies2").prepend(a)
         }
       
 
 
-        const dubmovie = [
-        {
-          movies1: {
-            "source": "Assets/images/sita_ramam/sitaramam.jpg",
-            "alt": "movie image"
-          },
+      //   const dubmovie = [
+      //   {
+      //     "name": "Sitaraman",
+      //     movies1: {
+      //       "source": "Assets/images/sita_ramam/sitaramam.jpg",
+      //       "alt": "movie image"
+      //     },
 
-        },
+      //   },
 
-        {
-          movies1: {
-            "source": "Assets/images/kantara/Kantara.jpg",
-            "alt": "movie image"
-          }
-        },
+      //   {
+      //     "name": "Kantara",
+      //     movies1: {
+      //       "source": "Assets/images/kantara/Kantara.jpg",
+      //       "alt": "movie image"
+      //     }
+      //   },
 
-        {
-          movies1: {
-            "source": "Assets/images/no_way_home/no-way-home.jpg",
-            "alt": "movie image"
-          }
-        },
+      //   {
+      //     "name": "Sitaraman",
+      //     movies1: {
+      //       "source": "Assets/images/no_way_home/no-way-home.jpg",
+      //       "alt": "movie image"
+      //     }
+      //   },
 
-        {
-          movies1: {
-            "source": "Assets/images/kgf2/kgf2-.jpg",
-            "alt": "movie image"
-          }
-        },
+      //   {
+      //     "name": "Sitaraman",
+      //     movies1: {
+      //       "source": "Assets/images/kgf2/kgf2-.jpg",
+      //       "alt": "movie image"
+      //     }
+      //   },
 
-        {
-          movies1: {
-            "source":  "Assets/images/avatar/avatar.jpg",
-            "alt": "movie image"
-          }
-        },
+      //   {
+      //     "name": "Sitaraman",
+      //     movies1: {
+      //       "source":  "Assets/images/avatar/avatar.jpg",
+      //       "alt": "movie image"
+      //     }
+      //   },
 
-        {
-          movies1: {
-            "source": "Assets/images/endgame/endgame.jpg",
-            "alt": "movie image"
-          }
-        }
+      //   {
+      //     "name": "Sitaraman",
+      //     movies1: {
+      //       "source": "Assets/images/endgame/endgame.jpg",
+      //       "alt": "movie image"
+      //     }
+      //   }
 
-      ]
+      // ]
 
 
-      for (i = 0; i < dubmovie.length; i++) {
+      // for (i = 0; i < dubmovie.length; i++) {
         
-         const dub = dubmovie[i];
-          console.log(dub)
+      //    const dub = dubmovie[i];
+      //     console.log(dub)
 
-        img_dubmovies = document.createElement("img");
-        img_dubmovies.setAttribute("src", dubmovie[i]["movies1"]["source"]);
-        img_dubmovies.setAttribute("alt", "image_placeholder");
-        img_dubmovies.setAttribute("id", "img1")
-        document.querySelector(".dubmovies").prepend(img_dubmovies)
-      }
-      document.querySelector("div.all.movies.dubmovies").append(div_all);
+      //   img_dubmovies = document.createElement("img");
+      //   img_dubmovies.setAttribute("src", dubmovie[i]["movies1"]["source"]);
+      //   img_dubmovies.setAttribute("alt", "image_placeholder");
+      //   img_dubmovies.setAttribute("id", "img1")
+      //   document.querySelector(".dubmovies").prepend(img_dubmovies)
+      // }
+      // document.querySelector("div.all.movies.dubmovies").append(div_all);
+
+
+        // const name_list = [
+        //     {
+        //         "name": "Asuran",
+        //         "image": { source: "Assets/images/Asuran/Asuran.jpg", alt: "avatar of Asuran" },
+        //         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Est unde quas laborum accusantium molestias velit mollitia alias quia earum repudiandae odio molestiae modi possimus aut, nisi magni quos.Dicta, cupiditate."
+        //     },
+        //     {
+        //         "name": "Thunivu",
+        //         "image": { source: "Assets/images/Thunivu/Thunivu.jpg", alt: "avatar of Ajith" },
+        //         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Est unde quas laborum accusantium molestias velit mollitia alias quia earum repudiandae odio molestiae modi possimus aut, nisi magni quos.Dicta, cupiditate."
+        //     },
+        //     {
+        //         "name": "Bala",
+        //         "image": { source: "https://ui-avatars.com/api/?name=Bala", alt: "avatar of Bala" },
+        //         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Est unde quas laborum accusantium molestias velit mollitia alias quia earum repudiandae odio molestiae modi possimus aut, nisi magni quos.Dicta, cupiditate."
+        //     },
+        //     {
+        //         "name": "Deva",
+        //         "image": { source: "https://ui-avatars.com/api/?name=Deva", alt: "avatar of Deva" },
+        //         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Est unde quas laborum accusantium molestias velit mollitia alias quia earum repudiandae odio molestiae modi possimus aut, nisi magni quos.Dicta, cupiditate."
+        //     }
+        // ]
+        // let div_col;
+        // let div_card;
+        // let img_card;
+        // let div_card_body;
+        // let h5_card_title;
+        // let a;
+        // let p_card_text;
+
+        // const name_list_length = name_list.length
+
+        // for (let i = 0; i < name_list_length; i++) {
+
+        //     const user = name_list[i]
+
+        //     console.log(user["name"])
+        //     console.log(user["text"])
+        //     console.log(user["image"])
+
+        //     // console.log("hello world")
+
+        //     //  <div class="col"> </div>
+        //     div_col = document.createElement("div");
+        //     div_col.setAttribute("class", "col");
+        //     console.log(div_col);
+
+        //     // //  <div class="card"> </div>
+        //     div_card = document.createElement("div");
+        //     div_card.setAttribute("class", "card");
+        //     div_col.append(div_card);
+
+        //     //  <img src="" class="card-img-top" alt=""/>
+        //     img_card = document.createElement("img");
+        //     img_card.setAttribute("src", user["image"]["source"]);
+        //     img_card.setAttribute("alt", user["image"]["alt"]);
+        //     img_card.setAttribute("class", "card-img-top");
+        //     div_card.append(img_card);
+
+        //     //  <div class="card-body"> </div>
+        //     div_card_body = document.createElement("div");
+        //     div_card_body.setAttribute("class", "card-body");
+        //     div_card.append(div_card_body);
+
+
+        //     //  <h5 class="card-title"> </h5>
+        //     h5_card_title = document.createElement("h5");
+        //     h5_card_title.setAttribute("class", "card-title");
+
+        //     // <a href="./details.html"> </a>
+        //     a = document.createElement("a");
+        //     //  url.html?key=value&key=value
+        //     a.setAttribute("href", "./movie_details.html?name=" + user["name"]);
+        //     a.innerText = user.name;
+        //     // console.log(a)
+        //     h5_card_title.append(a);
+            
+        //     div_card_body.append(h5_card_title);
+
+
+        //     //  <p class="card-text"> </p>
+        //     p_card_text = document.createElement("p");
+        //     p_card_text.setAttribute("class", "card-text");
+        //     p_card_text.innerText = user.text;
+        //     div_card_body.append(p_card_text);
+
+        //     document.querySelector(".movies").append(div_col);
+
+        // }
 
     </script>
 
