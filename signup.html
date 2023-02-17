@@ -15,31 +15,32 @@
     <div class="main">
 
         <h1>Lets starts! to book your tickets</h1>
+    
 
         <div class="input">
             <h2>Sign up</h2>
-
+            <form>
             <div class="email">
-                <input required type="text" placeholder="Enter your name" required="email" id="name" />
+                <input required type="text" placeholder="Enter your name"  id="name" />
                 <label>Name</label>
             </div>
 
             <div class="email">
-                <input required type="text" inputmode="numeric" placeholder="Enter your phone number" required="true" id="number" />
+                <input required type="text" inputmode="numeric" placeholder="Enter your phone number"  id="number" />
                 <label>Number</label>
             </div>
 
             <div class="email">
-                <input required type="email" placeholder="Enter your email" required="true" id="emailid" />
+                <input  type="email" placeholder="Enter your email" required="true" id="emailid" />
                 <label>Email</label>
             </div>
 
             <div class="email">
-                <input required type="password" title="please enter your password" placeholder="Enter your password" required id="password" />
+                <input required type="password" pattern=[8]  title=" password must have  8 charecters " placeholder="Enter your password" id="password" />
                 <label>Password</label>
             </div>
             <div class="email">
-                <input required type="password" placeholder="Confirm your password" required id="confirm_password" />
+                <input required type="password" placeholder="Confirm your password" pattern=[8] id="confirm_password" />
                 <label>Confirm </label>
             </div>
 
@@ -48,7 +49,8 @@
                 <h4>Terms and conditions</h4>
             </div>
 
-            <button onclick="submit()">Submit</button>
+            <button>Submit</button>
+        </form>
 
 
 
@@ -58,6 +60,13 @@
 
     <script>
 
+    
+
+let form=document.querySelector("form");
+form.addEventListener("submit",e=>{
+    e.preventDefault();
+    submit();
+})
         function submit() {
 
             const number = document.getElementById("number").value;
@@ -67,17 +76,23 @@
             const confirm_password = document.getElementById("confirm_password").value;
 
 
+            let res;
+
             if (password != confirm_password) {
-                alert("enter password was worng");
-            } else {
+                alert("password was not match");
+            } 
+            
+            else {
+                res=1;
+
                 let user_data = {
                 "email": emailid,
-                "password": password,
+                "password": xpassword,
                 "name":name,
-                "number":number,
+                "number":number
             }
 
-            let arr = localStorage.getItem("arr")// ARR = FALSE
+            let arr =JSON.parse( localStorage.getItem("arr"))// ARR = FALSE
 
                 ? JSON.parse(localStorage.getItem("arr")) //IF CRT            // true
                 :  [];//IF WRONG   // ARR= []                                 //false
@@ -86,7 +101,11 @@
 
             localStorage.setItem("arr", JSON.stringify(arr))  // arr= key...."[{}]"
 
-            window.location.href = "log.html"
+
+            if (res==1){
+                window.location.href = "log.html"
+
+            }
                 // alert("password is correct")
             }
         }

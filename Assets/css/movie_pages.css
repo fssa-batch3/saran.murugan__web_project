@@ -106,13 +106,9 @@ hr{
     margin-left: 50px;
 }
 .cast{
-    display: flex;
+     display: flex;  
 }
-h1{
-    margin-left: 40px;
-    margin-top: 50px;
-    color: white;
-}
+
 .cast img{
     width:180px;
     height: 180px;
@@ -120,12 +116,20 @@ h1{
     margin-top: 40px;
     border-radius: 200px;
 }
-.castname{
-    display: flex;
-}
+
 .castname h2{
   padding-left: 140px;
   font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.cast_head h1{
+    color: white;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.crew_head h1{
+    color: white;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 /* .casteh h2{
     color:white;
@@ -133,9 +137,17 @@ h1{
 .casteh p{
      color:white;
 }  */
-.cast h2{
+/* .cast h2{
     color:white;
     text-align: center;
+} */
+.casteh h2{
+    text-align: center;
+    color:white;
+}
+.creweh h2{
+    text-align: center;
+    color: white;;
 }
 .cast p{
     color:white;
@@ -143,10 +155,6 @@ h1{
 }
 .crew{
     display: flex;
-}
-.crew h2 {
-    color:white;
-    text-align: center;
 }
 .crew p{
     color:white;
@@ -175,14 +183,4 @@ iframe{
 .time h2 {
     font-size: 20px;
 }
-.time h3{
-
-}
-.time h4{
-
-}
-.time p{
-    
-}
-
 }

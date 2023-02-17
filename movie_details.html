@@ -1,135 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../Assets/css/movie_pages.css">
-\
+    <link rel="stylesheet" href="Assets/css/movie_pages.css">
 </head>
+
 <body>
 
     <header>
-        <img src="../../Assets/images/logo/logo.png"alt="Error image">
-      </header>
+        <img src="../../Assets/images/logo/logo.png" alt="Error image">
+    </header>
 
-      <div class="content">
 
-        <div class="mainimg">
-
-        </div>
-
-    
-    <div class="time">
+    <div class="mainimg">
+       
 
     </div>
 
-      </div>
+   <div class="content">
+
+
+    <div class="cast_head">
+
+    </div>
+
+    <div class="cast">
+
+    <div class="casteh">
+    </div>
+    
+
+    <div class="casteh">
+    </div>
+    
+    <div class="casteh">
+    </div>
+
+</div>
+
+<div class="crew_head">
+
+</div>
+    
+<div class="crew">
+
+
+    <div class="creweh"> 
+    </div>
+    <div class="creweh"> 
+    </div>
+    <div class="creweh"> 
+    </div>
+
+</div>
+
+
+
+
+   </div>
+
+
+
 
     <script>
-        const name_list = [
+         name_list = [
             {
                 name: "Asuran",
-                language:"Tamil",
+                language: "Tamil",
                 frame: "2D",
-                movie_time:"2h 44mins - UA - jan18",
-                movie_type:"Action-drama-fantacy",
-                Description_head:"About movie",
+                movie_time: "2h 44mins - UA - jan18",
+                movie_type: "Action-drama-fantacy",
+                book_button:"Book your tickets",
+                Description_head: "About movie",
                 Description: "The teenage son of a farmer frmo an underprivileged caste kills a rich, upper caste landlord. Will the farmer, a loving father and a pacifist by heart, be able to save his hot-blood son? ",
-                Cast : "cast",
-                Actor_name:"Dhanush",
-                Actress_name:"Manju warrior",
-                Actor_name:"Teejay Arunachalam",
-                cast_category:"Actor",
-                cast_category:"Actress",
-                cast_category:"Actor",
-                crew : "crew",
-                crew_name:"Vetrimaran",
-                crew_name:"G V Prakash",
-                crew_name:"S thaanu",
-                crew_category:"Director",
-                crew_category:"Music Director",
-                crew_category:"Producer",
+                cast_heading: "cast",
+                Actor_name: "Dhanush",
+                Actress_name: "Manju warrior",
+                Actor_name: "Teejay Arunachalam",
+                cast_category1: "Actor",
+                cast_category2: "Actress",
+                cast_category3: "Actor",
+                crew_heading: "crew",
+                crew_name1: "Vetrimaran",
+                crew_name2: "G V Prakash",
+                crew_name3: "S thaanu",
+                crew_category1: "Director",
+                crew_category2: "Music Director",
+                crew_category3: "Producer",
             },
             {
                 name: "Thunivu",
-                language:"Tamil",
+                language: "Tamil",
                 frame: "2D",
-                movie_time:"2h 50mins - UA - jan11",
-                movie_type:"Action-drama-thriller",
-                Description_head:"About movie",
+                movie_time: "2h 50mins - UA - jan11",
+                movie_type: "Action-drama-thriller",
+                Description_head: "About movie",
                 Description: "Thunivu is a Tamil movie starring Ajith Kumar in a prominent role. It is directed by H. Vinoth forming part of the crew.",
-                Cast : "cast",
-                Actor_name:"Ajith kumar",
-                Actress_name:"Manju warrior",
-                Actor_name:"Samuthirakani",
-                cast_category:"Actor",
-                cast_category:"Actress",
-                cast_category:"Actor",
-                crew : "crew",
-                crew_name:"H.vinoth",
-                crew_name:"M.Ghibran",
-                crew_name:"Zee studios",
-                crew_category:"Director",
-                crew_category:"Music Director",
-                crew_category:"Producer",
+                cast_heading: "cast",
+                cast_image1:"Assets/images/Thunivu/ajith kumar.jpg",
+                cast_image2:"Assets/images/Thunivu/manju-warrier.jpg",
+                cast_image3:"Assets/images/Thunivu/samuthirakani.jpg",
+                cast_name1: "Ajith kumar",
+                cast_name2: "Manju warrior",
+                cast_name3: "Samuthirakani",
+                cast_category1: "Actor",
+                cast_category2: "Actor",
+                cast_category3: "Actor",
+                crew_heading: "crew",
+                crew_image1:"Assets/images/Thunivu/H._Vinoth.jpg",
+                crew_image2:"Assets/images/Thunivu/M_Ghibran.jpg",
+                crew_image3:"Assets/images/Thunivu/zee.jpeg",
+                crew_name1: "H.vinoth",
+                crew_name2: "M.Ghibran",
+                crew_name3: "Zee studios",
+                crew_category1: "Director",
+                crew_category2: "Music Director",
+                crew_category3: "Producer",
             },
-            
+
         ]
 
-                const url = window.location.search;                // ?name=Arun
-                const urlParams = new URLSearchParams(url);        // converting string into key value pair
-                const username = urlParams.get("name")             // return value of the "name" key
-                console.log(urlParams);
+        const url = window.location.search;                // ?name=Arun
+        const urlParams = new URLSearchParams(url);        // converting string into key value pair
+        const username = urlParams.get("name")             // return value of the "name" key
+        console.log(username);
 
 
 
-                // Array.find(  function(variableName){} )
-                const user = name_list.find(
-                        function (userObj) {  //   userObj = {name : "Bala", "image": {}, "text": ""}
+        // Array.find(  function(variableName){} )
+        // const user = name_list.find(
+        //         function (userObj) {  //   userObj = {name : "Bala", "image": {}, "text": ""}
 
-                                const name = userObj["name"];
+        //                 const name = userObj["name"];
 
-                                // username = "Bala"
-                                // name =     "Bala"
-                                if (username === name) {
-                                        return true;
-                                } else {
-                                        return false;
-                                }
+        //                 // username = "Bala"
+        //                 // name =     "Bala"
+        //                 if (username === name) {
+        //                         return true;
+        //                 } else {
+        //                         return false;
+        //                 }
 
-                        }
-                )
+        //         }
+        // )
+        let res;
+        name_list.find(e => {
+            if (e["name"] == username) {
+                return res = e;
+            }
+            else {
+                return res = 0;
+            }
+        })
 
-                // console.log(user)
-                // console.log(user["name"])
-                // console.log(user["image"])
-                // console.log(user["text"])
+        if (res) {
+            console.log(res);
+
+        }
+        else {
+            console.log("not found")
+        }
+
+                //  console.log(user)
+                //  console.log(user["name"])
+                //  console.log(user["image"])
+                //  console.log(user["text"])
 
 
-                 mainimg= document.querySelector(".mainimg");
-                 time = document.querySelector(".time");
-                 time = document.createElement("h2");
-                 time.innerText = user["text"];
-                 time.innerText="HI";
-                 time = document.createElement("p");
-                 time = document.createElement("h4");
-                 document.querySelector(".mainimg").append(time)
+                //  mainimg= document.querySelector(".mainimg");
+                //  time = document.querySelector(".time");
+                //  time = document.createElement("h2");
+                //  time.innerText = user["text"];
+                //  time.innerText="hi";
+                //  time = document.createElement("p");
+                //  time = document.createElement("h4");
+                //  document.querySelector(".mainimg").append(time)
 
 
 
                 // const user_description = document.getElementById("description");
                 // user_description.innerText = user["text"]
-
                 // const username_h4 = document.getElementById("username");
                 // username_h4.innerText = user["name"]
-
-
                 // const user_avatar = document.getElementById("avatar");
                 // user_avatar.setAttribute("src", user["image"]["source"])
                 // user_avatar.setAttribute("alt", user["image"]["alt"])
+                
+                let mainimg=document.querySelector(".mainimg");
+                let time=document.createElement("div");
+                time.setAttribute("class","time")
+                mainimg.prepend(time);
+                let heading1=document.createElement("h2")
+                heading1.innerText=res["name"];
+                time.append(heading1)
+                let lan=document.createElement("div")
+                lan.setAttribute("class","lan")
+                time.append(lan);
+                let language=document.createElement("h3")
+                language.innerText=res["language"];
+                lan.append(language);
+                let frame=document.createElement("h3")
+                frame.innerText=res["frame"];
+                lan.append(frame);
+                let movie_time=document.createElement("p")
+                movie_time.innerText=res["movie_time"];
+                time.append(movie_time)
+                let movie_type=document.createElement("h4")
+                movie_type.innerText=res["movie_type"];
+                time.append(movie_type)             
+                let book_button=document.createElement("button")
+                book_button.innerText=res["book_button"];
+                time.append(book_button);
 
+                let content=document.querySelector(".content");
+                let about_movie=document.createElement("div");
+                about_movie.setAttribute("class","aboutmovie")
+                content.prepend(about_movie);
+                let about_head=document.createElement("h2")
+                about_head.innerText=res["Description_head"]
+                about_movie.prepend(about_head);
+
+                let about_text=document.createElement("p")
+                about_text.innerText=res["Description"]
+                about_movie.append(about_text);
+
+
+                // let cast_head=document.createElement("h1")
+                // // cast_head.innerText=res["cast_heading"]
+                // // about_movie.append(cast_head);
+
+
+                let cast_head=document.querySelector(".cast_head")
+
+                let cast_head_text=document.createElement("h1")
+                cast_head_text.innerText=res["cast_heading"]
+
+                let cast1=document.querySelector(".cast")
+                let casteh=document.querySelectorAll(".casteh")
+        
+               
+                let cast_image1 = document.createElement("img");
+                cast_image1.setAttribute("src",res["cast_image1"]);
+                cast_image1.setAttribute("alt", "image_placeholder");
+                casteh[0].prepend(cast_image1);
+
+                let cast_image2 = document.createElement("img");
+                cast_image2.setAttribute("src",res["cast_image2"]);
+                cast_image2.setAttribute("alt", "image_placeholder");
+                casteh[1].append(cast_image2);
+               
+                let cast_image3 = document.createElement("img");
+                cast_image3.setAttribute("src",res["cast_image3"]);
+                cast_image3.setAttribute("alt", "image_placeholder");
+                casteh[2].append(cast_image3);
+            
+                let cast_name1=document.createElement("h2")
+                cast_name1.innerText=res["cast_name1"]
+                casteh[0].append(cast_name1);
+
+                let cast_name2=document.createElement("h2")
+                cast_name2.innerText=res["cast_name2"]
+                casteh[1].append(cast_name2);
+
+                let cast_name3=document.createElement("h2")
+                cast_name3.innerText=res["cast_name3"]
+                casteh[2].append(cast_name3);
+
+                let cast_category=document.createElement("p")
+                cast_category.innerText=res["cast_category1"]
+                casteh[0].append(cast_category);
+                
+                let cast_category2=document.createElement("p")
+                cast_category2.innerText=res["cast_category2"]
+                casteh[1].append(cast_category2);
+
+                
+                let cast_category3=document.createElement("p")
+                cast_category3.innerText=res["cast_category3"]
+                casteh[2].append(cast_category3);
+    
+
+                let crew_image1 = document.createElement("img");
+                crew_image1.setAttribute("src",res["crew_image1"]);
+                crew_image1.setAttribute("alt", "image_placeholder");
+                casteh[0].append(crew_image1);
+
+                let crew_image2 = document.createElement("img");
+                crew_image2.setAttribute("src",res["crew_image2"]);
+                crew_image2.setAttribute("alt", "image_placeholder");
+                casteh[1].append(crew_image2);
+               
+                let crew_image3 = document.createElement("img");
+                crew_image3.setAttribute("src",res["crew_image3"]);
+                crew_image3.setAttribute("alt", "image_placeholder");
+                casteh[2].append(crew_image3);
+
+                let crew_name1=document.createElement("h2")
+                crew_name1.innerText=res["crew_name1"]
+                casteh[0].append(crew_name1);
+
+                let crew_name2=document.createElement("h2")
+                crew_name2.innerText=res["crew_name2"]
+                casteh[1].append(crew_name2);
+
+                let crew_name3=document.createElement("h2")
+                crew_name3.innerText=res["crew_name3"]
+                casteh[2].append(crew_name3);
+
+
+                let crew_category=document.createElement("p")
+                crew_category.innerText=res["crew_category1"]
+                casteh[0].append(crew_category);
+                
+                let crew_category2=document.createElement("p")
+                crew_category2.innerText=res["crew_category2"]
+                casteh[1].append(crew_category2);
+                
+                
+                let crew_category3=document.createElement("p")
+                crew_category3.innerText=res["crew_category3"]
+                casteh[2].append(crew_category3);
+                console.log(mainimg);
+                console.log(content);
     </script>
 </body>
+
 </html>

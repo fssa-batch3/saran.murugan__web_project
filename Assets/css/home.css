@@ -20,6 +20,7 @@ body{
 header img{
     width: 120px;
     margin-bottom:20px;
+    margin-left: 60px;
     bottom: 20px;
     height: 130px;
 } 
@@ -125,6 +126,7 @@ option{
 }
 .various a:hover{
     transform: scale(1.5);
+    transition: 0.5s;
     color: tomato;
 }
 .line hr{
@@ -162,6 +164,7 @@ option{
     overflow: hidden;
     overflow-x: scroll;
     width: 100%;
+    padding-bottom: 20px;
    
 }
 .movies::-webkit-scrollbar{
@@ -175,7 +178,7 @@ option{
     overflow: hidden;
     overflow-x: scroll;
     width: 100%;
-   
+   padding-bottom: 20px;
 }
 .movies2::-webkit-scrollbar{
     display: none;
@@ -360,4 +363,42 @@ footer >img{
         width:20px;
         height: 30px;
     }
+}
+
+
+
+
+.main{
+    background-color: black;
+    width:30%;
+    height: 890px;
+    /* display: none; */
+    transform: translateX(-500px);
+    
+}
+.content{
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin-left: 60px;
+    
+}
+.hide{
+    /* animation-name: move; */
+    transform: translateX(0px);
+    transition: 3s;
+    
+}
+@keyframes move {
+    0%{transform: translateX(-500px);}
+    100%{transform: translateX(0px);}
+    
+}
+.content h3{
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.content h3:hover{
+    color: yellow;
 }
