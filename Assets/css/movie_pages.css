@@ -19,15 +19,15 @@ header img{
     bottom: 20px;
     height: 130px;
 }
-/* .mainimg{
-    background-image: url(../../images/naane_varuven/naane\ varuven\ about.jpg);
+ .mainimg{
+    background-image: url(../images/naane_varuven/naane-varuven-about.jpg);
     background-size: 100%;
     height: 500px;
     background-repeat: no-repeat;
     opacity:80% black;
     padding-top: 50px;
     
-} */
+} 
 .time{
 
     margin-left: 40px;
@@ -121,7 +121,8 @@ hr{
 }
 
 .casteh h2{
-  
+    text-align: center;
+    color:white;
   font-family: 'Rubik', sans-serif;
   font-size: 17px;
 }
@@ -152,15 +153,12 @@ hr{
     color:white;
     text-align: center;
 } */
-.casteh h2{
-    text-align: center;
-    
-    color:white;
-}
+
 .creweh h2{
     text-align: center;
     font-family: 'Rubik', sans-serif;
     color: white;
+    font-size: 17px;
 }
 .cast p{
     color:white;
