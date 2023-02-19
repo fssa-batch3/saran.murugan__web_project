@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200&display=swap');
 *{
     padding: 0px;
     margin: 0px;
@@ -13,6 +15,7 @@ header img{
 
     width: 120px;
     margin-bottom:20px;
+    margin-left: 60px;
     bottom: 20px;
     height: 130px;
 }
@@ -109,26 +112,34 @@ hr{
      display: flex;  
 }
 
-.cast img{
-    width:180px;
-    height: 180px;
+.casteh img{
+    width:150px;
+    height: 150px;
     margin-left: 20px;
     margin-top: 40px;
     border-radius: 200px;
 }
 
-.castname h2{
-  padding-left: 140px;
-  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.casteh h2{
+  
+  font-family: 'Rubik', sans-serif;
+  font-size: 17px;
+}
+.casteh p{
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 14px;
+    color:red;
 }
 .cast_head h1{
     color: white;
     margin-left: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 20px;
 }
 .crew_head h1{
     color: white;
     margin-left: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 20px;
 }
 /* .casteh h2{
@@ -143,11 +154,13 @@ hr{
 } */
 .casteh h2{
     text-align: center;
+    
     color:white;
 }
 .creweh h2{
     text-align: center;
-    color: white;;
+    font-family: 'Rubik', sans-serif;
+    color: white;
 }
 .cast p{
     color:white;
@@ -161,9 +174,9 @@ hr{
     text-align: center;
 }
 
-.crew img{
-    width:180px;
-    height: 180px;
+.creweh img{
+    width:150px;
+    height: 150px;
     margin-left: 20px;
     margin-top: 40px;
     border-radius: 200px;

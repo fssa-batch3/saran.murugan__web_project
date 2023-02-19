@@ -24,6 +24,10 @@
    <div class="content">
 
 
+
+    <div class="castandcrew">
+
+    
     <div class="cast_head">
 
     </div>
@@ -40,30 +44,28 @@
     <div class="casteh">
     </div>
 
-</div>
-
-<div class="crew_head">
-
-</div>
-    
-<div class="crew">
-
-
-    <div class="creweh"> 
-    </div>
-    <div class="creweh"> 
-    </div>
-    <div class="creweh"> 
-    </div>
-
-</div>
-
-
-
-
    </div>
 
 
+   
+    <div class="crew_head">
+    </div>
+    
+<div class="crew">
+    <div class="creweh"> 
+    </div>
+    <div class="creweh"> 
+    </div>
+    <div class="creweh"> 
+    </div>
+</div>
+
+
+
+
+</div>
+
+</div>
 
 
     <script>
@@ -125,10 +127,9 @@
         ]
 
         const url = window.location.search;                // ?name=Arun
-        const urlParams = new URLSearchParams(url);        // converting string into key value pair
+        const urlParams = new URLSearchParams(url);    //"name":"ponniyinselvan"    // converting string into key value pair
         const username = urlParams.get("name")             // return value of the "name" key
         console.log(username);
-
 
 
         // Array.find(  function(variableName){} )
@@ -148,8 +149,8 @@
         //         }
         // )
         let res;
-        name_list.find(e => {
-            if (e["name"] == username) {
+        name_list.find(function (e){
+            if (e["name"] == username) { //arr[0],arr[1]  =e
                 return res = e;
             }
             else {
@@ -157,13 +158,13 @@
             }
         })
 
-        if (res) {
-            console.log(res);
+        // if (res) {
+        //     console.log(res);
 
-        }
-        else {
-            console.log("not found")
-        }
+        // }
+        // else {
+        //     console.log("not found")
+        // }
 
                 //  console.log(user)
                 //  console.log(user["name"])
@@ -232,15 +233,20 @@
                 // let cast_head=document.createElement("h1")
                 // // cast_head.innerText=res["cast_heading"]
                 // // about_movie.append(cast_head);
-
+                let castandcrew=document.querySelector(".castandcrew")
 
                 let cast_head=document.querySelector(".cast_head")
+                castandcrew.prepend(cast_head);
 
                 let cast_head_text=document.createElement("h1")
                 cast_head_text.innerText=res["cast_heading"]
+                cast_head.prepend(cast_head_text);
 
                 let cast1=document.querySelector(".cast")
+                castandcrew.append("cast1");
+
                 let casteh=document.querySelectorAll(".casteh")
+                cast1.prepend(casteh)
         
                
                 let cast_image1 = document.createElement("img");
@@ -284,46 +290,64 @@
                 casteh[2].append(cast_category3);
     
 
-                let crew_image1 = document.createElement("img");
+
+                let crew_head=document.querySelector(".crew_head")
+            
+                
+                let crew_head_text=document.createElement("h1")
+                crew_head_text.innerText=res["crew_heading"]
+                crew_head.prepend(crew_head_text);
+
+
+                 let crew=document.querySelector(".crew")
+                 castandcrew.append(crew);
+
+                 let creweh=document.querySelectorAll(".creweh")
+                 crew.prepend(creweh);
+
+
+                 let crew_image1 = document.createElement("img");
                 crew_image1.setAttribute("src",res["crew_image1"]);
                 crew_image1.setAttribute("alt", "image_placeholder");
-                casteh[0].append(crew_image1);
+                creweh[0].prepend(crew_image1);
 
                 let crew_image2 = document.createElement("img");
                 crew_image2.setAttribute("src",res["crew_image2"]);
                 crew_image2.setAttribute("alt", "image_placeholder");
-                casteh[1].append(crew_image2);
+                creweh[1].append(crew_image2);
                
                 let crew_image3 = document.createElement("img");
                 crew_image3.setAttribute("src",res["crew_image3"]);
                 crew_image3.setAttribute("alt", "image_placeholder");
-                casteh[2].append(crew_image3);
-
+                creweh[2].append(crew_image3);
+            
                 let crew_name1=document.createElement("h2")
                 crew_name1.innerText=res["crew_name1"]
-                casteh[0].append(crew_name1);
+                creweh[0].append(crew_name1);
 
                 let crew_name2=document.createElement("h2")
-                crew_name2.innerText=res["crew_name2"]
-                casteh[1].append(crew_name2);
+                cast_name2.innerText=res["crew_name2"]
+                creweh[1].append(crew_name2);
 
                 let crew_name3=document.createElement("h2")
                 crew_name3.innerText=res["crew_name3"]
-                casteh[2].append(crew_name3);
-
+                creweh[2].append(crew_name3);
 
                 let crew_category=document.createElement("p")
                 crew_category.innerText=res["crew_category1"]
-                casteh[0].append(crew_category);
+                creweh[0].append(crew_category);
                 
                 let crew_category2=document.createElement("p")
                 crew_category2.innerText=res["crew_category2"]
-                casteh[1].append(crew_category2);
-                
+                creweh[1].append(crew_category2);
+
                 
                 let crew_category3=document.createElement("p")
                 crew_category3.innerText=res["crew_category3"]
-                casteh[2].append(crew_category3);
+                creweh[2].append(crew_category3);
+    
+
+                
                 console.log(mainimg);
                 console.log(content);
     </script>
