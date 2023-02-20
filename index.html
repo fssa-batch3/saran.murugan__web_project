@@ -196,7 +196,7 @@
         },
 
         {
-          "name": "Poniyan Selvan",
+          "name": "PoniyanSelvan",
           movies1: {
             "source": "Assets/images/poniyan_selvan/poniyan selvan.jpg",
             "alt": "movie image"
@@ -217,7 +217,7 @@
           img_movies.setAttribute("id", "img1")
           a = document.createElement("a");
             //  url.html?key=value&key=value
-            a.setAttribute("href", "./movie_details.html?name=" + movies[i]["name"]);
+            a.setAttribute("href", "./pages/movie_details.html?name=" + movies[i]["name"]);
             a.append(img_movies)
           document.querySelector(".movies").prepend(a)
 

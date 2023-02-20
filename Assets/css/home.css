@@ -81,7 +81,7 @@ option{
 }
 .image-slider figure img{
     float: left;
-    width:1190px;
+    width:1150px;
     border-radius: 10px;
 }
 .image-slider figure{
@@ -165,7 +165,7 @@ option{
     overflow-x: scroll;
     width: 100%;
     padding-bottom: 20px;
-   
+
 }
 .movies::-webkit-scrollbar{
     display: none;
@@ -178,7 +178,9 @@ option{
     overflow: hidden;
     overflow-x: scroll;
     width: 100%;
-   padding-bottom: 20px;
+    padding-bottom: 20px;
+   
+  
 }
 .movies2::-webkit-scrollbar{
     display: none;
