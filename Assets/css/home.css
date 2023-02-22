@@ -163,31 +163,15 @@ option{
     justify-content: space-between; 
     overflow: hidden;
     overflow-x: scroll;
-    width: 100%;
+    width: 90%;
+    padding: 50px;
     padding-bottom: 20px;
+    
+    
 
 }
-.movies::-webkit-scrollbar{
-    display: none;
-}
-
-.movies2{
-    display: flex;  
-    gap: 10px;
-    justify-content: space-between; 
-    overflow: hidden;
-    overflow-x: scroll;
-    width: 100%;
-    padding-bottom: 20px;
-   
-  
-}
-.movies2::-webkit-scrollbar{
-    display: none;
-}
-
 .movies #img1{
-    width: 240px;
+    width: 250px;
     height: 380px;
     border-radius: 10px;
     margin-top: 60px;
@@ -199,27 +183,39 @@ option{
     transform: scale(1.1);
 }
 
-.movies2 #img1{
-    width: 240px;
-    height: 380px;
-    border-radius: 10px;
-    margin-top: 60px;
-    /* padding-left: 20px; */
-    transition: 0.5s;
-    border: 2px solid white;
+.movies::-webkit-scrollbar{
+    display: none;
 }
-.movies2 #img1:hover{
-    transform: scale(1.1);
-}
+
 .movies2{
     display: flex;  
     gap: 10px;
     justify-content: space-between; 
     overflow: hidden;
     overflow-x: scroll;
-    width: 100%;
+    width: 90%;
+    padding: 50px;
+    padding-bottom: 20px;
    
+  
 }
+.movies2::-webkit-scrollbar{
+    display: none;
+}
+
+
+.movies2 #img1{
+    width: 250px;
+    height: 380px;
+    border-radius: 10px;
+    margin-top: 60px;
+    transition: 0.5s;
+    border: 2px solid white;
+}
+.movies2 #img1:hover{
+    transform: scale(1.1);
+}
+
 
 .mname{
     display: flex;
@@ -231,7 +227,8 @@ option{
     overflow: hidden;
     overflow-x: scroll;
     gap:10px;
-    width: 100%;
+    width: 90%;
+    padding: 50px;
    
 }
 .dubmovies::-webkit-scrollbar{
@@ -239,7 +236,7 @@ option{
 }
 
 .dubmovies #img1{
-    width: 240px;
+    width: 250px;
     height: 380px;
     border-radius: 10px;
     margin-top: 60px;
