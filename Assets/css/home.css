@@ -6,6 +6,10 @@
     margin: 0px;
     padding: 0px;
 }
+html{
+   overflow-x: hidden; */
+    width:80%
+}
 header{
     background-color:#edd605;
     height: 100px;
@@ -48,7 +52,7 @@ a  button {
     font-size: 15px;
     display: inline;
 }
-a button:hover{
+ header a button:hover{
     transition: 1.3s;
     transform: scale(1.1);
 }
@@ -81,7 +85,7 @@ option{
 }
 .image-slider figure img{
     float: left;
-    width:1150px;
+    width:1190px;
     border-radius: 10px;
 }
 .image-slider figure{
@@ -115,14 +119,10 @@ option{
 .various a{
     text-decoration: none;
     color:black;
+    font-size: 20px;
     border-color:white;
     margin-top: 10px;
     font-family: 'Barlow Condensed', sans-serif;
-    font-family: 'Island Moments', cursive;
-    font-family: 'Londrina Solid', cursive;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'PT Sans Narrow', sans-serif;  
-    
 }
 .various a:hover{
     transform: scale(1.5);
@@ -138,114 +138,323 @@ option{
 .main{
     display: flex;
 }
-
-.now  button {
-    margin-top: 30px;
-    font-size: 25px;
+.show-button{
+    display: flex;
+}
+.show-button  button {
+    margin-top: 40px;
+    width:150px;
+    height: 40px;
+    font-size: 15px;
+    color: black;
     margin-left: 20px;
     background-color:#fdee21;
-    border-radius: 20px;
-    padding: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.show-button h2{
+    font-size: 25px;
+    margin-left: 40px;
+    margin-top: 45px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.now{
+    display: flex;
+}
+.now a{
+    text-decoration: none;
+}
+.now a button {
+    margin-top: 80px;
+    width:150px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+    background-color:#fdee21;
+    border-radius: 10px;
+    padding: 10px;
+}
+.now a button:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 .now h2{
     font-size: 25px;
     margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 85px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.movies a{
-    padding-top:0px;
-}
-.movies{
-    display: flex;  
-    gap: 10px;
-    justify-content: space-between; 
-    overflow: hidden;
-    overflow-x: scroll;
-    width: 90%;
-    padding: 50px;
-    padding-bottom: 20px;
-    
-    
-
-}
-.movies #img1{
-    width: 250px;
-    height: 380px;
-    border-radius: 10px;
-    margin-top: 60px;
-    /* padding-left: 20px; */
-    transition: 0.5s;
-    border: 2px solid white;
-}
-.movies #img1:hover{
-    transform: scale(1.1);
-}
-
-.movies::-webkit-scrollbar{
-    display: none;
-}
-
-.movies2{
-    display: flex;  
-    gap: 10px;
-    justify-content: space-between; 
-    overflow: hidden;
-    overflow-x: scroll;
-    width: 90%;
-    padding: 50px;
-    padding-bottom: 20px;
-   
-  
-}
-.movies2::-webkit-scrollbar{
-    display: none;
-}
 
 
-.movies2 #img1{
-    width: 250px;
-    height: 380px;
-    border-radius: 10px;
-    margin-top: 60px;
-    transition: 0.5s;
-    border: 2px solid white;
+.movie-list-container1{
+    padding: 0 20px;
 }
-.movies2 #img1:hover{
-    transform: scale(1.1);
+.movie-list-container2{
+    padding: 0 20px;
+}
+.movie-list-container3{
+    padding: 0 20px;
 }
 
-
-.mname{
+.movie-list{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    height: 420px;
+    margin-top: 40px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    
 }
-.dubmovies{
-    display: flex;  
-    justify-content: space-between; 
-    overflow: hidden;
-    overflow-x: scroll;
+.movie-list-wrapper{
     gap:10px;
-    width: 90%;
-    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
    
 }
-.dubmovies::-webkit-scrollbar{
-    display: none;
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 20px;
+    opacity: 0.5;
+}
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+  opacity: 1;
+}
+.movie-list-item-img{
+    width:270px;
+    border-radius: 20px;
+    height: 420px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+
+}
+.movie-list-item-title{
+    background-color: #ffffff1A;
+    color:white;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Asap Condensed', sans-serif;
+    position: absolute;
+    top:30%;
+    left:50px;
+    opacity: 0;
+    transition: 1s all  ease-in-out;
+}
+ .movie-list-item-desc{
+    background-color: #ffffff1A;
+    color: white;
+    padding:10px;
+    font-size: 14px;
+    position: absolute;
+    top:45%;
+    font-family: 'Catamaran', sans-serif;
+    left:50px;
+    width:230px;
+     opacity: 0;
+     transition: 1s all  ease-in-out;
+}
+  
+.movie-list-item-button{
+    background-color:#edd605;
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom:70px;
+    left:50px;
+    opacity: 0;
+    transition: 1s all  ease-in-out;
+}
+.movie-list-item-button a{
+    text-decoration: none;
+    color:black
+}
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top:90px;
+    right: 0;
+    color: red;
+    opacity: .5;
+    cursor: pointer;
+
 }
 
-.dubmovies #img1{
-    width: 250px;
-    height: 380px;
+.movie-list2{
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    height: 420px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    
+}
+.movie-list-wrapper2{
+    gap:10px;
+    position: relative;
+    overflow: hidden;
+}
+.movie-list-item2{
+    margin-right: 30px;
+    position: relative;
+   
+}
+.movie-list-item2:hover .movie-list-item-img2{
+    transform: scale(1.2);
+    margin: 0 20px;
+    opacity: 0.5;
+}
+.movie-list-item2:hover .movie-list-item-title2,
+.movie-list-item2:hover .movie-list-item-desc2,
+.movie-list-item2:hover .movie-list-item-button2{
+  opacity: 1;
+}
+.movie-list-item-img2{
+    width:270px;
+    border-radius: 20px;
+    height: 420px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+
+}
+.movie-list-item-title2{
+    background-color: #333;
+    color:white;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Asap Condensed', sans-serif;
+    position: absolute;
+    top:30%;
+    left:50px;
+    opacity: 0;
+    transition: 1s all  ease-in-out;
+}
+ .movie-list-item-desc2{
+    background-color: #333;
+    color: white;
+    padding:10px;
+    font-size: 14px;
+    position: absolute;
+    top:45%;
+    font-family: 'Catamaran', sans-serif;
+    left:50px;
+    width:230px;
+     opacity: 0;
+     transition: 1s all  ease-in-out;
+}
+  
+.movie-list-item-button2{
+    background-color:#edd605;
+    color:white;
+    padding: 10px;
     border-radius: 10px;
-    margin-top: 60px;
-    border: 2px solid white;
-    transition: 0.5s;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom:70px;
+    left:50px;
+    opacity: 0;
+    transition: 1s all  ease-in-out;
 }
-.dubmovies #img1:hover{
-    transform: scale(1.1);
+.movie-list-item-button2 a{
+    text-decoration: none;
+    color:black
 }
+
+.movie-list3{
+    display: flex;
+    align-items: center;
+    height: 420px;
+    margin-top: 70px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    
+}
+.movie-list-wrapper3{
+    gap:10px;
+    position: relative;
+    overflow: hidden;
+}
+.movie-list-item3{
+    margin-right: 30px;
+    position: relative;
+   
+}
+.movie-list-item3:hover .movie-list-item-img3{
+    transform: scale(1.2);
+    margin: 0 20px;
+    opacity: 0.5;
+}
+.movie-list-item3:hover .movie-list-item-title3,
+.movie-list-item3:hover .movie-list-item-desc3,
+.movie-list-item3:hover .movie-list-item-button3{
+  opacity: 1;
+}
+.movie-list-item-img3{
+    width:270px;
+    border-radius: 20px;
+    height: 420px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+
+}
+.movie-list-item-title3{
+    background-color: #333;
+    color:white;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Asap Condensed', sans-serif;
+    position: absolute;
+    top:30%;
+    left:50px;
+    opacity: 0;
+    transition: 1s all  ease-in-out;
+}
+ .movie-list-item-desc3{
+    background-color: #333;
+    color: white;
+    padding:10px;
+    font-size: 14px;
+    position: absolute;
+    top:45%;
+    font-family: 'Catamaran', sans-serif;
+    left:50px;
+    width:230px;
+     opacity: 0;
+     transition: 1s all  ease-in-out;
+}
+  
+.movie-list-item-button3{
+    background-color:#edd605;
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom:70px;
+    left:50px;
+    opacity: 0;
+    transition: 1s all  ease-in-out;
+}
+
+
 footer{
     background-color:#edd605 ;
     margin-top: 160px;
@@ -266,10 +475,6 @@ footer >img{
     margin:0px 20px;
 }
 
-/* #logo1:hover{
-    background-color:whitesmoke;
-    transform: scale(1.1);
-} */
 
 #logo2:hover{
     background-color: whitesmoke;

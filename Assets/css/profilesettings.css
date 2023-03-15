@@ -2,31 +2,58 @@ body{
     background-image: linear-gradient(rgb(4,9,30,0.7),rgb(4,9,30,0.7)),url(../images/logo/profile_banner.jpg);
     /* mix-blend-mode: darken; */
 }
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.user-logo{
+    font-size: 120px;
+    margin-left: 150px;
+    margin-top: 50px;
+    color:white;
+}
+#name{
+    color:white;
+}
+.content1{
+    background-color: #181818;
+    width:28%;
+    height: 500px;
+    margin-top: 170px;
+    border-radius: 10px;
+
+}
+.user-img{
+    margin-left: 150px;
+    margin-top: 10px;
+    font-size: 25px;
+    color:white;
+}
+.head{
+    display: flex;
+    width:300px;
+    justify-content:flex-start;
+}
 .main1{
     background-color:#181818;
-    width:70%;
+    width:90%;
     height: 200px;
-    margin-left: 15%;
+    margin-left: 10%;
     margin-top: 100px;
     border-radius: 10px;
     
 }
-.head img{
-    width:25px;
-    height: 25px;
+#name{
+    background-color: #181818;
+    border-color:#181818;
+    margin-left: 10px;
+    font-family:'Courier New', Courier, monospace;
+    color:white;
+    width:100px;
+
+    font-size: 20px;
     margin-top: 10px;
-}
-.head{
-    display: flex;
-}
-.head p{
-      background-color:#181818;
-      border: none;
-      font-size: 30px;
-      color: #d2d2d2;
-      margin-left: 30px;
-      width: 23%;
-      margin-top: 2%;
 }
 .main{
     display: flex;
@@ -51,14 +78,7 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     
 }
-.main2, .main3{
-    background-color:#181818;
-    width:40%;
-    height: 500px;
-    margin-left: 25%;
-    margin-top: 50px;
-    padding-left: 200px;
-}
+
 .email{
     display: flex;
     flex-direction:row;
@@ -71,6 +91,10 @@ body{
     align-items: center;
     margin-left: 100px;
 }
+.password input{
+    margin-left: 20px;
+    
+}
 #email{
     width: 200px;
     height: 20px;
@@ -78,9 +102,10 @@ body{
 }
 .main2{
     background-color:#181818;
-    width:57%;
+    width:70%;
     height: 400px;
-    margin-left: 15%;
+    margin-left: 10%;
+    padding-left: 200px;
     margin-top: 100px;
     border-radius: 10px;
 }
@@ -109,16 +134,41 @@ body{
     margin-right: 380px;
     gap: 20px;
 }
-.edit button{
+.edit #edit {
     background-color: #edd605;
     color:black;
     padding: 10px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 50px;
     width:100px;
     font-size: 20px;
     border-radius: 10px;
 }
+.edit #save{
+    background-color: #edd605;
+    color:black;
+    margin-left: 20px;
+    border-color: #181818;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 28px;
+    text-align: center;
+    width:70px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#edit:hover{
+    transform: scale(1.1);
+    transition: 1.2s;
+}
+#save:hover{
+    transform: scale(1.1);
+    transition: 1.2s;
+}
 .edit{
     display: flex;
-    margin-left: 400px;
+    margin-left: 150px;
     
 }

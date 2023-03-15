@@ -6,41 +6,48 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../Assets/css/profilesettings.css">
-    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="main1">
 
+    <div class="container">
+
+    
+
+    <div class="content1">
+        <i class="user-logo fa-sharp fa-solid fa-circle-user"></i>
+        <h1></h1>
+    </div>
+
+
+
+<div class="content2">    
+    <div class="main1">
         <div class="head">
-            <p id="name" style="color:white;" ></p>
-            
-            <img src="../Assets/images/logo/edit.png" alt="image">
+            <i class="user-img fa-solid fa-user"></i>
+            <input type="text" id="name" disabled>
         </div>
 
         <div class="main">
+            <form>
             <div class="email">
                 <h3>Email:</h3> <p id="email" style="color:white;" ></p>
             </div>
-
             <div class="password">
-                <h3>Phone:</h3> <p id="number" ></p>
+                 <h3>Phone:</h3> 
+                <input type="text" id="number" pattern="[0-9]{10,10}" inputmode="numeric" minlength="10" maxlength="10" disabled>
+            </form>
             </div>
-
         </div>
-
     </div>
 
 
     <div class="main2">
-
         <h1>Personal details</h1>
 
-        <!-- <div class="personal-detail">
-            <h3>Name</h3><input type="text"  id="name">
-        </div> -->
         <div class="personal-detail">
-            <h3>Birthdate(optional)</h3><input type="text" value="9.11.2004">
+            <h3>Birthdate(optional)</h3><input type="text" >
         </div>
 
         <div class="personal-detail">
@@ -50,24 +57,84 @@
             </div>
         </div>
         <div class="personal-detail">
-            <h3>Age (optional)</h3><input type="text" value="18">
+            <h3>Age (optional)</h3><input type="text" >
         </div>
         
         <div class="edit">
-        <button>Edit</button>
-        <button>Save</button>
-        </div>
-    </div>
+        <button onclick="edit()" id="edit">Edit</button>
+       <buttonn id="save">Save</button>
 
+        </div>
+        
+       <button onclick="deleteItem()" id="log out"> log out</button>
+    </div>
+</div>
+
+
+</div>
 
     <script>
 
-   let arr = JSON.parse(localStorage.getItem("profile_details"));
-   document.getElementById("name").innerText = arr["name"]
-   document.getElementById("email").innerText = arr["email"]
-   document.getElementById("number").innerText = arr["number"]
+   let users = JSON.parse(localStorage.getItem("users"));
 
-    </script>
+   const name = document.getElementById("name")
+   const email = document.getElementById("email")
+   const number = document.getElementById("number")
+//    document.getElementById("name").value = users["name"]
+//    document.getElementById("email").innerText = users["email"]
+//    document.getElementById("number").value = users["number"];
+
+  
+let profile_arr = JSON.parse(localStorage.getItem("profile_details"));
+
+let check;
+
+users.find(userobj => {
+    if (userobj["email"] == profile_arr["email"] && userobj["password"] == profile_arr["password"]) {
+        name.value = userobj["name"]
+        email.innerText = userobj["email"]
+        number.value = userobj["number"]
+        return check  = userobj;
+    }
+}) 
+
+// console.log(check)
+// console.log(check["name"])
+// name.value=check["name"];
+
+  function edit(){
+    document.getElementById("name").disabled = false;
+    document.getElementById("number").disabled = false;
+  }
+
+  document.getElementById("save").addEventListener("click", (e) => {
+
+    check["name"] = document.getElementById("name").value;
+    check["number"] = document.getElementById("number").value;
+
+    console.log(check)
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    console.log(users);
+
+  })  
+
+  function deleteItem() {
+        for (let i = 0; i < users.length; i++) {
+            if (document.getElementById("email").value == users[i]["email"]) {
+                users.splice(i,1)
+                confirm("poda ...p*****")
+                localStorage.setItem("users", JSON.stringify(users));
+
+                window.location.href = "signup.html";
+            }
+        }
+  }
+
+     
+     
+     </script>
 
   
 </body>

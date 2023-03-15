@@ -36,11 +36,11 @@
             </div>
 
             <div class="email">
-                <input required type="password" pattern=[8]  title=" password must have  8 charecters " placeholder="Enter your password" id="password" />
+                <input required type="password"    " placeholder="Enter your password" id="password" />
                 <label>Password</label>
             </div>
             <div class="email">
-                <input required type="password" placeholder="Confirm your password" pattern=[8] id="confirm_password" />
+                <input required type="password" placeholder="Confirm your password"  id="confirm_password" />
                 <label>Confirm </label>
             </div>
 
@@ -49,6 +49,7 @@
                 <h4>Terms and conditions</h4>
             </div>
 
+            <a href="log.html"> <h2>Already have a account</h2></a>
             <button>Submit</button>
         </form>
 
@@ -87,19 +88,19 @@ form.addEventListener("submit",e=>{
 
                 let user_data = {
                 "email": emailid,
-                "password": xpassword,
+                "password": password,
                 "name":name,
                 "number":number
             }
 
-            let arr =JSON.parse( localStorage.getItem("arr"))// ARR = FALSE
+            let users =JSON.parse( localStorage.getItem("users"))// ARR = FALSE
 
-                ? JSON.parse(localStorage.getItem("arr")) //IF CRT            // true
+                ? JSON.parse(localStorage.getItem("users")) //IF CRT            // true
                 :  [];//IF WRONG   // ARR= []                                 //false
 
-            arr.push(user_data) //arr =[{}]// arr =[{},{}]
+            users.push(user_data) //arr =[{}]// arr =[{},{}]
 
-            localStorage.setItem("arr", JSON.stringify(arr))  // arr= key...."[{}]"
+            localStorage.setItem("users", JSON.stringify(users))  // arr= key...."[{}]"
 
 
             if (res==1){
