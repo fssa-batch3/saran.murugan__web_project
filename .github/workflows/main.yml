@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  topic_tagging:
+    runs-on: ubuntu-latest
+    name: Topic Tagging
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Topic Tagger
+        uses: suryaumapathy2812/topic-tagger-action@v1
+        with:
+          # enter the starting point
+          start-point: "./"
+          version: "v2"
