@@ -18,5 +18,10 @@
   "homepage": "https://github.com/fssa-batch3/saran.murugan__web_project#readme",
   "dependencies": {
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "husky": "^8.0.3"
   }
 }

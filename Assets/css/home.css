@@ -159,34 +159,6 @@ option{
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.now{
-    display: flex;
-}
-.now a{
-    text-decoration: none;
-}
-.now a button {
-    margin-top: 80px;
-    width:150px;
-    height: 40px;
-    margin-left: 20px;
-    font-size: 15px;
-    color: black;
-    background-color:#fdee21;
-    border-radius: 10px;
-    padding: 10px;
-}
-.now a button:hover{
-    transform: scale(1.1);
-    transition: 0.2s;
-}
-.now h2{
-    font-size: 25px;
-    margin-left: 20px;
-    margin-top: 85px;
-    color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
 
 .movie-list-container1{
@@ -240,7 +212,7 @@ option{
     background-color: #ffffff1A;
     color:white;
     padding: 0 10px;
-    font-size: 32px;
+    font-size: 27px;
     font-weight: bold;
     font-family: 'Asap Condensed', sans-serif;
     position: absolute;
@@ -284,13 +256,43 @@ option{
 .arrow{
     font-size: 120px;
     position: absolute;
-    top:90px;
+    top:150px;
     right: 0;
-    color: red;
-    opacity: .5;
+    color:white;
+    /* opacity: .8; */
     cursor: pointer;
 
 }
+.watch-now{
+    display: flex;
+    margin-top: 50px;
+}
+.watch-now a{
+    text-decoration: none;
+}
+.watch-now a button {
+    margin-top: 80px;
+    width:150px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+    background-color:#fdee21;
+    border-radius: 10px;
+    padding: 10px;
+}
+.watch-now a button:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.watch-now h2{
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 85px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 
 .movie-list2{
     display: flex;
@@ -322,7 +324,7 @@ option{
   opacity: 1;
 }
 .movie-list-item-img2{
-    width:270px;
+    width:245px;
     border-radius: 20px;
     height: 420px;
     object-fit: cover;
@@ -330,10 +332,10 @@ option{
 
 }
 .movie-list-item-title2{
-    background-color: #333;
+    background-color: #ffffff1A;
     color:white;
     padding: 0 10px;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     font-family: 'Asap Condensed', sans-serif;
     position: absolute;
@@ -343,7 +345,7 @@ option{
     transition: 1s all  ease-in-out;
 }
  .movie-list-item-desc2{
-    background-color: #333;
+    background-color: #ffffff1A;
     color: white;
     padding:10px;
     font-size: 14px;
@@ -351,7 +353,7 @@ option{
     top:45%;
     font-family: 'Catamaran', sans-serif;
     left:50px;
-    width:230px;
+    width:210px;
      opacity: 0;
      transition: 1s all  ease-in-out;
 }
@@ -365,7 +367,7 @@ option{
     border: none;
     cursor: pointer;
     position: absolute;
-    bottom:70px;
+    bottom:60px;
     left:50px;
     opacity: 0;
     transition: 1s all  ease-in-out;
@@ -373,6 +375,37 @@ option{
 .movie-list-item-button2 a{
     text-decoration: none;
     color:black
+}
+
+
+
+.watch-now2{
+    display: flex;
+}
+.watch-now2 a{
+    text-decoration: none;
+}
+.watch-now2 a button {
+    margin-top: 80px;
+    width:150px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+    background-color:#fdee21;
+    border-radius: 10px;
+    padding: 10px;
+}
+.watch-now2 a button:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.watch-now2 h2{
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 85px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .movie-list3{
@@ -405,18 +438,18 @@ option{
   opacity: 1;
 }
 .movie-list-item-img3{
-    width:270px;
+    width:250px;
     border-radius: 20px;
-    height: 420px;
+    height: 400px;
     object-fit: cover;
     transition: all 1s ease-in-out;
 
 }
 .movie-list-item-title3{
-    background-color: #333;
+    background-color: #ffffff1A;
     color:white;
     padding: 0 10px;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
     font-family: 'Asap Condensed', sans-serif;
     position: absolute;
@@ -426,7 +459,7 @@ option{
     transition: 1s all  ease-in-out;
 }
  .movie-list-item-desc3{
-    background-color: #333;
+    background-color: #ffffff1A;
     color: white;
     padding:10px;
     font-size: 14px;
@@ -434,7 +467,7 @@ option{
     top:45%;
     font-family: 'Catamaran', sans-serif;
     left:50px;
-    width:230px;
+    width:210px;
      opacity: 0;
      transition: 1s all  ease-in-out;
 }
@@ -448,10 +481,14 @@ option{
     border: none;
     cursor: pointer;
     position: absolute;
-    bottom:70px;
+    bottom:40px;
     left:50px;
     opacity: 0;
     transition: 1s all  ease-in-out;
+}
+.movie-list-item-button3 a{
+    text-decoration: none;
+    color:black
 }
 
 
