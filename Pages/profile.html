@@ -10,69 +10,84 @@
 </head>
 
 <body>
-
-    <div class="container">
-
-    
-
-    <div class="content1">
-        <i class="user-logo fa-sharp fa-solid fa-circle-user"></i>
-        <h1></h1>
-    </div>
+    <header>
+        <img src="../Assets/images/logo/logo.png" alt="logo5">
+    </header>
 
 
 
-<div class="content2">    
+  
+
+
+
     <div class="main1">
-        <div class="head">
+        <div class="name-user">
             <i class="user-img fa-solid fa-user"></i>
             <input type="text" id="name" disabled>
+
+            <div class="logout">
+                <button onclick="deleteItem()" id="logout"> Sign out</button>
+            </div>
         </div>
 
-        <div class="main">
+        <div class="email-num">
             <form>
-            <div class="email">
-                <h3>Email:</h3> <p id="email" style="color:white;" ></p>
-            </div>
-            <div class="password">
+            <div class="phone-num">
                  <h3>Phone:</h3> 
                 <input type="text" id="number" pattern="[0-9]{10,10}" inputmode="numeric" minlength="10" maxlength="10" disabled>
+            </div>
+
+            <div class="email">
+                    <h3>Email:</h3> <p id="email" style="color:white;" ></p>
+            </div>
+
+            <div class="whatsapp-msg">
+                
+                <input type="checkbox" >
+                <h3>WhatsApp notification</h3>
+            </div>
+
+
+
             </form>
-            </div>
-        </div>
-    </div>
 
-
-    <div class="main2">
-        <h1>Personal details</h1>
-
-        <div class="personal-detail">
-            <h3>Birthdate(optional)</h3><input type="text" >
         </div>
-
-        <div class="personal-detail">
-            <h3>Identity(Optional)</h3>
-            <div class="gender">
-                <button>Male</button><button>Female</button>
-            </div>
-        </div>
-        <div class="personal-detail">
-            <h3>Age (optional)</h3><input type="text" >
-        </div>
-        
         <div class="edit">
-        <button onclick="edit()" id="edit">Edit</button>
-       <buttonn id="save">Save</button>
-
+         <button onclick="edit()" id="edit">Edit</button>
+         <buttonn id="save">Save</button>
         </div>
-        
-       <button onclick="deleteItem()" id="log out"> log out</button>
+
     </div>
-</div>
+    <div class="setting-option">
+        <ul>
+          <li>Booking history</li>
+          <li>Notification</li>
+          <li>Help and support</li>
+          <li>About us</li>
+          <li>Cinemas</li>
+          <li>Movies</li>
+        </ul>
+    </div>
 
 
-</div>
+    <div class="content-all">
+    
 
+
+    <div class="booking-history">
+     
+    <div class="booked-movie">
+     
+    </div>
+
+    </div>
+      
+    </div>
+    
+
+
+    
+   
     <script>
 
    let users = JSON.parse(localStorage.getItem("users"));

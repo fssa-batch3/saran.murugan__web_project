@@ -1,28 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
 body{
     background-image: linear-gradient(rgb(4,9,30,0.7),rgb(4,9,30,0.7)),url(../images/logo/profile_banner.jpg);
     /* mix-blend-mode: darken; */
 }
-
-.container{
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color:#edd605;
+    height: 100px;
+}
+header img{
+    width: 120px;
+    height: 130px;
+    align-items: center;
+   position:relative;
+   bottom: 20px;
+} 
+.setting-option{
+    background-color: black;
+    width:80%;
+    margin-left: 150px;
+    height: 50px;
+}
+.setting-option ul {
     display: flex;
     justify-content: space-evenly;
-}
-.user-logo{
-    font-size: 120px;
-    margin-left: 150px;
-    margin-top: 50px;
-    color:white;
-}
-#name{
-    color:white;
-}
-.content1{
-    background-color: #181818;
-    width:28%;
-    height: 500px;
-    margin-top: 170px;
-    border-radius: 10px;
+    list-style: none;
+    color:#d2d2d2;
+    padding-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
+}
+.setting-option ul li:hover{
+   color:#edd605;
+   transform: scale(1.1);
+   transition: 0.3s;
+}
+.main1{
+    background-color:#181818;
+    width:80%;
+    height: 200px;
+    margin-left: 10%;
+    margin-top: 100px;
+    border-radius: 10px;
+    
 }
 .user-img{
     margin-left: 150px;
@@ -30,19 +54,25 @@ body{
     font-size: 25px;
     color:white;
 }
-.head{
+.name-user{
     display: flex;
     width:300px;
-    justify-content:flex-start;
+    justify-content: flex-start;
 }
-.main1{
-    background-color:#181818;
-    width:90%;
-    height: 200px;
-    margin-left: 10%;
-    margin-top: 100px;
-    border-radius: 10px;
-    
+.logout{
+    margin-left: 265%;
+}
+#logout{
+    width:100px;
+    height: 30px;
+    color:#d2d2d2;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: none;
+    margin-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#181818 ;
 }
 #name{
     background-color: #181818;
@@ -51,97 +81,73 @@ body{
     font-family:'Courier New', Courier, monospace;
     color:white;
     width:100px;
-
     font-size: 20px;
     margin-top: 10px;
 }
-.main{
+.email-num form{
     display: flex;
-    gap: 80px;
+    gap: 40px;
     margin-top: 40px;
 }
-.main h3{
-    color:#d2d2d2;
-    font-family:sans-serif;
-    font-size: 18px;
-}
-.email p{
+.email h3{
     font-size: 18px;
     border: none;
     color: #d2d2d2;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-.password p{
+.phone-num h3{
     font-size: 18px;
     border: none;
     color: #d2d2d2;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
 }
-
 .email{
     display: flex;
     flex-direction:row;
     align-items: center;
     margin-left: 100px;
 }
-.password{
+.phone-num{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 100px;
 }
-.password input{
+.phone-num input{
     margin-left: 20px;
-    
+    background-color: #181818;
+    border-style: none;
+    font-size: 15px;
+    color: #d2d2d2;
+    font-family: 'Nunito Sans', sans-serif;
 }
 #email{
     width: 200px;
     height: 20px;
     margin-left: 20px;
+    font-size: 15px;
+    font-family: 'Nunito Sans', sans-serif;
 }
-.main2{
-    background-color:#181818;
-    width:70%;
-    height: 400px;
-    margin-left: 10%;
-    padding-left: 200px;
-    margin-top: 100px;
-    border-radius: 10px;
-}
-.main2 h1{
-    color:#d2d2d2;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.personal-detail{
+.whatsapp-msg{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 5px;
+    margin-left: 40px;
 }
-.personal-detail h3{
-    color:#d2d2d2;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.whatsapp-msg h3{
+    font-family: 'Nunito Sans', sans-serif;
+    color:#d2d2d2 ;
 }
-.personal-detail input{
-    height: 40px;
-    border-radius: 10px;
-    width:300px;
-    margin-right:200px;
+.edit{
+    margin-top: 30px;
 }
-.gender{
-    display: flex;
-    justify-content:space-between;
-    margin-right: 380px;
-    gap: 20px;
-}
+
 .edit #edit {
     background-color: #edd605;
     color:black;
-    padding: 10px;
     cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 50px;
-    width:100px;
+    height: 35px;
+    width:70px;
     font-size: 20px;
     border-radius: 10px;
 }
@@ -150,12 +156,11 @@ body{
     color:black;
     margin-left: 20px;
     border-color: #181818;
-    padding: 10px;
     cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 28px;
+    height: 33px;
     text-align: center;
-    width:70px;
+    width:65px;
     font-size: 20px;
     border-radius: 10px;
 }
@@ -171,4 +176,10 @@ body{
     display: flex;
     margin-left: 150px;
     
+}
+.content-all{
+   background-color:#181818;
+   width:80%;
+   height: 500px;
+   margin-left: 150px;
 }
