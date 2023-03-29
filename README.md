@@ -87,10 +87,10 @@ Wireframe: https://drive.google.com/file/d/1LqXwCjJntdGz6BWtTNUGyDUMwExW1N5r/vie
     -Scenario 1:user  wants to logout
     -Steps:
    3.Log in as user.
-   2.Navigate to the profile page
-   4.User views the logout button
-   5.Clicks the button
-   6.Logged out From the profile
-   7.Now user in home page
+   2.Navigate to the profile page.
+   4.User views the logout button.
+   5.Clicks the button.
+   6.Logged out From the profile.
+   7.Now user in home page.
     -Expected Result:
       -User Succesfully Logged out
