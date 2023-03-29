@@ -72,16 +72,16 @@ Wireframe: https://drive.google.com/file/d/1LqXwCjJntdGz6BWtTNUGyDUMwExW1N5r/vie
         
         
   ### Edit profile
-  -Scenario 1:user come to edit profile and edited
-     -Steps:
-       1.Log in as user.
-       2.Navigate to the profile page
-       3.User views the Edit button
-       4.Clicks the button Edit the profile
-       5.Save button appears
-       6.Clicks and save it
-     -Expected Result:
-         -User Succesfully edited the profile.
+  - Scenario 1:user come to edit profile and edited
+     - Steps:
+       1. Log in as user.
+       2. Navigate to the profile page
+       3. User views the Edit button
+       4. Clicks the button Edit the profile
+       5. Save button appears
+       6. Clicks and save it
+     - Expected Result:
+         - User Succesfully edited the profile.
      
    ###Log out
     -Scenario 1:user  wants to logout
