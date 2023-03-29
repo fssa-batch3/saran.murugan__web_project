@@ -52,16 +52,16 @@ Wireframe: https://drive.google.com/file/d/1LqXwCjJntdGz6BWtTNUGyDUMwExW1N5r/vie
 
 
 ## Create an account
-- Scenario 1: Successfully create an account
+- Scenario 1:  create an account
     - Steps:
-        1. Navigate to the registration page.
-        2. Enter the required information such as name, email, and password.
-        3. Click the "Create Account" button.
+        1. Navigate to the sign in page.
+        2. Enter the required information such as name, email,number and password.
+        3. Click the "Submit" button.
     - Expected Result:
         - The user is redirected to the login page.
 
 ### Create an account
-- Scenario 1: Successfully login in to account
+- Scenario 1: login in to account
     - Steps:
         1. Navigate to the login page.
         2. Enter the required information such as email, and password.
@@ -74,23 +74,23 @@ Wireframe: https://drive.google.com/file/d/1LqXwCjJntdGz6BWtTNUGyDUMwExW1N5r/vie
   ### Edit profile
   - Scenario 1:user come to edit profile and edited
      - Steps:
-       1. Log in as user.
-       2. Navigate to the profile page
-       3. User views the Edit button
-       4. Clicks the button Edit the profile
-       5. Save button appears
-       6. Clicks and save it
+      1. Log in as user.
+      2. Navigate to the profile page
+      3. User views the Edit button
+      4. Clicks the button Edit the profile
+      5. Save button appears
+      6. Clicks and save it
      - Expected Result:
          - User Succesfully edited the profile.
      
    ###Log out
-    -Scenario 1:user  wants to logout
-       -Steps:
-        1.Log in as user.
-        2.Navigate to the profile page.
-        3.User views the logout button.
-        4.Clicks the button.
-        5.Logged out From the profile.
-        6.Now user in home page.
-     -Expected Result:
-         -User Succesfully Logged out
+    - Scenario 1:user  wants to logout
+       - Steps:
+        1. Log in as user.
+        2. Navigate to the profile page.
+        3. User views the logout button.
+        4. Clicks the button.
+        5. Logged out From the profile.
+        6. Now user in home page.
+      - Expected Result:
+         - User Succesfully Logged out
