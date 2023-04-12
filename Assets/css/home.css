@@ -7,24 +7,25 @@
     padding: 0px;
 }
 html{
-   overflow-x: hidden; */
-    width:80%
+   overflow-x: hidden; 
+    width:100%
 }
 header{
-    background-color:#edd605;
+    background-color:#edde3b;
     height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
+
 body{
     background-color: black;
 }
 header img{
     width: 120px;
     margin-bottom:20px;
-    margin-left: 60px;
+    margin-left: 50px;
     bottom: 20px;
     height: 130px;
 } 
@@ -32,25 +33,43 @@ header input {
     padding-left:50px;
     height:50px;
     background-image: url(../images/logo/search.png);
-    background-size: 50px;
+    background-size: 40px;
     background-repeat: no-repeat;
-    width:50%;
-    border-radius: 10px;
+    width:35%;
+    border-radius: 7px;
     margin-left: 50px;
     font-size: 18px;    
+    border-color: #edde3b;
 }
-
-a  button {
+.buttons{
+    display: flex;
+}
+header   a #log-in-button  {
     padding: 20px;
-    width: 100px;
-    height: 60px;
-    text-decoration: none;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 30px;
+    width: 90px;
+    height: 40px;
     border-radius: 10px;
     background-color:black;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
+    margin-right: 10px;
     display: inline;
+}
+header   a #sign-in-button  {
+    padding: 20px;
+    padding-bottom: 30px;
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-color:black;
+    color: white;
+    font-size: 14px;
+    display: inline;
+}
+header a{
+    text-decoration: none;
 }
  header a button:hover{
     transition: 1.3s;
@@ -59,10 +78,10 @@ a  button {
 select {
     padding: 10px;
     color: black;
-    width: 10%;
+    width: 8%;
     height: 100px;
-    background-color:#edd605;
-    border-color:#edd605;
+    background-color:#edde3b;
+    border-color:#edde3b;
     font-size: 20px;
     
 }
@@ -74,6 +93,9 @@ option{
     width: 50px;
     height: 50px;
     margin-top: 25px;
+    position: relative;
+    right:60px;
+    top: 3px;
 }
 .image-slider{
     width: 80%;
@@ -140,6 +162,7 @@ option{
 }
 .show-button{
     display: flex;
+    margin-left: 40px;
 }
 .show-button  button {
     margin-top: 40px;
@@ -148,7 +171,7 @@ option{
     font-size: 15px;
     color: black;
     margin-left: 20px;
-    background-color:#fdee21;
+    background-color:#edde3b;
     border-radius: 10px;
     padding: 10px;
 }
@@ -163,12 +186,18 @@ option{
 
 .movie-list-container1{
     padding: 0 20px;
+    width:88%;
+    margin-left: 65px; 
 }
 .movie-list-container2{
     padding: 0 20px;
+    width:90%;
+    margin-left: 40px;
 }
 .movie-list-container3{
     padding: 0 20px;
+ margin-left: 40px;
+    width: 90%;
 }
 
 .movie-list{
@@ -236,7 +265,7 @@ option{
 }
   
 .movie-list-item-button{
-    background-color:#edd605;
+    background-color:#edde3b;
     color:white;
     padding: 10px;
     border-radius: 10px;
@@ -254,9 +283,12 @@ option{
     color:black
 }
 .arrow{
-    font-size: 120px;
+    font-size: 40px;
+    padding: 10px;
     position: absolute;
-    top:150px;
+    top:190px;
+    background-color: #181818;
+    border-radius: 50px;
     right: 0;
     color:white;
     /* opacity: .8; */
@@ -266,6 +298,7 @@ option{
 .watch-now{
     display: flex;
     margin-top: 50px;
+    margin-left: 65px;
 }
 .watch-now a{
     text-decoration: none;
@@ -277,7 +310,7 @@ option{
     margin-left: 20px;
     font-size: 15px;
     color: black;
-    background-color:#fdee21;
+    background-color:#edde3b;
     border-radius: 10px;
     padding: 10px;
 }
@@ -297,6 +330,7 @@ option{
 .movie-list2{
     display: flex;
     margin-top: 80px;
+    margin-left: 20px;
     align-items: center;
     height: 420px;
     transform: translateX(0);
@@ -324,7 +358,7 @@ option{
   opacity: 1;
 }
 .movie-list-item-img2{
-    width:245px;
+    width:240px;
     border-radius: 20px;
     height: 420px;
     object-fit: cover;
@@ -359,7 +393,7 @@ option{
 }
   
 .movie-list-item-button2{
-    background-color:#edd605;
+    background-color:#edde3b;
     color:white;
     padding: 10px;
     border-radius: 10px;
@@ -381,6 +415,7 @@ option{
 
 .watch-now2{
     display: flex;
+    margin-left: 65px;
 }
 .watch-now2 a{
     text-decoration: none;
@@ -392,7 +427,7 @@ option{
     margin-left: 20px;
     font-size: 15px;
     color: black;
-    background-color:#fdee21;
+    background-color:#edde3b;
     border-radius: 10px;
     padding: 10px;
 }
@@ -413,6 +448,7 @@ option{
     align-items: center;
     height: 420px;
     margin-top: 70px;
+    margin-left: 25px;
     transform: translateX(0);
     transition: all 1s ease-in-out;
     
@@ -438,7 +474,7 @@ option{
   opacity: 1;
 }
 .movie-list-item-img3{
-    width:250px;
+    width:237px;
     border-radius: 20px;
     height: 400px;
     object-fit: cover;
@@ -473,7 +509,7 @@ option{
 }
   
 .movie-list-item-button3{
-    background-color:#edd605;
+    background-color:#edde3b;
     color:white;
     padding: 10px;
     border-radius: 10px;
@@ -493,7 +529,7 @@ option{
 
 
 footer{
-    background-color:#edd605 ;
+    background-color:#edde3b ;
     margin-top: 160px;
 }
 footer >img{
@@ -525,8 +561,13 @@ footer >img{
     padding: 10px;
     border-radius: 10px;
 }
-
-
+.about_copy_right p{
+    font-size: 15px;
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
 
 @media (max-width:768px) {
 

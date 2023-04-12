@@ -26,7 +26,7 @@
             <input type="text" id="name" disabled>
 
             <div class="logout">
-                <button onclick="deleteItem()" id="logout"> Sign out</button>
+                <button id="logout"> Sign out</button>
             </div>
         </div>
 
@@ -56,8 +56,13 @@
          <button onclick="edit()" id="edit">Edit</button>
          <buttonn id="save">Save</button>
         </div>
+  
+        <div class="Home-a-tag">       
+            <a href="../index.html"><h4>Go to home</h4></a>
+        </div>
 
     </div>
+
     <div class="setting-option">
         <ul>
           <li>Booking history</li>
@@ -135,14 +140,21 @@ users.find(userobj => {
 
   })  
 
+  document.getElementById("logout").addEventListener("click",(e)=>{
+    console.log("clicked")
+    deleteItem();
+  })
+
   function deleteItem() {
         for (let i = 0; i < users.length; i++) {
-            if (document.getElementById("email").value == users[i]["email"]) {
-                users.splice(i,1)
-                confirm("poda ...p*****")
+            console.log(document.getElementById("email").innerText)
+            if (document.getElementById("email").innerText == users[i]["email"]) {
+                // console.log("deleted")
+                users.splice(i,1);
+                console.log(users)
                 localStorage.setItem("users", JSON.stringify(users));
 
-                window.location.href = "signup.html";
+                // window.location.href = "signup.html";
             }
         }
   }

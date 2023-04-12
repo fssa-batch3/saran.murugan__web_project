@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #edd605;
+    background-color: #edde3b;
     width: 100%;
     height: 80px;
     display: flex;
@@ -39,7 +39,7 @@ header img {
 
 .banner h1 {
     font-family: 'Puritan', sans-serif;
-    color: #edd605;
+    color: #edde3b;
     font-size: 50px;
 }
 
@@ -239,31 +239,34 @@ header img {
     background-color: #333333;
 }
 
+.lan_frame{
+    display: flex;
+}
 
-.theatre1 {
+.theatre {
     padding-top: 20px;
 }
 
-.theatre1 h2 {
+.theatre h2 {
     color: white;
     margin-left: 50px;
     font-family: 'Archivo Narrow', sans-serif;
 }
 
-.theatre1 h3 {
+.theatre h3 {
     color: #60665e;
     font-family: 'Archivo Narrow', sans-serif;
     margin-left: 60px;
 }
 
-.theatre1-show-time {
+.theatre-show-time {
     display: flex;
     gap: 20px;
     margin-left: 50px;
     margin-top: 30px;
 }
 
-.theatre1-show-time a,
+.theatre-show-time a,
 p {
     text-decoration: none;
     color: #edd605;
@@ -271,11 +274,12 @@ p {
     border: 1px solid rgba(21, 19, 10, 255);
     padding: 8px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 
 
-.theatre2 {
+/* .theatre2 {
     padding-top: 20px;
 }
 
@@ -587,11 +591,11 @@ p {
     padding: 8px;
     border-radius: 10px;
 }
-
+*/
 hr  {
     border: 1px solid white;
     width: 95%;
     margin-left: 3%;
     margin-top: 40px;
 }
-
+ 

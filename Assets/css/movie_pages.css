@@ -5,7 +5,7 @@
     margin: 0px;
 }
 header{
-    background-color:#edd605;
+    background-color:#edde3b;
     height: 80px;
     display: flex;
     align-items: center;
@@ -65,8 +65,10 @@ header input {
     border-radius:5px;
     margin-left:70px;
     margin-top: 20px;
+    text-align: center;
     padding-left: 20px;
-    background-color: #edd605;
+    padding-right: 20px;
+    background-color: #edde3b;
 }
 .time p{
     font-size: 20px;
@@ -86,7 +88,7 @@ header input {
     width: 400px;
     border-radius: 10px;
     height: 50px;
-    background-color: #edd605;
+    background-color: #edde3b;
     margin-left: 50px;
     margin-top: 20px;
     cursor: pointer;

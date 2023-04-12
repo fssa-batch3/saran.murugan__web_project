@@ -126,7 +126,58 @@ body{
     margin-left: 45%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.seatbudget{
+.seat-budget{
+    background-color: #444451;
+    height: 22px;
+    width: 25px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    margin-top: 15px;
+    border-top-right-radius: 10px;
+}
+.seatbudget-row{
+    display: flex;
+    margin-left: 38%;
+}
+.seat-prime{
+    background-color: #444451;
+    height: 22px;
+    width: 25px;
+    margin-top: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.seatprime-row{
+    display: flex;
+    margin-left: 33%;
+}
+.seatcost-prime{
+    color:white;
+    font-size: 12px;
+    margin-top: 40px;
+    margin-left: 45%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.seat-prime-occupied{
+    background-color: #fff;
+    height: 22px;
+    width: 25px;
+    margin-top: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.total_seatandcost{
+    background-color: #ffffff;
+    width: 60%;
+    height: 60px;
+    margin-top: 40px;
+    margin-left: 18%;
+}
+
+/* .seatbudget{
     display: flex;
     gap:10px;
     margin-left: 35%;
@@ -149,7 +200,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
 /* .seatbudget2{
     display: flex;
@@ -175,50 +226,5 @@ body{
     flex-direction: column;
     justify-content: center;
 } */
-a:hover{
-    background-color: #edd605;
-    color:black;
-    border:#edd605 1px solid;
-}
-.seatcost-prime{
-    color:white;
-    font-size: 12px;
-    margin-top: 40px;
-    margin-left: 45%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.seatprime{
-    display: flex;
-    gap:10px;
-    margin-left: 28%;
-    margin-top: 25px;
-}
-.seatprime h3{
-    color:white;
-    margin-top: 5px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.seatprime a {
-    
-    border: 1px solid white;
-    color: #edd605;
-    font-family: 'Puritan', sans-serif;
-    width:30px;
-    height: 40px;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-a:hover{
-    background-color: #edd605;
-    color:black;
-    border: 1px solid#edd605
-}
-.total_seatandcost{
-    background-color: #ffffff;
-    width: 60%;
-    height: 60px;
-}
+
+

@@ -50,8 +50,8 @@
         let pass=document.getElementById("password").value
         let details=JSON.parse(localStorage.getItem("users"))
         let datas={
-            "email":email,
-            "password":pass
+            email:"email",
+            password:"pass",
         }
         let res;
         details.find(element=>{
@@ -69,7 +69,7 @@
             window.location.href="profile.html"
         }
         else{
-            alert("error")
+            alert("Account not valid")
         }
     }
 

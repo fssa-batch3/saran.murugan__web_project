@@ -183,3 +183,12 @@ header img{
    height: 500px;
    margin-left: 150px;
 }
+.Home-a-tag a,h4{
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 90%;
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+    bottom: 10px;
+}
+

@@ -21,12 +21,14 @@
             <h2>Sign up</h2>
             <form>
             <div class="email">
-                <input required type="text" placeholder="Enter your name"  id="name" />
+                <input required="true" type="text" title="name doesn't contain number or spaces" placeholder="Enter your name"  
+                  pattern="[A-Z a-z]{1,20}"  id="name" />
                 <label>Name</label>
             </div>
 
             <div class="email">
-                <input required type="text" inputmode="numeric" placeholder="Enter your phone number"  id="number" />
+                <input required type="text" inputmode="numeric" placeholder="Enter your phone number" 
+                pattern="{0,9}[10]"  maxlength="10"  id="number" />
                 <label>Number</label>
             </div>
 
@@ -36,11 +38,11 @@
             </div>
 
             <div class="email">
-                <input required type="password"    placeholder="Enter your password" id="password" />
+                <input required type="password" maxlength="8" pattern="[A-Za-z0-9]{1,8}{!@#$%&*><+=}"   placeholder="Enter your password" id="password" />
                 <label>Password</label>
             </div>
             <div class="email">
-                <input required type="password" placeholder="Confirm your password"  id="confirm_password" />
+                <input required type="password" maxlength="8" placeholder="Confirm your password"  id="confirm_password" />
                 <label>Confirm </label>
             </div>
 

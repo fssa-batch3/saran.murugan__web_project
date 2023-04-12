@@ -1,725 +1,728 @@
 <!DOCTYPE html>
+
 <head lan="eng">
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>show timings</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet'  href="../../Assets/css/timings.css">
-    
-    <style>
-        .banner{
-            /* background-image:url(../../Assets/images/Vaathi/vaathi-about.jpg); */
-            background-size: 100%;
-            height: 500px;
-        }
-    </style>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>show timings</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href="../../Assets/css/timings.css">
+
+  <style>
+    .banner {
+      /* background-image:url(../../Assets/images/Vaathi/vaathi-about.jpg); */
+      background-size: 100%;
+      height: 500px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <img src="../../Assets/images/logo/logo.png" alt="logo">
-    </header> 
+  <header>
+    <img src="../../Assets/images/logo/logo.png" alt="logo">
+  </header>
 
-    <div class="banner">
-        
-      <div class="timeandcast">
+  <div class="banner">
 
-      </div>
+    <div class="timeandcast">
+
     </div>
-    
+  </div>
 
-    <div class="main">
 
-      <div class="show_date">
+  <div class="main">
 
-        <div class="sunday_show">
-          <h2>Sun</h2><p>11</p>
-        </div>
-  
-        <div class="monday_show">
-          <h2>Mon</h2><p>12</p>
-        </div>
-  
-        <div class="tuesday_show">
-          <h2>Tue</h2><p>13</p>
-        </div>
-  
-        <div class="wednesday_show">
-          <h2>Wed</h2><p>14</p>
-        </div>
-  
-        <div class="thursday_show">
-          <h2>Thur</h2><p>15</p>
-        </div>
-  
-        <div class="friday_show">
-          <h2> Fri</h2><p>16</p>
-        </div>
-  
-        <div class="saturday_show">
-          <h2> Sat</h2><p>17</p>
-        </div>
-        
- 
+    <div class="show_date">
+
+      <div class="sunday_show">
+        <h2>Sun</h2>
+        <p>11</p>
       </div>
-      
 
-       <div class="theatre1">
-          <h2>PVR,Grand mall ,velchery</h2>  
+      <div class="monday_show">
+        <h2>Mon</h2>
+        <p>12</p>
+      </div>
 
-          <h3>Tamil - 2D</h3>
-         <div class="theatre1-show-time">
-        
-         </div>
-         <hr>
-       </div>
+      <div class="tuesday_show">
+        <h2>Tue</h2>
+        <p>13</p>
+      </div>
 
-       <div class="theatre2">
-        <h2>Luxe cinemas,Pheonix mall,velachery</h2>  
+      <div class="wednesday_show">
+        <h2>Wed</h2>
+        <p>14</p>
+      </div>
 
-        <h3>Tamil - 2D</h3>
-       <div class="theatre2-show-time">
-       
-       </div>
-       <hr>
-     </div>
+      <div class="thursday_show">
+        <h2>Thur</h2>
+        <p>15</p>
+      </div>
 
-     <div class="theatre3">
-        <h2>Mayajaal multiplex,ECR</h2>  
+      <div class="friday_show">
+        <h2> Fri</h2>
+        <p>16</p>
+      </div>
 
-        <h3>Tamil - 2D</h3>
-       <div class="theatre3-show-time">
-       
-       </div>
-       <hr>
-     </div>
+      <div class="saturday_show">
+        <h2> Sat</h2>
+        <p>17</p>
+      </div>
 
-     <div class="theatre4">
-        <h2>Rohini silver screen,koyambedu</h2>  
-
-        <h3>Tamil - 2D</h3>
-       <div class="theatre4-show-time">
-       
-       </div>
-       <hr>
-     </div>
-
-
-     <div class="theatre5">
-        <h2>Kasi takies ,Ashok nagar</h2>  
-
-        <h3>Tamil - 2D</h3>
-       <div class="theatre5-show-time">
-       
-       </div>
-       <hr>
-     </div>
-
-     <div class="theatre6">
-        <h2>INOX:Marina mall,ECR</h2>  
-
-        <h3>Tamil - 2D</h3>
-       <div class="theatre6-show-time">
-       
-       </div>
-       <hr>
-     </div>
-
-     <div class="theatre7">
-        <h2>Woodlands complex,chennai</h2>  
-
-        <h3>Tamil - 2D</h3>
-       <div class="theatre7-show-time">
-       
-       </div>
-       <hr>
-     </div>
-
-     <div class="theatre8">
-        <h2>AGS Cinemas,Villivakkam</h2>  
-
-        <h3>Tamil - 2D</h3>
-       <div class="theatre8-show-time">
-       
-       </div>
-       <hr>
-     </div>
-
-     <div class="theatre9">
-        <h2>SPi-S2 Theyagaraja,Thiruvanmiyur</h2>  
-
-        <h3>Tamil - 2D</h3>
-       <div class="theatre9-show-time">
-       
-       </div>
-       <hr>
-     </div>
-
-     <div class="theatre10">
-        <h2>PVR-Vr,chennai</h2>  
-
-        <h3>Tamil - 2D</h3>
-       <div class="theatre10-show-time">
-       
-       </div>
-       <hr>
-     </div>
 
     </div>
 
-    <script>
-        
-      let   show_time = [
 
-         
-         {
-            name:"Vaathi",
-            cast_name:"Dhanush, Samyuktha menon ",
-            banner_back_img:"linear-gradient(to bottom, rgba(0,0,0,0), #151515),url(../../Assets/images/Vaathi/vaathi-about.jpg)",
-            movie_time: "2h 20mins - UA- feb17",
-            movie_type: "Action-drama-social",
-            frame:"2D",
-            language:"Tamil",
+    <div class="theatres_lists">
 
-         },
+    </div>
 
-         {
-            name: "Vikram",
-            cast_name:"Kamal hasan,vijaysethupathi",
-            banner_back_img:"linear-gradient(to bottom, rgba(0,0,0,0), #151515),url(../../Assets/images/vikram/vikram-about.jpg)",
-            movie_time: "2h 50mins - UA - feb17",
-            movie_type: "Action-drama-thriller",
-            frame:"2D",
-            language:"Tamil",
-         },
-        {
-          name:"Jailer",
-          cast_name:"Rajinikanth,Iswarya rai",
-          banner_back_img:"linear-gradient(to bottom, rgba(0,0,0,0), #151515),url(../../Assets/images/Jailer/jailerabout.jpg)",
-          movie_time: "2h 50mins - UA - jan11",
-          movie_type: "Action-drama-thriller",
-          frame:"2D",
-            language:"Tamil",
-        },
-        {
-          name:"Thunivu",
-          cast_name:"Ajith kumar , manju warrior",
-          banner_back_img:"linear-gradient(to bottom, rgba(0,0,0,0), #151515),url(../../Assets/images/Thunivu/thunivu-about.jpg)",
-          movie_time: "2h 50mins - UA - jan11",
-          movie_type: "Action-drama-thriller",
-          frame:"2D",
-            language:"Tamil",
-        },
-        {
-          name:"Thiruchitrambalam",
-          cast_name:"Dhanush , Nithya menon",
-          banner_back_img:"linear-gradient(to bottom, rgba(0,0,0,0), #151515),url(../../Assets/images/Thiruchitrambalam/Thiruchitrambalam-release-date-1.jpg)",
-          movie_time: "2h 10mins - UA - jan11",
-          movie_type: "Love-drama-musical",
-          frame:"2D",
-            language:"Tamil",
-        },
-        {
-          name:"Love today",
-          cast_name: "Pradeep ranganathan, Ivana",
-          banner_back_img:"linear-gradient(to bottom, rgba(0,0,0,0), #151515),url(../../Assets/images/love_today/love-today-about.jpg)",
-          movie_time: "2h 50mins - UA - jan11",
-          movie_type: "Love-romance=drama",
-          frame:"2D",
-            language:"Tamil",
-        },
-        {
-          name:"Master",
-          cast_name:"Vijay, Sethupathi",
-          banner_back_img:"linear-gradient(to bottom, rgba(0,0,0,0), #151515),url(../../Assets/images/master/Master_about.jpg)",
-          movie_time: "2h 44mins - UA - jan11",
-          movie_type: "Action-drama-thriller",
-          frame:"2D",
-            language:"Tamil",
+
+  </div>
+
+  <script>
+
+
+
+
+    const name_list = JSON.parse(localStorage.getItem("show_movies_details"));
+
+
+    const url = window.location.search;                // ?name=Arun
+    const urlParams = new URLSearchParams(url);    //"name":"ponniyinselvan"    // converting string into key value pair
+    const username = urlParams.get("name")             // return value of the "name" key
+    console.log(username);
+
+
+    let res;
+    name_list.find(function (e) {
+      if (e["name"]["movie_name"] == username) { //arr[0],arr[1]  =e
+        return res = e;
+      }
+      else {
+        return res = 0;
+      }
+    })
+
+    let theatres = [
+
+      {
+        theatre_name: "PVR,Grand mall,velacherry",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
         }
-        
+      },
+      {
+        theatre_name: "Luxe cinemas,Pheonix mall,velacherry",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+      {
+        theatre_name: "Mayajaal multiplex,ECR",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+      {
+        theatre_name: "Rohini silver screen,Koyambedu",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+      {
+        theatre_name: "Kasi takies,Ashok nagar",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+      {
+        theatre_name: "INOX: Marina mall,ECR",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+      {
+        theatre_name: "Woodlands complex,chennai",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+      {
+        theatre_name: "AGS cinemas,villivakkam",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+      {
+        theatre_name: "SPI-S2 theyagaraja, Thiruvanmiyur",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+      {
+        theatre_name: "PVR-VR,Chennai",
+        show_times: {
+          show1_time: "10:00am",
+          show2_time: "1:00pm",
+          show3_time: "5:00pm",
+          show4_time: "8:00pm",
+        }
+      },
+
+    ]
 
 
-        ]
+    // BANNER SECTION //
+    let banner = document.querySelector(".banner");
+    banner.style.backgroundImage = res["images"]["background_image"];
+
+    let movie_name = document.createElement("h1");
+    movie_name.innerText = res["name"]["movie_name"];
+    banner.prepend(movie_name);
+
+    let cast_time = document.querySelector(".timeandcast")
+    banner.append(cast_time);
+
+    let cast_name1 = document.createElement("h4");
+    cast_name1.innerText = res["name"]["cast1_name"];
+    cast_time.prepend(cast_name1);
+
+    let cast_name2 = document.createElement("h4");
+    cast_name2.innerText = res["name"]["cast2_name"];
+    cast_time.append(cast_name2);
+
+    let dot = document.createElement("h4")
+    dot.innerText = "•";
+    cast_time.append(dot);
+
+    let movie_time = document.createElement("h4");
+    movie_time.innerText = res["movie_time"];
+    cast_time.append(movie_time);
+
+    let dot2 = document.createElement("h4")
+    dot2.innerText = "•";
+    cast_time.append(dot2);
+
+    let movie_type = document.createElement("h4");
+    movie_type.innerText = res["movie_type"];
+    cast_time.append(movie_type);
+
+    let dot3 = document.createElement("h4")
+    dot3.innerText = "•";
+    cast_time.append(dot3);
+
+    let frame = document.createElement("h4");
+    frame.innerText = res["frame"];
+    cast_time.append(frame);
+
+    let language = document.createElement("h4");
+    language.innerText = res["language"];
+    cast_time.append(language);
 
 
+    //THEATRE SECTION STARTS//
 
-        const url = window.location.search;                // ?name=Arun
-        const urlParams = new URLSearchParams(url);    //"name":"ponniyinselvan"    // converting string into key value pair
-        const username = urlParams.get("name")             // return value of the "name" key
-        console.log(username);
-        
+    for (let theatre of theatres) {
+      let theater, title, languages, showtime, para1, para2, para3, para4, hr
 
-        let res;
-        show_time.find(function (e){
-            if (e["name"] == username) { //arr[0],arr[1]  =e
-                return res = e;
-            }
-            else {
-                return res = 0;
-            }
-        })
+      theater = document.createElement("div");
+      theater.setAttribute("class", "theatre");
 
-       let banner = document.querySelector(".banner");
-       banner.style.backgroundImage=res["banner_back_img"];
+      title = document.createElement("h2");
+      title.innerText = theatre.theatre_name;
+      theater.append(title);
 
-       let movie_name = document.createElement("h1");
-       movie_name.innerText=res["name"];
-       banner.prepend(movie_name);
+      lan_frame = document.createElement("div");
+      lan_frame.setAttribute("class","lan_frame")
+      theater.append(lan_frame);
 
-       let cast_time=document.querySelector(".timeandcast")
-       banner.append(cast_time);
-       
-       let cast_names = document.createElement("h4");
-       cast_names.innerText=res["cast_name"];
-       cast_time.prepend(cast_names);
-
-       let dot = document.createElement("h4")
-       dot.innerText="•";
-       cast_time.append(dot);
-
-       let movie_time = document.createElement("h4");
-       movie_time.innerText=res["movie_time"];
-       cast_time.append(movie_time);
-
-       let dot2 = document.createElement("h4")
-       dot2.innerText="•";
-       cast_time.append(dot2);
-
-       let movie_type = document.createElement("h4");
-       movie_type.innerText=res["movie_type"];
-       cast_time.append(movie_type);
-
-       let dot3 = document.createElement("h4")
-       dot3.innerText="•";
-       cast_time.append(dot3);
-
-       let frame =document.createElement("h4");
-       frame.innerText=res["frame"];
-       cast_time.append(frame);
-       let language= document.createElement("h4");
-       language.innerText=res["language"];
-       cast_time.append(language);
-
-
-       let theatre_1 = document.querySelector(".theatre1")
-       
-       let theatre1_show_time = document.querySelector(".theatre1-show-time");
-
-       let theatre1_show_time1 = document.createElement("p");
-       theatre1_show_time.prepend(theatre1_show_time1);
-
-      let theatre1_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre1_show_time_a.setAttribute("href", "movie_seats.html?name=" + res["name"]);
-      theatre1_show_time_a.innerText="10:00am";
-      theatre1_show_time1.prepend(theatre1_show_time_a);
-
-
-      let theatre1_show_time2 = document.createElement("p");
-      theatre1_show_time.append(theatre1_show_time2);
-
-      let theatre1_show_time_a2 = document.createElement("a");
-      theatre1_show_time_a2.setAttribute("href", "movie_seats.html?name=" + res["name"]);
-      theatre1_show_time_a2.innerText="1:00pm";
-      theatre1_show_time2.append(theatre1_show_time_a2);
-
+      languages = document.createElement("h3");
+      languages.innerText = res["language"];
+      lan_frame.append(languages);
       
-      let theatre1_show_time3 = document.createElement("p");
-      theatre1_show_time.append(theatre1_show_time3);
-
-      let theatre1_show_time_a3 = document.createElement("a");
-      theatre1_show_time_a3.setAttribute("href", "movie_seats.html?name=" + res["name"]);
-      theatre1_show_time_a3.innerText="5:00pm";
-      theatre1_show_time3.append(theatre1_show_time_a3);
-
+      frame = document.createElement("h3");
+      frame.innerText=res["frame"];
       
-      let theatre1_show_time4 = document.createElement("p");
-      theatre1_show_time.append(theatre1_show_time4);
+      lan_frame.append(frame)
 
-      let theatre1_show_time_a4 = document.createElement("a");
-      theatre1_show_time_a4.setAttribute("href", "movie_seats.html?name=" + res["name"]);
-      theatre1_show_time_a4.innerText="8:00pm";
-      theatre1_show_time4.append(theatre1_show_time_a4);
+      showtime = document.createElement("div");
+      showtime.setAttribute("class", "theatre-show-time");
+      theater.append(showtime);
 
+      para1 = document.createElement("p");
+      para1.innerText =theatre.show_times.show1_time;
+      showtime.append(para1);
 
-      let theatre_2 = document.querySelector(".theatre2")
-       
-       let theatre2_show_time = document.querySelector(".theatre2-show-time");
+      para2 = document.createElement("p");
+      para2.innerText = theatre.show_times.show2_time;
+      showtime.append(para2);
 
-       let theatre2_show_time1 = document.createElement("p");
-       theatre2_show_time.prepend(theatre2_show_time1);
+      para3 = document.createElement("p");
+      para3.innerText =theatre.show_times.show3_time;
+      showtime.append(para3)
 
-      let theatre2_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre2_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre2_show_time_a.innerText="10:00am";
-      theatre2_show_time1.prepend(theatre2_show_time_a);
+      para4 = document.createElement("p");
+      para4.innerText = theatre.show_times.show4_time;
+      showtime.append(para4);
 
+      hr = document.createElement("hr");
+      theater.append(hr)
 
-      let theatre2_show_time2 = document.createElement("p");
-      theatre2_show_time.append(theatre2_show_time2);
+      document.querySelector(".theatres_lists").append(theater);
 
-      let theatre2_show_time_a2 = document.createElement("a");
-      theatre2_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre2_show_time_a2.innerText="1:00pm";
-      theatre2_show_time2.append(theatre2_show_time_a2);
 
-      
-      let theatre2_show_time3 = document.createElement("p");
-      theatre2_show_time.append(theatre2_show_time3);
+      //  let theatre_1 = document.querySelector(".theatre1");
 
-      let theatre2_show_time_a3 = document.createElement("a");
-      theatre2_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre2_show_time_a3.innerText="5:00pm";
-      theatre2_show_time3.append(theatre2_show_time_a3);
+      //  let theatre_name=document.createElement("h2");
+      //     theatre_name.innerText=theatre.theatre_name;
+      //     theatre_1.append()
 
-      
-      let theatre2_show_time4 = document.createElement("p");
-      theatre2_show_time.append(theatre2_show_time4);
 
-      let theatre2_show_time_a4 = document.createElement("a");
-      theatre2_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre2_show_time_a4.innerText="8:00pm";
-      theatre2_show_time4.append(theatre2_show_time_a4);
+      //  let theatre1_show_time = document.querySelector(".theatre1-show-time");
 
+      //  let theatre1_show_time1 = document.createElement("p");
+      //  theatre1_show_time.prepend(theatre1_show_time1);
 
+      // let theatre1_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // // theatre1_show_time_a.setAttribute("href", "movie_seats.html?name=" + res["name"]);
+      // theatre1_show_time_a.innerText=[];
+      // theatre1_show_time1.prepend(theatre1_show_time_a);
 
-      let theatre_3 = document.querySelector(".theatre3")
-       
-       let theatre3_show_time = document.querySelector(".theatre3-show-time");
 
-       let theatre3_show_time1 = document.createElement("p");
-       theatre3_show_time.prepend(theatre3_show_time1);
+      // let theatre1_show_time2 = document.createElement("p");
+      // theatre1_show_time.append(theatre1_show_time2);
 
-      let theatre3_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre3_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre3_show_time_a.innerText="10:00am";
-      theatre3_show_time1.prepend(theatre3_show_time_a);
+      // let theatre1_show_time_a2 = document.createElement("a");
+      // theatre1_show_time_a2.setAttribute("href", "movie_seats.html?name=" + res["name"]);
+      // theatre1_show_time_a2.innerText=["theatres"]["show_times"]["show1_time"];
+      // theatre1_show_time2.append(theatre1_show_time_a2);
 
 
-      let theatre3_show_time2 = document.createElement("p");
-      theatre3_show_time.append(theatre3_show_time2);
+      // let theatre1_show_time3 = document.createElement("p");
+      // theatre1_show_time.append(theatre1_show_time3);
 
-      let theatre3_show_time_a2 = document.createElement("a");
-      theatre3_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre3_show_time_a2.innerText="1:00pm";
-      theatre3_show_time2.append(theatre3_show_time_a2);
+      // let theatre1_show_time_a3 = document.createElement("a");
+      // theatre1_show_time_a3.setAttribute("href", "movie_seats.html?name=" + res["name"]);
+      // theatre1_show_time_a3.innerText="5:00pm";
+      // theatre1_show_time3.append(theatre1_show_time_a3);
 
-      
-      let theatre3_show_time3 = document.createElement("p");
-      theatre3_show_time.append(theatre3_show_time3);
 
-      let theatre3_show_time_a3 = document.createElement("a");
-      theatre3_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre3_show_time_a3.innerText="5:00pm";
-      theatre3_show_time3.append(theatre3_show_time_a3);
+      // let theatre1_show_time4 = document.createElement("p");
+      // theatre1_show_time.append(theatre1_show_time4);
 
-      
-      let theatre3_show_time4 = document.createElement("p");
-      theatre3_show_time.append(theatre3_show_time4);
+      // let theatre1_show_time_a4 = document.createElement("a");
+      // theatre1_show_time_a4.setAttribute("href", "movie_seats.html?name=" + res["name"]);
+      // theatre1_show_time_a4.innerText="8:00pm";
+      // theatre1_show_time4.append(theatre1_show_time_a4);
 
-      let theatre3_show_time_a4 = document.createElement("a");
-      theatre3_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre3_show_time_a4.innerText="8:00pm";
-      theatre3_show_time4.append(theatre3_show_time_a4);
 
+      // let theatre_2 = document.querySelector(".theatre2")
 
+      //  let theatre2_show_time = document.querySelector(".theatre2-show-time");
 
-      let theatre_4 = document.querySelector(".theatre4")
-       
-       let theatre4_show_time = document.querySelector(".theatre4-show-time");
+      //  let theatre2_show_time1 = document.createElement("p");
+      //  theatre2_show_time.prepend(theatre2_show_time1);
 
-       let theatre4_show_time1 = document.createElement("p");
-       theatre4_show_time.prepend(theatre4_show_time1);
+      // let theatre2_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre2_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre2_show_time_a.innerText="10:00am";
+      // theatre2_show_time1.prepend(theatre2_show_time_a);
 
-      let theatre4_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre4_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre4_show_time_a.innerText="10:00am";
-      theatre4_show_time1.prepend(theatre4_show_time_a);
 
+      // let theatre2_show_time2 = document.createElement("p");
+      // theatre2_show_time.append(theatre2_show_time2);
 
-      let theatre4_show_time2 = document.createElement("p");
-      theatre4_show_time.append(theatre4_show_time2);
+      // let theatre2_show_time_a2 = document.createElement("a");
+      // theatre2_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre2_show_time_a2.innerText="1:00pm";
+      // theatre2_show_time2.append(theatre2_show_time_a2);
 
-      let theatre4_show_time_a2 = document.createElement("a");
-      theatre4_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre4_show_time_a2.innerText="1:00pm";
-      theatre4_show_time2.append(theatre4_show_time_a2);
 
-      
-      let theatre4_show_time3 = document.createElement("p");
-      theatre4_show_time.append(theatre4_show_time3);
+      // let theatre2_show_time3 = document.createElement("p");
+      // theatre2_show_time.append(theatre2_show_time3);
 
-      let theatre4_show_time_a3 = document.createElement("a");
-      theatre4_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre4_show_time_a3.innerText="5:00pm";
-      theatre4_show_time3.append(theatre4_show_time_a3);
+      // let theatre2_show_time_a3 = document.createElement("a");
+      // theatre2_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre2_show_time_a3.innerText="5:00pm";
+      // theatre2_show_time3.append(theatre2_show_time_a3);
 
-      
-      let theatre4_show_time4 = document.createElement("p");
-      theatre4_show_time.append(theatre4_show_time4);
 
-      let theatre4_show_time_a4 = document.createElement("a");
-      theatre4_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre4_show_time_a4.innerText="8:00pm";
-      theatre4_show_time4.append(theatre4_show_time_a4);
+      // let theatre2_show_time4 = document.createElement("p");
+      // theatre2_show_time.append(theatre2_show_time4);
 
+      // let theatre2_show_time_a4 = document.createElement("a");
+      // theatre2_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre2_show_time_a4.innerText="8:00pm";
+      // theatre2_show_time4.append(theatre2_show_time_a4);
 
 
 
-      let theatre_5 = document.querySelector(".theatre5")
-       
-       let theatre5_show_time = document.querySelector(".theatre5-show-time");
+      // let theatre_3 = document.querySelector(".theatre3")
 
-       let theatre5_show_time1 = document.createElement("p");
-       theatre5_show_time.prepend(theatre5_show_time1);
+      //  let theatre3_show_time = document.querySelector(".theatre3-show-time");
 
-      let theatre5_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre5_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre5_show_time_a.innerText="10:00am";
-      theatre5_show_time1.prepend(theatre5_show_time_a);
+      //  let theatre3_show_time1 = document.createElement("p");
+      //  theatre3_show_time.prepend(theatre3_show_time1);
 
+      // let theatre3_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre3_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre3_show_time_a.innerText="10:00am";
+      // theatre3_show_time1.prepend(theatre3_show_time_a);
 
-      let theatre5_show_time2 = document.createElement("p");
-      theatre5_show_time.append(theatre5_show_time2);
 
-      let theatre5_show_time_a2 = document.createElement("a");
-      theatre5_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre5_show_time_a2.innerText="1:00pm";
-      theatre5_show_time2.append(theatre5_show_time_a2);
+      // let theatre3_show_time2 = document.createElement("p");
+      // theatre3_show_time.append(theatre3_show_time2);
 
-      
-      let theatre5_show_time3 = document.createElement("p");
-      theatre5_show_time.append(theatre5_show_time3);
+      // let theatre3_show_time_a2 = document.createElement("a");
+      // theatre3_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre3_show_time_a2.innerText="1:00pm";
+      // theatre3_show_time2.append(theatre3_show_time_a2);
 
-      let theatre5_show_time_a3 = document.createElement("a");
-      theatre5_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre5_show_time_a3.innerText="5:00pm";
-      theatre5_show_time3.append(theatre5_show_time_a3);
 
-      
-      let theatre5_show_time4 = document.createElement("p");
-      theatre5_show_time.append(theatre5_show_time4);
+      // let theatre3_show_time3 = document.createElement("p");
+      // theatre3_show_time.append(theatre3_show_time3);
 
-      let theatre5_show_time_a4 = document.createElement("a");
-      theatre5_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre5_show_time_a4.innerText="8:00pm";
-      theatre5_show_time4.append(theatre5_show_time_a4);
+      // let theatre3_show_time_a3 = document.createElement("a");
+      // theatre3_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre3_show_time_a3.innerText="5:00pm";
+      // theatre3_show_time3.append(theatre3_show_time_a3);
 
 
+      // let theatre3_show_time4 = document.createElement("p");
+      // theatre3_show_time.append(theatre3_show_time4);
 
-      let theatre_6 = document.querySelector(".theatre6")
-       
-       let theatre6_show_time = document.querySelector(".theatre6-show-time");
+      // let theatre3_show_time_a4 = document.createElement("a");
+      // theatre3_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre3_show_time_a4.innerText="8:00pm";
+      // theatre3_show_time4.append(theatre3_show_time_a4);
 
-       let theatre6_show_time1 = document.createElement("p");
-       theatre6_show_time.prepend(theatre6_show_time1);
 
-      let theatre6_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre6_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre6_show_time_a.innerText="10:00am";
-      theatre6_show_time1.prepend(theatre6_show_time_a);
 
+      // let theatre_4 = document.querySelector(".theatre4")
 
-      let theatre6_show_time2 = document.createElement("p");
-      theatre6_show_time.append(theatre6_show_time2);
+      //  let theatre4_show_time = document.querySelector(".theatre4-show-time");
 
-      let theatre6_show_time_a2 = document.createElement("a");
-      theatre6_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre6_show_time_a2.innerText="1:00pm";
-      theatre6_show_time2.append(theatre6_show_time_a2);
+      //  let theatre4_show_time1 = document.createElement("p");
+      //  theatre4_show_time.prepend(theatre4_show_time1);
 
-      
-      let theatre6_show_time3 = document.createElement("p");
-      theatre6_show_time.append(theatre6_show_time3);
+      // let theatre4_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre4_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre4_show_time_a.innerText="10:00am";
+      // theatre4_show_time1.prepend(theatre4_show_time_a);
 
-      let theatre6_show_time_a3 = document.createElement("a");
-      theatre6_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre6_show_time_a3.innerText="5:00pm";
-      theatre6_show_time3.append(theatre6_show_time_a3);
 
-      
-      let theatre6_show_time4 = document.createElement("p");
-      theatre6_show_time.append(theatre6_show_time4);
+      // let theatre4_show_time2 = document.createElement("p");
+      // theatre4_show_time.append(theatre4_show_time2);
 
-      let theatre6_show_time_a4 = document.createElement("a");
-      theatre6_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre6_show_time_a4.innerText="8:00pm";
-      theatre6_show_time4.append(theatre6_show_time_a4);
+      // let theatre4_show_time_a2 = document.createElement("a");
+      // theatre4_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre4_show_time_a2.innerText="1:00pm";
+      // theatre4_show_time2.append(theatre4_show_time_a2);
 
 
+      // let theatre4_show_time3 = document.createElement("p");
+      // theatre4_show_time.append(theatre4_show_time3);
 
-      let theatre_7 = document.querySelector(".theatre7")
-       
-       let theatre7_show_time = document.querySelector(".theatre7-show-time");
+      // let theatre4_show_time_a3 = document.createElement("a");
+      // theatre4_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre4_show_time_a3.innerText="5:00pm";
+      // theatre4_show_time3.append(theatre4_show_time_a3);
 
-       let theatre7_show_time1 = document.createElement("p");
-       theatre7_show_time.prepend(theatre7_show_time1);
 
-      let theatre7_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre7_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre7_show_time_a.innerText="10:00am";
-      theatre7_show_time1.prepend(theatre7_show_time_a);
+      // let theatre4_show_time4 = document.createElement("p");
+      // theatre4_show_time.append(theatre4_show_time4);
 
+      // let theatre4_show_time_a4 = document.createElement("a");
+      // theatre4_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre4_show_time_a4.innerText="8:00pm";
+      // theatre4_show_time4.append(theatre4_show_time_a4);
 
-      let theatre7_show_time2 = document.createElement("p");
-      theatre7_show_time.append(theatre7_show_time2);
 
-      let theatre7_show_time_a2 = document.createElement("a");
-      theatre7_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre7_show_time_a2.innerText="1:00pm";
-      theatre7_show_time2.append(theatre7_show_time_a2);
 
-      
-      let theatre7_show_time3 = document.createElement("p");
-      theatre7_show_time.append(theatre7_show_time3);
 
-      let theatre7_show_time_a3 = document.createElement("a");
-      theatre7_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre7_show_time_a3.innerText="5:00pm";
-      theatre7_show_time3.append(theatre7_show_time_a3);
+      // let theatre_5 = document.querySelector(".theatre5")
 
-      
-      let theatre7_show_time4 = document.createElement("p");
-      theatre7_show_time.append(theatre7_show_time4);
+      //  let theatre5_show_time = document.querySelector(".theatre5-show-time");
 
-      let theatre7_show_time_a4 = document.createElement("a");
-      theatre7_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre7_show_time_a4.innerText="8:00pm";
-      theatre7_show_time4.append(theatre7_show_time_a4);
+      //  let theatre5_show_time1 = document.createElement("p");
+      //  theatre5_show_time.prepend(theatre5_show_time1);
 
+      // let theatre5_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre5_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre5_show_time_a.innerText="10:00am";
+      // theatre5_show_time1.prepend(theatre5_show_time_a);
 
-      let theatre_8 = document.querySelector(".theatre8")
-       
-       let theatre8_show_time = document.querySelector(".theatre8-show-time");
 
-       let theatre8_show_time1 = document.createElement("p");
-       theatre8_show_time.prepend(theatre8_show_time1);
+      // let theatre5_show_time2 = document.createElement("p");
+      // theatre5_show_time.append(theatre5_show_time2);
 
-      let theatre8_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre8_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre8_show_time_a.innerText="10:00am";
-      theatre8_show_time1.prepend(theatre8_show_time_a);
+      // let theatre5_show_time_a2 = document.createElement("a");
+      // theatre5_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre5_show_time_a2.innerText="1:00pm";
+      // theatre5_show_time2.append(theatre5_show_time_a2);
 
 
-      let theatre8_show_time2 = document.createElement("p");
-      theatre8_show_time.append(theatre8_show_time2);
+      // let theatre5_show_time3 = document.createElement("p");
+      // theatre5_show_time.append(theatre5_show_time3);
 
-      let theatre8_show_time_a2 = document.createElement("a");
-      theatre8_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre8_show_time_a2.innerText="1:00pm";
-      theatre8_show_time2.append(theatre8_show_time_a2);
+      // let theatre5_show_time_a3 = document.createElement("a");
+      // theatre5_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre5_show_time_a3.innerText="5:00pm";
+      // theatre5_show_time3.append(theatre5_show_time_a3);
 
-      
-      let theatre8_show_time3 = document.createElement("p");
-      theatre8_show_time.append(theatre8_show_time3);
 
-      let theatre8_show_time_a3 = document.createElement("a");
-      theatre8_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre8_show_time_a3.innerText="5:00pm";
-      theatre8_show_time3.append(theatre8_show_time_a3);
+      // let theatre5_show_time4 = document.createElement("p");
+      // theatre5_show_time.append(theatre5_show_time4);
 
-      
-      let theatre8_show_time4 = document.createElement("p");
-      theatre8_show_time.append(theatre8_show_time4);
+      // let theatre5_show_time_a4 = document.createElement("a");
+      // theatre5_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre5_show_time_a4.innerText="8:00pm";
+      // theatre5_show_time4.append(theatre5_show_time_a4);
 
-      let theatre8_show_time_a4 = document.createElement("a");
-      theatre8_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre8_show_time_a4.innerText="8:00pm";
-      theatre8_show_time4.append(theatre8_show_time_a4);
 
 
+      // let theatre_6 = document.querySelector(".theatre6")
 
-      let theatre_9 = document.querySelector(".theatre9")
-       
-       let theatre9_show_time = document.querySelector(".theatre9-show-time");
+      //  let theatre6_show_time = document.querySelector(".theatre6-show-time");
 
-       let theatre9_show_time1 = document.createElement("p");
-       theatre9_show_time.prepend(theatre9_show_time1);
+      //  let theatre6_show_time1 = document.createElement("p");
+      //  theatre6_show_time.prepend(theatre6_show_time1);
 
-      let theatre9_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre9_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre9_show_time_a.innerText="10:00am";
-      theatre9_show_time1.prepend(theatre9_show_time_a);
+      // let theatre6_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre6_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre6_show_time_a.innerText="10:00am";
+      // theatre6_show_time1.prepend(theatre6_show_time_a);
 
 
-      let theatre9_show_time2 = document.createElement("p");
-      theatre9_show_time.append(theatre9_show_time2);
+      // let theatre6_show_time2 = document.createElement("p");
+      // theatre6_show_time.append(theatre6_show_time2);
 
-      let theatre9_show_time_a2 = document.createElement("a");
-      theatre9_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre9_show_time_a2.innerText="1:00pm";
-      theatre9_show_time2.append(theatre9_show_time_a2);
+      // let theatre6_show_time_a2 = document.createElement("a");
+      // theatre6_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre6_show_time_a2.innerText="1:00pm";
+      // theatre6_show_time2.append(theatre6_show_time_a2);
 
-      
-      let theatre9_show_time3 = document.createElement("p");
-      theatre9_show_time.append(theatre9_show_time3);
 
-      let theatre9_show_time_a3 = document.createElement("a");
-      theatre9_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre9_show_time_a3.innerText="5:00pm";
-      theatre9_show_time3.append(theatre9_show_time_a3);
+      // let theatre6_show_time3 = document.createElement("p");
+      // theatre6_show_time.append(theatre6_show_time3);
 
-      
-      let theatre9_show_time4 = document.createElement("p");
-      theatre9_show_time.append(theatre9_show_time4);
+      // let theatre6_show_time_a3 = document.createElement("a");
+      // theatre6_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre6_show_time_a3.innerText="5:00pm";
+      // theatre6_show_time3.append(theatre6_show_time_a3);
 
-      let theatre9_show_time_a4 = document.createElement("a");
-      theatre9_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre9_show_time_a4.innerText="8:00pm";
-      theatre9_show_time4.append(theatre9_show_time_a4);
 
+      // let theatre6_show_time4 = document.createElement("p");
+      // theatre6_show_time.append(theatre6_show_time4);
 
-      let theatre_10 = document.querySelector(".theatre10")
-       
-       let theatre10_show_time = document.querySelector(".theatre10-show-time");
+      // let theatre6_show_time_a4 = document.createElement("a");
+      // theatre6_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre6_show_time_a4.innerText="8:00pm";
+      // theatre6_show_time4.append(theatre6_show_time_a4);
 
-       let theatre10_show_time1 = document.createElement("p");
-       theatre10_show_time.prepend(theatre10_show_time1);
 
-      let theatre10_show_time_a = document.createElement("a");
-       //  url.html?key=value&key=value
-      theatre10_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre10_show_time_a.innerText="10:00am";
-      theatre10_show_time1.prepend(theatre10_show_time_a);
 
+      // let theatre_7 = document.querySelector(".theatre7")
 
-      let theatre10_show_time2 = document.createElement("p");
-      theatre10_show_time.append(theatre10_show_time2);
+      //  let theatre7_show_time = document.querySelector(".theatre7-show-time");
 
-      let theatre10_show_time_a2 = document.createElement("a");
-      theatre10_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre10_show_time_a2.innerText="1:00pm";
-      theatre10_show_time2.append(theatre10_show_time_a2);
+      //  let theatre7_show_time1 = document.createElement("p");
+      //  theatre7_show_time.prepend(theatre7_show_time1);
 
-      
-      let theatre10_show_time3 = document.createElement("p");
-      theatre10_show_time.append(theatre10_show_time3);
+      // let theatre7_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre7_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre7_show_time_a.innerText="10:00am";
+      // theatre7_show_time1.prepend(theatre7_show_time_a);
 
-      let theatre10_show_time_a3 = document.createElement("a");
-      theatre10_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre10_show_time_a3.innerText="5:00pm";
-      theatre10_show_time3.append(theatre10_show_time_a3);
 
-      
-      let theatre10_show_time4 = document.createElement("p");
-      theatre10_show_time.append(theatre10_show_time4);
+      // let theatre7_show_time2 = document.createElement("p");
+      // theatre7_show_time.append(theatre7_show_time2);
 
-      let theatre10_show_time_a4 = document.createElement("a");
-      theatre10_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      theatre10_show_time_a4.innerText="8:00pm";
-      theatre10_show_time4.append(theatre10_show_time_a4);
+      // let theatre7_show_time_a2 = document.createElement("a");
+      // theatre7_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre7_show_time_a2.innerText="1:00pm";
+      // theatre7_show_time2.append(theatre7_show_time_a2);
 
 
+      // let theatre7_show_time3 = document.createElement("p");
+      // theatre7_show_time.append(theatre7_show_time3);
 
-    </script>
+      // let theatre7_show_time_a3 = document.createElement("a");
+      // theatre7_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre7_show_time_a3.innerText="5:00pm";
+      // theatre7_show_time3.append(theatre7_show_time_a3);
+
+
+      // let theatre7_show_time4 = document.createElement("p");
+      // theatre7_show_time.append(theatre7_show_time4);
+
+      // let theatre7_show_time_a4 = document.createElement("a");
+      // theatre7_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre7_show_time_a4.innerText="8:00pm";
+      // theatre7_show_time4.append(theatre7_show_time_a4);
+
+
+      // let theatre_8 = document.querySelector(".theatre8")
+
+      //  let theatre8_show_time = document.querySelector(".theatre8-show-time");
+
+      //  let theatre8_show_time1 = document.createElement("p");
+      //  theatre8_show_time.prepend(theatre8_show_time1);
+
+      // let theatre8_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre8_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre8_show_time_a.innerText="10:00am";
+      // theatre8_show_time1.prepend(theatre8_show_time_a);
+
+
+      // let theatre8_show_time2 = document.createElement("p");
+      // theatre8_show_time.append(theatre8_show_time2);
+
+      // let theatre8_show_time_a2 = document.createElement("a");
+      // theatre8_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre8_show_time_a2.innerText="1:00pm";
+      // theatre8_show_time2.append(theatre8_show_time_a2);
+
+
+      // let theatre8_show_time3 = document.createElement("p");
+      // theatre8_show_time.append(theatre8_show_time3);
+
+      // let theatre8_show_time_a3 = document.createElement("a");
+      // theatre8_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre8_show_time_a3.innerText="5:00pm";
+      // theatre8_show_time3.append(theatre8_show_time_a3);
+
+
+      // let theatre8_show_time4 = document.createElement("p");
+      // theatre8_show_time.append(theatre8_show_time4);
+
+      // let theatre8_show_time_a4 = document.createElement("a");
+      // theatre8_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre8_show_time_a4.innerText="8:00pm";
+      // theatre8_show_time4.append(theatre8_show_time_a4);
+
+
+
+      // let theatre_9 = document.querySelector(".theatre9")
+
+      //  let theatre9_show_time = document.querySelector(".theatre9-show-time");
+
+      //  let theatre9_show_time1 = document.createElement("p");
+      //  theatre9_show_time.prepend(theatre9_show_time1);
+
+      // let theatre9_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre9_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre9_show_time_a.innerText="10:00am";
+      // theatre9_show_time1.prepend(theatre9_show_time_a);
+
+
+      // let theatre9_show_time2 = document.createElement("p");
+      // theatre9_show_time.append(theatre9_show_time2);
+
+      // let theatre9_show_time_a2 = document.createElement("a");
+      // theatre9_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre9_show_time_a2.innerText="1:00pm";
+      // theatre9_show_time2.append(theatre9_show_time_a2);
+
+
+      // let theatre9_show_time3 = document.createElement("p");
+      // theatre9_show_time.append(theatre9_show_time3);
+
+      // let theatre9_show_time_a3 = document.createElement("a");
+      // theatre9_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre9_show_time_a3.innerText="5:00pm";
+      // theatre9_show_time3.append(theatre9_show_time_a3);
+
+
+      // let theatre9_show_time4 = document.createElement("p");
+      // theatre9_show_time.append(theatre9_show_time4);
+
+      // let theatre9_show_time_a4 = document.createElement("a");
+      // theatre9_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre9_show_time_a4.innerText="8:00pm";
+      // theatre9_show_time4.append(theatre9_show_time_a4);
+
+
+      // let theatre_10 = document.querySelector(".theatre10")
+
+      //  let theatre10_show_time = document.querySelector(".theatre10-show-time");
+
+      //  let theatre10_show_time1 = document.createElement("p");
+      //  theatre10_show_time.prepend(theatre10_show_time1);
+
+      // let theatre10_show_time_a = document.createElement("a");
+      //  //  url.html?key=value&key=value
+      // theatre10_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre10_show_time_a.innerText="10:00am";
+      // theatre10_show_time1.prepend(theatre10_show_time_a);
+
+
+      // let theatre10_show_time2 = document.createElement("p");
+      // theatre10_show_time.append(theatre10_show_time2);
+
+      // let theatre10_show_time_a2 = document.createElement("a");
+      // theatre10_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre10_show_time_a2.innerText="1:00pm";
+      // theatre10_show_time2.append(theatre10_show_time_a2);
+
+
+      // let theatre10_show_time3 = document.createElement("p");
+      // theatre10_show_time.append(theatre10_show_time3);
+
+      // let theatre10_show_time_a3 = document.createElement("a");
+      // theatre10_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre10_show_time_a3.innerText="5:00pm";
+      // theatre10_show_time3.append(theatre10_show_time_a3);
+
+
+      // let theatre10_show_time4 = document.createElement("p");
+      // theatre10_show_time.append(theatre10_show_time4);
+
+      // let theatre10_show_time_a4 = document.createElement("a");
+      // theatre10_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
+      // theatre10_show_time_a4.innerText="8:00pm";
+      // theatre10_show_time4.append(theatre10_show_time_a4);
+
+
+    }
+  </script>
 </body>
+
 </html>
