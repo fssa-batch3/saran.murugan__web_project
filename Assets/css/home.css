@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Island+Moments&family=Londrina+Solid:wght@300&family=Oswald&family=PT+Sans+Narrow&family=Roboto+Condensed:wght@300&family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -14,13 +17,13 @@ header{
     background-color:#edde3b;
     height: 100px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: row;    justify-content: space-evenly;
     align-items: center;
 }
 
 body{
     background-color: black;
+    font-family: 'Poppins', sans-serif;
 }
 header img{
     width: 120px;
@@ -144,12 +147,23 @@ option{
     font-size: 20px;
     border-color:white;
     margin-top: 10px;
-    font-family: 'Barlow Condensed', sans-serif;
+
 }
 .various a:hover{
     transform: scale(1.5);
     transition: 0.5s;
     color: tomato;
+}
+.crud-button button{
+    padding: 5px;
+    width:60px;
+    height: 30px;
+    background-color:aliceblue;
+    border-radius: 5px;
+    border-color: black;
+
+}.crud-button{
+    margin-left: 130px;
 }
 .line hr{
     width: 1300px;
@@ -180,14 +194,14 @@ option{
     margin-left: 40px;
     margin-top: 45px;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 
 .movie-list-container1{
     padding: 0 20px;
-    width:88%;
-    margin-left: 65px; 
+    width:80%;
+    margin-left: 120px; 
 }
 .movie-list-container2{
     padding: 0 20px;
@@ -243,7 +257,6 @@ option{
     padding: 0 10px;
     font-size: 27px;
     font-weight: bold;
-    font-family: 'Asap Condensed', sans-serif;
     position: absolute;
     top:30%;
     left:50px;
@@ -257,7 +270,6 @@ option{
     font-size: 14px;
     position: absolute;
     top:45%;
-    font-family: 'Catamaran', sans-serif;
     left:50px;
     width:230px;
      opacity: 0;
@@ -323,7 +335,6 @@ option{
     margin-left: 20px;
     margin-top: 85px;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -371,7 +382,6 @@ option{
     padding: 0 10px;
     font-size: 28px;
     font-weight: bold;
-    font-family: 'Asap Condensed', sans-serif;
     position: absolute;
     top:30%;
     left:50px;
@@ -385,7 +395,6 @@ option{
     font-size: 14px;
     position: absolute;
     top:45%;
-    font-family: 'Catamaran', sans-serif;
     left:50px;
     width:210px;
      opacity: 0;
@@ -440,7 +449,6 @@ option{
     margin-left: 20px;
     margin-top: 85px;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .movie-list3{
@@ -487,7 +495,6 @@ option{
     padding: 0 10px;
     font-size: 30px;
     font-weight: bold;
-    font-family: 'Asap Condensed', sans-serif;
     position: absolute;
     top:30%;
     left:50px;
@@ -501,7 +508,6 @@ option{
     font-size: 14px;
     position: absolute;
     top:45%;
-    font-family: 'Catamaran', sans-serif;
     left:50px;
     width:210px;
      opacity: 0;
@@ -563,7 +569,6 @@ footer >img{
 }
 .about_copy_right p{
     font-size: 15px;
-    font-family: 'Catamaran', sans-serif;
     text-align: center;
     margin-top: 30px;
     font-weight: bold;
@@ -679,7 +684,6 @@ footer >img{
 }
 .content h3{
     color:white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 .content h3:hover{
     color: yellow;

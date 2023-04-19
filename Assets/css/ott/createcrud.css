@@ -1,0 +1,12 @@
+body{
+    background-color: #f5f5f5;
+}
+.movie_details_section{
+background-color: #ffffff;
+width: 50%;
+margin-left: 20%;
+}
+.movie_details_section h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 30%;
+}

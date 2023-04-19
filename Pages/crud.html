@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='../Assets/css/crud.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <div class="movie_details_section">
+
+        <h1>Movie details</h1>
+
+        <form id="movie_details-form">
+            <div class="movie_wrapper">
+                <label for="moviename">Movie name</label>
+                <input type="text" required="true" id="movie_name" placeholder="Enter movie name">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Movie language">Movie language</label>
+                <input type="text" required="true" id="movie_language" placeholder="Enter ">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Movie frame">Movie frame</label>
+                <input type="text" required="true" id="movie_frame" placeholder="Enter ">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="movie time">Movie time</label>
+                <input type="text" required="true" id="movie_time" placeholder="Enter ">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="movie Certified"> Movie Certified</label>
+                <input type="text" required="true" id="movie_certified" placeholder="Enter ">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Movie type"> Movie type</label>
+                <input type="text" required="true" id="movie_type" placeholder="Enter ">
+            </div>
+            <div class="movie_wrapper">
+                <label for="movie release date">Movie release date</label>
+                <input type="text" required="true" id="movie_release_date" placeholder="Enter ">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="About Movie description">About movie description</label>
+                <input type="text" required="true" id="movie_description" placeholder="Enter ">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Movie main image ">Movie main image </label>
+                <input type="text" required="true" id="movie_main_image" placeholder="Enter the image link">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Movie background image ">Movie background image </label>
+                <input type="text" required="true" id="movie_background_image" placeholder="Enter the image link">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Cast 1 ">Cast 1 </label>
+                <input type="text" required="true" id="cast1_name" placeholder="Enter cast name">
+                <input type="text" required="true" id="cast1_image" placeholder="Enter image link">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Cast 2 ">Cast 2 </label>
+                <input type="text" required="true" id="cast2_name" placeholder="Enter cast name">
+                <input type="text" required="true" id="cast2_image" placeholder="Enter image link">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Cast 3 ">Cast 3 </label>
+                <input type="text" required="true" id="cast3_name" placeholder="Enter cast name">
+                <input type="text" required="true" id="cast3_image" placeholder="Enter image link">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Cast 4 ">Cast 4 </label>
+                <input type="text" required="true" id="cast4_name" placeholder="Enter cast name">
+                <input type="text" required="true" id="cast4_image" placeholder="Enter image link">
+            </div>
+
+
+            <div class="movie_wrapper">
+                <label for="Director ">Director </label>
+                <input type="text" required="true" id="director_name" placeholder="Enter director name">
+                <input type="text" required="true" id="director_image" placeholder="Enter image link">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="music director ">Music director</label>
+                <input type="text" required="true" id="music_director_name" placeholder="Enter music director name">
+                <input type="text" required="true" id="music_director_image" placeholder="Enter image link">
+            </div>
+
+            <div class="movie_wrapper">
+                <label for="Producer ">Producer </label>
+                <input type="text" required="true" id="producer_name" placeholder="Enter producer name">
+                <input type="text" required="true" id="producer_image" placeholder="Enter image link">
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+    <script>
+        const form_control = document.getElementById("movie_details-form");
+        function formsubmit() {
+
+
+            const movie_name = document.getElementById("movie_name").value
+            const movie_language = document.getElementById("movie_language").value
+            const movie_frame = document.getElementById("movie_frame").value
+            const movie_time = document.getElementById("movie_time").value
+            const movie_certified = document.getElementById("movie_certified").value
+            const movie_type = document.getElementById("movie_type").value
+            const movie_release_date = document.getElementById("movie_release_date").value
+            const movie_description = document.getElementById("movie_description").value
+            const movie_main_image = document.getElementById("movie_main_image").value
+            const movie_background_image = document.getElementById("movie_background_image").value
+            const cast1_name = document.getElementById("cast1_name").value
+            const cast1_image = document.getElementById("cast1_image").value
+            const cast2_name = document.getElementById("cast2_name").value
+            const cast2_image = document.getElementById("cast2_image").value
+            const cast3_name = document.getElementById("cast3_name").value
+            const cast3_image = document.getElementById("cast3_image").value
+            const cast4_name = document.getElementById("cast4_name").value
+            const cast4_image = document.getElementById("cast4_image").value
+            const director_name = document.getElementById("director_name").value
+            const director_image = document.getElementById("director_image").value
+            const music_director_name = document.getElementById("music_director_name").value
+            const music_director_image = document.getElementById("music_director_image").value
+            const producer_name = document.getElementById("producer_name").value
+            const producer_image = document.getElementById("producer_image").value
+
+            let movie_details = {
+
+
+                name: {
+                    movie_name: movie_name,
+                    cast1_name: cast1_name,
+                    cast2_name: cast2_name,
+                    cast3_name: cast3_name,
+                    cast4_name: cast4_name,
+                    director_name: director_name,
+                    music_director_name: music_director_name,
+                    producer_name: producer_name,
+                },
+                images: {
+                    main_image: movie_main_image,
+                    background_image: movie_background_image,
+                    cast1_image: cast1_image,
+                    cast2_image: cast2_image,
+                    cast3_image: cast3_image,
+                    cast4_image: cast4_image,
+                    director_image: director_image,
+                    music_director_image: music_director_image,
+                    producer_image: producer_image,
+                },
+                movie_time: movie_time,
+                language: movie_language,
+                frame: movie_frame,
+                movie_type: movie_type,
+                Description: movie_description,
+                status:true,
+            }
+            const details_movie = JSON.parse(localStorage.getItem("show_movie_details")) ?? [];
+
+            details_movie.push(movie_details);
+
+            alert('movie list created successfully!')
+
+            localStorage.setItem("show_movie_details", JSON.stringify(details_movie));
+
+        }
+        form_control.addEventListener("submit", e => {
+            e.preventDefault();
+
+            formsubmit()
+        })
+    </script>
+    <div class="theatre-details-section">
+
+        <h1>Theatre details</h1>
+    </div>
+</body>
+
+</html>

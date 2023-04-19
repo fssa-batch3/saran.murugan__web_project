@@ -16,7 +16,11 @@ input{
     padding: 10px;
     background-color: black;
     border-color: white;
-    width:250px
+    width:250px;
+    margin-right: 100px;
+}
+.logo-container img{
+    width:200px;
 }
 .navbar-container{
     display: flex;
@@ -43,7 +47,7 @@ input{
     color:white;
     font-family: 'Catamaran', sans-serif;
 }
-.profile-container{
+/* .profile-container{
     flex:1;  
     display: flex;
     align-items: center;
@@ -58,11 +62,9 @@ input{
     width:40px;
     height: 42px;
     border-radius: 50%;
-}
-.logo-container img{
-    width:200px;
-}
-.toggle{
+} */
+
+/* .toggle{
     width:40px;
     margin-left: 10px;
     height: 20px;
@@ -84,7 +86,7 @@ input{
   right:1px;
   border-radius: 50%;
   cursor: pointer;
-}
+} */
 .sidebar{
     width:50px;
     height: 100%;
@@ -112,7 +114,9 @@ input{
     margin-left: 50px;
 }
 .banner-container{
-    background:linear-gradient(to bottom, rgba(0,0,0,0), #151515 ) ,url('../../Assets/images/Ott/moneyheist.jpg');
+    background:linear-gradient(to bottom, rgba(0,0,0,0), #151515 ) ,url('https://s01.sgp1.digitaloceanspaces.com/large/898601-jltidzntcv-1537778848.jpg');
+    background-repeat: no-repeat;
+    width: ;
     height:600px;
     padding: 80px;
 }
@@ -141,7 +145,7 @@ input{
     margin-left: 20px;
 }
 
-.movie-list-container{
+.movie-list-container1{
     padding: 0 20px;
 
 }

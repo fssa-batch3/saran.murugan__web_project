@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="Assets/js/index.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
   <title>Lets show website</title>
@@ -75,7 +76,11 @@
     <a href="Pages/OTT/ottindex.html">OTT</a>
     <a href="Pages/movie_reviews.html">Movie reviews</a>
   </div>
-
+  
+  <div class="crud-button">
+  <a href="Pages/crud.html"><button>Add</button></a> 
+  <a href="Pages/admin_update_crud.html"> <button >Update</button></a>
+  </div>
 
 
 
@@ -88,71 +93,33 @@
     <div class="movie-list-wrapper">
         <div class="movie-list">
           
-        <div class="movie-list-item">
-        
-        </div>
 
-        <div class="movie-list-item">
+
+        </div>
+        <i class="fa-solid fa-chevron-right arrow"></i>
+      </div>
       
-        </div>
-        <div class="movie-list-item">
-      
-        </div>
-    
-        <div class="movie-list-item">
-    
-        </div>
-
-        <div class="movie-list-item">
-        
-        </div>
-
-        <div class="movie-list-item">
-
-        </div>
-
-        <div class="movie-list-item">
-        
-        </div>
-       
-    </div>
-           <i class="fa-solid fa-chevron-right arrow"></i>
     </div> 
-
-    </div>
+    
+       
+  
     
 
 
-    <div class="watch-now">
-      <h2>Released movies </h2> <a href="Pages/OTT/ottindex.html"> <button> Watch now</button> </a>
+    <div class="show-button">
+      <h2>Other language movies </h2> <button> Now showing</button> 
     </div>
 
     <div class="movie-list-container2">
     <div class="movie-list-wrapper2">
-
       <div class="movie-list2">
-
-      <div class="movie-list-item2">
-    
-      </div>
-
-      <div class="movie-list-item2">
-      </div>
-      <div class="movie-list-item2">
-    
-      </div>
-  
-      <div class="movie-list-item2">
+       
       
-      </div>
 
-      <div class="movie-list-item2">
-    
-      </div>
-  </div>
+       </div>
       
-  </div>
-  </div>
+    </div>
+    </div>
 
 <div class="watch-now2">
       <h2>Released dub movies </h2> <a href="Pages/OTT/ottindex.html"> <button> Watch now</button> </a>
@@ -212,441 +179,56 @@
   <script>
 
 
-    
 
     
 
-    // let div_all;
-    // let div_movies;
-    // let img_movies2;
-    // let div_dubmovies;
-
-    
-    // const movie_list = [
-
-
-    //   {
-        
-    //     movies1: {
-    //       movie_name: "Captain miller",
-    //       source: "Assets/images/captain_miller/captain_miller_main2jpg.jpeg",
-    //       alt: "movie image",
-    //       description:"Captain Miller is a Tamil movie starring Dhanush in a prominent role. It is a drama written and directed by Arun Matheswaran",
-    //       book_button:"Book now"
-    //     }
-        
-    //   },
-
-      
-        
-    //   //   movies1: {
-    //   //     name: "Master",
-    //   //     source: "Assets/images/master/Master.jpg",
-    //   //     alt: "movie image",
-    //   //     description:"An alcoholic professor is sent to a juvenile school, where he clashes with a gangster, who uses the children of the school for criminal activities.",
-    //   //     book_button:"Book now"
-    //   //   }
-        
-    //   // },
-    //   {
-    //   movies1: {
-    //       movie_name: "Leo",
-    //       source: "Assets/images/leo/leo_main.jpg",
-    //       alt: "movie image",
-    //       description:"Leo is an action-thriller starring Vijay and Trisha Krishnan in the lead.",
-    //       book_button:"Book now"
-    //     }
-        
-    //   },
-
-    //   {
-         
-    //     movies1: {
-    //       movie_name: "Vikram",
-    //       source: "Assets/images/vikram/vikram.jpg",
-    //       alt: "movie image",
-    //       description:"A high-octane action film where a special investigator is assigned a case of serial Killings. As the investigation proceeds",
-    //       book_button:"Book now"
-    //     }
-    //        },
-    //   {
-       
-    //     movies1: {
-    //       movie_name: "Thunivu",
-    //       source: "Assets/images/Thunivu/Thunivu.jpg",
-    //       alt: "movie image",
-    //       description:"A gang goes to rob a bank only to find that there`s already a criminal mastermind holding it for ransom, but his identities and motives behind the heist remains mysterious. ",
-    //       book_button:"Book now"
-    //     }
-    //   },
-
-    //   {
-    //     movies1: {        
-    //       movie_name: "Thiruchitrambalam",        
-    //       source: "Assets/images/Thiruchitrambalam/Thiruchitrambalam.jpg",
-    //       description:"Thiruchitrambalam, known as Pazham, floats aimlessly through his life as a delivery boy to the disdain of his father. As he tries to get his life on track to no avail, the possibility of love seems to finally bring light into his life.",
-    //       book_button:"Book now"
-
-           
-    //     }
-    //   },
-
-    //   {
-        
-    //     movies1: {
-    //       name: "Jailer",
-    //       source: "Assets/images/Jailer/jailer.jpg",
-    //       alt: "movie image",
-    //       description:"Jailer is a Tamil movie starring Rajinikanth. It is an action drama directed and written by Nelson with music director Anirudh forming part of the crew.",
-    //       book_button:"Book now"
-    //     }
-    //   },
-
-
-    //   {
-        
-    //     movies1: {
-    //       name: "Love today",
-    //       source: "Assets/images/love_today/love-today.jpg",
-    //       alt: "movie image",
-    //       description:"A witty father lays a trap by exchanging mobiles between a couple.",
-    //       book_button:"Book now"
-    //     }
-    //   },
-    // ]
-
-
-    let name_list = [
-
-    
-    {
-    name:{
-        movie_name:"Captain miller",
-        cast1_name:"Dhanush",
-        cast2_name:"Priyanka mohan",
-        cast3_name:"Sundeep",
-        cast4_name:"Shiva raj",
-        director_name:"Arun matheeswaran",
-        music_director_name:"G v praksh",
-        producer_name:"Sathya jyothi films"
-    },
-    images:{
-        main_image:"Assets/images/captain_miller/captain_miller_main2jpg.jpeg",
-        background_image:"url(../Assets/images/captain_miller/captain_miller_about.jpg)",
-        cast1_image:"../Assets/images/Vaathi/Dhanush.jpg",
-        cast2_image:"../Assets/images/captain_miller/priyanka_mohan.jpg",
-        cast3_image:"../Assets/images/captain_miller/sundeep.jpg",
-        cast4_image:"../Assets/images/captain_miller/Shivaraj.jpg",
-        director_image:"../Assets/images/captain_miller/arun.jpg",
-        music_director_image:"../Assets/images/Vaathi/gv parkash.jpeg",
-        producer_image:"../Assets/images/captain_miller/sathyajyothi.jpg"
-    },
-    movie_time: "2h 20mins - UA - Jun10",
-    language:"Tamil",
-    frame:"2D",
-    movie_type: "Action-historical-thriller",
-    Description: "Captain Miller is a Tamil movie starring Dhanush in a prominent role. It is a drama written and directed by Arun Matheswaran",
    
-},
-
-
-{
-
-name:{
-    movie_name:"Leo",
-    cast1_name:"Vijay",
-    cast2_name:"Trisha",
-    cast3_name:"Gautham vasudev menon",
-    cast4_name:"Arjun",
-    director_name:"Lokesh kanagaraj",
-    music_director_name:"Anirudh",
-    producer_name:"7 Screen studio"
-},
-images:{
-    main_image:"Assets/images/leo/leo_main.jpg",
-    background_image:"url(../../Assets/images/leo/leo_about.jpg)",
-    cast1_image:"../Assets/images/master/vijay.jpeg",
-    cast2_image:"../Assets/images/leo/trisha-krishnan-.jpg",
-    cast3_image:"../Assets/images/leo/gvm.jpeg",
-    cast4_image:"../Assets/images/leo/Arjun.jpg",
-    director_image:"../Assets/images/leo/lokesh.jpg",
-    music_director_image:"../Assets/images/leo/anirudh.jpg",
-    producer_image:"../Assets/images/leo/7screen studio.jpg"
-},
-movie_time: "2h 44mins - UA - jan11",
-language:"Tamil",
-frame:"2D",
-movie_type: "Action-drama-thriller",
-Description: "An alcoholic professor is sent to a juvenile school, where he clashes with a gangster, who uses the children of the school for criminal activities",
-},
-{
-    name:{
-        movie_name: "Thunivu",
-        cast1_name:"Ajith kumar",
-        cast2_name:"Manju warrior",
-        cast3_name:"Samuthirakani",
-        cast4_name:"Koken",
-        director_name:"H.vinoth",
-        music_director_name:"Ghibran",
-        producer_name:"Zee studios"
-      },
-      images:{
-        main_image:"../../Assets/images/Thunivu/Thunivu.jpg",
-        background_image:"url(../../Assets/images/Thunivu/thunivu-about.jpg)",
-        cast1_image:"../Assets/images/Thunivu/ajith kumar.jpg",
-        cast2_image:"../Assets/images/Thunivu/manju-warrier.jpg",
-        cast3_image:"../Assets/images/Thunivu/samuthirakani.jpg",
-        cast4_image:"../Assets/images/Thunivu/koken.jpeg",
-        director_image:"../Assets/images/Thunivu/H._Vinoth.jpg",
-        music_director_image:"../Assets/images/Thunivu/M_Ghibran.jpg",
-        producer_image:"../Assets/images/Thunivu/zee.jpeg"
-    },
-    movie_time: "2h 50mins - UA - jan11",
-    language:"Tamil",
-    frame:"2D",
-    movie_type: "Action-drama-thriller",
-    Description: "Thunivu is a Tamil movie starring Ajith Kumar in a prominent role. It is directed by H. Vinoth forming part of the crew.",
-    
-},
-{
-
-    name:{
-        movie_name:"Jailer",
-        cast1_name:"Ranjikanth",
-        cast2_name:"Aiswarya rai",
-        cast3_name:"Priyanka mohan",
-        cast4_name:"Shivaraj",
-        director_name:"Nelson dhilipkumar",
-        music_director_name:"Anirudh",
-        producer_name:"Kalanithi maran"
-    },
-    images:{
-        main_image:"Assets/images/Jailer/jailer.jpg",
-        background_image:"url(../../Assets/images/Jailer/jailerabout.jpg)",
-        cast1_image:"../Assets/images/Jailer/super star.jpg",
-        cast2_image:"../Assets/images/poniyan_selvan/Aishwarya.jpg",
-        cast3_image:"../Assets/images/Jailer/priyanka_doll.jpg",
-        cast4_image:"../Assets/images/Jailer/Shivaraj.jpg",
-        director_image:"../Assets/images/Jailer/AnirudhRavichander.jpg",
-        music_director_image:"../Assets/images/Jailer/nelson.jpg",
-        producer_image:"../Assets/images/Jailer/kalanithi maran.webp",
-        
-    },
-    movie_time: "2h 50mins - UA - jan11",
-    movie_type: "Action-drama-thriller",
-    language:"Tamil",
-    frame:"2D",
-    Description: "Jailer is a Tamil movie starring Rajinikanth. It is an action drama directed and written by Nelson with music director Anirudh forming part of the crew",
-    
-},
-{
-    name:{
-        movie_name: "Vikram",
-        cast1_name:"Kamal hasan",
-        cast2_name:"Vijay sethupathi",
-        cast3_name:"Suriya",
-        cast4_name:"Fahad fasil",
-        director_name:"Lokesh kanagaraj",
-        music_director_name:"Anirudh ravichandran",
-        producer_name:"Kamal hasan"
-      },
-      images:{
-        main_image:"Assets/images/vikram/vikram.jpg",
-        background_image:"url(../../Assets/images/vikram/vikram-about.jpg)",
-        cast1_image:"../../Assets/images/vikram/kmal.jpeg",
-        cast2_image:"../../Assets/images/vikram/VijaySethupathi.jpg",
-        cast3_image:"../../Assets/images/vikram/suriya.jpg",
-        cast4_image:"../../Assets/images/vikram/fafa.jpg",
-        director_image:"../../Assets/images/vikram/Lokesh_Kanagaraj.jpg",
-        music_director_image:"../../Assets/images/vikram/anirudh.jpg",
-        producer_image:"../../Assets/images/vikram/kmal.jpeg"
-    },
-    movie_time: "2h 50mins - UA - feb17",
-    movie_type: "Action-drama-thriller",
-    language:"Tamil",
-    frame:"2D",
-    Description: "A high-octane action film where a special investigator is assigned a case of serial Killings. As theinvestigation proceeds, he finds the case is not what it seems to be and leading down this path is only going toend in a war between everyone involved.",
-    
-
-},
-
-
-{
-    name:{
-        movie_name:"Love today",
-        cast1_name:"Pradeep ranganathan",
-        cast2_name:"Ivana",
-        cast3_name:"Rathika",
-        cast4_name:"Sathya raj",
-        director_name:"Pradeep ranganathan",
-        music_director_name:"Yuvan shanker raja",
-        producer_name:"Archana"
-    },
-    images:{
-        main_image:"Assets/images/love_today/love-today.jpg",
-        background_image:"url(../../Assets/images/love_today/love-today-about.jpg)",
-        cast1_image:"../Assets/images/love_today/pradeep.jpg",
-        cast2_image:"../Assets/images/love_today/ivana.jpg",
-        cast3_image:"../Assets/images/love_today/Rathika.jpg",
-        cast4_image:"../Assets/images/love_today/sathyaraj.jpg",
-        director_image:"../Assets/images/love_today/pradeep.jpg",
-        music_director_image:"../Assets/images/love_today/yuvan.jpg",
-        producer_image:"../Assets/images/love_today/archanacropped.jpg",
-        
-    },
-    movie_time: "2h 50mins - UA - jan11",
-    movie_type: "Love-romance=drama",
-    language:"Tamil",
-    frame:"2D",
-    Description: "A witty father lays a trap by exchanging mobiles between a couple",
-   
-},
-// {
-//     name: "Master",
-//     language: "Tamil",
-//     frame: "2D",
-//     back_ground_image:"url(../../Assets/images/master/Master_about.jpg)",
-//     movie_time: "2h 44mins - UA - jan11",
-//     movie_type: "Action-drama-thriller",
-//     book_button:"Book your tickets",
-//     Description: "An alcoholic professor is sent to a juvenile school, where he clashes with a gangster, who uses the children of the school for criminal activities",
-//     cast_image1:"../Assets/images/master/vijay.jpeg",
-//     cast_image2:"../Assets/images/master/malavika.jpeg",
-//     cast_image3:"../Assets/images/master/Vijay-Sethupathi.jpg",
-//     cast_image4:"../Assets/images/master/Arjundas.jpg",
-//     cast_name:{
-//         cast1:"Vijay",
-//         cast2:"Malavika mohan",
-//         cast3:"Vijay sethupathi",
-//         cast4:"Arjun das"
-//     },
-//     crew_image1:"../Assets/images//master/lokesh.jpg",
-//     crew_image2:"../Assets/images/master/anirudh.jpg",
-//     crew_image3:"../Assets/images/master/7screen studio.jpg",
-//     crew_name:{
-//         director:"Lokesh kanagaraj",
-//         music_dir:"Anirudh",
-//         producer:"7 Screen studio"
-//     },
-    
-    
-// },
-
-
-
-{
-
-    name:{
-        movie_name:"Thiruchitrambalam",
-        cast1_name:"Dhanush",
-        cast2_name:"Nithya menon",
-        cast3_name:"Bharathiraja",
-        cast4_name:"Prakashraj",
-        director_name:"Mithran r jawahar",
-        music_director_name:"Anirudh ravichandran",
-        producer_name:"Kalanithi maran"
-    },
-    images:{
-        main_image:"Assets/images/Thiruchitrambalam/Thiruchitrambalam.jpg",
-        background_image:"url(../../Assets/images/Thiruchitrambalam/Thiruchitrambalam-release-date-1.jpg)",
-        cast1_image:"../Assets/images/Vaathi/Dhanush.jpg",
-        cast2_image:"../Assets/images/Thiruchitrambalam/Nithya-Menen.jpg",
-        cast3_image:"../Assets/images/Thiruchitrambalam/bharathi raja.jpg",
-        cast4_image:"../Assets/images/Thiruchitrambalam/PrakashRaj.jpg",
-        director_image:"../Assets/images/Thiruchitrambalam/Mithran-Jawahar.jpg",
-        music_director_image:"../Assets/images/Thiruchitrambalam/anirudh.jpg",
-        producer_image:"../Assets/images/Thiruchitrambalam/kalanithi maran.webp"
-    },
-    movie_time: "2h 10mins - UA - jan11",
-    movie_type: "Love-drama-musical",
-    language:"Tamil",
-    frame:"2D",
-    Description: "Thiruchitrambalam, known as Pazham, floats aimlessly through his life as a delivery boy to the disdain of his father. As he tries to get his life on track to no avail, the possibility of love seems to finally bring light into his life.",
-},
-
-
-
-// {
-//     name: "Vaathi",
-//     language: "Tamil",
-//     frame: "2D",
-//     back_ground_image:"url(../../Assets/images/Vaathi/vaathi-about.jpg)",
-//     movie_time: "2h 20mins - UA - feb17",
-//     movie_type: "Action-drama-social",
-//     Description: "Vaathi is a Tamil movie directed by Venky Atluri starring Dhanush and Samyuktha Menon in the lead.",
-//     cast_image1:"../Assets/images/Vaathi/Dhanush.jpg",
-//     cast_image2:"../Assets/images/Vaathi/samyuktha.jpg",
-//     cast_image3:"../Assets/images/Vaathi/sai kumar.jpeg",
-//     cast_image4:"../Assets/images/Vaathi/Samuthirakani.jpg",
-//     cast_name:{
-//         cast1:"Dhanush",
-//         cast2:"Samyutha",
-//         cast3:"Sai kumar",
-//         cast4:"Samuthirakani"
-//     },
-//     crew_image1:"../Assets/images/Vaathi/venky-atluri.jpg",
-//     crew_image2:"../Assets/images/Vaathi/gv parkash.jpeg",
-//     crew_image3:"../Assets/images/Vaathi/naga vamsi.jpg",
-//     crew_name:{
-//         director:"Venky atluri",
-//         music_dir:"G v prakash",
-//         producer:"Naga vamsi"
-//     },
-    
-   
-// },
+ 
+      const movie_lists =JSON.parse(localStorage.getItem("show_movie_details"));
   
-]
-
-localStorage.setItem("show_movies_details", JSON.stringify(name_list));  //local storage seting
-
+      movie_lists.filter(function (movie){
+        if(movie.status && movie.language == "Tamil" ){
 
 
-// console.log(movie_list.length)
-    for (i = 0; i < name_list.length; i++) {
-  // console.log(movie_list[i])
-      // const mov = movie_list[i];
-      // console.log(mov);
 
-  
-      
+           let movie_list_items=document.createElement("div")
+                movie_list_items.setAttribute("class","movie-list-item");
 
-       let movie_list_item=document.querySelectorAll(".movie-list-item");
+           let   main_image = document.createElement("img");
+             main_image.setAttribute("class","movie-list-item-img");
+             main_image.setAttribute("src",movie.images.main_image);
+             movie_list_items.append(main_image);
 
-        
-      let movie_img = document.createElement("img")
-        movie_img.setAttribute("src", name_list[i]["images"]["main_image"]);
-        movie_img.setAttribute("alt","movie_image");
-        movie_img.setAttribute("class","movie-list-item-img")
-        movie_list_item[i].append(movie_img);
+           let   title = document.createElement("span");
+             title.innerText = movie.name.movie_name;
+             title.setAttribute("class","movie-list-item-title");
+             movie_list_items.append(title);
 
-       let   movie_title = document.createElement("span");
-        movie_title.innerText=name_list[i]["name"]["movie_name"];
-        movie_title.setAttribute("class","movie-list-item-title");
-        movie_list_item[i].append(movie_title);
+          let   description = document.createElement("p");
+             description.innerText = movie.Description;
+             description.setAttribute("class","movie-list-item-desc");
+             movie_list_items.append(description);
 
-      let  movie_desc =document.createElement("p");
-        movie_desc.innerText=name_list[i]["Description"];
-        movie_desc.setAttribute("class","movie-list-item-desc");
-        movie_list_item[i].append(movie_desc);
+          let movie_button=document.createElement("button");
+            //  movie_button.innerText="book now";
+             movie_button.setAttribute("class","movie-list-item-button");
+             movie_list_items.append(movie_button);
 
-       let movie_button =document.createElement("button");
-        // movie_button.innerText=movie_list[i]["movies1"]["book_button"];
-        movie_button.setAttribute("class","movie-list-item-button")
-        movie_list_item[i].append(movie_button);
 
-        a= document.createElement("a");
-        //  url.html?key=value&key=value
-        a.setAttribute("href", "./pages/movie_details.html?name=" + name_list[i]["name"]["movie_name"]);
-        a.innerText="book now";
-        movie_button.append(a);
-        // document.querySelector("movies_list_item").prepend(a)
+         let a = document.createElement("a");
+             a.setAttribute("href", "./pages/movie_details.html?name=" +movie["name"]["movie_name"]);
+             a.innerText="book now";
+             movie_button.append(a);
 
-    }
+             document.querySelector(".movie-list").append(movie_list_items);
+          
+
+            }
+      }) ;
 
     const arrows = document.querySelectorAll(".arrow");
     const movieLists = document.querySelectorAll(".movie-list ");
-    
+        
 
    arrows.forEach((arrow, i) => {
        let itemNumber = movieLists[i].querySelectorAll("img").length;
@@ -667,294 +249,323 @@ localStorage.setItem("show_movies_details", JSON.stringify(name_list));  //local
    });
 
 
-    const ott_movie_list =[
-     
-    {
-      name:{
-        movie_name:"Vadachennai",
-        
-
-      },
-      images:{
-        main_image:"Assets/images/vada_chennai/vadachennai.jpg"
-      },
-      description:"Vada Chennai is the story of a fisherman from North Chennai, who does not even realize when he falls prey to the trap set by a mafia gang, and what happens to him later.",
-    },
-    {
-      name:{
-        movie_name:"Kaithi",
-       
-
-      },
-      images:{
-        main_image:"Assets/images/kaithi/kaithi.jpg"
-      },
-      description:"A group of cops confiscate a record amount of drugs but find themselves in danger of the mafia. The injured inspector then takes the help of a life term prisoner, who is out on parole to meet his daughter.",
-    },
-    {
-      name:{
-        movie_name:"PoniyanSelvan",
-        
-      },
-      images:{
-        main_image:"Assets/images/poniyan_selvan/poniyan selvan.jpg"
-      },
-      description:"Vandiyathevan, a brave and brilliant young man sets out to cross the Chola land to deliver a message from the Crown Prince Adithya Karikalan. The narrative deals with attempts by his sister Kundavai ",
-    },
-    {
-      name:{
-        movie_name:"Asuran",
-
-      },
-      images:{
-        main_image:"Assets/images/Asuran/Asuran.jpg"
-      },
-      description:"The teenage son of a farmer from an underprivileged caste kills a rich, upper caste landlord. Will the farmer, a loving father and a pacifist by heart, be able to save his hot-blooded son?",
-    },
-    {
-      name:{
-        movie_name:"Varisu",
-      },
-      images:{
-        main_image:"Assets/images/Varisu/Varisu.jpg"
-      },
-      description:"Vijay, the prodigal son of business tycoon Rajendran agrees to take over the reins of the business, much to the chagrin of his brothers. But can Vijay prove himself to be a worthy varisu and also reunite his now-broken family?",
-    }
-
-
-    ]
-    
-
-  //    const movie_list2 = [
-
-  //    {  
-  //       movies2: {
-  //       name: "Vadachennai",
-  //       source: "Assets/images/vada_chennai/vadachennai.jpg",
-  //       description:"Vada Chennai is the story of a fisherman from North Chennai, who does not even realize when he falls prey to the trap set by a mafia gang, and what happens to him later.",
-  //       watch_button:"Watch now"
-          
-  //   }
-  //   },
-  //   //     {
-
-  //   //     movies2: {
-          
-  //   //       name: "Naane varuven",
-  //   //       source: "Assets/images/naane_varuven/naane varuven.jpg",
-  //   //       description:"Naane Varuvean is a 2022 Indian Tamil-language horror thriller film directed by Selvaraghavan. Dhanush appears in a dual role for the third time",
-  //   //       watch_button:"Watch now"
-  //   //     },
-  //   // },
-
-  //     {
-       
-  //       movies2: {
-  //         name: "Kaithi",
-  //         source: "Assets/images/kaithi/kaithi.jpg",
-  //         description:"A group of cops confiscate a record amount of drugs but find themselves in danger of the mafia. The injured inspector then takes the help of a life term prisoner, who is out on parole to meet his daughter.",
-  //         watch_button:"Watch now"
-  //       },
-
-  //     },
-
-  //     {
-        
-  //       movies2: {
-  //         name: "PoniyanSelvan",
-  //         source: "Assets/images/poniyan_selvan/poniyan selvan.jpg",
-  //         description:"Vandiyathevan, a brave and brilliant young man sets out to cross the Chola land to deliver a message from the Crown Prince Adithya Karikalan. The narrative deals with attempts by his sister Kundavai ",
-  //         watch_button:"Watch now"
-  //       }
-  //     },  
-  //     // {
-        
-  //     //   movies2: {
-  //     //     name: "Petta",
-  //     //     source: "Assets/images/petta/petta.jpg",
-  //     //     description:"Though he works as a hostel warden, there is more to Kaali than meets the eye. Things take an interesting turn when Kaali's path crosses with a group of dreaded gangsters.",
-  //     //     watch_button:"Watch now"
-  //     //   }
-  //     // },
-  //     {
-        
-  //       movies2: {
-  //          name:"Asuran",
-  //         source: "Assets/images/Asuran/Asuran.jpg",
-  //         description:"The teenage son of a farmer from an underprivileged caste kills a rich, upper caste landlord. Will the farmer, a loving father and a pacifist by heart, be able to save his hot-blooded son?",
-  //         watch_button:"Watch now"
-  //       }
-  //     },
-     
-  //     {
-        
-  //       movies2: {
-  //         name: "Varisu",
-  //         source: "Assets/images/Varisu/Varisu.jpg",
-  //         description:"Vijay, the prodigal son of business tycoon Rajendran agrees to take over the reins of the business, much to the chagrin of his brothers. But can Vijay prove himself to be a worthy varisu and also reunite his now-broken family?",
-  //         watch_button:"Watch now"
-  //       }
-  //     },
-   
-   
-
-  //  ]
-
-   
-localStorage.setItem("tamil_ott_movie_details", JSON.stringify(ott_movie_list)); 
-   
-     for (i = 0; i < ott_movie_list.length; i++) {
   
-      const mov = ott_movie_list[i];
-      console.log(mov);
+      movie_lists.filter(function (movie){
+        if(movie.status && movie.language == "English"){
+
+
+
+           let movie_list_items=document.createElement("div")
+                movie_list_items.setAttribute("class","movie-list-item2");
+
+           let   main_image = document.createElement("img");
+             main_image.setAttribute("class","movie-list-item-img2");
+             main_image.setAttribute("src",movie.images.main_image);
+             movie_list_items.append(main_image);
+
+           let   title = document.createElement("span");
+             title.innerText = movie.name.movie_name;
+             title.setAttribute("class","movie-list-item-title2");
+             movie_list_items.append(title);
+
+          let   description = document.createElement("p");
+             description.innerText = movie.Description;
+             description.setAttribute("class","movie-list-item-desc2");
+             movie_list_items.append(description);
+
+          let movie_button=document.createElement("button");
+            //  movie_button.innerText="book now";
+             movie_button.setAttribute("class","movie-list-item-button2");
+             movie_list_items.append(movie_button);
+
+
+         let a = document.createElement("a");
+             a.setAttribute("href", "./pages/movie_details.html?name=" +movie["name"]["movie_name"]);
+             a.innerText="book now";
+             movie_button.append(a);
+
+             document.querySelector(".movie-list2").append(movie_list_items);
+          
+
+            }
+            if(movie.status && movie.language == "Telugu"){
+              let movie_list_items=document.createElement("div")
+                movie_list_items.setAttribute("class","movie-list-item2");
+
+           let   main_image = document.createElement("img");
+             main_image.setAttribute("class","movie-list-item-img2");
+             main_image.setAttribute("src",movie.images.main_image);
+             movie_list_items.append(main_image);
+
+           let   title = document.createElement("span");
+             title.innerText = movie.name.movie_name;
+             title.setAttribute("class","movie-list-item-title2");
+             movie_list_items.append(title);
+
+          let   description = document.createElement("p");
+             description.innerText = movie.Description;
+             description.setAttribute("class","movie-list-item-desc2");
+             movie_list_items.append(description);
+
+          let movie_button=document.createElement("button");
+            //  movie_button.innerText="book now";
+             movie_button.setAttribute("class","movie-list-item-button2");
+             movie_list_items.append(movie_button);
+
+
+         let a = document.createElement("a");
+             a.setAttribute("href", "./pages/movie_details.html?name=" +movie["name"]["movie_name"]);
+             a.innerText="book now";
+             movie_button.append(a);
+
+             document.querySelector(".movie-list2").append(movie_list_items);
+            }
+      }) ;
+
 
       
 
     
-        let movie_list_item2=document.querySelectorAll(".movie-list-item2");
+
+
+//     const ott_movie_list =[
+     
+//     
+
+
+//     ]
+    
+
+//   //    const movie_list2 = [
+
+//   //    {  
+//   //       movies2: {
+//   //       name: "Vadachennai",
+//   //       source: "Assets/images/vada_chennai/vadachennai.jpg",
+//   //       description:"Vada Chennai is the story of a fisherman from North Chennai, who does not even realize when he falls prey to the trap set by a mafia gang, and what happens to him later.",
+//   //       watch_button:"Watch now"
+          
+//   //   }
+//   //   },
+//   //   //     {
+
+//   //   //     movies2: {
+          
+//   //   //       name: "Naane varuven",
+//   //   //       source: "Assets/images/naane_varuven/naane varuven.jpg",
+//   //   //       description:"Naane Varuvean is a 2022 Indian Tamil-language horror thriller film directed by Selvaraghavan. Dhanush appears in a dual role for the third time",
+//   //   //       watch_button:"Watch now"
+//   //   //     },
+//   //   // },
+
+//   //     {
+       
+//   //       movies2: {
+//   //         name: "Kaithi",
+//   //         source: "Assets/images/kaithi/kaithi.jpg",
+//   //         description:"A group of cops confiscate a record amount of drugs but find themselves in danger of the mafia. The injured inspector then takes the help of a life term prisoner, who is out on parole to meet his daughter.",
+//   //         watch_button:"Watch now"
+//   //       },
+
+//   //     },
+
+//   //     {
+        
+//   //       movies2: {
+//   //         name: "PoniyanSelvan",
+//   //         source: "Assets/images/poniyan_selvan/poniyan selvan.jpg",
+//   //         description:"Vandiyathevan, a brave and brilliant young man sets out to cross the Chola land to deliver a message from the Crown Prince Adithya Karikalan. The narrative deals with attempts by his sister Kundavai ",
+//   //         watch_button:"Watch now"
+//   //       }
+//   //     },  
+//   //     // {
+        
+//   //     //   movies2: {
+//   //     //     name: "Petta",
+//   //     //     source: "Assets/images/petta/petta.jpg",
+//   //     //     description:"Though he works as a hostel warden, there is more to Kaali than meets the eye. Things take an interesting turn when Kaali's path crosses with a group of dreaded gangsters.",
+//   //     //     watch_button:"Watch now"
+//   //     //   }
+//   //     // },
+//   //     {
+        
+//   //       movies2: {
+//   //          name:"Asuran",
+//   //         source: "Assets/images/Asuran/Asuran.jpg",
+//   //         description:"The teenage son of a farmer from an underprivileged caste kills a rich, upper caste landlord. Will the farmer, a loving father and a pacifist by heart, be able to save his hot-blooded son?",
+//   //         watch_button:"Watch now"
+//   //       }
+//   //     },
+     
+//   //     {
+        
+//   //       movies2: {
+//   //         name: "Varisu",
+//   //         source: "Assets/images/Varisu/Varisu.jpg",
+//   //         description:"Vijay, the prodigal son of business tycoon Rajendran agrees to take over the reins of the business, much to the chagrin of his brothers. But can Vijay prove himself to be a worthy varisu and also reunite his now-broken family?",
+//   //         watch_button:"Watch now"
+//   //       }
+//   //     },
+   
+   
+
+//   //  ]
+
+   
+// localStorage.setItem("tamil_ott_movie_details", JSON.stringify(ott_movie_list)); 
+   
+//      for (i = 0; i < ott_movie_list.length; i++) {
+  
+//       const mov = ott_movie_list[i];
+//       console.log(mov);
+
+      
+
+    
+//         let movie_list_item2=document.querySelectorAll(".movie-list-item2");
    
         
-       let movie_img2 = document.createElement("img")
-        movie_img2.setAttribute("src", ott_movie_list[i]["images"]["main_image"]);
-        movie_img2.setAttribute("alt","movie_image");
-        movie_img2.setAttribute("class","movie-list-item-img2")
-        movie_list_item2[i].append(movie_img2);
+//        let movie_img2 = document.createElement("img")
+//         movie_img2.setAttribute("src", ott_movie_list[i]["images"]["main_image"]);
+//         movie_img2.setAttribute("alt","movie_image");
+//         movie_img2.setAttribute("class","movie-list-item-img2")
+//         movie_list_item2[i].append(movie_img2);
 
-        let movie_title2 = document.createElement("span");
-        movie_title2.innerText= ott_movie_list[i]["name"]["movie_name"];
-        movie_title2.setAttribute("class","movie-list-item-title2");
-        movie_list_item2[i].append(movie_title2);
+//         let movie_title2 = document.createElement("span");
+//         movie_title2.innerText= ott_movie_list[i]["name"]["movie_name"];
+//         movie_title2.setAttribute("class","movie-list-item-title2");
+//         movie_list_item2[i].append(movie_title2);
 
-       let movie_desc2=document.createElement("p");
-        movie_desc2.innerText= ott_movie_list[i]["description"];
-        movie_desc2.setAttribute("class","movie-list-item-desc2");
-        movie_list_item2[i].append(movie_desc2);
+//        let movie_desc2=document.createElement("p");
+//         movie_desc2.innerText= ott_movie_list[i]["description"];
+//         movie_desc2.setAttribute("class","movie-list-item-desc2");
+//         movie_list_item2[i].append(movie_desc2);
 
-       let  movie_button2 =document.createElement("button");
-        // movie_button.innerText=movie_list[i]["movies1"]["book_button"];
-        movie_button2.setAttribute("class","movie-list-item-button2")
-        movie_list_item2[i].append(movie_button2);
+//        let  movie_button2 =document.createElement("button");
+//         // movie_button.innerText=movie_list[i]["movies1"]["book_button"];
+//         movie_button2.setAttribute("class","movie-list-item-button2")
+//         movie_list_item2[i].append(movie_button2);
 
-        a = document.createElement("a");
-        //  url.html?key=value&key=value
-        a.setAttribute("href", "./pages/movie_details_OTT.html?name=" + ott_movie_list[i]["name"]["movie_name"]);
-        a.innerText="watch now";
-        movie_button2.append(a);
-        // document.querySelector("movies_list_item").prepend(a)
+//         a = document.createElement("a");
+//         //  url.html?key=value&key=value
+//         a.setAttribute("href", "./pages/movie_details_OTT.html?name=" + ott_movie_list[i]["name"]["movie_name"]);
+//         a.innerText="watch now";
+//         movie_button2.append(a);
+//         // document.querySelector("movies_list_item").prepend(a)
 
-    }
+//     }
     
 
 
 
 
-    const ott_dubmovie_list = [
+//     const ott_dubmovie_list = [
 
 
 
     
-      {
+//       {
         
-        movies3: {
-          name: "Endgame",
-          source: "Assets/images/endgame/endgame.jpg",
-          description:"The grave course of events set in motion by Thanos that wiped out half the universe and fractured the Avengers ranks compels the remaining Avengers to take one final stand in Marvel Studios` grand conclusion to twenty-two films,",
-          watch_button:"Watch now"
-        }
-      } ,
-      {
+//         movies3: {
+//           name: "Endgame",
+//           source: "Assets/images/endgame/endgame.jpg",
+//           description:"The grave course of events set in motion by Thanos that wiped out half the universe and fractured the Avengers ranks compels the remaining Avengers to take one final stand in Marvel Studios` grand conclusion to twenty-two films,",
+//           watch_button:"Watch now"
+//         }
+//       } ,
+//       {
         
-        movies3: {
-          name: "Kgf2",
-          source: "Assets/images/kgf2/kgf2-.jpg",
-          description:"The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord now - Rocky, whose name strikes fear in the heart of his foes. His allies look up to Rocky as their saviour, the government sees him as a threat to law and order; enemies are clamouring for revenge",
-          watch_button:"Watch now"
-        }
-      },
+//         movies3: {
+//           name: "Kgf2",
+//           source: "Assets/images/kgf2/kgf2-.jpg",
+//           description:"The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord now - Rocky, whose name strikes fear in the heart of his foes. His allies look up to Rocky as their saviour, the government sees him as a threat to law and order; enemies are clamouring for revenge",
+//           watch_button:"Watch now"
+//         }
+//       },
 
-      {
+//       {
        
-        movies3: {
-          name: "Avatar",
-          source: "Assets/images/avatar/avatar.jpg",
-          description:"Set more than a decade after the events of the first film, 'Avatar The Way of Water' begins to tell the story of the Sully family (Jake, Neytiri and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive  ",
-          watch_button:"Watch now"
-        }
-      },
-      {
+//         movies3: {
+//           name: "Avatar",
+//           source: "Assets/images/avatar/avatar.jpg",
+//           description:"Set more than a decade after the events of the first film, 'Avatar The Way of Water' begins to tell the story of the Sully family (Jake, Neytiri and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive  ",
+//           watch_button:"Watch now"
+//         }
+//       },
+//       {
        
-       movies3: {
-         name: "Nowayhome",
-         source: "Assets/images/no_way_home/no-way-home.jpg",
-         description:"When Dr. Strange`s spell to restore Spider-Man`s identity goes awry, Peter is forced to overcome his greatest challenge yet.",
-         watch_button:"Watch now"
-       }
-     },
-      {
+//        movies3: {
+//          name: "Nowayhome",
+//          source: "Assets/images/no_way_home/no-way-home.jpg",
+//          description:"When Dr. Strange`s spell to restore Spider-Man`s identity goes awry, Peter is forced to overcome his greatest challenge yet.",
+//          watch_button:"Watch now"
+//        }
+//      },
+//       {
         
-        movies3: {
-          name: "Sita ramam",
-          source: "Assets/images/sita_ramam/sitaramam.jpg",
-          description:"A long-lost letter must find its way to the recipient twenty years later. A rabble-rouser learns a lesson in humility and love along the way.",
-          watch_button:"Watch now"
-        },
+//         movies3: {
+//           name: "Sita ramam",
+//           source: "Assets/images/sita_ramam/sitaramam.jpg",
+//           description:"A long-lost letter must find its way to the recipient twenty years later. A rabble-rouser learns a lesson in humility and love along the way.",
+//           watch_button:"Watch now"
+//         },
 
-      },
+//       },
 
-    ]
+//     ]
       
-    localStorage.setItem("dub_ott_movie_details", JSON.stringify(ott_dubmovie_list)); 
+//     localStorage.setItem("dub_ott_movie_details", JSON.stringify(ott_dubmovie_list)); 
     
 
-      // {
+//       // {
        
-      //     movies3: {
-      //     name: "Kantara",
-      //     source: "Assets/images/kantara/Kantara.jpg",
-      //     alt: "movie image"
-      //   }
-      // },
+//       //     movies3: {
+//       //     name: "Kantara",
+//       //     source: "Assets/images/kantara/Kantara.jpg",
+//       //     alt: "movie image"
+//       //   }
+//       // },
 
-      let movie_list_item3=document.querySelectorAll(".movie-list-item3");
+//       let movie_list_item3=document.querySelectorAll(".movie-list-item3");
 
-      for (i = 0; i < ott_dubmovie_list.length; i++) {
-      console.log("index" +ott_dubmovie_list[i]);
-      const dub = ott_dubmovie_list[i];
-      console.log(dub);
+//       for (i = 0; i < ott_dubmovie_list.length; i++) {
+//       console.log("index" +ott_dubmovie_list[i]);
+//       const dub = ott_dubmovie_list[i];
+//       console.log(dub);
 
 
-       console.log(movie_list_item3);
+//        console.log(movie_list_item3);
 
         
-       let movie_img3 = document.createElement("img")
-        movie_img3.setAttribute("src", ott_dubmovie_list[i]["movies3"]["source"]);
-        movie_img3.setAttribute("alt","movie_image");
-        movie_img3.setAttribute("class","movie-list-item-img3")
-        movie_list_item3[i].append(movie_img3);
+//        let movie_img3 = document.createElement("img")
+//         movie_img3.setAttribute("src", ott_dubmovie_list[i]["movies3"]["source"]);
+//         movie_img3.setAttribute("alt","movie_image");
+//         movie_img3.setAttribute("class","movie-list-item-img3")
+//         movie_list_item3[i].append(movie_img3);
 
-     let   movie_title3 = document.createElement("span");
-        movie_title3.innerText= ott_dubmovie_list[i]["movies3"]["name"];
-        movie_title3.setAttribute("class","movie-list-item-title3");
-        movie_list_item3[i].append(movie_title3);
+//      let   movie_title3 = document.createElement("span");
+//         movie_title3.innerText= ott_dubmovie_list[i]["movies3"]["name"];
+//         movie_title3.setAttribute("class","movie-list-item-title3");
+//         movie_list_item3[i].append(movie_title3);
 
-     let   movie_desc3=document.createElement("p");
-        movie_desc3.innerText= ott_dubmovie_list[i]["movies3"]["description"];
-        movie_desc3.setAttribute("class","movie-list-item-desc3");
-        movie_list_item3[i].append(movie_desc3);
+//      let   movie_desc3=document.createElement("p");
+//         movie_desc3.innerText= ott_dubmovie_list[i]["movies3"]["description"];
+//         movie_desc3.setAttribute("class","movie-list-item-desc3");
+//         movie_list_item3[i].append(movie_desc3);
 
-      let   movie_button3 =document.createElement("button");
-        // movie_button.innerText=movie_list[i]["movies1"]["book_button"];
-        movie_button3.setAttribute("class","movie-list-item-button3")
-        movie_list_item3[i].append(movie_button3);
+//       let   movie_button3 =document.createElement("button");
+//         // movie_button.innerText=movie_list[i]["movies1"]["book_button"];
+//         movie_button3.setAttribute("class","movie-list-item-button3")
+//         movie_list_item3[i].append(movie_button3);
 
-        a = document.createElement("a");
-        //  url.html?key=value&key=value
-        a.setAttribute("href", "./pages/movie_details.html?name=" + ott_dubmovie_list[i]["movies3"]["name"]);
-        a.innerText=ott_dubmovie_list[i]["movies3"]["watch_button"];
-        movie_button3.append(a);
-        // document.querySelector("movies_list_item").prepend(a)
+//         a = document.createElement("a");
+//         //  url.html?key=value&key=value
+//         a.setAttribute("href", "./pages/movie_details.html?name=" + ott_dubmovie_list[i]["movies3"]["name"]);
+//         a.innerText=ott_dubmovie_list[i]["movies3"]["watch_button"];
+//         movie_button3.append(a);
+//         // document.querySelector("movies_list_item").prepend(a)
 
-    }
+//     }
     
 
 
@@ -969,33 +580,7 @@ localStorage.setItem("tamil_ott_movie_details", JSON.stringify(ott_movie_list));
   </script>
 
 
-  <!-- let movie_div = document.querySelector(".movies");
-    let movie_img=document.querySelectorAll(".movies img") //7
-    console.log(movie_img.length)
-    let check = document.querySelector(".check")
-    let check1 = document.querySelector(".check1")
-    let count=0;
-    check.addEventListener("click", (e) => {
-        count++;//
-        // "translateX(-450px)"
-        movie_img.forEach((e)=>{
-          e.style.transform =`translateX(${-count*430}px)`//-430
-        })
-      // movie_div.style.transform =`translateX(${-count*300}px)`;
-      console.log(count)
-      // console.log(`translateX(${count*300}px)`)
-    })
-    check1.addEventListener("click", (e) => {
-        count--;
-        // "translateX(-450px)"
-        movie_img.forEach((e)=>{
-          e.style.transform =`translateX(${-count*250}px)` //ES6 ${}
-        })
-      // movie_div.style.transform =`translateX(${-count*300}px)`;
-      console.log(count)
-      // console.log(`translateX(${count*300}px)`)
-    }) -->
-
+  
 </body>
 
 </html>

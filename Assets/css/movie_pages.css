@@ -84,6 +84,9 @@ header input {
     color:white;
     font-size: 20px;
 }
+.time_date{
+    display: flex;
+}
 .time button{
     width: 400px;
     border-radius: 10px;

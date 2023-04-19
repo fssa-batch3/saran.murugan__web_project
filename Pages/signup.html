@@ -22,13 +22,13 @@
             <form>
             <div class="email">
                 <input required="true" type="text" title="name doesn't contain number or spaces" placeholder="Enter your name"  
-                  pattern="[A-Z a-z]{1,20}"  id="name" />
+                  pattern="[A-Za-z]"  id="name" />
                 <label>Name</label>
             </div>
 
             <div class="email">
-                <input required type="text" inputmode="numeric" placeholder="Enter your phone number" 
-                pattern="{0,9}[10]"  maxlength="10"  id="number" />
+                <input required="true" type="text" inputmode="numeric" placeholder="Enter your phone number" 
+                pattern="{0,9}"  maxlength="10"  id="number" />
                 <label>Number</label>
             </div>
 
@@ -38,11 +38,11 @@
             </div>
 
             <div class="email">
-                <input required type="password" maxlength="8" pattern="[A-Za-z0-9]{1,8}{!@#$%&*><+=}"   placeholder="Enter your password" id="password" />
+                <input required type="password" minlength="5" maxlength="8" pattern="[A-Za-z0-9]{1,8}{!@#$%&*><+=}"   placeholder="Enter your password" id="password" />
                 <label>Password</label>
             </div>
             <div class="email">
-                <input required type="password" maxlength="8" placeholder="Confirm your password"  id="confirm_password" />
+                <input required type="password" minlength="5" maxlength="8" placeholder="Confirm your password"  id="confirm_password" />
                 <label>Confirm </label>
             </div>
 
@@ -113,6 +113,275 @@ form.addEventListener("submit",e=>{
             }
         }
 
+
+
+        let movies_details = [
+
+            {
+                name: {
+                    movie_name: "Captain miller",
+                    cast1_name: "Dhanush",
+                    cast2_name: "Priyanka mohan",
+                    cast3_name: "Sundeep",
+                    cast4_name: "Shiva raj",
+                    director_name: "Arun matheeswaran",
+                    music_director_name: "G v praksh",
+                    producer_name: "Sathya jyothi films"
+                },
+                images: {
+                    main_image: "../../Assets/images/captain_miller/captain_miller_main2jpg.jpeg",
+                    background_image: "url(../Assets/images/captain_miller/captain_miller_about.jpg)",
+                    cast1_image: "../Assets/images/Vaathi/Dhanush.jpg",
+                    cast2_image: "../Assets/images/captain_miller/priyanka_mohan.jpg",
+                    cast3_image: "../Assets/images/captain_miller/sundeep.jpg",
+                    cast4_image: "../Assets/images/captain_miller/Shivaraj.jpg",
+                    director_image: "../Assets/images/captain_miller/arun.jpg",
+                    music_director_image: "../Assets/images/Vaathi/gv parkash.jpeg",
+                    producer_image: "../Assets/images/captain_miller/sathyajyothi.jpg"
+                },
+                movie_time: "2h 20mins ",
+                movie_certified:"UA",
+                movie_release_date:"jun10",
+                language: "Tamil",
+                frame: "2D",
+                movie_type: "Action-historical-thriller",
+                Description: "Captain Miller is a Tamil movie starring Dhanush in a prominent role. It is a drama written and directed by Arun Matheswaran",
+                status: true,
+
+            },
+
+
+            {
+
+                name: {
+                    movie_name: "Leo",
+                    cast1_name: "Vijay",
+                    cast2_name: "Trisha",
+                    cast3_name: "Gautham vasudev menon",
+                    cast4_name: "Arjun",
+                    director_name: "Lokesh kanagaraj",
+                    music_director_name: "Anirudh",
+                    producer_name: "7 Screen studio"
+                },
+                images: {
+                    main_image: "../../Assets/images/leo/leo_main.jpg",
+                    background_image: "url(../../Assets/images/leo/leo_about.jpg)",
+                    cast1_image: "../Assets/images/master/vijay.jpeg",
+                    cast2_image: "../Assets/images/leo/trisha-krishnan-.jpg",
+                    cast3_image: "../Assets/images/leo/gvm.jpeg",
+                    cast4_image: "../Assets/images/leo/Arjun.jpg",
+                    director_image: "../Assets/images/leo/lokesh.jpg",
+                    music_director_image: "../Assets/images/leo/anirudh.jpg",
+                    producer_image: "../Assets/images/leo/7screen studio.jpg"
+                },
+                movie_time: "2h 44mins",
+                movie_certified:"UA",
+                movie_release_date:"jan11",
+                language: "Tamil",
+                frame: "2D",
+                movie_type: "Action-drama-thriller",
+                Description: "An alcoholic professor is sent to a juvenile school, where he clashes with a gangster, who uses the children of the school for criminal activities",
+                status: true,
+            },
+            {
+                name: {
+                    movie_name: "Thunivu",
+                    cast1_name: "Ajith kumar",
+                    cast2_name: "Manju warrior",
+                    cast3_name: "Samuthirakani",
+                    cast4_name: "Koken",
+                    director_name: "H.vinoth",
+                    music_director_name: "Ghibran",
+                    producer_name: "Zee studios"
+                },
+                images: {
+                    main_image: "../../Assets/images/Thunivu/Thunivu.jpg",
+                    background_image: "url(../../Assets/images/Thunivu/thunivu-about.jpg)",
+                    cast1_image: "../Assets/images/Thunivu/ajith kumar.jpg",
+                    cast2_image: "../Assets/images/Thunivu/manju-warrier.jpg",
+                    cast3_image: "../Assets/images/Thunivu/samuthirakani.jpg",
+                    cast4_image: "../Assets/images/Thunivu/koken.jpeg",
+                    director_image: "../Assets/images/Thunivu/H._Vinoth.jpg",
+                    music_director_image: "../Assets/images/Thunivu/M_Ghibran.jpg",
+                    producer_image: "../Assets/images/Thunivu/zee.jpeg"
+                },
+                movie_time: "2h 50mins",
+                movie_certified:"UA",
+                movie_release_date:"jan11",
+                language: "Tamil",
+                frame: "2D",
+                movie_type: "Action-drama-thriller",
+                Description: "Thunivu is a Tamil movie starring Ajith Kumar in a prominent role. It is directed by H. Vinoth forming part of the crew.",
+                status: true,
+
+            },
+            {
+
+                name: {
+                    movie_name: "Jailer",
+                    cast1_name: "Ranjikanth",
+                    cast2_name: "Aiswarya rai",
+                    cast3_name: "Priyanka mohan",
+                    cast4_name: "Shivaraj",
+                    director_name: "Nelson dhilipkumar",
+                    music_director_name: "Anirudh",
+                    producer_name: "Kalanithi maran"
+                },
+                images: {
+                    main_image: "../../Assets/images/Jailer/jailer.jpg",
+                    background_image: "url(../../Assets/images/Jailer/jailerabout.jpg)",
+                    cast1_image: "../Assets/images/Jailer/super star.jpg",
+                    cast2_image: "../Assets/images/poniyan_selvan/Aishwarya.jpg",
+                    cast3_image: "../Assets/images/Jailer/priyanka_doll.jpg",
+                    cast4_image: "../Assets/images/Jailer/Shivaraj.jpg",
+                    director_image: "../Assets/images/Jailer/AnirudhRavichander.jpg",
+                    music_director_image: "../Assets/images/Jailer/nelson.jpg",
+                    producer_image: "../Assets/images/Jailer/kalanithi maran.webp",
+
+                },
+                movie_time: "2h 50mins ",
+                movie_certified:"UA",
+                movie_release_date:"jun12",
+                movie_type: "Action-drama-thriller",
+                language: "Tamil",
+                frame: "2D",
+                Description: "Jailer is a Tamil movie starring Rajinikanth. It is an action drama directed and written by Nelson with music director Anirudh forming part of the crew",
+                status: true,
+
+            },
+            {
+                name: {
+                    movie_name: "Vikram",
+                    cast1_name: "Kamal hasan",
+                    cast2_name: "Vijay sethupathi",
+                    cast3_name: "Suriya",
+                    cast4_name: "Fahad fasil",
+                    director_name: "Lokesh kanagaraj",
+                    music_director_name: "Anirudh ravichandran",
+                    producer_name: "Kamal hasan"
+                },
+                images: {
+                    main_image: "../../Assets/images/vikram/vikram.jpg",
+                    background_image: "url(../../Assets/images/vikram/vikram-about.jpg)",
+                    cast1_image: "../../Assets/images/vikram/kmal.jpeg",
+                    cast2_image: "../../Assets/images/vikram/VijaySethupathi.jpg",
+                    cast3_image: "../../Assets/images/vikram/suriya.jpg",
+                    cast4_image: "../../Assets/images/vikram/fafa.jpg",
+                    director_image: "../../Assets/images/vikram/Lokesh_Kanagaraj.jpg",
+                    music_director_image: "../../Assets/images/vikram/anirudh.jpg",
+                    producer_image: "../../Assets/images/vikram/kmal.jpeg"
+                },
+                movie_time: "2h 50mins",
+                movie_certified:"UA",
+                movie_release_date:"feb17",
+                movie_type: "Action-drama-thriller",
+                language: "Tamil",
+                frame: "2D",
+                Description: "A high-octane action film where a special investigator is assigned a case of serial Killings. As theinvestigation proceeds, he finds the case is not what it seems to be and leading down this path is only going toend in a war between everyone involved.",
+                status: true,
+
+
+            },
+            {
+                name: {
+                    movie_name: "Love today",
+                    cast1_name: "Pradeep ranganathan",
+                    cast2_name: "Ivana",
+                    cast3_name: "Rathika",
+                    cast4_name: "Sathya raj",
+                    director_name: "Pradeep ranganathan",
+                    music_director_name: "Yuvan shanker raja",
+                    producer_name: "Archana"
+                },
+                images: {
+                    main_image: "../../Assets/images/love_today/love-today.jpg",
+                    background_image: "url(../../Assets/images/love_today/love-today-about.jpg)",
+                    cast1_image: "../Assets/images/love_today/pradeep.jpg",
+                    cast2_image: "../Assets/images/love_today/ivana.jpg",
+                    cast3_image: "../Assets/images/love_today/Rathika.jpg",
+                    cast4_image: "../Assets/images/love_today/sathyaraj.jpg",
+                    director_image: "../Assets/images/love_today/pradeep.jpg",
+                    music_director_image: "../Assets/images/love_today/yuvan.jpg",
+                    producer_image: "../Assets/images/love_today/archanacropped.jpg",
+
+                },
+                movie_time: "2h 50mins",
+                movie_certified:"UA",
+                movie_release_date:"jun10",
+                movie_type: "Love-romance=drama",
+                language: "Tamil",
+                frame: "2D",
+                Description: "A witty father lays a trap by exchanging mobiles between a couple",
+                status: true,
+
+            },
+            {
+
+                name: {
+                    movie_name: "Thiruchitrambalam",
+                    cast1_name: "Dhanush",
+                    cast2_name: "Nithya menon",
+                    cast3_name: "Bharathiraja",
+                    cast4_name: "Prakashraj",
+                    director_name: "Mithran r jawahar",
+                    music_director_name: "Anirudh ravichandran",
+                    producer_name: "Kalanithi maran"
+                },
+                images: {
+                    main_image: "../../Assets/images/Thiruchitrambalam/Thiruchitrambalam.jpg",
+                    background_image: "url(../../Assets/images/Thiruchitrambalam/Thiruchitrambalam-release-date-1.jpg)",
+                    cast1_image: "../Assets/images/Vaathi/Dhanush.jpg",
+                    cast2_image: "../Assets/images/Thiruchitrambalam/Nithya-Menen.jpg",
+                    cast3_image: "../Assets/images/Thiruchitrambalam/bharathi raja.jpg",
+                    cast4_image: "../Assets/images/Thiruchitrambalam/PrakashRaj.jpg",
+                    director_image: "../Assets/images/Thiruchitrambalam/Mithran-Jawahar.jpg",
+                    music_director_image: "../Assets/images/Thiruchitrambalam/anirudh.jpg",
+                    producer_image: "../Assets/images/Thiruchitrambalam/kalanithi maran.webp"
+                },
+                movie_time: "2h 10mins ",
+                movie_certified:"UA",
+                movie_release_date:"nov12",
+                movie_type: "Love-drama-musical",
+                language: "Tamil",
+                frame: "2D",
+                Description: "Thiruchitrambalam, known as Pazham, floats aimlessly through his life as a delivery boy to the disdain of his father. As he tries to get his life on track to no avail, the possibility of love seems to finally bring light into his life.",
+                status: true,
+            },
+            {
+
+                name: {
+                    movie_name: "John wick chapter 4",
+                    cast1_name: "Dhanush",
+                    cast2_name: "Nithya menon",
+                    cast3_name: "Bharathiraja",
+                    cast4_name: "Prakashraj",
+                    director_name: "Mithran r jawahar",
+                    music_director_name: "Anirudh ravichandran",
+                    producer_name: "Kalanithi maran"
+                },
+                images: {
+                    main_image: "../../Assets/images/Thiruchitrambalam/Thiruchitrambalam.jpg",
+                    background_image: "url(../../Assets/images/Thiruchitrambalam/Thiruchitrambalam-release-date-1.jpg)",
+                    cast1_image: "../Assets/images/Vaathi/Dhanush.jpg",
+                    cast2_image: "../Assets/images/Thiruchitrambalam/Nithya-Menen.jpg",
+                    cast3_image: "../Assets/images/Thiruchitrambalam/bharathi raja.jpg",
+                    cast4_image: "../Assets/images/Thiruchitrambalam/PrakashRaj.jpg",
+                    director_image: "../Assets/images/Thiruchitrambalam/Mithran-Jawahar.jpg",
+                    music_director_image: "../Assets/images/Thiruchitrambalam/anirudh.jpg",
+                    producer_image: "../Assets/images/Thiruchitrambalam/kalanithi maran.webp"
+                },
+                movie_time: "2h 10mins",
+                movie_certified:"UA",
+                movie_release_date:"jun10",
+                movie_type: "Love-drama-musical",
+                language: "english",
+                frame: "2D",
+                Description: "Thiruchitrambalam, known as Pazham, floats aimlessly through his life as a delivery boy to the disdain of his father. As he tries to get his life on track to no avail, the possibility of love seems to finally bring light into his life.",
+                status: true,
+            },
+        ]
+            
+         localStorage.setItem("show_movie_details", JSON.stringify(movies_details));
     </script>
 
 </body>

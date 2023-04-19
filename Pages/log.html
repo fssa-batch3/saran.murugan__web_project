@@ -1,84 +1,220 @@
 <!DOCTYPE html>
+
 <head lan="eng">
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="../Assets/css/log.css">
-    
+
 </head>
+
 <body>
 
 
     <div class="main">
 
-    <h1>Lets starts! to book your tickets</h1>
-   
-    <div class="input">
-        <h2>Log in</h2>
+        <h1>Lets starts! to book your tickets</h1>
 
-    <div class="email">
-        <input required type="email" placeholder="Enter your email or phone"  id="emailid"/>
-        <label>Email</label>
+        <div class="input">
+            <h2>Log in</h2>
+
+            <div class="email">
+                <input required type="email" placeholder="Enter your email or phone" id="emailid" />
+                <label>Email</label>
+            </div>
+
+            <div class="email">
+                <input required type="password" pattern="[a-z]{8,}" title="Password must lowercase and 4-8 charecters"
+                    placeholder="Enter your password" id="password" />
+                <label>Password</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" required>
+                <h4>Terms and conditions</h4>
+            </div>
+
+            <button onclick="check()">Submit</button>
+
+
+
+        </div>
+
     </div>
-    
-    <div class="email">
-        <input required type="password" pattern="[a-z]{8,}" title="Password must lowercase and 4-8 charecters" placeholder="Enter your password" id="password"/>
-        <label>Password</label>
-    </div>
-       
-    <div class="check">
-    <input type="checkbox" required>
-    <h4>Terms and conditions</h4>
-    </div>
 
-    <button onclick="check()">Submit</button> 
-
-    
-   
-    </div>
-     
-   </div>
-
-   <script>
-    // cammel case 
+    <script>
+        // cammel case 
 
 
-   
-    function check(){
-        let email=document.getElementById("emailid").value
-        let pass=document.getElementById("password").value
-        let details=JSON.parse(localStorage.getItem("users"))
-        let datas={
-            email:"email",
-            password:"pass",
-        }
-        let res;
-        details.find(element=>{
-            if(element["email"]==email && element["password"]==pass){
-                 localStorage.setItem("profile_details",JSON.stringify(element))
-                 console.log(element);
-                return res=1;
+
+        function check() {
+            let email = document.getElementById("emailid").value
+            let pass = document.getElementById("password").value
+            let details = JSON.parse(localStorage.getItem("users"))
+            let datas = {
+                email: "email",
+                password: "pass",
             }
-            else{
-                return res=0;
+            let res;
+            details.find(element => {
+                if (element["email"] == email && element["password"] == pass) {
+                    localStorage.setItem("profile_details", JSON.stringify(element))
+                    console.log(element);
+                    return res = 1;
+                }
+                else {
+                    return res = 0;
+                }
+            })
+            if (res == 1) {
+                // alert("logged in")
+                window.location.href = "profile.html"
             }
-        })
-        if(res==1){
-            // alert("logged in")
-            window.location.href="profile.html"
+            else {
+                alert("Account not valid")
+            }
         }
-        else{
-            alert("Account not valid")
-        }
-    }
+
+
+
+        
+
+    
 
 
 
 
 
-         
-   </script>
+
+        // let tamil_ott_list = [
+
+        //     {
+        //         name: {
+        //             movie_name: "Master",
+        //             cast1_name: "Vijay",
+        //             cast2_name: "Malavika mohan",
+        //             cast3_name: "Vijay sethupathi",
+        //             cast4_name: "Arjun das",
+        //             director_name: "Lokesh kanagaraj",
+        //             music_director_name: "Anirudh",
+        //             producer_name: "7 Screen studio"
+
+        //         },
+        //         images: {
+        //             background_image: "url(../../Assets/images/master/Master_about.jpg)",
+        //             cast1_image: "../Assets/images/master/vijay.jpeg",
+        //             cast2_image: "../Assets/images/master/malavika.jpeg",
+        //             cast3_image: "../Assets/images/master/Vijay-Sethupathi.jpg",
+        //             cast4_image: "../Assets/images/master/Arjundas.jpg",
+        //             director_image: "../Assets/images//master/lokesh.jpg",
+        //             music_director_image: "../Assets/images/master/anirudh.jpg",
+        //             producer_image: "../Assets/images/master/7screen studio.jpg",
+
+        //         },
+        //         language: "Tamil",
+        //         frame: "2D",
+        //         movie_time: "2h 44mins",
+        //         movie_certified: "UA",
+        //         movie_release_year: "2023",
+        //         movie_type: "Action-drama-thriller",
+        //         Description: "An alcoholic professor is sent to a juvenile school, where he clashes with a gangster, who uses the children of the school for criminal activities",
+        //         status: true,
+        //     },
+        //     {
+        //         name: {
+        //             movie_name: "Vaathi",
+        //             cast1_name: "Dhanush",
+        //             cast2_name: "Samyutha",
+        //             cast3_name: "Sai kumar",
+        //             cast4_name: "Samuthirakani",
+        //             director_name: "Venky atluri",
+        //             music_director_name: "G v prakash",
+        //             producer_name: "Naga vamsi"
+        //         },
+        //         images: {
+        //             background_image: "url(../../Assets/images/Vaathi/vaathi-about.jpg)",
+        //             cast1_image: "../Assets/images/Vaathi/Dhanush.jpg",
+        //             cast2_image: "../Assets/images/Vaathi/samyuktha.jpg",
+        //             cast3_image: "../Assets/images/Vaathi/sai kumar.jpeg",
+        //             cast4_image: "../Assets/images/Vaathi/Samuthirakani.jpg",
+        //             director_image: "../Assets/images/Vaathi/venky-atluri.jpg",
+        //             music_director_image: "../Assets/images/Vaathi/gv parkash.jpeg",
+        //             producer_image: "../Assets/images/Vaathi/naga vamsi.jpg",
+
+        //         },
+        //         language: "Tamil",
+        //         frame: "2D",
+        //         movie_time: "2h 20mins",
+        //         movie_certified: "UA",
+        //         movie_release_year: "2023",
+        //         movie_type: "Action-drama-social",
+        //         Description: "Vaathi is a Tamil movie directed by Venky Atluri starring Dhanush and Samyuktha Menon in the lead.",
+        //         status: true,
+        //     },
+
+        //     {
+        //         name: {
+        //             movie_name: "Vadachennai",
+
+
+        //         },
+        //         images: {
+        //             main_image: "../../Assets/images/vada_chennai/vadachennai.jpg"
+        //         },
+        //         description: "Vada Chennai is the story of a fisherman from North Chennai, who does not even realize when he falls prey to the trap set by a mafia gang, and what happens to him later.",
+        //     },
+        //     {
+        //         name: {
+        //             movie_name: "Kaithi",
+
+
+        //         },
+        //         images: {
+        //             main_image: "../../Assets/images/kaithi/kaithi.jpg"
+        //         },
+        //         description: "A group of cops confiscate a record amount of drugs but find themselves in danger of the mafia. The injured inspector then takes the help of a life term prisoner, who is out on parole to meet his daughter.",
+        //     },
+        //     {
+        //         name: {
+        //             movie_name: "PoniyanSelvan",
+
+        //         },
+        //         images: {
+        //             main_image: "../../Assets/images/poniyan_selvan/poniyan selvan.jpg"
+        //         },
+        //         description: "Vandiyathevan, a brave and brilliant young man sets out to cross the Chola land to deliver a message from the Crown Prince Adithya Karikalan. The narrative deals with attempts by his sister Kundavai ",
+        //     },
+        //     {
+        //         name: {
+        //             movie_name: "Asuran",
+
+        //         },
+        //         images: {
+        //             main_image: "../../Assets/images/Asuran/Asuran.jpg"
+        //         },
+        //         description: "The teenage son of a farmer from an underprivileged caste kills a rich, upper caste landlord. Will the farmer, a loving father and a pacifist by heart, be able to save his hot-blooded son?",
+        //     },
+        //     {
+        //         name: {
+        //             movie_name: "Varisu",
+        //         },
+        //         images: {
+        //             main_image: "../../Assets/images/Varisu/Varisu.jpg"
+        //         },
+        //         description: "Vijay, the prodigal son of business tycoon Rajendran agrees to take over the reins of the business, much to the chagrin of his brothers. But can Vijay prove himself to be a worthy varisu and also reunite his now-broken family?",
+        //     }
+
+        // ]
+        // localStorage.setItem("ott_movie_list", JSON.stringify(tamil_ott_list));
+
+
+
+
+
+
+    </script>
 
 </body>
+
 </html>
