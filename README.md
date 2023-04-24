@@ -59,26 +59,26 @@ Features:
  ### Edit profile [completed]
   - Scenario 1:user come to edit profile and edited
      - Steps:
-      1. Log in as user.
-      2. Navigate to the profile page
-      3. User views the Edit button
-      4. Clicks the button Edit the profile
-      5. Save button appears
-      6. Clicks and save it
+        1. Log in as user.
+        2. Navigate to the profile page
+        3. User views the Edit button
+        4. Clicks the button Edit the profile
+        5. Save button appears
+        6. Clicks and save it
      - Expected Result:
          - User Succesfully edited the profile.
      
  ### log out [completed]
-    - Scenario 1:user  wants to logout
-       - Steps:
+  - Scenario 1:user  wants to logout
+     - Steps:
         1. Log in as user.
         2. Navigate to the profile page.
         3. User views the logout button.
         4. Clicks the button.
         5. Logged out From the profile.
         6. Now user in home page.
-      - Expected Result:
-         - User Succesfully Logged out
+     - Expected Result:
+         - User Succesfully Logged out.
 
    
    
