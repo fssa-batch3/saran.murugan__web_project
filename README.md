@@ -17,20 +17,60 @@ Wireframe: https://drive.google.com/file/d/1LqXwCjJntdGz6BWtTNUGyDUMwExW1N5r/vie
 
 Features:
 
-   Register CRUD [completed]:
+-user_module	
+   1. sign in
+   2. sign up
+	
+	
+-profile module	
+   1. profile view
+	2. profile update
+	3. profile delete
+	
+-movie_card module	
+   1. movie_list create
+	2. movie_list delete
+ 	3. movie_list_update
+ 	4. movie_list_read
+	
+-selection_module	
+   1. search_movie
+	
+-theatre_module	
+   1. theatre_create
+	2. theatre_update
+	3. theatre_delete
+	
+	
+	
+	
+-booking_module	
+   1. theatre_selecting
+	2. seat_selection
+	3. payment_selection
+	
+-cab_module	
+   1. book_cab_in_payment_page
+	2. live location
+	
+-history_module	
+   1.booking_history
+	
+-ott /selection module	
+   1.search_movie
    
-   1.Create user profile.
-   2.Read   user profile.
-   3.update user profile.
-   4.delete user profile.
-   
-   
-   booking_movie_list CRUD [completed]:
-   
-   1. Create movie_list
-   2. read   movie_list.
-   3. update movie_list.
-   4. delete movie_list.
+ott_module	watch_movie
+
+
+-ott_movie_list	
+    1. movie_list create
+	 2. movie_list delete
+	 3. movie_list_update
+	
+-ott_favourites_module	
+     1. add to favourites
+	  2. delete  favourites
+	
    
    
   
