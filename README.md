@@ -23,12 +23,12 @@ Features:
 	
 	
 -profile module	
-   1. profile view
+        1. profile view
 	2. profile update
 	3. profile delete
 	
 -movie_card module	
-   1. movie_list create
+        1. movie_list create
 	2. movie_list delete
  	3. movie_list_update
  	4. movie_list_read
@@ -37,7 +37,7 @@ Features:
    1. search_movie
 	
 -theatre_module	
-   1. theatre_create
+        1. theatre_create
 	2. theatre_update
 	3. theatre_delete
 	
@@ -46,12 +46,12 @@ Features:
 	
 -booking_module	
    1. theatre_selecting
-	2. seat_selection
-	3. payment_selection
+   2. seat_selection
+   3. payment_selection
 	
 -cab_module	
-   1. book_cab_in_payment_page
-	2. live location
+    1. book_cab_in_payment_page
+    2. live location
 	
 -history_module	
    1.booking_history
@@ -63,7 +63,7 @@ ott_module	watch_movie
 
 
 -ott_movie_list	
-    1. movie_list create
+         1. movie_list create
 	 2. movie_list delete
 	 3. movie_list_update
 	
