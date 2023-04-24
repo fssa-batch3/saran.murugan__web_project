@@ -76,7 +76,7 @@ ott_module	watch_movie
   
 
 
-## Create an account [completed]
+## Create an account [completed ✅ ]
 - Scenario 1:  create an account
     - Steps:
         1. Navigate to the sign in page.
@@ -85,7 +85,7 @@ ott_module	watch_movie
     - Expected Result:
         - The user is redirected to the login page.
 
-### Create an account [completed]
+### Create an account [completed ✅ ]
 - Scenario 1: login in to account
     - Steps:
         1. Navigate to the login page.
@@ -96,7 +96,7 @@ ott_module	watch_movie
         
         
         
- ### Edit profile [completed]
+ ### Edit profile [completed ✅ ]
   - Scenario 1:user come to edit profile and edited
      - Steps:
         1. Log in as user.
@@ -108,7 +108,7 @@ ott_module	watch_movie
      - Expected Result:
          - User Succesfully edited the profile.
      
- ### log out [completed]
+ ### log out [completed ✅ ]
   - Scenario 1:user  wants to logout
      - Steps:
         1. Log in as user.
