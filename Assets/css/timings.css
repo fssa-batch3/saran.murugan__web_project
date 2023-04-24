@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: black;
 }
 
 header {
@@ -100,6 +100,7 @@ header img {
     font-size: 25px;
     font-family: 'Mohave', sans-serif;
 }
+
 
 .monday_show {
     padding: 30px;
@@ -239,35 +240,65 @@ header img {
     background-color: #333333;
 }
 
-.lan_frame{
-    display: flex;
-}
 
-.theatre {
+.theatre_show1 {
     padding-top: 20px;
 }
+.theatre_show2 {
+    padding-top: 20px;
+}
+.theatre_show3 {
+    padding-top: 20px;
+}
+.theatre_show4 {
+    padding-top: 20px;
+}
+.theatre_show5 {
+    padding-top: 20px;
+}
+.theatre_show6 {
+    padding-top: 20px;
+}
+.theatre_show7 {
+    padding-top: 20px;
+}
+#day1_shows{
+    display:block;
+}
+#day2_shows{
+    display: none;
+}
+#day3_shows{
+    display: none;
+}
+#day4_shows{
+    display: none;
+}
+#day5_shows{
+    display: none;
+}
+#day6_shows{
+    display: none;
+}
+#day7_shows{
+    display: none;
+}
 
-.theatre h2 {
+
+
+
+#movie_title{
     color: white;
     margin-left: 50px;
     font-family: 'Archivo Narrow', sans-serif;
 }
-
-.theatre h3 {
-    color: #60665e;
-    font-family: 'Archivo Narrow', sans-serif;
-    margin-left: 60px;
-}
-
-.theatre-show-time {
+#theatre_showtime{
     display: flex;
     gap: 20px;
     margin-left: 50px;
     margin-top: 30px;
 }
-
-.theatre-show-time a,
-p {
+#theatre_showtime a,p{
     text-decoration: none;
     color: #edd605;
     background-color: rgba(21, 19, 10, 255);
@@ -277,7 +308,21 @@ p {
     cursor: pointer;
 }
 
-
+/* #theatre{
+    display: flex;
+    gap: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+#theatre  a, p{
+    text-decoration: none;
+    color: #edd605;
+    background-color: rgba(21, 19, 10, 255);
+    border: 1px solid rgba(21, 19, 10, 255);
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+} */
 
 /* .theatre2 {
     padding-top: 20px;

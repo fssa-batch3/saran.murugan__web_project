@@ -21,8 +21,8 @@
             <h2>Sign up</h2>
             <form>
             <div class="email">
-                <input required="true" type="text" title="name doesn't contain number or spaces" placeholder="Enter your name"  
-                  pattern="[A-Za-z]"  id="name" />
+                <input  type="text" title="name doesn't contain number or spaces" placeholder="Enter your name"  
+                  pattern="[A-Za-z]{0,20}"  id="name" required="true"/>
                 <label>Name</label>
             </div>
 
@@ -111,7 +111,7 @@ form.addEventListener("submit",e=>{
             }
                 // alert("password is correct")
             }
-        }
+        };
 
 
 

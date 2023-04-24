@@ -16,7 +16,7 @@
 
 
 
-  
+
 
 
 
@@ -32,20 +32,22 @@
 
         <div class="email-num">
             <form>
-            <div class="phone-num">
-                 <h3>Phone:</h3> 
-                <input type="text" id="number" pattern="[0-9]{10,10}" inputmode="numeric" minlength="10" maxlength="10" disabled>
-            </div>
+                <div class="phone-num">
+                    <h3>Phone:</h3>
+                    <input type="text" id="number" pattern="[0-9]{10,10}" inputmode="numeric" minlength="10"
+                        maxlength="10" disabled>
+                </div>
 
-            <div class="email">
-                    <h3>Email:</h3> <p id="email" style="color:white;" ></p>
-            </div>
+                <div class="email">
+                    <h3>Email:</h3>
+                    <p id="email" style="color:white;"></p>
+                </div>
 
-            <div class="whatsapp-msg">
-                
-                <input type="checkbox" >
-                <h3>WhatsApp notification</h3>
-            </div>
+                <div class="whatsapp-msg">
+
+                    <input type="checkbox">
+                    <h3>WhatsApp notification</h3>
+                </div>
 
 
 
@@ -53,117 +55,129 @@
 
         </div>
         <div class="edit">
-         <button onclick="edit()" id="edit">Edit</button>
-         <buttonn id="save">Save</button>
+            <button onclick="edit()" id="edit">Edit</button>
+            <buttonn id="save">Save</button>
         </div>
-  
-        <div class="Home-a-tag">       
-            <a href="../index.html"><h4>Go to home</h4></a>
+
+        <div class="Home-a-tag">
+            <a href="../index.html">
+                <h4>Go to home</h4>
+            </a>
         </div>
 
     </div>
 
     <div class="setting-option">
         <ul>
-          <li>Booking history</li>
-          <li>Notification</li>
-          <li>Help and support</li>
-          <li>About us</li>
-          <li>Cinemas</li>
-          <li>Movies</li>
+            <li>Booking history</li>
+            <li>Notification</li>
+            <li>Help and support</li>
+            <li>About us</li>
+            <li>Cinemas</li>
+            <li>Movies</li>
         </ul>
     </div>
 
 
     <div class="content-all">
-    
 
 
-    <div class="booking-history">
-     
-    <div class="booked-movie">
-     
+
+        <div class="booking-history">
+
+            <div class="booked-movie">
+
+            </div>
+
+        </div>
+
     </div>
 
-    </div>
-      
-    </div>
-    
 
 
-    
-   
+
+
     <script>
 
-   let users = JSON.parse(localStorage.getItem("users"));
+        let users = JSON.parse(localStorage.getItem("users"));
 
-   const name = document.getElementById("name")
-   const email = document.getElementById("email")
-   const number = document.getElementById("number")
-//    document.getElementById("name").value = users["name"]
-//    document.getElementById("email").innerText = users["email"]
-//    document.getElementById("number").value = users["number"];
+        const name = document.getElementById("name")
+        const email = document.getElementById("email")
+        const number = document.getElementById("number")
+        //    document.getElementById("name").value = users["name"]
+        //    document.getElementById("email").innerText = users["email"]
+        //    document.getElementById("number").value = users["number"];
 
-  
-let profile_arr = JSON.parse(localStorage.getItem("profile_details"));
 
-let check;
+        let profile_arr = JSON.parse(localStorage.getItem("profile_details"));
 
-users.find(userobj => {
-    if (userobj["email"] == profile_arr["email"] && userobj["password"] == profile_arr["password"]) {
-        name.value = userobj["name"]
-        email.innerText = userobj["email"]
-        number.value = userobj["number"]
-        return check  = userobj;
-    }
-}) 
+        let check;
 
-// console.log(check)
-// console.log(check["name"])
-// name.value=check["name"];
+        users.find(userobj => {
+            if (userobj["email"] == profile_arr["email"] && userobj["password"] == profile_arr["password"]) {
+                name.value = userobj["name"]
+                email.innerText = userobj["email"]
+                number.value = userobj["number"]
+                return check = userobj;
+            }
+        })
 
-  function edit(){
-    document.getElementById("name").disabled = false;
-    document.getElementById("number").disabled = false;
-  }
+        // console.log(check)
+        // console.log(check["name"])
+        // name.value=check["name"];
 
-  document.getElementById("save").addEventListener("click", (e) => {
+        function edit() {
+            document.getElementById("name").disabled = false;
+            document.getElementById("number").disabled = false;
+        }
 
-    check["name"] = document.getElementById("name").value;
-    check["number"] = document.getElementById("number").value;
+        document.getElementById("save").addEventListener("click", (e) => {
 
-    console.log(check)
+            check["name"] = document.getElementById("name").value;
+            check["number"] = document.getElementById("number").value;
 
-    localStorage.setItem("users", JSON.stringify(users));
+            console.log(check)
 
-    console.log(users);
+            localStorage.setItem("users", JSON.stringify(users));
 
-  })  
+            console.log(users);
 
-  document.getElementById("logout").addEventListener("click",(e)=>{
-    console.log("clicked")
-    deleteItem();
-  })
+        })
 
-  function deleteItem() {
-        for (let i = 0; i < users.length; i++) {
-            console.log(document.getElementById("email").innerText)
-            if (document.getElementById("email").innerText == users[i]["email"]) {
-                // console.log("deleted")
-                users.splice(i,1);
-                console.log(users)
-                localStorage.setItem("users", JSON.stringify(users));
+        document.getElementById("logout").addEventListener("click", (e) => {
+            console.log("clicked")
+            deleteItem();
+        })
+    
+        function deleteItem() {
+            for (let i = 0; i < users.length; i++) {
+                console.log(document.getElementById("email").innerText)
+                if (document.getElementById("email").innerText == users[i]["email"]) {
+                    // console.log("deleted")
 
-                // window.location.href = "signup.html";
+
+
+                    let message = confirm("do you want to delete your account!! byee...");
+                    if (message != true) {
+                        return false;
+                    } else {
+                    
+                        users.splice(i, 1);
+                        console.log(users)
+                        localStorage.setItem("users", JSON.stringify(users));
+                        window.location.href = "signup.html";
+                    }
+
+                    
+                }
             }
         }
-  }
 
-     
-     
-     </script>
 
-  
+
+    </script>
+
+
 </body>
 
 </html>

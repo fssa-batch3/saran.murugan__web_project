@@ -23,7 +23,7 @@ header{
 
 body{
     background-color: black;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
 }
 header img{
     width: 120px;
@@ -205,8 +205,8 @@ option{
 }
 .movie-list-container2{
     padding: 0 20px;
-    width:90%;
-    margin-left: 40px;
+    width:80%;
+    margin-left: 115px;
 }
 .movie-list-container3{
     padding: 0 20px;
@@ -307,6 +307,21 @@ option{
     cursor: pointer;
 
 }
+
+.arrow2{
+    font-size: 40px;
+    padding: 10px;
+    position: absolute;
+    top:190px;
+    background-color: #181818;
+    border-radius: 50px;
+    right: 0;
+    color:white;
+    /* opacity: .8; */
+    cursor: pointer;
+
+}
+
 .watch-now{
     display: flex;
     margin-top: 50px;
@@ -369,7 +384,7 @@ option{
   opacity: 1;
 }
 .movie-list-item-img2{
-    width:240px;
+    width:270px;
     border-radius: 20px;
     height: 420px;
     object-fit: cover;

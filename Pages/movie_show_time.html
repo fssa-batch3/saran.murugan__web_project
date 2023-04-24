@@ -32,51 +32,77 @@
 
   <div class="main">
 
+    <h3 id="IndiaTime" style="color: white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></h3>
+
+
     <div class="show_date">
 
-      <div class="sunday_show">
-        <h2>Sun</h2>
-        <p>11</p>
+      <div class="sunday_show" id="show_day1" >
+        <h2>
+          <span id="day"></span> <br>
+          <span id="date"></span> <br>
+          <span id="month"></span>
+        </h2>
       </div>
 
-      <div class="monday_show">
-        <h2>Mon</h2>
-        <p>12</p>
+      <div class="monday_show" id="show_day2" >
+        <h2>
+          <span id="day"></span> <br>
+          <span id="date"></span> <br>
+          <span id="month"></span>
+        </h2>
       </div>
 
-      <div class="tuesday_show">
-        <h2>Tue</h2>
-        <p>13</p>
+      <div class="tuesday_show" id="show_day3">
+        <h2>
+          <span id="day"></span> <br>
+          <span id="date"></span> <br>
+          <span id="month"></span>
+        </h2>
       </div>
 
-      <div class="wednesday_show">
-        <h2>Wed</h2>
-        <p>14</p>
+      <div class="wednesday_show" id="show_day4" >
+        <h2>
+          <span id="day"></span> <br>
+          <span id="date"></span> <br>
+          <span id="month"></span>
+        </h2>
       </div>
 
-      <div class="thursday_show">
-        <h2>Thur</h2>
-        <p>15</p>
+      <div class="thursday_show" id="show_day5">
+        <h2>
+          <span id="day"></span> <br>
+          <span id="date"></span> <br>
+          <span id="month"></span>
+        </h2>
       </div>
 
-      <div class="friday_show">
-        <h2> Fri</h2>
-        <p>16</p>
+      <div class="friday_show" id="show_day6" >
+        <h2>
+          <span id="day"></span> <br>
+          <span id="date"></span> <br>
+          <span id="month"></span>
+        </h2>
       </div>
 
-      <div class="saturday_show">
-        <h2> Sat</h2>
-        <p>17</p>
+      <div class="saturday_show" id="show_day7" >
+        <h2>
+          <span id="day"></span> <br>
+          <span id="date"></span> <br>
+          <span id="month"></span>
+        </h2>
       </div>
-
 
     </div>
 
+    <a href="Add_theatre.html"><button>Add</button></a>
 
     <div class="theatres_lists">
 
-    </div>
 
+
+
+    </div>
 
   </div>
 
@@ -85,102 +111,95 @@
 
 
 
-    
+
 
     let theatres = [
 
       {
         theatre_name: "PVR,Grand mall,velacherry",
+        show_date: "22",
+        show_month: "jun",
         show_times: {
           show1_time: "10:00am",
           show2_time: "1:00pm",
           show3_time: "5:00pm",
           show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "Luxe cinemas,Pheonix mall,velacherry",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "Mayajaal multiplex,ECR",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "Rohini silver screen,Koyambedu",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "Kasi takies,Ashok nagar",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "INOX: Marina mall,ECR",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "Woodlands complex,chennai",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "AGS cinemas,villivakkam",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "SPI-S2 theyagaraja, Thiruvanmiyur",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
-      },
-      {
-        theatre_name: "PVR-VR,Chennai",
-        show_times: {
-          show1_time: "10:00am",
-          show2_time: "1:00pm",
-          show3_time: "5:00pm",
-          show4_time: "8:00pm",
-        }
+        },
+        status: true,
       },
 
-    ]
+    ];
+    localStorage.setItem("theatre_details", JSON.stringify(theatres))
+
+    let day = "";
+    let month = "";
+    let date = "";
+    let day_div = document.querySelectorAll("#day");
+    let month_div = document.querySelectorAll("#month")
+    let date_div = document.querySelectorAll("#date")
+
+
+    let curr_day = new Date().toDateString().slice(0, 3);
+    // day = curr_day;
+    //  document.querySelectorAll("day")[0].append(day)
+    // console.log(day);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+
+    let current_seq;
+    let day_index
+    days.forEach((e, index) => {
+      if (curr_day == e) {
+        day_index = index
+      }
+    })
+    let temp
+
+    temp = days.splice(0, day_index)
+    current_seq = days.concat(temp)
+
+    // console.log(day_index,"dfh");
+    console.log(current_seq, "yg");
+    // console.log(temp,"hyg");
+
+    let curr_month = new Date().toDateString().slice(4, 7);
+    // month =curr_month;
+    // document.getElementById("month").append(month)
+    // console.log(month);
+
+    let curr_date = new Date().toDateString().slice(8, 10);
+    // date =curr_date;
+    // document.getElementById("date").append(date)
+    // console.log(date)
+
+    for (let i = 0; i < date_div.length; i++) {
+      // let date_edited=curr_day + curr_month + curr_date;
+      day_div[i].append(current_seq[i]);
+      month_div[i].append(curr_month)
+      date_div[i].append(curr_date)
+      curr_date++;
+
+    }
+
+
+    // console.log(date_edited)
+
+
+
+
+
+
+
+
+
+
+
+    var getIndiaTime = function () {
+      document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timeZone: 'Asia/Kolkata', timeStyle: 'short', hourCycle: 'h12' });
+    }
+    getIndiaTime();
+    setInterval(getIndiaTime, 1000);
+
+
 
     const name_list = JSON.parse(localStorage.getItem("show_movie_details"));
 
@@ -204,10 +223,10 @@
 
     // BANNER SECTION //
     let banner = document.querySelector(".banner");
-    banner.style.backgroundImage =res["images"]["background_image"];
+    banner.style.backgroundImage = res["images"]["background_image"];
 
     let movie_name = document.createElement("h1");
-    movie_name.innerText =res["name"]["movie_name"];
+    movie_name.innerText = res["name"]["movie_name"];
     banner.prepend(movie_name);
 
     let cast_time = document.querySelector(".timeandcast")
@@ -242,7 +261,7 @@
     cast_time.append(dot3);
 
     let frame = document.createElement("h4");
-    frame.innerText = res["frame"];
+    frame.innerText = res["movie_frame"];
     cast_time.append(frame);
 
     let language = document.createElement("h4");
@@ -253,477 +272,436 @@
     //THEATRE SECTION STARTS//
 
     for (let theatre of theatres) {
-      let theater, title, languages, showtime, para1, para2, para3, para4, hr
 
-      theater = document.createElement("div");
-      theater.setAttribute("class", "theatre");
 
-      title = document.createElement("h2");
+      let theater = document.createElement("div");
+      theater.setAttribute("class", "theatre_show1");
+      theater.setAttribute("id", "day1_shows")
+
+
+      let title = document.createElement("h2");
+      title.setAttribute("id", "movie_title")
       title.innerText = theatre.theatre_name;
       theater.append(title);
 
-      lan_frame = document.createElement("div");
-      lan_frame.setAttribute("class","lan_frame")
-      theater.append(lan_frame);
 
-      languages = document.createElement("h3");
-      languages.innerText = res["language"];
-      lan_frame.append(languages);
-      
-      frame = document.createElement("h3");
-      frame.innerText=res["frame"];
-      
-      lan_frame.append(frame)
-
-      showtime = document.createElement("div");
-      showtime.setAttribute("class", "theatre-show-time");
+      let showtime = document.createElement("div");
+      showtime.setAttribute("class", "show_time1");
+      showtime.setAttribute("id", "theatre_showtime")
       theater.append(showtime);
 
-      para1 = document.createElement("p");
-      para1.innerText =theatre.show_times.show1_time;
+      let para1 = document.createElement("p");
+      para1.innerText = theatre.show_times.show1_time;
       showtime.append(para1);
 
-      para2 = document.createElement("p");
+      let para2 = document.createElement("p");
       para2.innerText = theatre.show_times.show2_time;
       showtime.append(para2);
 
-      para3 = document.createElement("p");
-      para3.innerText =theatre.show_times.show3_time;
+      let para3 = document.createElement("p");
+      para3.innerText = theatre.show_times.show3_time;
       showtime.append(para3)
 
-      para4 = document.createElement("p");
+      let para4 = document.createElement("p");
       para4.innerText = theatre.show_times.show4_time;
       showtime.append(para4);
 
-      hr = document.createElement("hr");
-      theater.append(hr)
+      let hr = document.createElement("hr");
+      theater.append(hr);
 
       document.querySelector(".theatres_lists").append(theater);
 
 
-      //  let theatre_1 = document.querySelector(".theatre1");
+    }
 
-      //  let theatre_name=document.createElement("h2");
-      //     theatre_name.innerText=theatre.theatre_name;
-      //     theatre_1.append()
 
+    for (let theatre of theatres) {
 
-      //  let theatre1_show_time = document.querySelector(".theatre1-show-time");
 
-      //  let theatre1_show_time1 = document.createElement("p");
-      //  theatre1_show_time.prepend(theatre1_show_time1);
+      let theater = document.createElement("div");
+      theater.setAttribute("class", "theatre_show2");
+      theater.setAttribute("id", "day2_shows")
 
-      // let theatre1_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // // theatre1_show_time_a.setAttribute("href", "movie_seats.html?name=" + res["name"]);
-      // theatre1_show_time_a.innerText=[];
-      // theatre1_show_time1.prepend(theatre1_show_time_a);
+      let title = document.createElement("h2");
+      title.setAttribute("id", "movie_title")
+      title.innerText = theatre.theatre_name;
+      theater.append(title);
 
 
-      // let theatre1_show_time2 = document.createElement("p");
-      // theatre1_show_time.append(theatre1_show_time2);
+      let showtime = document.createElement("div");
+      showtime.setAttribute("class", "show_time2");
+      showtime.setAttribute("id", "theatre_showtime")
+      theater.append(showtime);
 
-      // let theatre1_show_time_a2 = document.createElement("a");
-      // theatre1_show_time_a2.setAttribute("href", "movie_seats.html?name=" + res["name"]);
-      // theatre1_show_time_a2.innerText=["theatres"]["show_times"]["show1_time"];
-      // theatre1_show_time2.append(theatre1_show_time_a2);
+      let para1 = document.createElement("p");
+      para1.innerText = theatre.show_times.show1_time;
+      showtime.append(para1);
 
+      let para2 = document.createElement("p");
+      para2.innerText = theatre.show_times.show2_time;
+      showtime.append(para2);
 
-      // let theatre1_show_time3 = document.createElement("p");
-      // theatre1_show_time.append(theatre1_show_time3);
+      let para3 = document.createElement("p");
+      para3.innerText = theatre.show_times.show3_time;
+      showtime.append(para3)
 
-      // let theatre1_show_time_a3 = document.createElement("a");
-      // theatre1_show_time_a3.setAttribute("href", "movie_seats.html?name=" + res["name"]);
-      // theatre1_show_time_a3.innerText="5:00pm";
-      // theatre1_show_time3.append(theatre1_show_time_a3);
+      let para4 = document.createElement("p");
+      para4.innerText = theatre.show_times.show4_time;
+      showtime.append(para4);
 
+      let hr = document.createElement("hr");
+      theater.append(hr);
 
-      // let theatre1_show_time4 = document.createElement("p");
-      // theatre1_show_time.append(theatre1_show_time4);
-
-      // let theatre1_show_time_a4 = document.createElement("a");
-      // theatre1_show_time_a4.setAttribute("href", "movie_seats.html?name=" + res["name"]);
-      // theatre1_show_time_a4.innerText="8:00pm";
-      // theatre1_show_time4.append(theatre1_show_time_a4);
-
-
-      // let theatre_2 = document.querySelector(".theatre2")
-
-      //  let theatre2_show_time = document.querySelector(".theatre2-show-time");
-
-      //  let theatre2_show_time1 = document.createElement("p");
-      //  theatre2_show_time.prepend(theatre2_show_time1);
-
-      // let theatre2_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre2_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre2_show_time_a.innerText="10:00am";
-      // theatre2_show_time1.prepend(theatre2_show_time_a);
-
-
-      // let theatre2_show_time2 = document.createElement("p");
-      // theatre2_show_time.append(theatre2_show_time2);
-
-      // let theatre2_show_time_a2 = document.createElement("a");
-      // theatre2_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre2_show_time_a2.innerText="1:00pm";
-      // theatre2_show_time2.append(theatre2_show_time_a2);
-
-
-      // let theatre2_show_time3 = document.createElement("p");
-      // theatre2_show_time.append(theatre2_show_time3);
-
-      // let theatre2_show_time_a3 = document.createElement("a");
-      // theatre2_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre2_show_time_a3.innerText="5:00pm";
-      // theatre2_show_time3.append(theatre2_show_time_a3);
-
-
-      // let theatre2_show_time4 = document.createElement("p");
-      // theatre2_show_time.append(theatre2_show_time4);
-
-      // let theatre2_show_time_a4 = document.createElement("a");
-      // theatre2_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre2_show_time_a4.innerText="8:00pm";
-      // theatre2_show_time4.append(theatre2_show_time_a4);
-
-
-
-      // let theatre_3 = document.querySelector(".theatre3")
-
-      //  let theatre3_show_time = document.querySelector(".theatre3-show-time");
-
-      //  let theatre3_show_time1 = document.createElement("p");
-      //  theatre3_show_time.prepend(theatre3_show_time1);
-
-      // let theatre3_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre3_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre3_show_time_a.innerText="10:00am";
-      // theatre3_show_time1.prepend(theatre3_show_time_a);
-
-
-      // let theatre3_show_time2 = document.createElement("p");
-      // theatre3_show_time.append(theatre3_show_time2);
-
-      // let theatre3_show_time_a2 = document.createElement("a");
-      // theatre3_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre3_show_time_a2.innerText="1:00pm";
-      // theatre3_show_time2.append(theatre3_show_time_a2);
-
-
-      // let theatre3_show_time3 = document.createElement("p");
-      // theatre3_show_time.append(theatre3_show_time3);
-
-      // let theatre3_show_time_a3 = document.createElement("a");
-      // theatre3_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre3_show_time_a3.innerText="5:00pm";
-      // theatre3_show_time3.append(theatre3_show_time_a3);
-
-
-      // let theatre3_show_time4 = document.createElement("p");
-      // theatre3_show_time.append(theatre3_show_time4);
-
-      // let theatre3_show_time_a4 = document.createElement("a");
-      // theatre3_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre3_show_time_a4.innerText="8:00pm";
-      // theatre3_show_time4.append(theatre3_show_time_a4);
-
-
-
-      // let theatre_4 = document.querySelector(".theatre4")
-
-      //  let theatre4_show_time = document.querySelector(".theatre4-show-time");
-
-      //  let theatre4_show_time1 = document.createElement("p");
-      //  theatre4_show_time.prepend(theatre4_show_time1);
-
-      // let theatre4_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre4_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre4_show_time_a.innerText="10:00am";
-      // theatre4_show_time1.prepend(theatre4_show_time_a);
-
-
-      // let theatre4_show_time2 = document.createElement("p");
-      // theatre4_show_time.append(theatre4_show_time2);
-
-      // let theatre4_show_time_a2 = document.createElement("a");
-      // theatre4_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre4_show_time_a2.innerText="1:00pm";
-      // theatre4_show_time2.append(theatre4_show_time_a2);
-
-
-      // let theatre4_show_time3 = document.createElement("p");
-      // theatre4_show_time.append(theatre4_show_time3);
-
-      // let theatre4_show_time_a3 = document.createElement("a");
-      // theatre4_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre4_show_time_a3.innerText="5:00pm";
-      // theatre4_show_time3.append(theatre4_show_time_a3);
-
-
-      // let theatre4_show_time4 = document.createElement("p");
-      // theatre4_show_time.append(theatre4_show_time4);
-
-      // let theatre4_show_time_a4 = document.createElement("a");
-      // theatre4_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre4_show_time_a4.innerText="8:00pm";
-      // theatre4_show_time4.append(theatre4_show_time_a4);
-
-
-
-
-      // let theatre_5 = document.querySelector(".theatre5")
-
-      //  let theatre5_show_time = document.querySelector(".theatre5-show-time");
-
-      //  let theatre5_show_time1 = document.createElement("p");
-      //  theatre5_show_time.prepend(theatre5_show_time1);
-
-      // let theatre5_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre5_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre5_show_time_a.innerText="10:00am";
-      // theatre5_show_time1.prepend(theatre5_show_time_a);
-
-
-      // let theatre5_show_time2 = document.createElement("p");
-      // theatre5_show_time.append(theatre5_show_time2);
-
-      // let theatre5_show_time_a2 = document.createElement("a");
-      // theatre5_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre5_show_time_a2.innerText="1:00pm";
-      // theatre5_show_time2.append(theatre5_show_time_a2);
-
-
-      // let theatre5_show_time3 = document.createElement("p");
-      // theatre5_show_time.append(theatre5_show_time3);
-
-      // let theatre5_show_time_a3 = document.createElement("a");
-      // theatre5_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre5_show_time_a3.innerText="5:00pm";
-      // theatre5_show_time3.append(theatre5_show_time_a3);
-
-
-      // let theatre5_show_time4 = document.createElement("p");
-      // theatre5_show_time.append(theatre5_show_time4);
-
-      // let theatre5_show_time_a4 = document.createElement("a");
-      // theatre5_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre5_show_time_a4.innerText="8:00pm";
-      // theatre5_show_time4.append(theatre5_show_time_a4);
-
-
-
-      // let theatre_6 = document.querySelector(".theatre6")
-
-      //  let theatre6_show_time = document.querySelector(".theatre6-show-time");
-
-      //  let theatre6_show_time1 = document.createElement("p");
-      //  theatre6_show_time.prepend(theatre6_show_time1);
-
-      // let theatre6_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre6_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre6_show_time_a.innerText="10:00am";
-      // theatre6_show_time1.prepend(theatre6_show_time_a);
-
-
-      // let theatre6_show_time2 = document.createElement("p");
-      // theatre6_show_time.append(theatre6_show_time2);
-
-      // let theatre6_show_time_a2 = document.createElement("a");
-      // theatre6_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre6_show_time_a2.innerText="1:00pm";
-      // theatre6_show_time2.append(theatre6_show_time_a2);
-
-
-      // let theatre6_show_time3 = document.createElement("p");
-      // theatre6_show_time.append(theatre6_show_time3);
-
-      // let theatre6_show_time_a3 = document.createElement("a");
-      // theatre6_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre6_show_time_a3.innerText="5:00pm";
-      // theatre6_show_time3.append(theatre6_show_time_a3);
-
-
-      // let theatre6_show_time4 = document.createElement("p");
-      // theatre6_show_time.append(theatre6_show_time4);
-
-      // let theatre6_show_time_a4 = document.createElement("a");
-      // theatre6_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre6_show_time_a4.innerText="8:00pm";
-      // theatre6_show_time4.append(theatre6_show_time_a4);
-
-
-
-      // let theatre_7 = document.querySelector(".theatre7")
-
-      //  let theatre7_show_time = document.querySelector(".theatre7-show-time");
-
-      //  let theatre7_show_time1 = document.createElement("p");
-      //  theatre7_show_time.prepend(theatre7_show_time1);
-
-      // let theatre7_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre7_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre7_show_time_a.innerText="10:00am";
-      // theatre7_show_time1.prepend(theatre7_show_time_a);
-
-
-      // let theatre7_show_time2 = document.createElement("p");
-      // theatre7_show_time.append(theatre7_show_time2);
-
-      // let theatre7_show_time_a2 = document.createElement("a");
-      // theatre7_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre7_show_time_a2.innerText="1:00pm";
-      // theatre7_show_time2.append(theatre7_show_time_a2);
-
-
-      // let theatre7_show_time3 = document.createElement("p");
-      // theatre7_show_time.append(theatre7_show_time3);
-
-      // let theatre7_show_time_a3 = document.createElement("a");
-      // theatre7_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre7_show_time_a3.innerText="5:00pm";
-      // theatre7_show_time3.append(theatre7_show_time_a3);
-
-
-      // let theatre7_show_time4 = document.createElement("p");
-      // theatre7_show_time.append(theatre7_show_time4);
-
-      // let theatre7_show_time_a4 = document.createElement("a");
-      // theatre7_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre7_show_time_a4.innerText="8:00pm";
-      // theatre7_show_time4.append(theatre7_show_time_a4);
-
-
-      // let theatre_8 = document.querySelector(".theatre8")
-
-      //  let theatre8_show_time = document.querySelector(".theatre8-show-time");
-
-      //  let theatre8_show_time1 = document.createElement("p");
-      //  theatre8_show_time.prepend(theatre8_show_time1);
-
-      // let theatre8_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre8_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre8_show_time_a.innerText="10:00am";
-      // theatre8_show_time1.prepend(theatre8_show_time_a);
-
-
-      // let theatre8_show_time2 = document.createElement("p");
-      // theatre8_show_time.append(theatre8_show_time2);
-
-      // let theatre8_show_time_a2 = document.createElement("a");
-      // theatre8_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre8_show_time_a2.innerText="1:00pm";
-      // theatre8_show_time2.append(theatre8_show_time_a2);
-
-
-      // let theatre8_show_time3 = document.createElement("p");
-      // theatre8_show_time.append(theatre8_show_time3);
-
-      // let theatre8_show_time_a3 = document.createElement("a");
-      // theatre8_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre8_show_time_a3.innerText="5:00pm";
-      // theatre8_show_time3.append(theatre8_show_time_a3);
-
-
-      // let theatre8_show_time4 = document.createElement("p");
-      // theatre8_show_time.append(theatre8_show_time4);
-
-      // let theatre8_show_time_a4 = document.createElement("a");
-      // theatre8_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre8_show_time_a4.innerText="8:00pm";
-      // theatre8_show_time4.append(theatre8_show_time_a4);
-
-
-
-      // let theatre_9 = document.querySelector(".theatre9")
-
-      //  let theatre9_show_time = document.querySelector(".theatre9-show-time");
-
-      //  let theatre9_show_time1 = document.createElement("p");
-      //  theatre9_show_time.prepend(theatre9_show_time1);
-
-      // let theatre9_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre9_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre9_show_time_a.innerText="10:00am";
-      // theatre9_show_time1.prepend(theatre9_show_time_a);
-
-
-      // let theatre9_show_time2 = document.createElement("p");
-      // theatre9_show_time.append(theatre9_show_time2);
-
-      // let theatre9_show_time_a2 = document.createElement("a");
-      // theatre9_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre9_show_time_a2.innerText="1:00pm";
-      // theatre9_show_time2.append(theatre9_show_time_a2);
-
-
-      // let theatre9_show_time3 = document.createElement("p");
-      // theatre9_show_time.append(theatre9_show_time3);
-
-      // let theatre9_show_time_a3 = document.createElement("a");
-      // theatre9_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre9_show_time_a3.innerText="5:00pm";
-      // theatre9_show_time3.append(theatre9_show_time_a3);
-
-
-      // let theatre9_show_time4 = document.createElement("p");
-      // theatre9_show_time.append(theatre9_show_time4);
-
-      // let theatre9_show_time_a4 = document.createElement("a");
-      // theatre9_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre9_show_time_a4.innerText="8:00pm";
-      // theatre9_show_time4.append(theatre9_show_time_a4);
-
-
-      // let theatre_10 = document.querySelector(".theatre10")
-
-      //  let theatre10_show_time = document.querySelector(".theatre10-show-time");
-
-      //  let theatre10_show_time1 = document.createElement("p");
-      //  theatre10_show_time.prepend(theatre10_show_time1);
-
-      // let theatre10_show_time_a = document.createElement("a");
-      //  //  url.html?key=value&key=value
-      // theatre10_show_time_a.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre10_show_time_a.innerText="10:00am";
-      // theatre10_show_time1.prepend(theatre10_show_time_a);
-
-
-      // let theatre10_show_time2 = document.createElement("p");
-      // theatre10_show_time.append(theatre10_show_time2);
-
-      // let theatre10_show_time_a2 = document.createElement("a");
-      // theatre10_show_time_a2.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre10_show_time_a2.innerText="1:00pm";
-      // theatre10_show_time2.append(theatre10_show_time_a2);
-
-
-      // let theatre10_show_time3 = document.createElement("p");
-      // theatre10_show_time.append(theatre10_show_time3);
-
-      // let theatre10_show_time_a3 = document.createElement("a");
-      // theatre10_show_time_a3.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre10_show_time_a3.innerText="5:00pm";
-      // theatre10_show_time3.append(theatre10_show_time_a3);
-
-
-      // let theatre10_show_time4 = document.createElement("p");
-      // theatre10_show_time.append(theatre10_show_time4);
-
-      // let theatre10_show_time_a4 = document.createElement("a");
-      // theatre10_show_time_a4.setAttribute("href", "movie_show_time.html?name=" + res["name"]);
-      // theatre10_show_time_a4.innerText="8:00pm";
-      // theatre10_show_time4.append(theatre10_show_time_a4);
+      document.querySelector(".theatres_lists").append(theater);
 
 
     }
+
+    for (let theatre of theatres) {
+
+
+      let theater = document.createElement("div");
+      theater.setAttribute("class", "theatre_show3");
+      theater.setAttribute("id", "day3_shows")
+
+      let title = document.createElement("h2");
+      title.setAttribute("id", "movie_title")
+      title.innerText = theatre.theatre_name;
+      theater.append(title);
+
+
+      let showtime = document.createElement("div");
+      showtime.setAttribute("class", "show_time3");
+      showtime.setAttribute("id", "theatre_showtime")
+      theater.append(showtime);
+
+      let para1 = document.createElement("p");
+      para1.innerText = theatre.show_times.show1_time;
+      showtime.append(para1);
+
+      let para2 = document.createElement("p");
+      para2.innerText = theatre.show_times.show2_time;
+      showtime.append(para2);
+
+      let para3 = document.createElement("p");
+      para3.innerText = theatre.show_times.show3_time;
+      showtime.append(para3)
+
+      let para4 = document.createElement("p");
+      para4.innerText = theatre.show_times.show4_time;
+      showtime.append(para4);
+
+      let hr = document.createElement("hr");
+      theater.append(hr);
+
+      document.querySelector(".theatres_lists").append(theater);
+
+
+    }
+
+    for (let theatre of theatres) {
+
+
+      let theater = document.createElement("div");
+      theater.setAttribute("class", "theatre_show4");
+      theater.setAttribute("id", "day4_shows")
+
+      let title = document.createElement("h2");
+      title.setAttribute("id", "movie_title")
+      title.innerText = theatre.theatre_name;
+      theater.append(title);
+
+
+      let showtime = document.createElement("div");
+      showtime.setAttribute("class", "show_time4");
+      showtime.setAttribute("id", "theatre_showtime")
+      theater.append(showtime);
+
+      let para1 = document.createElement("p");
+      para1.innerText = theatre.show_times.show1_time;
+      showtime.append(para1);
+
+      let para2 = document.createElement("p");
+      para2.innerText = theatre.show_times.show2_time;
+      showtime.append(para2);
+
+      let para3 = document.createElement("p");
+      para3.innerText = theatre.show_times.show3_time;
+      showtime.append(para3)
+
+      let para4 = document.createElement("p");
+      para4.innerText = theatre.show_times.show4_time;
+      showtime.append(para4);
+
+      let hr = document.createElement("hr");
+      theater.append(hr);
+
+      document.querySelector(".theatres_lists").append(theater);
+
+
+
+    }
+
+    for (let theatre of theatres) {
+
+
+      let theater = document.createElement("div");
+      theater.setAttribute("class", "theatre_show5");
+      theater.setAttribute("id", "day5_shows")
+
+      let title = document.createElement("h2");
+      title.setAttribute("id", "movie_title")
+      title.innerText = theatre.theatre_name;
+      theater.append(title);
+
+
+      let showtime = document.createElement("div");
+      showtime.setAttribute("class", "show_time5");
+      showtime.setAttribute("id", "theatre_showtime")
+      theater.append(showtime);
+
+      let para1 = document.createElement("p");
+      para1.innerText = theatre.show_times.show1_time;
+      showtime.append(para1);
+
+      let para2 = document.createElement("p");
+      para2.innerText = theatre.show_times.show2_time;
+      showtime.append(para2);
+
+      let para3 = document.createElement("p");
+      para3.innerText = theatre.show_times.show3_time;
+      showtime.append(para3)
+
+      let para4 = document.createElement("p");
+      para4.innerText = theatre.show_times.show4_time;
+      showtime.append(para4);
+
+      let hr = document.createElement("hr");
+      theater.append(hr);
+
+      document.querySelector(".theatres_lists").append(theater);
+
+
+    }
+
+    for (let theatre of theatres) {
+
+
+      let theater = document.createElement("div");
+      theater.setAttribute("class", "theatre_show6");
+      theater.setAttribute("id", "day6_shows")
+
+      let title = document.createElement("h2");
+      title.setAttribute("id", "movie_title")
+      title.innerText = theatre.theatre_name;
+      theater.append(title);
+
+
+      let showtime = document.createElement("div");
+      showtime.setAttribute("class", "show_time6");
+      showtime.setAttribute("id", "theatre_showtime")
+      theater.append(showtime);
+
+      let para1 = document.createElement("p");
+      para1.innerText = theatre.show_times.show1_time;
+      showtime.append(para1);
+
+      let para2 = document.createElement("p");
+      para2.innerText = theatre.show_times.show2_time;
+      showtime.append(para2);
+
+      let para3 = document.createElement("p");
+      para3.innerText = theatre.show_times.show3_time;
+      showtime.append(para3)
+
+      let para4 = document.createElement("p");
+      para4.innerText = theatre.show_times.show4_time;
+      showtime.append(para4);
+
+      let hr = document.createElement("hr");
+      theater.append(hr);
+
+      document.querySelector(".theatres_lists").append(theater);
+
+
+    }
+
+    for (let theatre of theatres) {
+
+
+      let theater = document.createElement("div");
+      theater.setAttribute("class", "theatre_show7");
+      theater.setAttribute("id", "day7_shows")
+
+      let title = document.createElement("h2");
+      title.setAttribute("id", "movie_title");
+      title.innerText = "day7";
+      theater.append(title);
+
+
+      let showtime = document.createElement("div");
+      showtime.setAttribute("class", "show_time7");
+      showtime.setAttribute("id", "theatre_showtime")
+      theater.append(showtime);
+
+      let para1 = document.createElement("p");
+      para1.innerText = theatre.show_times.show1_time;
+      showtime.append(para1);
+
+      let para2 = document.createElement("p");
+      para2.innerText = theatre.show_times.show2_time;
+      showtime.append(para2);
+
+      let para3 = document.createElement("p");
+      para3.innerText = theatre.show_times.show3_time;
+      showtime.append(para3)
+
+      let para4 = document.createElement("p");
+      para4.innerText = theatre.show_times.show4_time;
+      showtime.append(para4);
+
+      let hr = document.createElement("hr");
+      theater.append(hr);
+
+      document.querySelector(".theatres_lists").append(theater);
+
+    }
+
+    // const day1_shows = document.getElementById("day1_shows");
+    // const day2_shows = document.getElementById("day2_shows");
+    // const day3_shows = document.getElementById("day3_shows");
+    // const day4_shows = document.getElementById("day4_shows");
+    // const day5_shows = document.getElementById("day5_shows");
+    // const day6_shows = document.getElementById("day6_shows");
+    // const day7_shows = document.getElementById("day7_shows");
+
+
+
+
+
+
+    const show_day1 = document.getElementById("show_day1");
+    const day1_shows = document.getElementById("day1_shows");
+
+    const show_day2 = document.getElementById("show_day2");
+    const day2_shows = document.getElementById("day2_shows");
+
+
+
+    const show_day3 = document.getElementById("show_day3");
+    const day3_shows = document.getElementById("day3_shows");
+
+
+
+    const show_day4 = document.getElementById("show_day4");
+    const day4_shows = document.getElementById("day4_shows");
+
+
+    
+    const show_day5 = document.getElementById("show_day5");
+    const day5_shows = document.getElementById("day5_shows");
+
+
+    
+    const show_day6 = document.getElementById("show_day6");
+    const day6_shows = document.getElementById("day6_shows");
+
+
+    
+    const show_day7 = document.getElementById("show_day7");
+    const day7_shows = document.getElementById("day7_shows");
+
+
+
+
+
+
+
+show_day1.addEventListener("click", function() {
+  day1_shows.style.display = "block";
+  day2_shows.style.display = "none";
+  day3_shows.style.display = "none";
+  day4_shows.style.display = "none";
+  day5_shows.style.display = "none";
+  day6_shows.style.display = "none";
+  day7_shows.style.display = "none";
+
+});
+
+show_day2.addEventListener("click", function() {
+  day1_shows.style.display = "none";
+  day2_shows.style.display = "block";
+  day3_shows.style.display = "none";
+  day4_shows.style.display = "none";
+  day5_shows.style.display = "none";
+  day6_shows.style.display = "none";
+  day7_shows.style.display = "none";
+
+});
+
+show_day3.addEventListener("click", function() {
+  day1_shows.style.display = "none";
+  day2_shows.style.display = "none";
+  day3_shows.style.display = "block";
+  day4_shows.style.display = "none";
+  day5_shows.style.display = "none";
+  day6_shows.style.display = "none";
+  day7_shows.style.display = "none";
+
+});
+
+show_day4.addEventListener("click", function() {
+  day1_shows.style.display = "none";
+  day2_shows.style.display = "none";
+  day3_shows.style.display = "none";
+  day4_shows.style.display = "block";
+  day5_shows.style.display = "none";
+  day6_shows.style.display = "none";
+  day7_shows.style.display = "none";
+
+});
+
+show_day5.addEventListener("click", function() {
+  day1_shows.style.display = "none";
+  day2_shows.style.display = "none";
+  day3_shows.style.display = "none";
+  day4_shows.style.display = "none";
+  day5_shows.style.display = "block";
+  day6_shows.style.display = "none";
+  day7_shows.style.display = "none";
+
+});
+
+show_day6.addEventListener("click", function() {
+  day1_shows.style.display = "none";
+  day2_shows.style.display = "none";
+  day3_shows.style.display = "none";
+  day4_shows.style.display = "none";
+  day5_shows.style.display = "none";
+  day6_shows.style.display = "block";
+  day7_shows.style.display = "none";
+
+});
+
+show_day7.addEventListener("click", function() {
+  day1_shows.style.display = "none";
+  day2_shows.style.display = "none";
+  day3_shows.style.display = "none";
+  day4_shows.style.display = "none";
+  day5_shows.style.display = "none";
+  day6_shows.style.display = "none";
+  day7_shows.style.display = "block";
+
+});
+
+
+
+
+
+
+
+
+
   </script>
 </body>
 
