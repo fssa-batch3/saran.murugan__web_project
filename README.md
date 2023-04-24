@@ -33,23 +33,10 @@ Features:
    4. delete movie_list.
    
    
-   released_movie_list CRUD :
-   
-   1. Create released_movie_list
-   2. read   released_movie_list.
-   3. update released_movie_list.
-   4. delete released_movie_list.
-   
-   upcoming_movie_list CRUD :
-   
-   1. Create upcoming_movie_list
-   2. read   upcoming_movie_list.
-   3. update upcoming_movie_list.
-   4. delete upcoming_movie_list.
+  
 
 
-
-## Create an account
+## Create an account [completed]
 - Scenario 1:  create an account
     - Steps:
         1. Navigate to the sign in page.
@@ -58,7 +45,7 @@ Features:
     - Expected Result:
         - The user is redirected to the login page.
 
-### Create an account
+### Create an account [completed]
 - Scenario 1: login in to account
     - Steps:
         1. Navigate to the login page.
@@ -69,7 +56,7 @@ Features:
         
         
         
-  ### Edit profile
+ ### Edit profile [completed]
   - Scenario 1:user come to edit profile and edited
      - Steps:
       1. Log in as user.
@@ -81,7 +68,7 @@ Features:
      - Expected Result:
          - User Succesfully edited the profile.
      
-   ###Log out
+ ### log out [completed]
     - Scenario 1:user  wants to logout
        - Steps:
         1. Log in as user.
