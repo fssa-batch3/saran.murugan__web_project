@@ -1,8 +1,10 @@
 #movie-form label {
     display: block;
-    margin-bottom: 10px;
+    margin-top: 30px;
     font-weight: bold;
     width: 300px;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #movie-form input[type="submit"] {
     color: white;
@@ -47,6 +49,38 @@ movie-form input[type="text"],[type="date"] {
    flex-direction: column;
    gap: 10px;
 }
-.show-times label{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.button{
+    display: flex;
+}
+#show-date {
+    width:80px;
+    height: 30px;
+}
+#show-month{
+    width:80px;
+    height: 30px;
+}
+#show-times-option{
+    width:80px;
+    height: 30px;
+}
+#show-times-option-button{
+    width:70px;
+    height: 30px;
+    margin-left: 10px;
+}
+.shows{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 30px;
+    margin-left: 20px;
+}
+.cost_seat{
+    display: flex;
+}
+.cost_seat input{
+    width: 70px;
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 20px;
 }

@@ -155,8 +155,8 @@ body{
 .seatcost-prime{
     color:white;
     font-size: 12px;
-    margin-top: 40px;
-    margin-left: 45%;
+    margin-top: 20px;
+    margin-left: 48%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .seat-prime-occupied{
@@ -176,7 +176,10 @@ body{
     margin-top: 40px;
     margin-left: 18%;
 }
-
+h3{
+    color: white;
+    margin-right:20px ;
+}
 /* .seatbudget{
     display: flex;
     gap:10px;

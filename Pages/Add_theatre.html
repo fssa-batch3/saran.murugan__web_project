@@ -1,70 +1,223 @@
 <!DOCTYPE html>
 <html lang="eng">
 
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <link rel="stylesheet" href="../Assets/css/add_theatre.css">
-   </head>
+</head>
 
-   <body>
+<body>
 
-   
+
     <div class="popup-content">
 
-    <form id="movie-form">
+        <form id="movie-form">
 
-        <label for="theatre_name">Theatre name :</label>
-        <input type="text" id="mname" name="theatre_name" placeholder="Enter theatre Name..">
+            <label> Movie name:</label>
+            <input type="text" id="mname" placeholder="Enter movie name">
 
-
-        <div class="day">
-        <h3> day1 </h3>
-
-        <div>        
-     
-        <div>
-            <label>enter show date</label>
-            <input type="text" placeholder=" Ex : 22">
-        </div>
-        <div>
-            <label>enter show month</label>
-            <input type="text" placeholder=" Ex : june like">
-        </div>
-        
-        </div>
-
-        <div class="show-times">
-            <label>Enter show timings</label>
-            <input type="text" id="show1_time" inputmode="numeric" placeholder="Ex: 07:00 am or pm">
-            <input type="text" id="show2_time" inputmode="numeric" placeholder="Ex: 07:00 am or pm">
-            <input type="text" id="show3_time" inputmode="numeric" placeholder="Ex: 07:00 am or pm">
-            <input type="text" id="show4_time" inputmode="numeric" placeholder="Ex: 07:00 am or pm">
-            <input type="text" id="show5_time" inputmode="numeric" placeholder="Ex: 07:00 am or pm">
-            <input type="text" id="show6_time" inputmode="numeric" placeholder="Ex: 07:00 am or pm">
-            <input type="text" id="show7_time" inputmode="numeric" placeholder="Ex: 07:00 am or pm">
-            <input type="text" id="show8_time" inputmode="numeric" placeholder="Ex: 07:00 am or pm">
-        </div>
+            <label for="theatre_name">Theatre name :</label>
+            <input type="text" id="thname" name="theatre_name" placeholder="Enter theatre Name..">
 
 
-        </div>
-        
+            <div class="show-date">
+                <label>choose show date</label>
+                <select id="show-date">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+            </div>
+
+            <div class="show-month">
+                <label>enter show month</label>
+                <select id="show-month">
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="Jun">Jun</option>
+                    <option value="Jul">Jul</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+            </div>
 
 
+            <div class="show-times">
+                <label>choose show times</label>
+                <div class="button">
+
+                    <select id="show-times-option">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+
+                    </select>
+                    <button id="show-times-option-button">Add show</button>
+
+                </div>
+
+
+                <label>enter show times</label>
+                <div class="shows" id="shows">
+
+                </div>
+            </div>
+
+
+            <div class="tickets_cost">
+
+                <label>Seat cost</label>
+
+                <div class="cost_seat">
+                    <h3>Budget seat</h3><input type="text" id="budget_cost" inputmode="numeric">
+                </div>
+
+                <div class="cost_seat">
+                    <h3>Premium seat</h3><input type="text" id="premium_cost" inputmode="numeric">
+                </div>
+            </div>
+            <button> submit</button>
+    </div>
 
     </form>
+    </div>
 
-</div>
+    <script>
+        let show_times_option_button = document.getElementById("show-times-option-button")
+        show_times_option_button.addEventListener("click", e => {
+            e.preventDefault()
+            let show_times_option = document.getElementById("show-times-option").value
 
-    
+            option = show_times_option
+
+            for (i = 0; i < option; i++) {
+                let shows = document.getElementById("shows")
+
+                let time_input = document.createElement("input");
+                time_input.setAttribute("class", "shows_timing");
+                time_input.setAttribute("type", "time");
+                shows.appendChild(time_input);
+            }
+        });
 
 
 
 
 
+        const form_control = document.getElementById("movie-form");
+        function formsubmit() {
 
-   </form>
+            const movie_name = document.getElementById("mname").value;
+            const theatre_name = document.getElementById("thname").value;
+            const show_date = document.getElementById("show-date").value;
+            const show_month = document.getElementById("show-month").value;
+            const show_times = document.querySelectorAll(".shows_timing");
+            const budget_cost = document.getElementById("budget_cost").value;
+            const premium_cost = document.getElementById("premium_cost").value;
 
-   </body>
+
+console.log(show_times.length);
+let show_timing=[];
+for(let j=0;j<show_times.length;j++){
+show_timing.push(show_times[j].value)
+}
+
+            let theatres = {
+
+
+                name: {
+                    movie_name: movie_name,
+                    theatre_name: theatre_name,
+
+                },
+                show_times: show_timing,
+                show_date: show_date,
+                show_month: show_month,
+                budget_cost: budget_cost,
+                premium_cost: premium_cost,
+                status: true,
+            }
+
+            const details_theatre = JSON.parse(localStorage.getItem("theatre_details")) ?? [];
+
+            details_theatre.push(theatres);
+
+            // alert('theatre list created successfully')
+
+            localStorage.setItem("theatre_details", JSON.stringify(details_theatre))
+        }
+        form_control.addEventListener("submit", e => {
+            e.preventDefault();
+
+            formsubmit()
+        })
+
+
+    </script>
+
+
+
+</body>
+
 </html>

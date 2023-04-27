@@ -29,7 +29,7 @@
 
     <input type="search" id="searchbar" placeholder="Search your movie">
 
-    <select>
+    <!-- <select>
       <option selected>Chennai</option>
       <option>Villupuram</option>
       <option>Madurai</option>
@@ -38,7 +38,7 @@
       <option>Thirunelveli</option>
       <option>Kallakuruchi</option>
       <option>Kanyakumari</option>
-    </select>
+    </select> -->
 
     <div class="buttons">
     <a href="Pages/log.html"><button id="log-in-button">Log in </button></a><br>
@@ -71,7 +71,7 @@
 
   <!-- upcoming movie /review anchor tag -->
   <div class="various">
-    <a href="Pages/upcomingmovies.html">Upcoming movies</a>
+    <!-- <a href="Pages/upcomingmovies.html">Upcoming movies</a> -->
     <a href="Pages/OTT/ottindex.html">OTT</a>
     <a href="Pages/movie_reviews.html">Movie reviews</a>
   </div>
@@ -84,7 +84,7 @@
 
 
   <div class="show-button">
-    <h2>Tamil movies </h2><button>Now showing</button>
+    <h2> Released Movies </h2><button>Now showing</button>
   </div>
 
   <div class="movie-list-container1">
@@ -106,7 +106,7 @@
 
 
     <div class="show-button">
-      <h2>Other language movies </h2> <button> Now showing</button> 
+      <h2>Upcoming movies   </h2> <button> Now showing</button> 
     </div>
 
     <div class="movie-list-container2">
@@ -122,7 +122,7 @@
     </div>
 
 <div class="watch-now2">
-      <h2>Released dub movies </h2> <a href="Pages/OTT/ottindex.html"> <button> Watch now</button> </a>
+      <h2>Released movies </h2> <a href="Pages/OTT/ottindex.html"> <button> Watch now</button> </a>
     </div>
 
     <div class="movie-list-container3">
@@ -177,270 +177,6 @@
   </footer>
 
   <script src="Assets/js/index.js"> </script>
-
-
-
-    
-
-   
- 
-     
-    
-
-
-//     const ott_movie_list =[
-     
-//     
-
-
-//     ]
-    
-
-//   //    const movie_list2 = [
-
-//   //    {  
-//   //       movies2: {
-//   //       name: "Vadachennai",
-//   //       source: "Assets/images/vada_chennai/vadachennai.jpg",
-//   //       description:"Vada Chennai is the story of a fisherman from North Chennai, who does not even realize when he falls prey to the trap set by a mafia gang, and what happens to him later.",
-//   //       watch_button:"Watch now"
-          
-//   //   }
-//   //   },
-//   //   //     {
-
-//   //   //     movies2: {
-          
-//   //   //       name: "Naane varuven",
-//   //   //       source: "Assets/images/naane_varuven/naane varuven.jpg",
-//   //   //       description:"Naane Varuvean is a 2022 Indian Tamil-language horror thriller film directed by Selvaraghavan. Dhanush appears in a dual role for the third time",
-//   //   //       watch_button:"Watch now"
-//   //   //     },
-//   //   // },
-
-//   //     {
-       
-//   //       movies2: {
-//   //         name: "Kaithi",
-//   //         source: "Assets/images/kaithi/kaithi.jpg",
-//   //         description:"A group of cops confiscate a record amount of drugs but find themselves in danger of the mafia. The injured inspector then takes the help of a life term prisoner, who is out on parole to meet his daughter.",
-//   //         watch_button:"Watch now"
-//   //       },
-
-//   //     },
-
-//   //     {
-        
-//   //       movies2: {
-//   //         name: "PoniyanSelvan",
-//   //         source: "Assets/images/poniyan_selvan/poniyan selvan.jpg",
-//   //         description:"Vandiyathevan, a brave and brilliant young man sets out to cross the Chola land to deliver a message from the Crown Prince Adithya Karikalan. The narrative deals with attempts by his sister Kundavai ",
-//   //         watch_button:"Watch now"
-//   //       }
-//   //     },  
-//   //     // {
-        
-//   //     //   movies2: {
-//   //     //     name: "Petta",
-//   //     //     source: "Assets/images/petta/petta.jpg",
-//   //     //     description:"Though he works as a hostel warden, there is more to Kaali than meets the eye. Things take an interesting turn when Kaali's path crosses with a group of dreaded gangsters.",
-//   //     //     watch_button:"Watch now"
-//   //     //   }
-//   //     // },
-//   //     {
-        
-//   //       movies2: {
-//   //          name:"Asuran",
-//   //         source: "Assets/images/Asuran/Asuran.jpg",
-//   //         description:"The teenage son of a farmer from an underprivileged caste kills a rich, upper caste landlord. Will the farmer, a loving father and a pacifist by heart, be able to save his hot-blooded son?",
-//   //         watch_button:"Watch now"
-//   //       }
-//   //     },
-     
-//   //     {
-        
-//   //       movies2: {
-//   //         name: "Varisu",
-//   //         source: "Assets/images/Varisu/Varisu.jpg",
-//   //         description:"Vijay, the prodigal son of business tycoon Rajendran agrees to take over the reins of the business, much to the chagrin of his brothers. But can Vijay prove himself to be a worthy varisu and also reunite his now-broken family?",
-//   //         watch_button:"Watch now"
-//   //       }
-//   //     },
-   
-   
-
-//   //  ]
-
-   
-// localStorage.setItem("tamil_ott_movie_details", JSON.stringify(ott_movie_list)); 
-   
-//      for (i = 0; i < ott_movie_list.length; i++) {
-  
-//       const mov = ott_movie_list[i];
-//       console.log(mov);
-
-      
-
-    
-//         let movie_list_item2=document.querySelectorAll(".movie-list-item2");
-   
-        
-//        let movie_img2 = document.createElement("img")
-//         movie_img2.setAttribute("src", ott_movie_list[i]["images"]["main_image"]);
-//         movie_img2.setAttribute("alt","movie_image");
-//         movie_img2.setAttribute("class","movie-list-item-img2")
-//         movie_list_item2[i].append(movie_img2);
-
-//         let movie_title2 = document.createElement("span");
-//         movie_title2.innerText= ott_movie_list[i]["name"]["movie_name"];
-//         movie_title2.setAttribute("class","movie-list-item-title2");
-//         movie_list_item2[i].append(movie_title2);
-
-//        let movie_desc2=document.createElement("p");
-//         movie_desc2.innerText= ott_movie_list[i]["description"];
-//         movie_desc2.setAttribute("class","movie-list-item-desc2");
-//         movie_list_item2[i].append(movie_desc2);
-
-//        let  movie_button2 =document.createElement("button");
-//         // movie_button.innerText=movie_list[i]["movies1"]["book_button"];
-//         movie_button2.setAttribute("class","movie-list-item-button2")
-//         movie_list_item2[i].append(movie_button2);
-
-//         a = document.createElement("a");
-//         //  url.html?key=value&key=value
-//         a.setAttribute("href", "./pages/movie_details_OTT.html?name=" + ott_movie_list[i]["name"]["movie_name"]);
-//         a.innerText="watch now";
-//         movie_button2.append(a);
-//         // document.querySelector("movies_list_item").prepend(a)
-
-//     }
-    
-
-
-
-
-//     const ott_dubmovie_list = [
-
-
-
-    
-//       {
-        
-//         movies3: {
-//           name: "Endgame",
-//           source: "Assets/images/endgame/endgame.jpg",
-//           description:"The grave course of events set in motion by Thanos that wiped out half the universe and fractured the Avengers ranks compels the remaining Avengers to take one final stand in Marvel Studios` grand conclusion to twenty-two films,",
-//           watch_button:"Watch now"
-//         }
-//       } ,
-//       {
-        
-//         movies3: {
-//           name: "Kgf2",
-//           source: "Assets/images/kgf2/kgf2-.jpg",
-//           description:"The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord now - Rocky, whose name strikes fear in the heart of his foes. His allies look up to Rocky as their saviour, the government sees him as a threat to law and order; enemies are clamouring for revenge",
-//           watch_button:"Watch now"
-//         }
-//       },
-
-//       {
-       
-//         movies3: {
-//           name: "Avatar",
-//           source: "Assets/images/avatar/avatar.jpg",
-//           description:"Set more than a decade after the events of the first film, 'Avatar The Way of Water' begins to tell the story of the Sully family (Jake, Neytiri and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive  ",
-//           watch_button:"Watch now"
-//         }
-//       },
-//       {
-       
-//        movies3: {
-//          name: "Nowayhome",
-//          source: "Assets/images/no_way_home/no-way-home.jpg",
-//          description:"When Dr. Strange`s spell to restore Spider-Man`s identity goes awry, Peter is forced to overcome his greatest challenge yet.",
-//          watch_button:"Watch now"
-//        }
-//      },
-//       {
-        
-//         movies3: {
-//           name: "Sita ramam",
-//           source: "Assets/images/sita_ramam/sitaramam.jpg",
-//           description:"A long-lost letter must find its way to the recipient twenty years later. A rabble-rouser learns a lesson in humility and love along the way.",
-//           watch_button:"Watch now"
-//         },
-
-//       },
-
-//     ]
-      
-//     localStorage.setItem("dub_ott_movie_details", JSON.stringify(ott_dubmovie_list)); 
-    
-
-//       // {
-       
-//       //     movies3: {
-//       //     name: "Kantara",
-//       //     source: "Assets/images/kantara/Kantara.jpg",
-//       //     alt: "movie image"
-//       //   }
-//       // },
-
-//       let movie_list_item3=document.querySelectorAll(".movie-list-item3");
-
-//       for (i = 0; i < ott_dubmovie_list.length; i++) {
-//       console.log("index" +ott_dubmovie_list[i]);
-//       const dub = ott_dubmovie_list[i];
-//       console.log(dub);
-
-
-//        console.log(movie_list_item3);
-
-        
-//        let movie_img3 = document.createElement("img")
-//         movie_img3.setAttribute("src", ott_dubmovie_list[i]["movies3"]["source"]);
-//         movie_img3.setAttribute("alt","movie_image");
-//         movie_img3.setAttribute("class","movie-list-item-img3")
-//         movie_list_item3[i].append(movie_img3);
-
-//      let   movie_title3 = document.createElement("span");
-//         movie_title3.innerText= ott_dubmovie_list[i]["movies3"]["name"];
-//         movie_title3.setAttribute("class","movie-list-item-title3");
-//         movie_list_item3[i].append(movie_title3);
-
-//      let   movie_desc3=document.createElement("p");
-//         movie_desc3.innerText= ott_dubmovie_list[i]["movies3"]["description"];
-//         movie_desc3.setAttribute("class","movie-list-item-desc3");
-//         movie_list_item3[i].append(movie_desc3);
-
-//       let   movie_button3 =document.createElement("button");
-//         // movie_button.innerText=movie_list[i]["movies1"]["book_button"];
-//         movie_button3.setAttribute("class","movie-list-item-button3")
-//         movie_list_item3[i].append(movie_button3);
-
-//         a = document.createElement("a");
-//         //  url.html?key=value&key=value
-//         a.setAttribute("href", "./pages/movie_details.html?name=" + ott_dubmovie_list[i]["movies3"]["name"]);
-//         a.innerText=ott_dubmovie_list[i]["movies3"]["watch_button"];
-//         movie_button3.append(a);
-//         // document.querySelector("movies_list_item").prepend(a)
-
-//     }
-    
-
-
-    
-
-   
- 
-   
-
-
-  
- 
-
-
-  
 </body>
 
 </html>
