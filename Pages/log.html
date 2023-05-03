@@ -37,7 +37,7 @@
 
             <button onclick="check()">Submit</button>
 
-
+            <a href="signup.html"><h2>I don't have a account</h2></a>
 
         </div>
 
@@ -51,12 +51,14 @@
         function check() {
             let email = document.getElementById("emailid").value
             let pass = document.getElementById("password").value
-            let details = JSON.parse(localStorage.getItem("users"))
+            let details = JSON.parse(localStorage.getItem("users"));
             let datas = {
                 email: "email",
                 password: "pass",
             }
             let res;
+
+            
             details.find(element => {
                 if (element["email"] == email && element["password"] == pass) {
                     localStorage.setItem("profile_details", JSON.stringify(element))

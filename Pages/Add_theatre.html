@@ -141,6 +141,7 @@
     </div>
 
     </form>
+
     </div>
 
     <script>
@@ -166,7 +167,7 @@
 
 
         const form_control = document.getElementById("movie-form");
-        function formsubmit() {
+        function formsubmit() {  
 
             const movie_name = document.getElementById("mname").value;
             const theatre_name = document.getElementById("thname").value;
@@ -175,13 +176,41 @@
             const show_times = document.querySelectorAll(".shows_timing");
             const budget_cost = document.getElementById("budget_cost").value;
             const premium_cost = document.getElementById("premium_cost").value;
+            let show_timing_values = [];
+            show_times.forEach((e, ind) => {
+                console.log(e.value.slice(0, 2));
+                if (e.value.slice(0, 2) > 12) {
+                    let new_hour = e.value.slice(0, 2) - 12
+                    let old_min = e.value.slice(2, 5)
+                    let new_time = new_hour + old_min + "PM"
+                    show_timing_values.push(new_time)
 
 
-console.log(show_times.length);
-let show_timing=[];
-for(let j=0;j<show_times.length;j++){
-show_timing.push(show_times[j].value)
-}
+                    // console.log(show_times[ind],new_hour,old_min,"33333")
+                    // console.log(new_hour+old_min+"PM","44444444444");
+                }
+                else if (e.value.slice(0, 2) == 12) {
+                    let new_time = show_times[ind].value + "PM"
+                    show_timing_values.push(new_time)
+                }
+
+                else {
+                    let new_time = show_times[ind].value + "AM"
+                    show_timing_values.push(new_time)
+
+                }
+
+
+                // console.log(show_times[ind].value,"efvd");
+            })
+            console.log(show_timing_values);
+
+
+            console.log(show_times.length);
+            let show_timing = [];
+            for (let j = 0; j < show_times.length; j++) {
+                show_timing.push(show_times[j].value)
+            }
 
             let theatres = {
 
@@ -191,7 +220,7 @@ show_timing.push(show_times[j].value)
                     theatre_name: theatre_name,
 
                 },
-                show_times: show_timing,
+                show_times: show_timing_values,
                 show_date: show_date,
                 show_month: show_month,
                 budget_cost: budget_cost,
@@ -202,11 +231,13 @@ show_timing.push(show_times[j].value)
             const details_theatre = JSON.parse(localStorage.getItem("theatre_details")) ?? [];
 
             details_theatre.push(theatres);
-
+  
             // alert('theatre list created successfully')
 
             localStorage.setItem("theatre_details", JSON.stringify(details_theatre))
-        }
+        };
+
+
         form_control.addEventListener("submit", e => {
             e.preventDefault();
 

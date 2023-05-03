@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+    /* font-family: 'Barlow', sans-serif;                                       */
 *{
     padding: 0px;
     margin: 0px;
+}
+html{
+    font-family: 'Barlow', sans-serif;                                      
 }
 header{
     background-color:#edde3b;
@@ -58,7 +61,6 @@ header input {
     font-size: 40px;
     color: white;
     margin-left: 60px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .time h3{
     width: 50px;
@@ -75,11 +77,9 @@ header input {
     margin-left: 60px;
     margin-top: 70px;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .time h4{
     margin-left: 60px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 50px;
     color:white;
     font-size: 20px;
@@ -114,13 +114,11 @@ header input {
     margin-left: 60px;
     font-size: 30px;
     color:white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .aboutmovie p{
     font-size: 20px;
     margin-left: 20px;
     padding-top: 20px;
-    font-family: cursive;
     color: white;
 }
 hr{
@@ -144,24 +142,23 @@ hr{
 .casteh h2{
     text-align: center;
     color:white;
-  font-family: 'Rubik', sans-serif;
+
   font-size: 17px;
 }
 .casteh p{
-    font-family: 'Asap Condensed', sans-serif;
+    
     font-size: 14px;
     color:red;
 }
 .cast_head h1{
     color: white;
     margin-left: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
     margin-top: 20px;
 }
 .crew_head h1{
     color: white;
     margin-left: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 20px;
 }
 /* .casteh h2{
@@ -177,7 +174,6 @@ hr{
 
 .creweh h2{
     text-align: center;
-    font-family: 'Rubik', sans-serif;
     color: white;
     font-size: 17px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Cab-Booking</title>
     <link rel="stylesheet" href="../Assets/css/cab.css">
@@ -7,42 +8,103 @@
 
 
 <body>
-    <!-- header of page -->
+
     <header>
-        <img src="../../Assets/images/logo/logo.png" alt="logo">
+        <h3 style="color: white; font-size: 30px; margin-left: 20px;">CAB</h3>
     </header>
 
     <div class="main">
-<!-- cab tag -->
+
         <div class="cab">
 
-            <h1>Ride now</h1>
+            <h1>RIDE NOW</h1>
 
             <h3>To</h3>
-            <p> PVR Theatre</p>
+            <p id="theatre_name"> </p>
 
             <h3>From</h3>
             <div class="pickup">
-                <input type="text" placeholder="Enter your address">
-                <input type="text" placeholder="Enter your live location link">
-            </div>
-            <div class="return">
-                <h2>Return </h2>
-                <input type="checkbox">
+                <input type="text" id="curr-location" placeholder="Enter your live location link">
+                <input type="text" id="phone" placeholder="Enter your phone number">
+                <button style="color: black; padding: 5px;" id="done-button">DONE</button>
             </div>
 
-            <div class="ride">
-             <a href="../Pages/payment/payment_naanevaruven.html"><button>Book ride now</button></a>
+            <!-- <div class="pickup-time">
+                <label for="PICKUP TIME">PICKUP TIME</label>
+                <h3 id="show_time"></h3>
+            </div> -->
+            <h3 class="h3">TOTAL AMOUNT <span id="rate">200</span></h3>
+
+
+
+            <div class="book_button">
+                <!-- <button id="book-button">BOOK NOW</button> -->
             </div>
+
         </div>
-
-
-
-
     </div>
+
+
+
+
+
 </body>
 
 
+<script>
+
+
+
+
+
+
+    
+
+    let users_booking = JSON.parse(localStorage.getItem("user_booking"));
+    const theater_name = document.getElementById("theatre_name");
+    theater_name.innerHTML = users_booking[0]["theatre_name"];
+
+    book_button = document.querySelector(".book_button");
+
+    button = document.createElement("button");
+    button.setAttribute("id", "book-button");
+   
+    book_button.append(button);
+
+
+    let a = document.createElement("a");
+    a.innerText = "BOOK NOW";
+    a.setAttribute("href", "http://127.0.0.1:5501/pages/movie_payment_page.html?name=PONIYAN%20SELVAN%20-2");
+    button.append(a);
+
+    // let show_time = document.getElementById("show_time");
+    // show_time.innerText = users_booking[0]["show_time"];
+
+    rate_h3 = document.querySelector(".h3")
+
+    //  rate=document.createElement("span");
+    //  rate.setAttribute("id", "rate");
+    //  rate.innerText="200";
+    //  rate_h3.append(rate);
+
+    let rate = document.getElementById("rate");
+    let cab_rate = JSON.parse(localStorage.getItem("cab")) || [];
+    document.getElementById("done-button").addEventListener("click", function () {
+        rate.style.display = "block";
+        let new_booking = {
+            "cab_rate": rate.innerText
+            
+        }
+        cab_rate.push(new_booking)
+        localStorage.setItem("cab", JSON.stringify(cab_rate));
+    });
+
+
+
+
+
+
+</script>
 
 
 

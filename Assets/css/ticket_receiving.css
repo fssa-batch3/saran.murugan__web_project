@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 *{
     
     margin: 0px;
 }
 body{
     background-color:white;
+    font-family: 'Barlow', sans-serif;  
 }
 header{
     background-color:#edd605;
@@ -16,7 +18,7 @@ header{
 header h1{
     font-size: 40px;
     margin-left: 410px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 header img{
@@ -48,7 +50,6 @@ header img{
 .showname{
     color: white;
     font-size: 30px;
-    font-family:sans-serif;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -65,7 +66,6 @@ hr{
 }
 .qrcode h2{
     color: white;
-    font-family: sans-serif;
     margin-left: 40%;
     margin-top: 10px;
 }

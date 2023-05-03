@@ -76,7 +76,7 @@ button{
     background-color: #edd605;
     width: 100px;
     border-radius: 20px;
-   margin-left: 200px;
+    margin-left: 200px;
     font-size: 15px;
     font-family: inherit;
 }
@@ -84,53 +84,9 @@ button:hover{
     transition: 0.2s;
     transform: scale(1.1);
 }
-.google{
-    background-image: url(../images/logo/google---.png);
-    background-size: 50px;
-    background-repeat: no-repeat;
-    /* width:100%; */
-    border-radius: 10px;
-    margin-left: 25px;
-    font-size: 18px;
-    background-color: #313136;
-    width:270px;
-    height: 50px;
-    
-}
-.google h3{
-    padding-left: 40px;
-}
-.apple {
-    background-image: url(../images/logo/apple-emblem-removebg-preview.png);
-    background-size: 30px;
-    background-repeat: no-repeat;
-    /* width:100%; */
-    border-radius: 10px;
-    margin-left: 28px;
-    font-size: 18px;
-    background-color: #313136;
-
-    width:270px;
-    height: 50px;
-}
 a{
     color:white;
     text-decoration: none;
-}
-.apple  h3{
-    padding-left: 35px;
-}
-.apple:hover{
-    background-color: #edd605;
-    color:black;
-    width:270px;
-    height: 50px;
-}
-.google:hover{
-    background-color:#edd605;
-    color:black;
-    width:270px;
-    height: 50px;
 }
 a:hover{
     color:black;

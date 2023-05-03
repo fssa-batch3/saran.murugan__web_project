@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='../Assets/css/payment_page.css'>
+
+</head>
+
+<body>
+
+    <div class="all-content">
+
+        <div class="profile-payment">
+
+            <div class="profile-contents">
+                <h2>YOUR CONTACT DETAILS</h2>
+
+                <div class="profile-details">
+
+                    <div class="name">
+                        <label>YOUR NAME</label><br>
+                        <input type="text" id="name" placeholder="ENTER YOUR NAME">
+                    </div>
+
+                    <div class="email">
+                        <label>E-MAIL</label><br>
+                        <input type="text" placeholder="ENTER YOUR E-MAIL">
+                    </div>
+
+                    <div class="phone">
+                        <label>PHONE</label><br>
+                        <input type="text" placeholder="ENTER YOUR PHONE">
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-section">
+
+
+                <h2>PAYMENT OPTIONS</h2>
+
+                <div class="pay-main">
+
+                    <div class="payment-heading">
+                        <ul>
+                            <li id="credit-card">CREDIT CARD</li>
+                            <li id="debit-card">DEBIT CARD</li>
+                            <li id="net-banking">NET BANKING</li>
+                            <li id="upi">UPI PAYMENT</li>
+                            <li id="phonepe">PHONEPE</li>
+                            <li id="paytm">PAYTM</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="payment-content">
+
+                        <div id="credit-card-content" class="credit-card">
+                            <div class="card">
+                                <form>
+                                    <div class="card-number">
+                                        <label>CARD NUMBER</label><br>
+                                        <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+                                    </div>
+
+                                    <div class="valid-cvv">
+                                        <div class="valid">
+                                            <label>VALID</label>
+                                            <input type="text" placeholder="MM/YYYY">
+                                        </div>
+
+                                        <div class="cvv">
+                                            <label>CVV</label>
+                                            <input type="text" placeholder="XXX">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-name">
+                                        <label> NAME</label><br>
+                                        <input type="text" placeholder="CARD HOLDER'S NAME">
+                                    </div>
+
+                                    <div class="terms">
+                                        <input type="checkbox">
+                                        <p>I have read and accepted the terms and conditions of this transaction </p>
+                                    </div>
+
+                                    <div class="credit-button-div">
+                                    <!-- <button class="credit-button" id="payment">MAKE PAYMENT</button> -->
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div id="debit-card-content" class="debit-card">
+                            <div class="card">
+                                <form>
+                                    <div class="card-number">
+                                        <label>CARD NUMBER</label><br>
+                                        <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+                                    </div>
+
+                                    <div class="valid-cvv">
+                                        <div class="valid">
+                                            <label>VALID</label>
+                                            <input type="text" placeholder="MM/YYYY">
+                                        </div>
+
+                                        <div class="cvv">
+                                            <label>CVV</label>
+                                            <input type="text" placeholder="XXX">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-name">
+                                        <label> NAME</label><br>
+                                        <input type="text" placeholder="CARD HOLDER'S NAME">
+                                    </div>
+
+                                    <div class="terms">
+                                        <input type="checkbox">
+                                        <p>I have read and accepted the LETS SHOW terms and conditions<br> of this
+                                            transaction </p>
+                                    </div>
+
+                                    <button class="debit-button" id="payment">MAKE PAYMENT</button>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div id="net-banking-content" class="net-banking">
+
+                            <h3>SELECT BANKS</h3>
+
+                            <select id="bank-select">
+                                <option>AXIS BANK</option>
+                                <option>STATE BANK OF INDIA</option>
+                                <option>ICICI BANK</option>
+                                <option>HDFC BANK</option>
+                                <option>KOTAK BANK</option>
+                                <option>CANARA BANK</option>
+                                <option>ANDHRA BANK</option>
+                            </select>
+
+                            <div class="terms">
+                                <input type="checkbox">
+                                <p>I have read and accepted the LETS SHOW terms<br> and conditions of this transaction
+                                </p>
+                            </div>
+
+                            <button class="net-banking-button">MAKE PAYMENT</button>
+                        </div>
+
+
+
+                        <div id="upi-content" class="upi">
+
+                            <div class="upi-name">
+                                <label>ACCOUNT NAME</label><br>
+                                <input type="text" placeholder="UPI PAYER ACCOUNT">
+                            </div>
+
+                            <div class="terms">
+                                <input type="checkbox">
+                                <p>I have read and accepted the LETS SHOW terms and conditions <br>of this transaction
+                                </p>
+                            </div>
+
+                            <button class="upi-button" id="payment">MAKE PAYMENT</button>
+
+                        </div>
+
+
+                        <div id="paytm-content" class="paytm">
+
+                            <div class="terms">
+                                <input type="checkbox">
+                                <p>I have read and accepted the LETS SHOW terms and conditions of<br> this transaction
+                                </p>
+                            </div>
+                               
+                            <div class="paytm-button-div">
+                            <!-- <button class="paytm-button">MAKE PAYMENT</button> -->
+                        </div>
+                        </div>
+
+                        <div id="phonepe-content" class="phonepe">
+
+                            <div class="terms">
+                                <input type="checkbox">
+                                <p>I have read and accepted the LETS SHOW terms and conditions of<br> this transaction
+                                </p>
+                            </div>
+
+                            <div class="phonepe-button-div">
+                                
+                            </div>
+                            <!-- <button class="phonepe-button" id="payment">MAKE PAYMENT</button> -->
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+            <div class="cab">
+
+                <h3 id="cab-head">LETS DRIVE WITH CAB</h3>
+            </div>
+
+        </div>
+
+
+
+        <aside>
+
+
+
+            <div class="ticket-content">
+
+                <div class="movie-details">
+                    <h2 id="movie_name"></h2>
+                    <h2>{<span id="language"></span>}</h2>
+                    <h2>{<span id="frame"></span>}</h2>
+                    <span style="margin-top: 28px; font-size: 17px; color: #9d9d9d;"></span>
+                </div>
+
+                <div class="theater">
+                    <h2 id="theatre_name"></h2>
+                    <h2>ON <span id="show_date"></span>-<span id="show_month"></span>-<span id="show_time"></span></h2>
+                </div>
+
+                <hr style="color: #9d9d9d; border: 1px solid #9d9d9d ; width: 90%;">
+
+
+                <div class="seat">
+                    <h2>SEAT INFO</h2>
+
+                    <span id="seat"></span>
+                </div>
+
+
+                <div class="total-expensive">
+
+
+                    <div class="tickets">
+                        <h3>TICKETS</h3>
+                        <h3>INR <span id="ticket-price"></span></h3>
+                    </div>
+
+                    <!-- <div class="conv-fees">
+                        <h3>CONV.FEES</h3>
+                        <h3>INR <span id="conv-price"></span></h3>
+                    </div> -->
+
+                    <div class="cab">
+                        <h3>CAB<span></span></s></h3>
+                        <h3> <span id="cab-price"></span></h3>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="total-tickets-cost">
+
+                    <div class="total">
+                        <h3>TOTAL<br>(INR)</h3>
+                        <h1 id="total-payment"></h1>
+                    </div>
+
+                </div>
+      
+
+
+            </div>
+
+        </aside>
+
+
+
+
+
+    </div>
+
+
+    <script>
+
+        const movie_list = JSON.parse(localStorage.getItem("show_movie_details"));
+
+
+        const url = window.location.search;                // ?name=Arun
+        const urlParams = new URLSearchParams(url);    //"name":"ponniyinselvan"    // converting string into key value pair
+        const username = urlParams.get("name")             // return value of the "name" key
+        console.log(username);
+
+
+        let res;
+        movie_list.find(function (e) {
+            if (e["name"]["movie_name"] == username) { //arr[0],arr[1]  =e
+                return res = e;
+            }
+            else {
+                return res = 0;
+            }
+        });
+
+
+
+        let movie_name = document.getElementById("movie_name");
+        movie_name.innerText = res["name"]["movie_name"];
+
+        let movie_language = document.getElementById("language");
+        movie_language.innerText = res["language"];
+
+        let movie_frame = document.getElementById("frame");
+        movie_frame.innerText = res["frame"];
+
+
+        let users_booking = JSON.parse(localStorage.getItem("user_booking"));
+
+        let theatre_name=document.getElementById("theatre_name");
+        theatre_name.innerText=users_booking[i]["theatre_name"]
+        
+        let show_date=document.getElementById("show_date");
+        show_date.innerText=users_booking[i]["show_date"];
+
+
+        let show_month=document.getElementById("show_month");
+        show_month.innerText=users_booking[i]["show_month"];
+
+        let show_time=document.getElementById("show_time");
+        show_time.innerText=users_booking[i]["show_time"];
+
+
+        let seat=document.getElementById("seat")
+        seat.innerText=users_booking[i]["seat_names"].slice(10,36);
+
+        let ticket_price= document.getElementById("ticket-price")
+          ticket_price.innerText=users_booking[0]["seat_total"]
+
+        let cab = document.querySelector(".cab")
+
+        let cab_button=document.createElement("button");
+        cab_button.setAttribute("class","a-cab")
+        cab.append(cab_button);
+
+        let a= document.createElement("a")
+        a.setAttribute("href", "cab.html")
+        a.setAttribute("class","a-cab")
+        a.innerText="book now";
+        cab_button.append(a)
+
+
+           
+
+
+        let cab_booking = JSON.parse(localStorage.getItem("cab"));
+
+        let cab_price=document.getElementById("cab-price");
+           cab_price.innerText=cab_booking[0]["cab_rate"];
+
+
+
+           total= Number(ticket_price.innerText) + Number(cab_price.innerText);
+
+           console.log(total);
+           let total_payment=document.getElementById("total-payment")
+             total_payment.innerText=total
+
+
+
+
+
+
+        const credit_card = document.getElementById("credit-card");
+        const debit_card = document.getElementById("debit-card");
+        const net_banking = document.getElementById("net-banking");
+        const upi = document.getElementById("upi");
+        const phonepe = document.getElementById("phonepe");
+        const paytm = document.getElementById("paytm");
+
+        const credit_card_content = document.getElementById("credit-card-content");
+        const debit_card_content = document.getElementById("debit-card-content");
+        const net_banking_content = document.getElementById("net-banking-content");
+        const upi_content = document.getElementById("upi-content");
+        const phonepe_content = document.getElementById("phonepe-content");
+        const paytm_content = document.getElementById("paytm-content");
+
+
+        credit_card.addEventListener("click", function () {
+            credit_card_content.style.display = "block";
+            debit_card_content.style.display = "none";
+            net_banking_content.style.display = "none";
+            upi_content.style.display = "none";
+            phonepe_content.style.display = "none";
+            paytm_content.style.display = "none";
+        });
+
+        debit_card.addEventListener("click", function () {
+            credit_card_content.style.display = "none";
+            debit_card_content.style.display = "block";
+            net_banking_content.style.display = "none";
+            upi_content.style.display = "none";
+            phonepe_content.style.display = "none";
+            paytm_content.style.display = "none";
+        });
+
+        net_banking.addEventListener("click", function () {
+            credit_card_content.style.display = "none";
+            debit_card_content.style.display = "none";
+            net_banking_content.style.display = "block";
+            upi_content.style.display = "none";
+            phonepe_content.style.display = "none";
+            paytm_content.style.display = "none";
+        });
+
+        upi.addEventListener("click", function () {
+            credit_card_content.style.display = "none";
+            debit_card_content.style.display = "none";
+            net_banking_content.style.display = "none";
+            upi_content.style.display = "block";
+            phonepe_content.style.display = "none";
+            paytm_content.style.display = "none";
+        });
+
+        phonepe.addEventListener("click", function () {
+            credit_card_content.style.display = "none";
+            debit_card_content.style.display = "none";
+            net_banking_content.style.display = "none";
+            upi_content.style.display = "none";
+            phonepe_content.style.display = "block";
+            paytm_content.style.display = "none";
+        });
+
+        paytm.addEventListener("click", function () {
+            credit_card_content.style.display = "none";
+            debit_card_content.style.display = "none";
+            net_banking_content.style.display = "none";
+            upi_content.style.display = "none";
+            phonepe_content.style.display = "none";
+            paytm_content.style.display = "block";
+        });
+
+
+    
+        let credit_button_div=document.querySelector(".credit-button-div");
+        let paytm_button_div=document.querySelector(".paytm-button-div");
+        let phonepe_button_div=document.querySelector(".phonepe-button-div");
+
+         let credit_button=document.createElement("button");
+             credit_button.setAttribute("class","credit-button");
+             credit_button_div.append(credit_button);
+
+             let credit_a=document.createElement("a");
+             credit_a.innerText="MAKE PAYMENT"
+            //  credit_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+             credit_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+             credit_button.append(credit_a);
+
+
+             let paytm_button=document.createElement("button");
+             paytm_button.setAttribute("class","credit-button");
+             paytm_button_div.append(paytm_button);
+
+             let paytm_a=document.createElement("a");
+             paytm_a.innerText="MAKE PAYMENT"
+            //  credit_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+             paytm_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+             paytm_button.append(paytm_a);
+    </script>
+
+</body>
+
+</html>

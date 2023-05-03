@@ -1,10 +1,12 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Mohave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 *{
     padding: 0px;
     margin: 0px;
 }
-
+html{
+    font-family: 'Barlow', sans-serif;  
+}
 body{
     background-color: black;
 }
@@ -14,30 +16,16 @@ body{
     justify-content: flex-end;
 }
 .banner h1{
-    font-family: 'Mohave', sans-serif;
     color:#edd605;
-}
-.theatre_time_date{
-    display:flex;
-    gap: 10px;
-}
-.theatre_name h2{
-  color:white;
-  font-family: 'Mohave', sans-serif;
-}
-.movie_date h2{
-  color:white;
-  font-family: 'Mohave', sans-serif;
-}
-.show_time h2{
-  color:white;
-  font-family: 'Mohave', sans-serif;
 }
 .screen{
     display: flex;
     align-items: center;
     margin-left: 40%;
     margin-top: 20px;
+}
+.screen h3{
+    font-family: 'Barlow', sans-serif;  
 }
 #screen-arrow-logo{
     width:30px;
@@ -47,84 +35,45 @@ body{
     width:30px;
     margin-left: ;
 } */
-.screen h3{
+.show-case{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seat_disclaimer{
+   display: flex;
+   margin-left: 37%;
+   gap:20px;
+}
+.seat-prime{
+    background-color:  #fff;
+    height: 28px;
+    width: 35px;
+    margin-top: 15px;
+    margin: 3px;
+    text-align: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+}
+/* .selected h5{
     color:white;
-    margin-left: 10px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-family: 'Puritan', sans-serif;
+    align-items: center;
+} */
+.seat-prime.selected {
+    background-color:#edd605;
+    
 }
 
-.seat_disclaimer{
-    display: flex;
-    gap: 20px;
-    margin-left: 39%;
-    margin-top: 20px;
-}
-.seat_selected{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-.seat_selected p{
-    background-color: #edd605;
-    color: black;
-    border:1px solid #edd605;
-    font-family: 'Puritan', sans-serif;
-    width:25px;
-    text-decoration: none;
-    text-align: center;
-}
-.seat_selected h5{
-    color:white;
- 
-    text-align: center;
-    font-family: 'Puritan', sans-serif;
-    align-items: center;
-}
-.seat-unavailable{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-.seat-unavailable p{
-    background-color:grey;
-    color: black;
-    border:1px solid grey;
-    font-family: 'Puritan', sans-serif;
-    width:25px;
-    text-decoration: none;
-    text-align: center;
-}
-.seat-unavailable h5{
-    color: white;
-    font-family: 'Puritan', sans-serif;
-}
-.seat-available{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-.seat-available p{
-    background-color:black;
-    color:#edd605;
-    border: 1px solid white;
-    font-family: 'Puritan', sans-serif;
-    width:25px;
-    text-decoration: none;
-    text-align: center;
-}
-.seat-available h5{
-    color: white;
-    font-family: 'Puritan', sans-serif;
-}
 .seatcost-budget{
     color:white;
     font-size: 12px;
     margin-top: 40px;
     margin-left: 45%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .seat-budget{
     background-color: #444451;
@@ -135,51 +84,122 @@ body{
     margin-top: 15px;
     border-top-right-radius: 10px;
 }
-.seatbudget-row{
+
+#seat-prime-row1{
     display: flex;
-    margin-left: 38%;
+    margin-left: 35%;
 }
-.seat-prime{
-    background-color: #444451;
-    height: 22px;
-    width: 25px;
-    margin-top: 15px;
-    margin: 3px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.seatprime-row{
+.seatprime-row2{
     display: flex;
-    margin-left: 33%;
+    margin-left: 28%;
 }
 .seatcost-prime{
     color:white;
     font-size: 12px;
     margin-top: 20px;
     margin-left: 48%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.seat-prime-occupied{
-    background-color: #fff;
-    height: 22px;
-    width: 25px;
+.seat-prime:nth-of-type(2){
+    margin-right: 18px;
+}
+.seat-prime:nth-last-of-type(3){
+    margin-right: 18px;
+}
+.seat-prime:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* .showcase .seat-prime:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1 );
+} */
+.occupied{
+    background-color:  #444451 ;
+    height: 28px;
+    width: 35px;
     margin-top: 15px;
     margin: 3px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+   
 }
 
 .total_seatandcost{
     background-color: #ffffff;
-    width: 60%;
-    height: 60px;
+    width: 80%;
+    height: 80px;
     margin-top: 40px;
-    margin-left: 18%;
+    margin-left: 10%;
 }
 h3{
     color: white;
     margin-right:20px ;
 }
+.total_seatandcost{
+    display: flex;
+    justify-content: space-between;
+}
+.seat_total{
+    display: flex;
+}
+.seat_total h3{
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 15px;
+    color: black;
+}
+.seat_total span{
+    font-size: 25px;
+    padding:  5px 8px;
+    color: white;
+    border: 1px #bd4747 solid;
+    background-color: #bd4747;
+    width: 35px;
+    border-radius: 10px;
+    text-align: center;
+    height: 35px;
+    margin-top: 8px;
+}
+.cost_total{
+    display: flex;
+    background-color: #f7f7f7;
+    padding-left: 20px;
+}
+.cost_total h3{
+    color: black;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+.cost_total span{
+    font-size: 33px;
+    margin-top: 7px;
+    margin-right: 40px;
+    
+}
+.foot{
+    display: flex;
+}
+a{
+    background-color: #edd605;
+    width: 150px;
+    height: 40px;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 10px;
+    color:black;
+    margin-top: 20px;
+    
+    
+}
+button{
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
 /* .seatbudget{
     display: flex;
     gap:10px;

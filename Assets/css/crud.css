@@ -27,3 +27,50 @@ margin-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 30%;
 }
+#movie_details-form label {
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+    width: 300px;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#movie_details-form input[type="submit"] {
+    color: white;
+    padding: 10px  20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.popup-content {
+    margin-top: 100px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    height: 100%; 
+    border-radius: 5px;
+    width: 30%;
+    margin-left: 30%;
+
+}
+input[type="text"]{
+    /* width: 100%; */
+    padding: 15px;
+    color:black;
+    border-radius: 5px;
+    border: 1px solid  black;
+    margin-bottom: 20px;
+    width: 50%;
+}
+select {
+       padding: 10px;
+       border-color: black;
+} 
+.cast_crew{
+    margin-left: 180px;
+}
+#casts{
+    margin-left: 180px;
+}
+.casts{
+    margin-left: 180px;
+}

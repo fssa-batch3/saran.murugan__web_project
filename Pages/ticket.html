@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>thanks</title>
+    <link rel="stylesheet" href="../../Assets/css/ticket_receiving.css">
+</head>
+
+<body>
+    <header>
+        <img src="../../Assets/images/logo/logo.png" alt="seat image">
+
+        <h1>Ticket confirmation</h1>
+
+
+    </header>
+
+    <div class="all">
+        <div class="main">
+
+            <div class="showtime">
+
+                <div class="showname">
+
+                    <h2 id="movie_name"></h2>
+                    <p><span id="language"></span> <span id="frame">2D</span></p>
+                    <p><span id="show_day"></span>   <span id="show_date"></span>   <span id=show_month></span> | <span
+                            id="show_time"> </span></p>
+                    <p id="theater_name"></p>
+                    <hr>
+                    <h3><span id="seat" style="color: white;"></span><span id="cab"></span></h3>
+                    <!-- <P>Audi 3</P> -->
+                </div>
+            </div>
+
+
+
+            <div class="qrcode">
+                <img src="../../Assets/images/logo/lets show_ QR code.png" alt="qr code">
+                <h2>SARAN4646</h2>
+            </div>
+
+
+        </div>
+        <a href="../../index.html"> <button>Done</button></a>
+
+    </div>
+
+    <script>
+
+        let movie_list = JSON.parse(localStorage.getItem("show_movie_details"))
+
+
+        const url = window.location.search;                // ?name=Arun
+        const urlParams = new URLSearchParams(url);    //"name":"ponniyinselvan"    // converting string into key value pair
+        const username = urlParams.get("name")             // return value of the "name" key
+        console.log(username);
+
+
+        let res;
+        movie_list.find(function (e) {
+            if (e["name"]["movie_name"] == username) { //arr[0],arr[1]  =e
+                return res = e;
+            }
+            else {
+                return res = 0;
+            }
+        });
+
+        let show_time = document.querySelector(".showtime");
+
+        let show_image = document.createElement("img")
+        show_image.setAttribute("src", res["images"]["main_image"])
+        show_time.append(show_image);
+
+        let show_information = document.querySelector(".show_name")
+
+        let movie_name = document.getElementById("movie_name")
+        movie_name.innerHTML = res["name"]["movie_name"];
+
+        let movie_language = document.getElementById("language")
+        movie_language.innerHTML = res["language"];
+
+        // let movie_frame = document.getElementById("frame")
+        // movie_frame.innerHTML = res["frame"];
+
+
+
+        let users_booking = JSON.parse(localStorage.getItem("user_booking"));
+
+        const show_day=document.getElementById("show_day");
+        show_day.innerHTML= users_booking[0]["show_day"];
+
+        const show_date=document.getElementById("show_date");
+        show_date.innerHTML= users_booking[0]["show_date"];
+
+        const show_month=document.getElementById("show_month");
+        show_month.innerHTML= users_booking[0]["show_month"];
+
+
+        const show_times = document.getElementById("show_time");
+        show_times.innerHTML = users_booking[0]["show_time"];
+
+        const theater_name = document.getElementById("theater_name");
+        theater_name.innerText= users_booking[0]["theatre_name"];
+
+        let seat=document.getElementById("seat");
+        seat.innerText=users_booking[0]["seat_names"].slice(10,36);
+
+
+
+
+
+    </script>
+</body>
+
+</htnl>

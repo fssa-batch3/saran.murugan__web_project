@@ -24,12 +24,24 @@
 
             <div class="movie_wrapper">
                 <label for="Movie language">Movie language</label>
-                <input type="text" required="true" id="movie_language" placeholder="Enter ">
+                <select id="movie_language">
+                    <option value="TAMIL">TAMIL</option>
+                    <option value="ENGLISH">ENGLISH</option>
+                    <option value="KANADA">KANADA</option>
+                    <option value="TELUGU">TELUGU</option>
+                    <option value="HINDI">HINDI</option>
+                    <option value="MALAYALAM">MALAYALAM</option>
+                </select>
+                <!-- <input type="text" required="true" id="movie_language" placeholder="Enter "> -->
             </div>
 
             <div class="movie_wrapper">
                 <label for="Movie frame">Movie frame</label>
-                <input type="text" required="true" id="movie_frame" placeholder="Enter ">
+                <select id="movie_frame">
+                    <option value="2D">2D</option>
+                    <option value="3D">3D</option>
+                </select>
+                <!-- <input type="text" required="true" id="movie_frame" placeholder="Enter "> -->
             </div>
 
             <div class="movie_wrapper">
@@ -39,21 +51,40 @@
 
             <div class="movie_wrapper">
                 <label for="movie Certified"> Movie Certified</label>
-                <input type="text" required="true" id="movie_certified" placeholder="Enter ">
+                <select id="movie_certified">
+                    <option value="U">U</option>
+                    <option value="A">A</option>
+                    <option value="UA">UA</option>
+
+                </select>
+                <!-- <input type="text" required="true" id="movie_certified" placeholder="Enter "> -->
             </div>
 
             <div class="movie_wrapper">
                 <label for="Movie type"> Movie type</label>
-                <input type="text" required="true" id="movie_type" placeholder="Enter ">
+
+                <select id="movie_type">
+                    <option value="ACTION,THRILLER,DRAMA">ACTION,THRILLER,DRAMA</option>
+                    <option value="HORROR,THRILLER">HORROR,THRILLER</option>
+                    <option value="LOVE,ROMANCE,THRILLER">LOVE,ROMANCE,THRILLER</option>
+                    <option value="LOVE,ROMANCE">LOVE,ROMANCE</option>
+                    <option value="SCI-FI,FANTACY,DRAMA">SCI-FI,FANTACY,DRAMA</option>
+                    <option value="MUSICAL,ROMANCE,DRAMA">MUSICAL,ROMANCE,DRAMA</option>
+                    <option value="HISTORICAL,FANTACY">HISTORICAL,FANTACY</option>
+                    <option value="CRIME,THRILLER,DRAMA">CRIME,THRILLER,DRAMA</option>
+                    <option value="FANTACY,ADVENTURE,SCI-FI">FANTACY,ADVENTURE,SCI-FI</option>
+                </select>
+                <!-- <input type="text" required="true" id="movie_type" placeholder="Enter "> -->
             </div>
             <div class="movie_wrapper">
                 <label for="movie release date">Movie release date</label>
-                <input type="text" required="true" id="movie_release_date" placeholder="Enter ">
+                <input type="type" required="true" id="movie_release_date" placeholder="like, MAY 03 ">
             </div>
 
             <div class="movie_wrapper">
                 <label for="About Movie description">About movie description</label>
-                <input type="text" required="true" id="movie_description" placeholder="Enter ">
+                <textarea id="movie_description" rows="8" cols="65"></textarea>
+                <!-- <input type="text" required="true" id="movie_description" placeholder="Enter ">  -->
             </div>
 
             <div class="movie_wrapper">
@@ -66,6 +97,39 @@
                 <input type="text" required="true" id="movie_background_image" placeholder="Enter the image link">
             </div>
 
+
+            <div class="cast_crew">
+
+                <label>Choose how many cast </label>
+                <select id="cast-select-option">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+                <button id="cast-select-option-button">Add casts</button>
+            </div>
+
+
+            <label class="casts">Enter cast details</label>
+            <div id="casts">
+
+            </div>
             <div class="movie_wrapper">
                 <label for="Cast 1 ">Cast 1 </label>
                 <input type="text" required="true" id="cast1_name" placeholder="Enter cast name">
@@ -115,6 +179,45 @@
     </div>
 
     <script>
+        // let cast_select_option_button= document.getElementById("cast-select-option-button").addEventListener("click",e=>{
+        //     e.preventDefault()
+        //     let cast_select_option=document.getElementById("cast-select-option").value;
+
+        //      let option= cast_select_option
+     
+        //     console.log(option)
+            
+        //     for(i=0; i< option; i++){
+              
+        //         let casts=document.getElementById("casts")
+             
+        //         let cast_image=document.createElement("input");
+        //           cast_image.setAttribute("type","text");
+        //         //   cast_image.setAttribute("id","cast_image")
+        //         cast_image.setAttribute("class","cast_image")
+        //           cast_image.setAttribute("placeholder","Enter image https: link")
+        //           casts.appendChild(cast_image);
+
+        //           let cast_name=document.createElement("input");
+        //           cast_name.setAttribute("type","text");
+        //         //   cast_name.setAttribute("id","cast_name");
+        //           cast_name.setAttribute("class","cast_name");
+        //           cast_name.setAttribute("placeholder","Enter cast name")
+        //           casts.appendChild(cast_name);
+
+        //           let cast_role=document.createElement("input")
+        //           cast_role.setAttribute("type","text");
+        //           cast_role.setAttribute("class","cast_role")
+        //         //   cast_role.setAttribute("id","cast_role");
+        //           cast_role.setAttribute("value","Actor");
+        //           casts.appendChild(cast_role);
+
+        //           console.log()
+        //     }
+        // })
+       
+
+
         const form_control = document.getElementById("movie_details-form");
         function formsubmit() {
 
@@ -129,6 +232,9 @@
             const movie_description = document.getElementById("movie_description").value
             const movie_main_image = document.getElementById("movie_main_image").value
             const movie_background_image = document.getElementById("movie_background_image").value
+            // const cast_image=document.querySelectorAll("cast_image");
+            // const cast_name=document.querySelectorAll("cast_name");
+            // const cast_role=document.querySelectorAll("cast_role");
             const cast1_name = document.getElementById("cast1_name").value
             const cast1_image = document.getElementById("cast1_image").value
             const cast2_name = document.getElementById("cast2_name").value
@@ -143,6 +249,14 @@
             const music_director_image = document.getElementById("music_director_image").value
             const producer_name = document.getElementById("producer_name").value
             const producer_image = document.getElementById("producer_image").value
+
+
+        //      console.log(cast_image.length)
+        //    let cast_images=[]
+        //     for(let c=0; c<cast_image.length; c++){
+        //         cast_images.push(cast_image[c].value)
+        //     }
+
 
             let movie_details = {
 
@@ -160,6 +274,7 @@
                 images: {
                     main_image: movie_main_image,
                     background_image: movie_background_image,
+                    // cast1_image:cast_images,
                     cast1_image: cast1_image,
                     cast2_image: cast2_image,
                     cast3_image: cast3_image,
@@ -173,7 +288,7 @@
                 frame: movie_frame,
                 movie_type: movie_type,
                 Description: movie_description,
-                status:true,
+                status: true,
             }
             const details_movie = JSON.parse(localStorage.getItem("show_movie_details")) ?? [];
 

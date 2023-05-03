@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Island+Moments&family=Londrina+Solid:wght@300&family=Oswald&family=PT+Sans+Narrow&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Island+Moments&family=Londrina+Solid:wght@300&family=Oswald&family=PT+Sans+Narrow&family=Roboto+Condensed:wght@300&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');                         
 
 
 *{
@@ -11,7 +7,8 @@
 }
 html{
    overflow-x: hidden; 
-    width:100%
+    width:100%;
+    font-family: 'Barlow', sans-serif;                                       
 }
 header{
     background-color:#edde3b;
@@ -23,7 +20,7 @@ header{
 
 body{
     background-color: black;
-    font-family: 'Poppins';
+    /* font-family: 'Poppins'; */
 }
 header img{
     width: 120px;
@@ -155,10 +152,9 @@ option{
     color: tomato;
 }
 .crud-button button{
-    padding: 5px;
     width:60px;
     height: 30px;
-    background-color:aliceblue;
+    background-color:azure;
     border-radius: 5px;
     border-color: black;
 
@@ -200,7 +196,7 @@ option{
 
 .movie-list-container1{
     padding: 0 20px;
-    width:80%;
+    width:82%;
     margin-left: 120px; 
 }
 .movie-list-container2{

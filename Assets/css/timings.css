@@ -10,6 +10,7 @@
 
 body {
     background-color: black;
+
 }
 
 header {
@@ -100,147 +101,6 @@ header img {
     font-size: 25px;
     font-family: 'Mohave', sans-serif;
 }
-
-
-.monday_show {
-    padding: 30px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.monday_show h2 {
-    color: white;
-    font-family: 'Mohave', sans-serif;
-}
-
-.monday_show p {
-    color: white;
-    font-size: 25px;
-    font-family: 'Mohave', sans-serif;
-}
-
-.monday_show:hover {
-    background-color: #333333;
-}
-
-.tuesday_show {
-    padding: 30px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.tuesday_show h2 {
-    color: white;
-    font-family: 'Mohave', sans-serif;
-}
-
-.tuesday_show p {
-    color: white;
-    font-size: 25px;
-    font-family: 'Mohave', sans-serif;
-}
-
-.tuesday_show:hover {
-    background-color: #333333;
-}
-
-.wednesday_show {
-    padding: 30px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.wednesday_show h2 {
-    color: white;
-    font-family: 'Mohave', sans-serif;
-}
-
-.wednesday_show p {
-    color: white;
-    font-size: 25px;
-    font-family: 'Mohave', sans-serif;
-}
-
-.wednesday_show:hover {
-    background-color: #333333;
-}
-
-.thursday_show {
-    padding: 30px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.thursday_show h2 {
-    color: white;
-    font-family: 'Mohave', sans-serif;
-}
-
-.thursday_show p {
-    color: white;
-    font-size: 25px;
-    font-family: 'Mohave', sans-serif;
-}
-
-.thursday_show:hover {
-    background-color: #333333;
-}
-
-.friday_show {
-    padding: 30px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.friday_show h2 {
-    color: white;
-    font-family: 'Mohave', sans-serif;
-}
-
-.friday_show p {
-    color: white;
-    font-size: 25px;
-    font-family: 'Mohave', sans-serif;
-}
-
-.friday_show:hover {
-    background-color: #333333;
-}
-
-.saturday_show {
-    padding: 30px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.saturday_show h2 {
-    color: white;
-    font-family: 'Mohave', sans-serif;
-}
-
-.saturday_show  p {
-    color: white;
-    font-size: 25px;
-    font-family: 'Mohave', sans-serif;
-}
-
-.saturday_show:hover {
-    background-color: #333333;
-}
-
-
 .theatre_show1 {
     padding-top: 20px;
 }
@@ -287,7 +147,7 @@ header img {
 
 
 
-.movie_title{
+.theatre_name{
     color: white;
     margin-left: 50px;
     font-family: 'Archivo Narrow', sans-serif;

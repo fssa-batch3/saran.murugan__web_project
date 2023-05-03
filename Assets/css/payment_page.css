@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+body{
+  background-color: black;
+    font-family: 'Barlow', sans-serif;                                       
+}
+.all-content{
+   display: flex;
+   justify-content: space-around;
+}
+input[type="text"] {
+    background-color:  #151515;;
+    border:  #151515;;
+}
+.profile-details{
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+}
+.profile-contents{
+    background-color: #121212;
+    width: 105%;
+    height: 150px;
+    margin-top: 50px;
+    
+}
+.profile-contents h2{
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    
+}
+
+.payment-section{
+  background-color:#121212 ;
+  width: 105%;
+  margin-top: 80px;
+}
+.payment-section h2{
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+}
+ul{
+    display: flex;
+   flex-direction: column;
+   gap: 50px;
+}
+ul li:hover{
+    color: #edde3b;
+    cursor: pointer;
+}
+.payment-heading li{
+    list-style: none;
+    color: white;
+    
+}
+.pay-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.credit-card{
+    display: none;
+}
+.card{
+    background-color: #151515;
+    width:400px;
+    height: 230px;
+    border-radius: 10px;
+    margin-right: 10px;
+
+}
+.card form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 20px;
+}
+.terms{
+    display: flex;
+    align-items: center;
+    color: #edde3b;
+    margin-left: 10px;
+}
+.credit-button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 11px;
+    border-radius: 10px;
+    border-color: white;
+}
+.debit-card{
+    display: none;
+}
+.debit-button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 11px;
+    border-radius: 10px;
+    border-color: white;
+}
+label{
+    color:#9d9d9d;
+}
+.valid-cvv{
+    display: flex;
+
+}
+#bank-select{
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 10px;
+    border-color: #2a2a2a;
+    width: 250px;
+    padding-left: 10px;
+    height: 40px;
+    margin-right: 100px;
+}
+.net-banking{
+    display: none;
+}
+.net-banking h3{
+    color: white;
+}
+.net-banking-button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 11px;
+    border-radius: 10px;
+    border-color: white;
+}
+.upi{
+    display: none;
+}
+.upi-button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 11px;
+    border-radius: 10px;
+    border-color: white;
+    margin-left: 20px;
+}
+.upi-name{
+    background-color: #151515;
+    width: 300px;
+    height: 100px;
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.paytm{
+    display: none;
+}
+.phonepe{
+    display: none;
+}
+.paytm-button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 11px;
+    border-radius: 10px;
+    border-color: white;
+    margin-left: 20px;
+}
+.phonepe-button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 11px;
+    border-radius: 10px;
+    border-color: white;
+    margin-left: 20px;
+}
+aside{
+    background-color: #1a1a1a;
+    width:400px;
+    margin-top: 50px;
+}
+.movie-details{
+    display: flex;
+    gap: 5px;
+    color: white;
+    margin-left: 10px;
+}
+.theater h2{
+    color: #9d9d9d;
+    margin-left: 10px;
+}
+.seat h2{
+    margin-left: 10px;
+    color: #9d9d9d;
+}
+#seat{
+    font-size: 25px;
+    padding:  5px 8px;
+    color: white;
+    width: 40px;
+    border-radius: 10px;
+    text-align: center;
+    height: 35px;
+    margin-left: 10px;
+   
+}
+.total-expensive{
+    height: 100px;
+    margin-top: 20px;
+}
+.total-expensive h3{
+    color: #9d9d9d;
+}
+.tickets{
+   display: flex;
+   justify-content: space-between;
+   width: 350px;
+   margin-left: 20px;
+}
+.conv-fees{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-left: 20px;
+ }
+ .cab{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-left: 20px;
+ }
+
+ .total{
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    margin-left: 30px;
+    color: #edde3b;
+    
+ }
+ .total h3{
+    margin-left: 10px;
+    margin-top: 30px;
+ }
+ .total h1{
+    font-size: 35px;
+    margin-right: 20px;
+ }
+ .total-tickets-cost{
+    
+    position: relative;
+    top: 190px;
+    background-color: #151515;
+ }
+ .cab{
+    display: flex;
+    margin-top: 30px;
+ }
+#cab-head{
+    color: white;
+}
+.a-cab{
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    color: #121212;
+    border-radius: 10px;
+    background-color:  #edde3b;
+}
