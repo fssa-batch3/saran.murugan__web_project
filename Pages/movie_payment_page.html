@@ -14,7 +14,13 @@
 
     <div class="all-content">
 
+
+
         <div class="profile-payment">
+            <div class="cab">
+
+                <h3 id="cab-head">LETS DRIVE WITH CAB</h3>
+            </div>
 
             <div class="profile-contents">
                 <h2>YOUR CONTACT DETAILS</h2>
@@ -23,17 +29,20 @@
 
                     <div class="name">
                         <label>YOUR NAME</label><br>
-                        <input type="text" id="name" placeholder="ENTER YOUR NAME">
+                        <!-- <input type="text" id="name" placeholder="ENTER YOUR NAME"> -->
+                        <h3 id="name"></h3>
                     </div>
 
                     <div class="email">
                         <label>E-MAIL</label><br>
-                        <input type="text" placeholder="ENTER YOUR E-MAIL">
+                        <!-- <input type="text" id="email"placeholder="ENTER YOUR E-MAIL"> -->
+                        <h3 id="email"></h3>
                     </div>
 
                     <div class="phone">
                         <label>PHONE</label><br>
-                        <input type="text" placeholder="ENTER YOUR PHONE">
+                        <!-- <input type="text" id="phone" placeholder="ENTER YOUR PHONE"> -->
+                        <h3 id="number"></h3>
                     </div>
                 </div>
             </div>
@@ -90,7 +99,7 @@
                                     </div>
 
                                     <div class="credit-button-div">
-                                    <!-- <button class="credit-button" id="payment">MAKE PAYMENT</button> -->
+                                        <!-- <button class="credit-button" id="payment">MAKE PAYMENT</button> -->
 
                                     </div>
                                 </form>
@@ -125,11 +134,13 @@
 
                                     <div class="terms">
                                         <input type="checkbox">
-                                        <p>I have read and accepted the LETS SHOW terms and conditions<br> of this
+                                        <p>I have read and accepted the LETS SHOW terms and  conditions of this
                                             transaction </p>
                                     </div>
 
-                                    <button class="debit-button" id="payment">MAKE PAYMENT</button>
+                                    <div class="debit-button-div">
+
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -155,7 +166,9 @@
                                 </p>
                             </div>
 
-                            <button class="net-banking-button">MAKE PAYMENT</button>
+                           <div class="net-button-div">
+
+                           </div>
                         </div>
 
 
@@ -173,8 +186,9 @@
                                 </p>
                             </div>
 
-                            <button class="upi-button" id="payment">MAKE PAYMENT</button>
+                          <div class="upi-button-div">
 
+                          </div>
                         </div>
 
 
@@ -185,10 +199,10 @@
                                 <p>I have read and accepted the LETS SHOW terms and conditions of<br> this transaction
                                 </p>
                             </div>
-                               
+
                             <div class="paytm-button-div">
-                            <!-- <button class="paytm-button">MAKE PAYMENT</button> -->
-                        </div>
+                                <!-- <button class="paytm-button">MAKE PAYMENT</button> -->
+                            </div>
                         </div>
 
                         <div id="phonepe-content" class="phonepe">
@@ -200,7 +214,7 @@
                             </div>
 
                             <div class="phonepe-button-div">
-                                
+
                             </div>
                             <!-- <button class="phonepe-button" id="payment">MAKE PAYMENT</button> -->
                         </div>
@@ -216,10 +230,7 @@
             </div>
 
 
-            <div class="cab">
 
-                <h3 id="cab-head">LETS DRIVE WITH CAB</h3>
-            </div>
 
         </div>
 
@@ -266,10 +277,12 @@
                         <h3>INR <span id="conv-price"></span></h3>
                     </div> -->
 
-                    <div class="cab">
+                    <div class="cab-total">
                         <h3>CAB<span></span></s></h3>
-                        <h3> <span id="cab-price"></span></h3>
+                        <h3><span id="cab-price"></span></h3>
                     </div>
+
+
 
 
                 </div>
@@ -284,7 +297,7 @@
                     </div>
 
                 </div>
-      
+
 
 
             </div>
@@ -299,6 +312,20 @@
 
 
     <script>
+
+        let user_profile = JSON.parse(localStorage.getItem("profile_details"));
+
+        let name = document.getElementById("name");
+        name.innerText = user_profile["name"];
+
+        let email = document.getElementById("email");
+        email.innerText = user_profile["email"];
+
+        let phone = document.getElementById("number");
+        phone.innerText = user_profile["number"];
+
+
+
 
         const movie_list = JSON.parse(localStorage.getItem("show_movie_details"));
 
@@ -333,54 +360,56 @@
 
         let users_booking = JSON.parse(localStorage.getItem("user_booking"));
 
-        let theatre_name=document.getElementById("theatre_name");
-        theatre_name.innerText=users_booking[i]["theatre_name"]
-        
-        let show_date=document.getElementById("show_date");
-        show_date.innerText=users_booking[i]["show_date"];
+        let theatre_name = document.getElementById("theatre_name");
+        theatre_name.innerText = users_booking[0]["theatre_name"]
+
+        let show_date = document.getElementById("show_date");
+        show_date.innerText = users_booking[0]["show_date"];
 
 
-        let show_month=document.getElementById("show_month");
-        show_month.innerText=users_booking[i]["show_month"];
+        let show_month = document.getElementById("show_month");
+        show_month.innerText = users_booking[0]["show_month"];
 
-        let show_time=document.getElementById("show_time");
-        show_time.innerText=users_booking[i]["show_time"];
+        let show_time = document.getElementById("show_time");
+        show_time.innerText = users_booking[0]["show_time"];
 
 
-        let seat=document.getElementById("seat")
-        seat.innerText=users_booking[i]["seat_names"].slice(10,36);
+        let seat = document.getElementById("seat")
+        seat.innerText = users_booking[0]["seat_names"];
 
-        let ticket_price= document.getElementById("ticket-price")
-          ticket_price.innerText=users_booking[0]["seat_total"]
+        let ticket_price = document.getElementById("ticket-price")
+        ticket_price.innerText = users_booking[0]["seat_price"]
 
         let cab = document.querySelector(".cab")
 
-        let cab_button=document.createElement("button");
-        cab_button.setAttribute("class","a-cab")
+        let cab_button = document.createElement("button");
+        cab_button.setAttribute("class", "a-cab")
         cab.append(cab_button);
 
-        let a= document.createElement("a")
+        let a = document.createElement("a")
         a.setAttribute("href", "cab.html")
-        a.setAttribute("class","a-cab")
-        a.innerText="book now";
-        cab_button.append(a)
+        a.setAttribute("class", "a-cab")
+        a.innerText = "book now";
+        cab_button.append(a);
 
 
-           
+     
+   
+
 
 
         let cab_booking = JSON.parse(localStorage.getItem("cab"));
 
-        let cab_price=document.getElementById("cab-price");
-           cab_price.innerText=cab_booking[0]["cab_rate"];
+
+        let cab_price = document.getElementById("cab-price");
+        // cab_price.innerText=cab_booking[0]["cab_rate"];
 
 
+        total = Number(ticket_price.innerText) + Number(cab_price.innerText);
 
-           total= Number(ticket_price.innerText) + Number(cab_price.innerText);
-
-           console.log(total);
-           let total_payment=document.getElementById("total-payment")
-             total_payment.innerText=total
+        console.log(total);
+        let total_payment = document.getElementById("total-payment")
+        total_payment.innerText = total
 
 
 
@@ -457,32 +486,96 @@
         });
 
 
+
+        let credit_button_div = document.querySelector(".credit-button-div");
+
+        let credit_button = document.createElement("button");
+        credit_button.setAttribute("class", "credit-button");
+        credit_button.innerText="Make Payment"
+        credit_button_div.append(credit_button);
+
+
     
-        let credit_button_div=document.querySelector(".credit-button-div");
-        let paytm_button_div=document.querySelector(".paytm-button-div");
-        let phonepe_button_div=document.querySelector(".phonepe-button-div");
-
-         let credit_button=document.createElement("button");
-             credit_button.setAttribute("class","credit-button");
-             credit_button_div.append(credit_button);
-
-             let credit_a=document.createElement("a");
-             credit_a.innerText="MAKE PAYMENT"
-            //  credit_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
-             credit_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
-             credit_button.append(credit_a);
 
 
-             let paytm_button=document.createElement("button");
-             paytm_button.setAttribute("class","credit-button");
-             paytm_button_div.append(paytm_button);
 
-             let paytm_a=document.createElement("a");
-             paytm_a.innerText="MAKE PAYMENT"
-            //  credit_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
-             paytm_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
-             paytm_button.append(paytm_a);
+        credit_button.addEventListener("click", function(){
+        
+      
+
+        });
+
+        // let credit_a = document.createElement("a");
+        // credit_a.innerText = "MAKE PAYMENT"
+        // credit_a.setAttribute("class","a_button")
+        // credit_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+        // credit_button.append(credit_a);
+
+
+        let paytm_button_div = document.querySelector(".paytm-button-div");
+
+        let paytm_button = document.createElement("button");
+        paytm_button.setAttribute("class", "paytm-button");
+        paytm_button_div.append(paytm_button);
+
+        let paytm_a = document.createElement("a");
+        paytm_a.innerText = "MAKE PAYMENT"
+        paytm_a.setAttribute("class","a_button")
+        paytm_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+        paytm_button.append(paytm_a);
+
+
+        let debit_button_div=document.querySelector(".debit-button-div")
+
+        let debit_button = document.createElement("button");
+        debit_button.setAttribute("class", "debit-button");
+        debit_button_div.append(debit_button);
+
+        let debit_a = document.createElement("a");
+        debit_a.innerText = "MAKE PAYMENT"
+        debit_a.setAttribute("class","a_button")
+        debit_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+        debit_button.append(debit_a);
+
+        let phonepe_button_div = document.querySelector(".phonepe-button-div");
+
+        let phonepe_button = document.createElement("button");
+        phonepe_button.setAttribute("class", "phonepe-button");
+        phonepe_button_div.append(phonepe_button);
+
+        let phonepe_a = document.createElement("a");
+        phonepe_a.innerText = "MAKE PAYMENT"
+        phonepe_a.setAttribute("class","a_button")
+        phonepe_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+        phonepe_button.append(phonepe_a);
+
+        let upi_button_div=document.querySelector(".upi-button-div");
+
+        let upi_button = document.createElement("button");
+        upi_button.setAttribute("class", "upi-button");
+        upi_button_div.append(upi_button);
+
+        let upi_a = document.createElement("a");
+        upi_a.innerText = "MAKE PAYMENT"
+        upi_a.setAttribute("class","a_button")
+        upi_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+        upi_button.append(upi_a);
+
+        let net_button_div =document.querySelector(".net-button-div")
+
+
+        let net_button = document.createElement("button");
+        net_button.setAttribute("class", "net-button");
+        net_button_div.append(net_button);
+
+        let net_a = document.createElement("a");
+        net_a.innerText = "MAKE PAYMENT"
+        net_a.setAttribute("class","a_button")
+        net_a.setAttribute("href", "ticket.html?name=" + res["name"]["movie_name"]);
+        net_button.append(net_a);
     </script>
+
+
 
 </body>
 

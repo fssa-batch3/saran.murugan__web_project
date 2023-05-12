@@ -4,7 +4,7 @@
     margin: 0px;
 }
 body{
-    background-color:white;
+    background-color:black;
     font-family: 'Barlow', sans-serif;  
 }
 header{
@@ -31,7 +31,7 @@ header img{
     display: flex;
 }
 .main{
-    background-color:black;
+    background-color:#333333;
     width: 50%;
     height: 690px;
     border-radius: 10px;
@@ -59,15 +59,13 @@ hr{
     color:white solid;
     width:450px;
 }
+.qrcode{
+    display: flex;
+}
 .qrcode img{
     width:200px;
-    margin-left: 37%;
+    margin-left: 30px;
     margin-top: 70px;
-}
-.qrcode h2{
-    color: white;
-    margin-left: 40%;
-    margin-top: 10px;
 }
 .main2{
     display: flex;
@@ -88,3 +86,16 @@ a button{
     height: 500px;
     margin-left: 25%8
 } */
+#seat_names_div{
+    font-size: 26px;
+    margin-left: 100px;
+    margin-top:170px ;
+    width:300px;
+    color: white;
+}
+#booking_id_div{
+    font-size: 30px;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: white;
+}

@@ -26,7 +26,7 @@
             <input type="text" id="name" disabled>
 
             <div class="logout">
-                <button id="logout"> Sign out</button>
+                <button id="logout"> log out</button>
             </div>
         </div>
 
@@ -69,12 +69,11 @@
 
     <div class="setting-option">
         <ul>
-            <li>Booking history</li>
-            <li>Notification</li>
-            <li>Help and support</li>
-            <li>About us</li>
-            <li>Cinemas</li>
-            <li>Movies</li>
+            <li id="booking-history-head">Booking history</li>
+           <a href="../Pages/cinema_page.html"><li id="cinemas-head">Cinemas</li></a> 
+            <li id="notification-head">Notification</li>
+            <li id="help-support-head">Help and support</li>
+            <li id="about-us-head">About us</li>
         </ul>
     </div>
 
@@ -83,13 +82,24 @@
 
 
 
-        <div class="booking-history">
+        <div class="booking-history-div">
 
-            <div class="booked-movie">
-
-            </div>
 
         </div>
+
+        <div class="help-support"></div>
+
+        <div class="about-us"></div>
+
+        <div class="notification"></div>
+
+        <!-- <div class="cinemas">
+    
+            
+
+
+        </div> -->
+
 
     </div>
 
@@ -99,7 +109,172 @@
 
     <script>
 
+        let booking_history_head = document.getElementById("booking-history-head");
+        // let cinemas_head = document.getElementById("cinemas-head");
+        let notification_head = document.getElementById("notification-head");
+        let help_support_head = document.getElementById("help-support-head");
+        let about_us_head = document.getElementById("about-us-head");
+
+        let booking_history = document.querySelector(".booking-history-div");
+        // let cinemas = document.querySelector(".cinemas");
+        let notification = document.querySelector(".notification");
+        let help_support = document.querySelector(".help-support");
+        let about_us = document.querySelector(".about-us");
+
+
+        booking_history_head.addEventListener("click", function () {
+            booking_history.style.display = "block";
+            //  cinemas.style.display="none";
+            notification.style.display = "none";
+            help_support.style.display = "none";
+            about_us.style.display = "none";
+        })
+        //  cinemas_head.addEventListener("click", function(){
+        //      booking_history.style.display="none";
+        //      cinemas.style.display="block";
+        //      notification.style.display="none";
+        //      help_support.style.display="none";
+        //      about_us.style.display="none";
+        //  })
+        notification_head.addEventListener("click", function () {
+            booking_history.style.display = "none";
+            //  cinemas.style.display="none";
+            notification.style.display = "block";
+            help_support.style.display = "none";
+            about_us.style.display = "none";
+        })
+        help_support_head.addEventListener("click", function () {
+            booking_history.style.display = "none";
+            //  cinemas.style.display="none";
+            notification.style.display = "none";
+            help_support.style.display = "block";
+            about_us.style.display = "none";
+        })
+        about_us_head.addEventListener("click", function () {
+            booking_history.style.display = "none";
+            //  cinemas.style.display="none";
+            notification.style.display = "none";
+            help_support.style.display = "none";
+            about_us.style.display = "block";
+        });
+
+
+        let booking_history_div = document.querySelector(".booking-history-div");
+
+        let booking_history_content = document.createElement("div");
+        booking_history_content.setAttribute("class", "booking-history-div");
+        booking_history_div.append(booking_history_content);
+
+        let movie_image = document.createElement("img");
+        movie_image.setAttribute("class", "movie_image")
+        movie_image.setAttribute("src", "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ponniyin-selvan--part-2-et00348725-1680776467.jpg");
+        booking_history_content.append(movie_image);
+
+        let ticket_detail_div = document.createElement("div");
+        ticket_detail_div.setAttribute("class", "ticket-detail-div");
+        booking_history_content.append(ticket_detail_div);
+
+        let movie_name = document.createElement("h1");
+        movie_name.setAttribute("class", "movie_name");
+        movie_name.innerText = "Poniyin selvan part-2";
+        ticket_detail_div.append(movie_name)
+
+        let certified = document.createElement("span");
+        certified.innerText = "UA";
+        movie_name.append(certified);
+
+        let movie_language = document.createElement("h3");
+        movie_language.innerText = "Tamil";
+        ticket_detail_div.append(movie_language);
+
+        let movie_frame = document.createElement("span");
+        movie_frame.innerText = "2D";
+        movie_language.append(movie_frame);
+
+        let movie_day = document.createElement("h3");
+        movie_day.innerText = "Fri";
+        ticket_detail_div.append(movie_day);
+
+        let show_date = document.createElement("span");
+        show_date.innerText = "17";
+        movie_day.append(show_date);
+
+        let show_month = document.createElement("span");
+        show_month.innerText = "May";
+        movie_day.append(show_month);
+
+        let hr_line = document.createElement("span");
+        hr_line.innerText = "|";
+        movie_day.append(hr_line);
+
+        let show_time = document.createElement("span");
+        show_time.innerText = "07:00AM";
+        movie_day.append(show_time);
+
+        let theatre_name = document.createElement("h3");
+        theatre_name.innerText = "PVR,Grand mall";
+        ticket_detail_div.append(theatre_name);
+
+        let qr_ticket_div = document.createElement("div");
+        qr_ticket_div.setAttribute("class", "qr_ticket_div")
+        ticket_detail_div.append(qr_ticket_div);
+
+        let ticket_total_div=document.createElement("div")
+         ticket_total_div.setAttribute("class","ticket_total_div");
+         qr_ticket_div.append(ticket_total_div);
+
+         let tickets=document.createElement("h3");
+         tickets.innerText="tickets";
+         ticket_total_div.append(tickets);
+
+         let how_many_ticket=document.createElement("span");
+           how_many_ticket.innerText="3";
+           tickets.prepend(how_many_ticket);
+
+           let cab_div=document.createElement("p");
+           cab_div.innerText=",";
+           tickets.append(cab_div);
+
+           
+
+           let cab=document.createElement("span")
+           cab.innerText="cab";
+           cab_div.append(cab);
+
+
+           let seats=document.createElement("h2");
+           seats.innerText="seats";
+           ticket_total_div.append(seats);
+
+           let seat_names=document.createElement("span");
+           seat_names.innerText="A7,A9";
+           seats.append(seat_names);
+
+           let booking_id_div=document.createElement("h3");
+             booking_id_div.innerText="BOOKING ID:"
+             ticket_total_div.append(booking_id_div);
+
+             let booking_id=document.createElement("span");
+             booking_id.innerText="WUDJ4839";
+             booking_id_div.append(booking_id)
+
+        let qr_code = document.createElement("img");
+        qr_code.setAttribute("src", "https://i.ibb.co/1ZpnGvG/lets-show-QR-code.png");
+        qr_code.setAttribute("class", "qrcode")
+        qr_ticket_div.append(qr_code)
+
+
+        let hr=document.createElement("hr");
+        ticket_detail_div.append(hr)
+
+
+
+
+
+
+
         let users = JSON.parse(localStorage.getItem("users"));
+
 
         const name = document.getElementById("name")
         const email = document.getElementById("email")
@@ -146,32 +321,37 @@
 
         document.getElementById("logout").addEventListener("click", (e) => {
             console.log("clicked")
-            deleteItem();
-        })
-    
-        function deleteItem() {
-            for (let i = 0; i < users.length; i++) {
-                console.log(document.getElementById("email").innerText)
-                if (document.getElementById("email").innerText == users[i]["email"]) {
-                    // console.log("deleted")
+            // deleteItem();
+            window.location.href="../index.html"
+
+        });
+
+        // function deleteItem() {
+        //     for (let i = 0; i < users.length; i++) {
+        //         console.log(document.getElementById("email").innerText)
+        //         if (document.getElementById("email").innerText == users[i]["email"]) {
+        //             // console.log("deleted")
 
 
 
-                    let message = confirm("do you want to delete your account!! byee...");
-                    if (message != true) {
-                        return false;
-                    } else {
-                    
-                        users.splice(i, 1);
-                        console.log(users)
-                        localStorage.setItem("users", JSON.stringify(users));
-                        window.location.href = "signup.html";
-                    }
+        //             let message = confirm("do you want to logout ?");
+        //             if (message != true) {
+        //                 return false;
+        //             } else {
 
-                    
-                }
-            }
-        }
+        //                 users.splice(i, 1);
+        //                 console.log(users);
+        //                 localStorage.setItem("users", JSON.stringify(users));
+        //                 window.location.href = "signup.html";
+        //             }
+
+
+        //         }
+        //     }
+        // }
+
+
+
 
 
 

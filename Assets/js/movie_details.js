@@ -85,7 +85,7 @@ const name_list= JSON.parse(localStorage.getItem("show_movie_details"));
                  let a = document.createElement("a");
                 //  url.html?key=value&key=value
                 a.setAttribute("href", "movie_show_time.html?name=" + res["name"]["movie_name"]);
-                a.innerText="Book your tickets";
+                a.innerText="Book tickets";
                 book_button.append(a);
 
                 let content=document.querySelector(".content");
@@ -105,139 +105,84 @@ const name_list= JSON.parse(localStorage.getItem("show_movie_details"));
                 // let cast_head=document.createElement("h1")
                 // // cast_head.innerText=res["cast_heading"]
                 // // about_movie.append(cast_head);
-                let castandcrew=document.querySelector(".castandcrew")
+                let castandcrew=document.querySelector(".cast")
 
                 let cast_head=document.querySelector(".cast_head")
                 castandcrew.prepend(cast_head);
 
                 let cast_head_text=document.createElement("h1")
                 cast_head_text.innerText="cast";
+                cast_head_text.setAttribute("class","cast_head")
                 cast_head.prepend(cast_head_text);
 
-                let cast1=document.querySelector(".cast")
-                castandcrew.append("cast1");
-
-                let casteh=document.querySelectorAll(".casteh")
-                cast1.prepend(casteh)
-        
+                let cast_div=document.querySelector(".cast-main-dev");
                
-                let cast_image1 = document.createElement("img");
-                cast_image1.setAttribute("src",res["images"]["cast1_image"]);
-                cast_image1.setAttribute("alt", "image_placeholder");
-                casteh[0].prepend(cast_image1);
 
-                let cast_image2 = document.createElement("img");
-                cast_image2.setAttribute("src",res["images"]["cast2_image"]);
-                cast_image2.setAttribute("alt", "image_placeholder");
-                casteh[1].append(cast_image2);
-               
-                let cast_image3 = document.createElement("img");
-                cast_image3.setAttribute("src",res["images"]["cast3_image"]);
-                cast_image3.setAttribute("alt", "image_placeholder");
-                casteh[2].append(cast_image3);
-
-                let cast_image4 = document.createElement("img");
-                cast_image4.setAttribute("src",res["images"]["cast4_image"]);
-                cast_image4.setAttribute("alt", "image_placeholder");
-                casteh[3].append(cast_image4);
-
-            
-                let cast_name1=document.createElement("h2")
-                cast_name1.innerText=res["name"]["cast1_name"]
-                casteh[0].append(cast_name1);
-
-                let cast_name2=document.createElement("h2")
-                cast_name2.innerText=res["name"]["cast2_name"]
-                casteh[1].append(cast_name2);
-
-                let cast_name3=document.createElement("h2")
-                cast_name3.innerText=res["name"]["cast3_name"]
-                casteh[2].append(cast_name3);
-
-                let cast_name4=document.createElement("h2")
-                cast_name4.innerText=res["name"]["cast4_name"]
-                casteh[3].append(cast_name4);
+                // let casteh=document.querySelector(".cast-main-dev")
+                // cast1.prepend(casteh)
 
 
+                 console.log(res);
 
-                let cast_category=document.createElement("p")
-                cast_category.innerText= "Actor";
-                casteh[0].append(cast_category);
-                
-                let cast_category2=document.createElement("p")
-                cast_category2.innerText="Actor";
-                casteh[1].append(cast_category2);
+                 for(i=0; i< res["images"]["cast_image"].length; i++){
+   
+                    
+                let cast=document.createElement("div");
+                cast.setAttribute("class","cast_div")
+                cast_div.append(cast);
 
-                
-                let cast_category3=document.createElement("p")
-                cast_category3.innerText="Actor";
-                casteh[2].append(cast_category3);
+                 let cast_images=document.createElement("img");
+                 cast_images.setAttribute("src",res["images"]["cast_image"][i]);
+                 cast_images.setAttribute("class","cast_images")
+                 cast.append(cast_images);
+ 
+                 let cast_name= document.createElement("h2");
+                 cast_name.innerText=res["name"]["cast_name"][i];
+                 cast_name.setAttribute("class","cast_names")
+                 cast_name.setAttribute("class","cast")
+                 cast.append(cast_name);
 
-                let cast_category4=document.createElement("p")
-                cast_category4.innerText="Actor";
-                casteh[3].append(cast_category4);
-    
+                 let cast_role=document.createElement("h4");
+                 cast_role.innerText=res["name"]["cast_role"][i];
+                 cast_role.setAttribute("class","cast_role");
+                 cast_role.setAttribute("class","cast")
+                 cast.append(cast_role);
+                }
 
 
                 let crew_head=document.querySelector(".crew_head")
-            
                 
+
                 let crew_head_text=document.createElement("h1")
                 crew_head_text.innerText="crew";
+                crew_head_text.setAttribute("class","crew_head")
                 crew_head.prepend(crew_head_text);
 
-
-                 let crew=document.querySelector(".crew")
-                 castandcrew.append(crew);
-
-                 let creweh=document.querySelectorAll(".creweh")
-                 crew.prepend(creweh);
-
-
-                 let crew_image1 = document.createElement("img");
-                crew_image1.setAttribute("src",res["images"]["director_image"]);
-                crew_image1.setAttribute("alt", "image_placeholder");
-                creweh[0].prepend(crew_image1);
-
-                let crew_image2 = document.createElement("img");
-                crew_image2.setAttribute("src",res["images"]["music_director_image"]);
-                crew_image2.setAttribute("alt", "image_placeholder");
-                creweh[1].append(crew_image2);
-               
-                let crew_image3 = document.createElement("img");
-                crew_image3.setAttribute("src",res["images"]["producer_image"]);
-                crew_image3.setAttribute("alt", "image_placeholder");
-                creweh[2].append(crew_image3);
-
-            
-                let crew_name1=document.createElement("h2")
-                crew_name1.innerText=res["name"]["director_name"]
-                creweh[0].append(crew_name1);
-
-                let crew_name2=document.createElement("h2")
-                crew_name2.innerText=res["name"]["music_director_name"]
-                creweh[1].append(crew_name2);
-
-                let crew_name3=document.createElement("h2")
-                crew_name3.innerText=res["name"]["producer_name"]
-                creweh[2].append(crew_name3);
-
-                let crew_category=document.createElement("p")
-                crew_category.innerText="Director" 
-                creweh[0].append(crew_category);
+                let crew_div=document.querySelector(".crew-main-dev");
+                 
                 
-                let crew_category2=document.createElement("p")
-                crew_category2.innerText="Music Director";
-                creweh[1].append(crew_category2);
 
+                for(i=0; i< res["images"]["crew_image"].length; i++){
+   
+                    
+                let crew=document.createElement("div");
+                crew.setAttribute("class","crew_div")
+                crew_div.append(crew);
 
-                
-                let crew_category3=document.createElement("p")
-                crew_category3.innerText="Producer";
-                creweh[2].append(crew_category3);
+                 let crew_images=document.createElement("img");
+                 crew_images.setAttribute("src",res["images"]["crew_image"][i]);
+                 crew_images.setAttribute("class","crew_images")
+                 crew.append(crew_images);
+ 
+                 let crew_name= document.createElement("h2");
+                 crew_name.innerText=res["name"]["crew_name"][i];
+                 crew_name.setAttribute("class","crew_names")
+                 crew_name.setAttribute("class","crew")
+                 crew.append(crew_name);
 
-              
-            
-                
-                console.log(mainimg);
-                console.log(content);
+                 let crew_role=document.createElement("h4");
+                 crew_role.innerText=res["name"]["crew_role"][i];
+                 crew_role.setAttribute("class","crew_role");
+                 crew_role.setAttribute("class","crew")
+                 crew.append(crew_role);
+                }

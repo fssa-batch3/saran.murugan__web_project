@@ -75,7 +75,7 @@ body{
     margin-top: 40px;
     margin-left: 45%;
 }
-.seat-budget{
+/* .seat-budget{
     background-color: #444451;
     height: 22px;
     width: 25px;
@@ -83,9 +83,9 @@ body{
     border-top-left-radius: 10px;
     margin-top: 15px;
     border-top-right-radius: 10px;
-}
+} */
 
-#seat-prime-row1{
+/* #seat-prime-row1{
     display: flex;
     margin-left: 35%;
 }
@@ -113,7 +113,7 @@ body{
     cursor: pointer;
     transform: scale(1 );
 } */
-.occupied{
+/* .occupied{
     background-color:  #444451 ;
     height: 28px;
     width: 35px;
@@ -125,9 +125,9 @@ body{
     border-bottom-right-radius: 0;
    
 }
-
-.total_seatandcost{
-    background-color: #ffffff;
+*/
+ .total_seatandcost{
+  background-color: #ffffff;
     width: 80%;
     height: 80px;
     margin-top: 40px;
@@ -144,12 +144,16 @@ h3{
 .seat_total{
     display: flex;
 }
+.seat_info{
+    display: flex;
+    flex-direction: column;
+}
 .seat_total h3{
     font-size: 20px;
     margin-left: 40px;
     margin-top: 15px;
     color: black;
-}
+} 
 .seat_total span{
     font-size: 25px;
     padding:  5px 8px;
@@ -198,7 +202,7 @@ button{
     border-radius: 10px;
     margin-top: 50px;
     margin-left: 10px;
-}
+}  */
 
 /* .seatbudget{
     display: flex;

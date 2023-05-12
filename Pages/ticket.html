@@ -24,7 +24,7 @@
 
                     <h2 id="movie_name"></h2>
                     <p><span id="language"></span> <span id="frame">2D</span></p>
-                    <p><span id="show_day"></span>   <span id="show_date"></span>   <span id=show_month></span> | <span
+                    <p><span id="show_day"></span> <span id="show_date"></span> <span id=show_month></span> | <span
                             id="show_time"> </span></p>
                     <p id="theater_name"></p>
                     <hr>
@@ -36,8 +36,17 @@
 
 
             <div class="qrcode">
-                <img src="../../Assets/images/logo/lets show_ QR code.png" alt="qr code">
-                <h2>SARAN4646</h2>
+
+                <div class="seat_div">
+
+                    <p id="seat_names_div"> Classic -<span id="seat_names"></span></p>
+
+                    <p id="booking_id_div">BOOKING ID :<span id="booking_id"></span></p>
+
+                </div>
+
+                <img src="https://i.ibb.co/k23qZ7Y/lets-show-QR-code.png" alt="qr code">
+
             </div>
 
 
@@ -88,27 +97,30 @@
 
         let users_booking = JSON.parse(localStorage.getItem("user_booking"));
 
-        const show_day=document.getElementById("show_day");
-        show_day.innerHTML= users_booking[0]["show_day"];
+        const show_day = document.getElementById("show_day");
+        show_day.innerHTML = users_booking[0]["show_day"];
 
-        const show_date=document.getElementById("show_date");
-        show_date.innerHTML= users_booking[0]["show_date"];
+        const show_date = document.getElementById("show_date");
+        show_date.innerHTML = users_booking[0]["show_date"];
 
-        const show_month=document.getElementById("show_month");
-        show_month.innerHTML= users_booking[0]["show_month"];
+        const show_month = document.getElementById("show_month");
+        show_month.innerHTML = users_booking[0]["show_month"];
 
 
         const show_times = document.getElementById("show_time");
         show_times.innerHTML = users_booking[0]["show_time"];
 
         const theater_name = document.getElementById("theater_name");
-        theater_name.innerText= users_booking[0]["theatre_name"];
-
-        let seat=document.getElementById("seat");
-        seat.innerText=users_booking[0]["seat_names"].slice(10,36);
+        theater_name.innerText = users_booking[0]["theatre_name"];
 
 
+        const seat_name = document.getElementById("seat_names");
+        seat_name.innerText = users_booking[0]["seat_names"]
 
+
+         const booking_id=document.getElementById("booking_id");
+         booking_id.innerText= users_booking[0]["booking_id"]
+      
 
 
     </script>

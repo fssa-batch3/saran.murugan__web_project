@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 body{
     background-image: linear-gradient(rgb(4,9,30,0.7),rgb(4,9,30,0.7)),url(../images/logo/profile_banner.jpg);
@@ -7,6 +7,9 @@ body{
 *{
     margin: 0px;
     padding: 0px;
+}
+html{
+    font-family: 'Barlow', sans-serif;
 }
 header{
     background-color:#edd605;
@@ -31,7 +34,7 @@ header img{
     list-style: none;
     color:#d2d2d2;
     padding-top: 10px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
 
 }
 .setting-option ul li:hover{
@@ -71,14 +74,13 @@ header img{
     border-radius: 5px;
     border-style: none;
     margin-top: 10px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
     background-color:#181818 ;
 }
 #name{
     background-color: #181818;
     border-color:#181818;
     margin-left: 10px;
-    font-family:'Courier New', Courier, monospace;
     color:white;
     width:100px;
     font-size: 20px;
@@ -93,13 +95,13 @@ header img{
     font-size: 18px;
     border: none;
     color: #d2d2d2;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
 }
 .phone-num h3{
     font-size: 18px;
     border: none;
     color: #d2d2d2;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
 }
 .email{
     display: flex;
@@ -119,14 +121,14 @@ header img{
     border-style: none;
     font-size: 15px;
     color: #d2d2d2;
-    font-family: 'Nunito Sans', sans-serif;
+    
 }
 #email{
     width: 200px;
     height: 20px;
     margin-left: 20px;
     font-size: 15px;
-    font-family: 'Nunito Sans', sans-serif;
+    
 }
 .whatsapp-msg{
     display: flex;
@@ -134,7 +136,7 @@ header img{
     margin-left: 40px;
 }
 .whatsapp-msg h3{
-    font-family: 'Nunito Sans', sans-serif;
+    
     color:#d2d2d2 ;
 }
 .edit{
@@ -145,7 +147,6 @@ header img{
     background-color: #edd605;
     color:black;
     cursor: pointer;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 35px;
     width:70px;
     font-size: 20px;
@@ -157,7 +158,6 @@ header img{
     margin-left: 20px;
     border-color: #181818;
     cursor: pointer;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 33px;
     text-align: center;
     width:65px;
@@ -180,15 +180,62 @@ header img{
 .content-all{
    background-color:#181818;
    width:80%;
-   height: 500px;
+   height: 100%;
    margin-left: 150px;
+   overflow-y: scroll;
 }
 .Home-a-tag a,h4{
     color: aliceblue;
     text-decoration: none;
     margin-left: 90%;
     position: relative;
-    font-family: 'Nunito Sans', sans-serif;
     bottom: 10px;
 }
-
+.booking-history-div{
+    display: none;
+    background-color:white;
+    height: 100%;
+}
+.help-support{
+    display: none;
+}
+.about-us{
+    display: none;
+}
+.notification{
+    display: none;
+}
+.cinemas{
+    display: none;
+    background-color:white;
+}
+.booking-history-div{
+    display: flex;
+}
+.ticket-detail-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.movie_image{
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+    
+}
+.booking-history-div span{
+    margin-left: 10px;
+}
+.qrcode{
+    width:180px;
+}
+.qr_ticket_div{
+    display: flex;
+    gap: 70px;
+}
+.ticket_total_div h3{
+    display: flex;
+    margin-top: 50px;
+}

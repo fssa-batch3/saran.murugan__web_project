@@ -46,7 +46,7 @@
                 <input type="text" id="mreleasedate" name="movie_release_date" placeholder="Enter movie_release_date..">
 
                 <label for="Movie_type">Movie type:</label>
-                <input type="text" id="mtype" name="Movie_type placeholder="Enter movie type..">
+                <input type="text" id="mtype" name="Movie_type placeholder="Enter movie type..>
 
                 <label for="describe"> About movie description :</label>
                 <textarea id="description" name="description" placeholder="Enter Description.."></textarea>
@@ -57,7 +57,13 @@
                 <label for="Movie_background_image">Movie background image:</label>
                 <input type="text" id="mbackimage" name="Movie_background_image" placeholder="Enter the image link..">
 
-                <label for="cast 1">Cast 1:</label>
+
+                <div class="cast-image">
+                
+
+                </div>
+
+                <!-- <label for="cast 1">Cast 1:</label>
                 <input type="text" id="cast1name" name="cast1_name" placeholder="Enter the name..">
                 <input type="text" id="cast1image" name="cast1_image" placeholder="Enter the image link..">
 
@@ -84,7 +90,7 @@
 
                 <label for="director">Producer name:</label>
                 <input type="text" id="producername" name="producer_name" placeholder="Enter the name..">
-                <input type="text" id="producerimage" name="producer_image" placeholder="Enter the image link..">
+                <input type="text" id="producerimage" name="producer_image" placeholder="Enter the image link.."> -->
 
 
 
@@ -96,6 +102,49 @@
         </div>
     </div>
     <script>
+
+
+          
+          const movie_lists = JSON.parse(localStorage.getItem("show_movie_details"));
+
+          console.log(movie_lists);
+           
+//   console.log( movie_lists[4]["images"]["cast_image"].length)
+
+            // for(let i=0; i< movie_lists[1]["images"]["cast_image"].length; i++){
+
+   
+            //     let cast_images_div=document.querySelector(".cast-image");
+
+            //     let cast_image_content=document.createElement("input");
+            //     cast_image_content.setAttribute("class","cast_image")
+            //     cast_image_content.setAttribute("id","cast_images");
+            //     cast_images_div.append(cast_image_content);
+            // }
+
+
+            movie_lists.forEach((element,index) => {
+                // console.log(index)
+
+                // console.log(element)
+
+                console.log(element["images"]["cast_image"].length);
+
+
+                if(element["images"]["cast_image"].length==undefined){
+                    console.log("how")
+                }
+                if(index==element){
+                    console.log(element)
+                }
+           
+
+                
+            });
+            
+   
+          
+
 
         const movie_list = JSON.parse(localStorage.getItem("show_movie_details"));
 
@@ -174,14 +223,19 @@
             popup.style.display = 'none';
         })
 
+
         const movieform = document.getElementById("movie-form");
 
         const movie_details = JSON.parse(localStorage.getItem("show_movie_details")) ?? [];
 
         function updatemovie(cinema) {
 
+            console.log(cinema);
+
             document.getElementById("mname").value = cinema.name.movie_name;
+            // console.log(document.getElementById("mname").value);
             document.getElementById("mlanguage").value = cinema.language;
+            // console.log(document.getElementById("mlanguage").value);
             document.getElementById("mframe").value = cinema.movie_frame;
             document.getElementById("mtime").value = cinema.movie_time;
             document.getElementById("mtype").value = cinema.movie_type;
@@ -190,20 +244,22 @@
             document.getElementById("description").value = cinema.Description;
             document.getElementById("mimage").value = cinema.images.main_image;
             document.getElementById("mbackimage").value = cinema.images.background_image;
-            document.getElementById("cast1name").value = cinema.name.cast1_name;
-            document.getElementById("cast1image").value = cinema.images.cast1_image;
-            document.getElementById("cast2name").value = cinema.name.cast2_name;
-            document.getElementById("cast2image").value = cinema.images.cast2_image;
-            document.getElementById("cast3name").value = cinema.name.cast3_name;
-            document.getElementById("cast3image").value = cinema.images.cast3_image;
-            document.getElementById("cast4name").value = cinema.name.cast4_name;
-            document.getElementById("cast4image").value = cinema.images.cast4_image;
-            document.getElementById("directorname").value = cinema.name.director_name;
-            document.getElementById("directorimage").value = cinema.images.director_image;
-            document.getElementById("musicdirectorname").value = cinema.name.music_director_name;
-            document.getElementById("musicdirectorimage").value = cinema.images.music_director_image;
-            document.getElementById("producername").value = cinema.name.producer_name;
-            document.getElementById("producerimage").value = cinema.images.producer_image;
+            document.querySelectorAll(".cast_images").value=cinema.images.cast_image;
+            // document.getElementById("cast_images").value= cinema.images.cast_image.;
+            // document.getElementById("cast1name").value = cinema.name.cast1_name;
+            // document.getElementById("cast1image").value = cinema.images.cast1_image;
+            // document.getElementById("cast2name").value = cinema.name.cast2_name;
+            // document.getElementById("cast2image").value = cinema.images.cast2_image;
+            // document.getElementById("cast3name").value = cinema.name.cast3_name;
+            // document.getElementById("cast3image").value = cinema.images.cast3_image;
+            // document.getElementById("cast4name").value = cinema.name.cast4_name;
+            // document.getElementById("cast4image").value = cinema.images.cast4_image;
+            // document.getElementById("directorname").value = cinema.name.director_name;
+            // document.getElementById("directorimage").value = cinema.images.director_image;
+            // document.getElementById("musicdirectorname").value = cinema.name.music_director_name;
+            // document.getElementById("musicdirectorimage").value = cinema.images.music_director_image;
+            // document.getElementById("producername").value = cinema.name.producer_name;
+            // document.getElementById("producerimage").value = cinema.images.producer_image;
 
         }
 
@@ -220,55 +276,59 @@
             const Description = document.getElementById("description").value
             const movie_main_image = document.getElementById("mimage").value
             const background_image = document.getElementById("mbackimage").value
-            const cast1_name = document.getElementById("cast1name").value
-            const cast1_image = document.getElementById("cast1image").value
-            const cast2_name = document.getElementById("cast2name").value
-            const cast2_image = document.getElementById("cast2image").value
-            const cast3_name = document.getElementById("cast3name").value
-            const cast3_image = document.getElementById("cast3image").value
-            const cast4_name = document.getElementById("cast4name").value
-            const cast4_image = document.getElementById("cast4image").value
-            const director_name = document.getElementById("directorname").value
-            const director_image = document.getElementById("directorimage").value
-            const music_director_name = document.getElementById("musicdirectorname").value
-            const music_director_image = document.getElementById("musicdirectorimage").value
-            const producer_name = document.getElementById("producername").value
-            const producer_image = document.getElementById("producerimage").value
+            // const cast_image=document.getElementById()
+
+            // const cast1_name = document.getElementById("cast1name").value
+            // const cast1_image = document.getElementById("cast1image").value
+            // const cast2_name = document.getElementById("cast2name").value
+            // const cast2_image = document.getElementById("cast2image").value
+            // const cast3_name = document.getElementById("cast3name").value
+            // const cast3_image = document.getElementById("cast3image").value
+            // const cast4_name = document.getElementById("cast4name").value
+            // const cast4_image = document.getElementById("cast4image").value
+            // const director_name = document.getElementById("directorname").value
+            // const director_image = document.getElementById("directorimage").value
+            // const music_director_name = document.getElementById("musicdirectorname").value
+            // const music_director_image = document.getElementById("musicdirectorimage").value
+            // const producer_name = document.getElementById("producername").value
+            // const producer_image = document.getElementById("producerimage").value
 
 
 
             const cinemadetails = {
                 name: {
                     movie_name: movie_name,
-                    cast1_name: cast1_name,
-                    cast2_name: cast2_name,
-                    cast3_name: cast3_name,
-                    cast4_name: cast4_name,
-                    director_name: director_name,
-                    music_director_name: music_director_name,
-                    producer_name: producer_name,
+                    cast_images:cast_images_values,
+                    // cast1_name: cast1_name,
+                    // cast2_name: cast2_name,
+                    // cast3_name: cast3_name,
+                    // cast4_name: cast4_name,
+                    // director_name: director_name,
+                    // music_director_name: music_director_name,
+                    // producer_name: producer_name,
                 },
                 images: {
                     main_image: movie_main_image,
                     background_image: background_image,
-                    cast1_image: cast1_image,
-                    cast2_image: cast2_image,
-                    cast3_image: cast3_image,
-                    cast4_image: cast4_image,
-                    director_image: director_image,
-                    music_director_image: music_director_image,
-                    producer_image: producer_image,
+                    // cast1_image: cast1_image,
+                    // cast2_image: cast2_image,
+                    // cast3_image: cast3_image,
+                    // cast4_image: cast4_image,
+
                 },
                 movie_time: movie_time,
                 movie_certified:movie_certified,
                 movie_release_date:movie_release_date,
                 language: movie_language,
                 movie_frame: movie_frame,
+                movie_releasing:"false",
                 movie_type: movie_type,
                 Description: Description,
                 status: true,
 
             }
+
+            
 
             // find index of current  movie in details
             const index = movie_details.findIndex((mdetails) => mdetails.name.movie_name === movie_name);

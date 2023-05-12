@@ -20,16 +20,50 @@
             <h1>RIDE NOW</h1>
 
             <h3>To</h3>
-            <p id="theatre_name"> </p>
+            <p id="theatre_name"></p>
+
+            <h3>Profile_detail</h3>
+            <p id="email"></p>
 
             <h3>From</h3>
             <div class="pickup">
-                <input type="text" id="curr-location" placeholder="Enter your live location link">
-                <input type="text" id="phone" placeholder="Enter your phone number">
-                <button style="color: black; padding: 5px;" id="done-button">DONE</button>
-            </div>
+                <input type="text" id="number" class="location" placeholder="Enter your phone number">
+                <select class="places">
+                    <option>Choose your pickup area</option>
+                    <option>Velacherry,depot</option>
+                    <option>Koyambedu,main depot</option>
+                    <option>Velacherry,railway,station</option>
+                    <option>Koyambedu,metro railway station</option>
+                    <option>Koyambedu junction bridge</option>
+                    <option>Thiruvanmiyur ,depot</option>
+                    <option>Thiruvanmiyur,railway station</option>
+                    <option>Sozinganallur junction bus stand</option>
+                    <option>Navalur bus stand ,near marina mall</option>
+                    <option>Thoraipakkam,bus stand ,near BSR mall </option>
+                    <option>Tharamani railway station</option>
+                    <option>Tharamani main bus stand</option>
+                    <option>Ashok piller metro</option>
+                    <option>Ashok nagar ,near kasi theatre</option>
+                    <option>Gurunanak college bus stand,near pheonix mal</p>
+                    <option>Guindy railway station</option>
+                    <option>Saidapet metro station</option>
+                    <option>Adayar depot</option>
+                    <option>Tambaram railway station</option>
+                    <option>Theyagaraja nagar,depot</option>
+                    <option>Mambalam railway station</option>
+                    <option>Perambur railway station</option>
+                    <option>Medavakkam koot road,depot</option>
+                    <option>Semmancherry bus stand,near jeppiar college</option>
+                    <option>Kamachi hospital bus stand</option>
+                    <option>Mylapore railway station</option>
+                    <option>Egmore railway station</option>
+                    <option>Chepak railway staion</option>
 
-            <!-- <div class="pickup-time">
+                </select>
+            </div>
+            <!-- <input type="text" id="phone" placeholder="Enter your phone number">
+                <button style="color: black; padding: 5px;" id="done-button">DONE</button>
+             <div class="pickup-time">
                 <label for="PICKUP TIME">PICKUP TIME</label>
                 <h3 id="show_time"></h3>
             </div> -->
@@ -53,12 +87,33 @@
 
 <script>
 
+    //    let locat=document.querySelectorAll(".location");
+
+    //    for(let i=0;i<locat.length;i++){
+    //     locat[i].addEventListener("click", function(){
+    //         this.classList.toggle("active");
+    //         var place= this.nextElementSibling;
+    //         if(place.style.display==="block"){
+    //             place.style.display="none";
+    //         }
+    //         else{
+    //             place.style.display="block";
+    //         }
+    //     })
+
+    //    }
+
+    let user_profile = JSON.parse(localStorage.getItem("profile_details"));
+
+
+
+    let email = document.getElementById("email");
+    email.innerText = user_profile["email"];
 
 
 
 
 
-    
 
     let users_booking = JSON.parse(localStorage.getItem("user_booking"));
     const theater_name = document.getElementById("theatre_name");
@@ -68,7 +123,7 @@
 
     button = document.createElement("button");
     button.setAttribute("id", "book-button");
-   
+
     book_button.append(button);
 
 
@@ -88,16 +143,26 @@
     //  rate_h3.append(rate);
 
     let rate = document.getElementById("rate");
-    let cab_rate = JSON.parse(localStorage.getItem("cab")) || [];
-    document.getElementById("done-button").addEventListener("click", function () {
-        rate.style.display = "block";
-        let new_booking = {
-            "cab_rate": rate.innerText
-            
-        }
-        cab_rate.push(new_booking)
-        localStorage.setItem("cab", JSON.stringify(cab_rate));
-    });
+
+    let user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
+    if (JSON.parse(localStorage.getItem("user_booking"))) {
+        user_booking.find(e => {
+            if (e["email"] == e.email) {
+                e["cab_rate"] = rate
+            }
+        })
+    }
+
+
+    // let cab_rate = JSON.parse(localStorage.getItem("cab")) || [];
+    // document.getElementById("done-button").addEventListener("click", function () {
+    //     rate.style.display = "block";
+    //     let new_booking = {
+    //         "cab_rate": rate.innerText
+    //     }
+    //     cab_rate.push(new_booking)
+    //     localStorage.setItem("cab", JSON.stringify(cab_rate));
+    // });
 
 
 

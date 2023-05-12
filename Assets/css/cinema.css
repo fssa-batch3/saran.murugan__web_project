@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');   
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-family: 'Barlow', sans-serif;                                       
+}
+header{
+
+    background-color:#edd605;
+    height: 100px;
+}
+header img{
+    width: 120px;
+    height: 130px;
+    align-items: center;
+   position:relative;
+   bottom: 20px;
+} 
+body{
+    background-color: black;
+}
+h2{
+    color: white;
+
+}
+.theatre_name_div{
+    display: flex;
+    justify-content: space-around;
+}
+.theatre-div{
+    display: flex;
+    justify-content: space-around;
+}
+.theatres{
+    border: 1px solid white;
+    padding: 40px;
+    width: 550px;
+    margin-top: 20px;
+    height: 150px;
+    border-radius: 20px;
+}
+.location-div{
+    display: flex;
+    padding-top: 30px;
+}
+.location-div img{
+    width:40px;
+    height: 40px;
+}
+.location-div h3{
+    color:white;
+}
+.see_shows_button{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #edd605;
+    
+ }
+ a:hover{
+    text-decoration: underline white;
+ }

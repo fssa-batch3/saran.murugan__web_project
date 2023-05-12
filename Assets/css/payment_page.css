@@ -5,6 +5,7 @@ body{
 }
 .all-content{
    display: flex;
+   margin-top: 60px;
    justify-content: space-around;
 }
 input[type="text"] {
@@ -14,7 +15,11 @@ input[type="text"] {
 .profile-details{
     display: flex;
     gap: 50px;
+    width:600px;
     margin-left: 30px;
+}
+h3{
+    color: #9d9d9d;
 }
 .profile-contents{
     background-color: #121212;
@@ -94,6 +99,14 @@ ul li:hover{
     display: none;
 }
 .debit-button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 11px;
+    border-radius: 10px;
+    border-color: white;
+}
+.net-button{
     background-color: white;
     width: 130px;
     height: 40px;
@@ -225,7 +238,7 @@ aside{
     width: 350px;
     margin-left: 20px;
  }
- .cab{
+ .cab-total{
     display: flex;
     justify-content: space-between;
     width: 350px;
@@ -256,7 +269,8 @@ aside{
  }
  .cab{
     display: flex;
-    margin-top: 30px;
+    width: 350px;
+    gap:20px;
  }
 #cab-head{
     color: white;
@@ -264,8 +278,13 @@ aside{
 .a-cab{
     width: 100px;
     height: 40px;
+    margin-top: 10px;
     text-decoration: none;
     color: #121212;
     border-radius: 10px;
     background-color:  #edde3b;
+}
+.a_button{
+    text-decoration: none;
+    color:black;
 }
