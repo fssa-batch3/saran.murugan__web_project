@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 movie_payments.html>
 
 <head lan="eng">
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Seat selecting</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../Assets/css/seat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
@@ -78,12 +79,8 @@ movie_payments.html>
 
     <!-- header logo -->
 
-
     <!-- movie banner -->
     <div class="banner">
-
-
-
 
     </div>
 
@@ -96,14 +93,17 @@ movie_payments.html>
     <div class="seat_disclaimer">
 
         <div class="show-case">
-            <p class="seat-prime selected"></p><label style="color: white;">SEAT SELECTED</label>
+            <p class="seat-prime selected"></p>
+<label style="color: white;">SEAT SELECTED</label>
         </div>
 
         <div class="show-case">
-            <p class="seat-prime"></p> <label style="color: white;">SEAT AVAILABLE</label>
+            <p class="seat-prime"></p>
+ <label style="color: white;">SEAT AVAILABLE</label>
         </div>
         <div class="show-case">
-            <p class="seat-prime occupied"></p><label style="color: white;">SEAT BOOKED</label>
+            <p class="seat-prime occupied"></p>
+<label style="color: white;">SEAT BOOKED</label>
         </div>
 
     </div>
@@ -116,9 +116,7 @@ movie_payments.html>
 
         <h2>First class(Rs130)</h2>
 
-
     </div>
-
 
     <div id="container">
         <div class="seat" data-name="A1">A1</div>
@@ -134,7 +132,6 @@ movie_payments.html>
         <!-- Add more seats as necessary -->
     </div>
 
-
     <div id="container">
         <div class="seat" data-name="B1">B1</div>
         <div class="seat" data-name="B2">B2</div>
@@ -148,7 +145,6 @@ movie_payments.html>
         <div class="seat" data-name="B10">B10</div>
         <!-- Add more seats as necessary -->
     </div>
-
 
     <div id="container">
         <div class="seat" data-name="C1">C1</div>
@@ -178,7 +174,6 @@ movie_payments.html>
         <!-- Add more seats as necessary -->
     </div>
 
-
     <div id="container">
         <div class="seat" data-name="E1">E1</div>
         <div class="seat" data-name="E2">E2</div>
@@ -193,7 +188,6 @@ movie_payments.html>
         <!-- Add more seats as necessary -->
     </div>
 
-
     <!-- seat prime -->
     <div class="foot">
         <div class="total_seatandcost">
@@ -205,7 +199,6 @@ movie_payments.html>
                  </div>
                 <p id="selected-seats" style="color: black; "></p>
             </div>
-            
 
             <div class="theatre_details">
                 <h3 id="theater_name" style="color:black"></h3>
@@ -213,67 +206,45 @@ movie_payments.html>
                 <span id="count_details"></span>
             </div>
 
-
             <div class="cost_total">
                 <h3>TOTAL(INR)</h3>
                 <span id="total">0</span>
 
             </div>
-            
 
         </div>
 
         <p id="seat-length" style="display: none;"></p>
 
-
         <img onclick="bookSeats()" id="next-arrow" src="https://i.ibb.co/wSgdWYq/right-arrow.png" alt="logo">
-
-
-
-
-
 
     </div>
 
-
-
-
-
-
-    <script>
-
-        let movie_list = JSON.parse(localStorage.getItem("show_movie_details"))
-
+    <script>        const movie_list = JSON.parse(localStorage.getItem("show_movie_details"))
 
         const url = window.location.search;                // ?name=Arun
         const urlParams = new URLSearchParams(url);    //"name":"ponniyinselvan"    // converting string into key value pair
         const username = urlParams.get("name")             // return value of the "name" key
         console.log(username);
 
-
         let res;
-        movie_list.find(function (e) {
-            if (e["name"]["movie_name"] == username) { //arr[0],arr[1]  =e
-                return res = e;
-            }
-            else {
-                return res = 0;
-            }
-        });
-
-
-
+        movie_list.find((e) => {
+    if (e.name.movie_name == username) { //arr[0],arr[1]  =e
+        return res = e;
+    }
+    
+        return res = 0;
+    
+});
 
         // let button= document.getElementById("button");
 
+        const banner = document.querySelector(".banner");
+        banner.style.backgroundImage = res.images.background_image;
 
-        let banner = document.querySelector(".banner");
-        banner.style.backgroundImage = res["images"]["background_image"];
-
-        let movie_name = document.createElement("h1");
-        movie_name.innerText = res["name"]["movie_name"];
+        const movie_name = document.createElement("h1");
+        movie_name.innerText = res.name.movie_name;
         banner.append(movie_name);
-
 
         // let next_arrow = document.getElementById("next-arrow");
 
@@ -282,22 +253,13 @@ movie_payments.html>
         // a.setAttribute("href", "movie_payment_page.html?name=" + res["name"]["movie_name"]);
         // next_arrow.append(a);
 
-        let users_booking = JSON.parse(localStorage.getItem("user_booking"));
-
-
+        const users_booking = JSON.parse(localStorage.getItem("user_booking"));
 
         const theater_name = document.getElementById("theater_name");
-        theater_name.innerHTML = users_booking[0]["theatre_name"];
+        theater_name.innerHTML = users_booking[0].theatre_name;
 
         const show_time = document.getElementById("show_time");
-        show_time.innerHTML = users_booking[0]["show_time"]
-
-
-
-
-
-
-
+        show_time.innerHTML = users_booking[0].show_time
 
         const container = document.querySelectorAll("#container");
         const selectedSeatsList = document.getElementById("selected-seats");
@@ -305,8 +267,6 @@ movie_payments.html>
         const ticketprice = document.getElementById("movie").value;
         
         let selectedSeats = [];
-
-
 
         const seats = document.querySelectorAll(".seat");
         seats.forEach(seat => {
@@ -334,16 +294,11 @@ movie_payments.html>
             // const selectedSeatCount = selectedSeats.length;
 
             const selectseatcount=document.getElementById("seat-length").innerText=selectedSeats.length;
-
-        
+         
+             
             total.innerText = selectseatcount * ticketprice;
 
-
-
         }
-
-
-
 
         function generateRandomAlphabetString(length) {
             let result = '';
@@ -359,13 +314,7 @@ movie_payments.html>
 
             return result + num;
         }
-
         const randomString = generateRandomAlphabetString();
-
-
-
-
-
 
         function bookSeats() {
             if (selectedSeats.length === 0) {
@@ -373,33 +322,32 @@ movie_payments.html>
             } else {
                 alert(`You have selected seats ${selectedSeats.join(", ")}.`);
                 console.log(selectedSeats);
-                window.location.href = "movie_payment_page.html?name=" + res["name"]["movie_name"];
+                window.location.href = `movie_payment_page.html?name=${ res.name.movie_name}`;
 
-
-                let user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
+                const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
                 if (JSON.parse(localStorage.getItem("user_booking"))) {
                     user_booking.find(e => {
-                        if (e["email"] == e.email) {
-                            e["seat_names"] = selectedSeats
-                            e["booking_id"] = randomString
-                            // e["seat_count"] = selectseatcount
-                            e["seat_price"] =total.innerText
+                        if (e.email == e.email) {
+                            e.seat_names = selectedSeats
+                            e.booking_id = randomString
+                            e.seat_count= selectedSeats.length
+                            e.seat_price =total.innerText
                             localStorage.setItem("user_booking", JSON.stringify(user_booking))
 
                         }
                         else {
-                            let booking_data = {
-                                "email": users.booking,
-                                "show_day": day,
-                                "show_date": date,
-                                "show_month": month,
-                                "theatre_name": theatre_name,
-                                "seat_names": selectedSeats,
-                                "booking_id": randomString,
-                                // "seat_count":selectseatcount,
-                                "seat_price":total.innerText,
-                                "show_time": show_time,
-                            }
+                            const booking_data = {
+                        "email": users.booking,
+                        "show_day": day,
+                        "show_date": date,
+                        "show_month": month,
+                        "theatre_name":theatre_name,
+                        "seat_names": selectedSeats,
+                        "booking_id": randomString,
+                        "seat_count":selectedSeats.length,
+                        "seat_price":total.innerText,
+                        "show_time":show_time,
+                    }
                             user_booking.push(booking_data)
 
                             // users.push(booking_data)
@@ -409,19 +357,13 @@ movie_payments.html>
                     })
                 }
 
-
                 selectedSeats = [];
 
                 seats.forEach(seat => seat.classList.remove("selected"));
                 updateSelectedSeatsList();
             }
         }
-
-
-
     </script>
-
-
 
 </body>
 

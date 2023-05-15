@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
-
 body{
     background-image: linear-gradient(rgb(4,9,30,0.7),rgb(4,9,30,0.7)),url(../images/logo/profile_banner.jpg);
     /* mix-blend-mode: darken; */
@@ -9,7 +8,7 @@ body{
     padding: 0px;
 }
 html{
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow', sans-serif;                                       
 }
 header{
     background-color:#edd605;
@@ -209,8 +208,12 @@ header img{
     display: none;
     background-color:white;
 }
+.booking-history-div-content{
+    display: flex;
+}
 .booking-history-div{
     display: flex;
+    flex-direction: column;
 }
 .ticket-detail-div{
     display: flex;

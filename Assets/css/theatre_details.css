@@ -44,7 +44,6 @@ body{
 }
 .show_days_div {
     padding: 30px;
-    border: 1px ;
     display: flex;
     flex-direction: column;
     cursor: pointer;

@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="eng">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet'  href='../Assets/css/add_theatre.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Assets/css/add_theatre.css">
 </head>
+
 <body>
 
     <div class="popup-content">
 
         <form id="movie-form">
 
-          <label>Theatre name :</label>
-          <input type="type" id="theatre-name" placeholder="Enter theatre name..">
+            <label>Theatre name :</label>
+            <input type="text" id="theatre-name" placeholder="Enter theatre name..">
 
-          <label>Theatre address</label>
-          <textarea name="theatre-address" id="theatre-address" cols="30" placeholder="Enter Theatre address.."  rows="10"></textarea>
+            <label>Theatre address</label>
+            <textarea name="theatre-address" id="theatre-address" cols="30" placeholder="Enter Theatre address.."
+                rows="10"></textarea>
 
-          <label>Theatre map address</label>
-          <textarea id="theatre-map-location" placeholder="Enter map location link .."></textarea>
-         
+            <label>Theatre map address</label>
+            <textarea id="theatre-map-location" placeholder="Enter map location link .."></textarea>
 
-          <button>Submit</button>
+            <label>Theare latitude and longitude </label>
+            <input type="text" placeholder="Enter latitude and longitude" id="lat_long">
 
-                
+            <button>Submit</button>
+
     </div>
-        </form>
+    </form>
 
-  
-    
-    <script>
+    <script>        const form_control = document.getElementById("movie-form");
 
-        const form_control= document.getElementById("movie-form");
+        function formsubmit() {
 
-        function formsubmit(){
+            const theatre_name = document.getElementById("theatre-name").value;
+            const theatre_address = document.getElementById("theatre-address").value;
+            const theatre_map_location = document.getElementById("theatre-map-location").value;
+            const theatre_lat_long=document.getElementById("lat_long").value
 
-            const theatre_name= document.getElementById("theatre-name").value;
-            const theatre_address=document.getElementById("theatre-address").value;
-            const theatre_map_location= document.getElementById("theatre-map-location").value;
+            const theatre_details = {
 
+                theatre_name,
+                theatre_address,
+                theatre_map_location,
+                theatre_lat_long,
 
-         let theatre_details={
-          
-           theatre_name:theatre_name,
-           theatre_address:theatre_address,
-           theatre_map_location:theatre_map_location,
-        
-         }
+            }
 
-         const details_theatre= JSON.parse(localStorage.getItem("theatre_details")) ?? [];
+            const details_theatre = JSON.parse(localStorage.getItem("theatre_details")) ?? [];
 
-         details_theatre.push(theatre_details)
+            details_theatre.push(theatre_details)
 
-         alert('theatre created')
+            alert('theatre created')
 
-         localStorage.setItem("theatre_details", JSON.stringify(details_theatre))
+            localStorage.setItem("theatre_details", JSON.stringify(details_theatre))
 
         }
-    
-        form_control.addEventListener("submit", e =>{
+
+        form_control.addEventListener("submit", e => {
             e.preventDefault();
 
             formsubmit()
         })
     </script>
 </body>
+
 </html>

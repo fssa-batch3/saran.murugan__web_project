@@ -4,7 +4,8 @@
   "description": "About my project: this my 100 days project ,\r i helping to peoples easy to get cinema tickets in online ,\r and i add new feature cab also book there.\r live server:https://freakysaran.github.io/Lets-show-100-days-project/\r Problem statement: https://docs.google.com/document/d/1ZCUK13nDjeW96mNd92nMW-dIo1SmQQxrFlsQaPwkwOs/edit?usp=sharing\r Market Research:https://docs.google.com/document/d/1w4iDjmDV4GU1iq43FA7roebex8IrtpstP-UFlFFIB0s/edit?usp=sharing\r User flow: https://drive.google.com/file/d/1fIytjSqPIGPcD7YNic5le1NrkF92eRkl/view?usp=share_link\r Wireframe: https://drive.google.com/file/d/1LqXwCjJntdGz6BWtTNUGyDUMwExW1N5r/view?usp=share_link",
   "main": "main.js",
   "scripts": {
-    "dev": "http-server"
+    "dev": "http-server",
+    "lint": "npx eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,26 @@
     "http-server": "^14.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
-    "eslint": "^8.40.0",
-    "husky": "^8.0.3"
+    "@html-eslint/eslint-plugin": "^0.18.0",
+    "@html-eslint/parser": "^0.18.0",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-code-complexity": "^1.1.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
+    "prettier-config-standard": "^5.0.0"
   }
 }

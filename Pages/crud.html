@@ -2,12 +2,12 @@
 <html lang="eng">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='../Assets/css/crud.css'>
-    <script src='main.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Assets/css/crud.css">
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -72,6 +72,7 @@
                     <option value="MUSICAL,ROMANCE,DRAMA">MUSICAL,ROMANCE,DRAMA</option>
                     <option value="HISTORICAL,FANTACY">HISTORICAL,FANTACY</option>
                     <option value="CRIME,THRILLER,DRAMA">CRIME,THRILLER,DRAMA</option>
+                    <option value="COMEDY,DRAMA,FAMILY">COMEDY,DRAMA,FAMILY</option>
                     <option value="FANTACY,ADVENTURE,SCI-FI">FANTACY,ADVENTURE,SCI-FI</option>
                 </select>
                 <!-- <input type="text" required="true" id="movie_type" placeholder="Enter "> -->
@@ -105,7 +106,6 @@
                 <input type="text" required="true" id="movie_background_image" placeholder="Enter the image link">
             </div>
 
-
             <div class="cast_crew">
 
                 <label>Choose how many cast </label>
@@ -134,11 +134,7 @@
 
                 <label class="casts">Enter cast details</label>
 
-
                  <div id="casts"></div>
-
-
-
 
                  <label>Choose how many cast </label>
                  <select id="crew-select-option">
@@ -169,11 +165,6 @@
                  <div id="crews"></div>
             </div>
 
-
-            
-
-            
-
             <!-- </div>
             <div class="movie_wrapper">
                 <label for="Cast 1 ">Cast 1 </label>
@@ -199,7 +190,6 @@
                 <input type="text" required="true" id="cast4_image" placeholder="Enter image link">
             </div>
 
-
             <div class="movie_wrapper">
                 <label for="Director ">Director </label>
                 <input type="text" required="true" id="director_name" placeholder="Enter director name">
@@ -223,100 +213,89 @@
         </form>
     </div>
 
-    <script>
+    <script>       
+     const cast_select_option_button = document.getElementById("cast-select-option-button").addEventListener("click", e => {
+    e.preventDefault()
+    const cast_select_option = document.getElementById("cast-select-option").value;
 
+    const option = cast_select_option
 
+    console.log(option);
 
+    for (i = 0; i < option.length; i++) {
 
+        const casts = document.getElementById("casts")
 
-        let cast_select_option_button = document.getElementById("cast-select-option-button").addEventListener("click", e => {
-            e.preventDefault()
-            let cast_select_option = document.getElementById("cast-select-option").value;
+        const label=document.createElement("label")
+        label.innerText="Cast";
+        casts.append(label)
 
-            let option = cast_select_option
+        const cast_image = document.createElement("input");
+        cast_image.setAttribute("type", "text");
+        //   cast_image.setAttribute("id","cast_image")
+        cast_image.setAttribute("class", "cast_image")
+        cast_image.setAttribute("placeholder", "Enter image https: link")
+        casts.appendChild(cast_image);
 
-            console.log(option);
+        const cast_name = document.createElement("input");
+        cast_name.setAttribute("type", "text");
+        //   cast_name.setAttribute("id","cast_name");
+        cast_name.setAttribute("class", "cast_name");
+        cast_name.setAttribute("placeholder", "Enter cast name")
+        casts.appendChild(cast_name);
 
-            for (i = 0; i < option; i++) {
+        const cast_role = document.createElement("input")
+        cast_role.setAttribute("type", "text");
+        cast_role.setAttribute("class", "cast_role")
+        //   cast_role.setAttribute("id","cast_role");
+        cast_role.setAttribute("value", "Actor");
+        casts.appendChild(cast_role);
 
-                let casts = document.getElementById("casts")
+        console.log()
+    }
+});
 
-                let label=document.createElement("label")
-                label.innerText="Cast";
-                casts.append(label)
+        const crew_select_option_button = document.getElementById("crew-select-option-button").addEventListener("click", e => {
+    e.preventDefault()
+    const crew_select_option = document.getElementById("crew-select-option").value;
 
-                let cast_image = document.createElement("input");
-                cast_image.setAttribute("type", "text");
-                //   cast_image.setAttribute("id","cast_image")
-                cast_image.setAttribute("class", "cast_image")
-                cast_image.setAttribute("placeholder", "Enter image https: link")
-                casts.appendChild(cast_image);
+    const option2 = crew_select_option
 
-                let cast_name = document.createElement("input");
-                cast_name.setAttribute("type", "text");
-                //   cast_name.setAttribute("id","cast_name");
-                cast_name.setAttribute("class", "cast_name");
-                cast_name.setAttribute("placeholder", "Enter cast name")
-                casts.appendChild(cast_name);
+    console.log(option2);
 
-                let cast_role = document.createElement("input")
-                cast_role.setAttribute("type", "text");
-                cast_role.setAttribute("class", "cast_role")
-                //   cast_role.setAttribute("id","cast_role");
-                cast_role.setAttribute("value", "Actor");
-                casts.appendChild(cast_role);
+    for (i = 0; i < option2; i++) {
 
-                console.log()
-            }
-        });
+        const crewts = document.getElementById("crews")
 
+        const label=document.createElement("label")
+        label.innerText="Crew";
+        crews.append(label)
 
+        const crew_image = document.createElement("input");
+        crew_image.setAttribute("type", "text");
+        //   cast_image.setAttribute("id","cast_image")
+        crew_image.setAttribute("class", "crew_image")
+        crew_image.setAttribute("placeholder", "Enter image https: link")
+        crews.appendChild(crew_image);
 
-        let crew_select_option_button = document.getElementById("crew-select-option-button").addEventListener("click", e => {
-            e.preventDefault()
-            let crew_select_option = document.getElementById("crew-select-option").value;
+        const crew_name = document.createElement("input");
+        crew_name.setAttribute("type", "text");
+        //   cast_name.setAttribute("id","cast_name");
+        crew_name.setAttribute("class", "crew_name");
+        crew_name.setAttribute("placeholder", "Enter crew name")
+        crews.appendChild(crew_name);
 
-            let option2 = crew_select_option
+        const crew_role = document.createElement("input")
+        crew_role.setAttribute("type", "text");
+        crew_role.setAttribute("class", "crew_role")
+        crew_role.setAttribute("placeholder","Enter crew role name")
+        crews.appendChild(crew_role);
 
-            console.log(option2);
-
-            for (i = 0; i < option2; i++) {
-
-                let crewts = document.getElementById("crews")
-
-                let label=document.createElement("label")
-                label.innerText="Crew";
-                crews.append(label)
-
-                let crew_image = document.createElement("input");
-                crew_image.setAttribute("type", "text");
-                //   cast_image.setAttribute("id","cast_image")
-                crew_image.setAttribute("class", "crew_image")
-                crew_image.setAttribute("placeholder", "Enter image https: link")
-                crews.appendChild(crew_image);
-
-                let crew_name = document.createElement("input");
-                crew_name.setAttribute("type", "text");
-                //   cast_name.setAttribute("id","cast_name");
-                crew_name.setAttribute("class", "crew_name");
-                crew_name.setAttribute("placeholder", "Enter crew name")
-                crews.appendChild(crew_name);
-
-                let crew_role = document.createElement("input")
-                crew_role.setAttribute("type", "text");
-                crew_role.setAttribute("class", "crew_role")
-                crew_role.setAttribute("placeholder","Enter crew role name")
-                crews.appendChild(crew_role);
-
-                console.log()
-            }
-        });
-
-
-
+        console.log()
+    }
+});
 
         function formsubmit() {
-
 
             const movie_name = document.getElementById("movie_name").value;
             const movie_language = document.getElementById("movie_language").value;
@@ -352,78 +331,75 @@
             // const producer_name = document.getElementById("producer_name").value
             // const producer_image = document.getElementById("producer_image").value
 
-
             console.log(cast_images.length)
-            let cast_image_values = []
+            const cast_image_values = []
             for (let i = 0; i < cast_images.length; i++) {
                 cast_image_values.push(cast_images[i].value)
             }
 
-            let cast_name_values=[]
+            const cast_name_values=[]
             for(let i=0; i< cast_names.length;i++){
                 cast_name_values.push(cast_names[i].value)
             }
 
-            let cast_role_values=[]
+            const cast_role_values=[]
             for(let i=0; i<cast_roles.length;i++){
                 cast_role_values.push(cast_roles[i].value)
             }
 
-            let crew_image_values = []
+            const crew_image_values = []
             for (let i = 0; i < crew_images.length; i++) {
                 crew_image_values.push(crew_images[i].value)
             }
 
-            let crew_name_values=[]
+            const crew_name_values=[]
             for(let i=0; i< crew_names.length;i++){
                 crew_name_values.push(crew_names[i].value)
             }
 
-            let crew_role_values=[]
+            const crew_role_values=[]
             for(let i=0; i<crew_roles.length;i++){
                 crew_role_values.push(crew_roles[i].value)
             }
 
+            const movie_details = {
 
-            let movie_details = {
-
-
-                name: {
-                    movie_name: movie_name,
-                     cast_name:cast_name_values,
-                     cast_role:cast_role_values,
-                     crew_name:crew_name_values,
-                     crew_role:crew_role_values,
-                    // cast2_name: cast2_name,
-                    // cast3_name: cast3_name,
-                    // cast4_name: cast4_name,
-                    // director_name: director_name,
-                    // music_director_name: music_director_name,
-                    // producer_name: producer_name,
-                },
-                images: {
-                    main_image: movie_main_image,
-                    background_image: movie_background_image,
-                    cast_image: cast_image_values,
-                    crew_image:crew_image_values,
-                    // cast1_image: cast1_image,
-                    // cast2_image: cast2_image,
-                    // cast3_image: cast3_image,
-                    // cast4_image: cast4_image,
-                    //     director_image: director_image,
-                    //     music_director_image: music_director_image,
-                    //     producer_image: producer_image,
-                },
-                movie_time: movie_time,
-                language: movie_language,
-                frame: movie_frame,
-                movie_certified: movie_certified,
-                movie_type: movie_type,
-                movie_release_date: movie_release_date,
-                movie_releasing:movie_releasing,
-                Description: movie_description,
-                status: true,
-            }
+        name: {
+            movie_name,
+             cast_name:cast_name_values,
+             cast_role:cast_role_values,
+             crew_name:crew_name_values,
+             crew_role:crew_role_values,
+            // cast2_name: cast2_name,
+            // cast3_name: cast3_name,
+            // cast4_name: cast4_name,
+            // director_name: director_name,
+            // music_director_name: music_director_name,
+            // producer_name: producer_name,
+        },
+        images: {
+            main_image: movie_main_image,
+            background_image: movie_background_image,
+            cast_image: cast_image_values,
+            crew_image:crew_image_values,
+            // cast1_image: cast1_image,
+            // cast2_image: cast2_image,
+            // cast3_image: cast3_image,
+            // cast4_image: cast4_image,
+            //     director_image: director_image,
+            //     music_director_image: music_director_image,
+            //     producer_image: producer_image,
+        },
+        movie_time,
+        language: movie_language,
+        frame: movie_frame,
+        movie_certified,
+        movie_type,
+        movie_release_date,
+        movie_releasing,
+        Description: movie_description,
+        status: true,
+    }
 
             const details_movie = JSON.parse(localStorage.getItem("show_movie_details")) ?? [];
 
@@ -433,19 +409,13 @@
 
             localStorage.setItem("show_movie_details", JSON.stringify(details_movie));
 
-            
-
-
         }
         const form_control = document.getElementById("movie_details-form");
 
         form_control.addEventListener("submit", e => {
 
-
             formsubmit()
         })
-
-
     </script>
     <div class="theatre-details-section">
 

@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 
 <head lan="eng">
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="../Assets/css/log.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../Assets/css/log.css">
 
 </head>
 
 <body>
 
-
     <div class="main">
 
         <h1>Lets start to book your tickets!</h1>
-    
 
         <div class="input">
             <h2>Sign up</h2>
             <form>
             <div class="email">
-                <input  type="text" title="name doesn't contain number or spaces" placeholder="Enter your name"  
-                  pattern="[A-Za-z]{0,20}"  id="name" required="true"/>
+                <input type="text" title="name doesn't contain number or spaces" placeholder="Enter your name"  
+                  pattern="[A-Za-z]{0,20}" id="name" required="true">
                 <label>Name</label>
             </div>
 
             <div class="email">
                 <input required="true" type="text" inputmode="numeric" placeholder="Enter your phone number" 
-                pattern="[0-9]{10}"  maxlength="10"  id="number" />
+                pattern="[0-9]{10}" maxlength="10" id="number">
                 <label>Number</label>
             </div>
 
             <div class="email">
-                <input  type="email" placeholder="Enter your email" required="true" id="emailid" />
+                <input type="email" placeholder="Enter your email" required="true" id="emailid">
                 <label>Email</label>
             </div>
 
             <div class="email">
-                <input required type="password" minlength="5" maxlength="8" pattern="[A-Za-z0-9]{1,8}{!@#$%&*><+=}"   placeholder="Enter your password" id="password" />
+                <input required type="password" minlength="5" maxlength="8" pattern="[A-Za-z0-9]{1,8}{!@#$%&*><+=}" placeholder="Enter your password" id="password">
                 <label>Password</label>
             </div>
             <div class="email">
-                <input required type="password" minlength="5" maxlength="8" placeholder="Confirm your password"  id="confirm_password" />
+                <input required type="password" minlength="5" maxlength="8" placeholder="Confirm your password" id="confirm_password">
                 <label>Confirm </label>
             </div>
 
@@ -53,21 +51,17 @@
                 <h4>Terms and conditions</h4>
             </div> -->
 
-            <a href="log.html"> <h2>Already have a account</h2></a>
+            <a href="log.html">
+ <h2>Already have a account</h2>
+</a>
          
         </form>
-
-
 
         </div>
 
     </div>
 
-    <script>
-
-    
-
-let form=document.querySelector("form");
+    <script>const form=document.querySelector("form");
 form.addEventListener("submit",e=>{
     e.preventDefault();
     submit();
@@ -80,7 +74,6 @@ form.addEventListener("submit",e=>{
             const password = document.getElementById("password").value;
             const confirm_password = document.getElementById("confirm_password").value;
 
-
             let res;
 
             if (password != confirm_password) {
@@ -90,22 +83,22 @@ form.addEventListener("submit",e=>{
             else {
                 res=1;
 
-                let user_data = {
-                "email": emailid,
-                "password": password,
-                "name":name,
-                "number":number
-            }
+                const user_data = {
+            "email": emailid,
+             "password": password,
+            "name": name,
+             "number": number,
+             "status":true,
+        }
 
-            let users =JSON.parse( localStorage.getItem("users"))// ARR = FALSE
+            const users =JSON.parse( localStorage.getItem("users"))// ARR = FALSE
 
-                ? JSON.parse(localStorage.getItem("users")) //IF CRT            // true
-                :  [];//IF WRONG   // ARR= []                                 //false
+            ? JSON.parse(localStorage.getItem("users")) //IF CRT            // true
+            :  [];//IF WRONG   // ARR= []                                 //false
 
             users.push(user_data) //arr =[{}]// arr =[{},{}]
 
             localStorage.setItem("users", JSON.stringify(users))  // arr= key...."[{}]"
-
 
             if (res==1){
                 window.location.href = "log.html"
@@ -114,8 +107,6 @@ form.addEventListener("submit",e=>{
                 // alert("password is correct")
             }
         };
-
-
 
         // let movies_details = [
 
@@ -151,7 +142,6 @@ form.addEventListener("submit",e=>{
         //         status: true,
 
         //     },
-
 
         //     {
 
@@ -281,7 +271,6 @@ form.addEventListener("submit",e=>{
         //         frame: "2D",
         //         Description: "A high-octane action film where a special investigator is assigned a case of serial Killings. As theinvestigation proceeds, he finds the case is not what it seems to be and leading down this path is only going toend in a war between everyone involved.",
         //         status: true,
-
 
         //     },
         //     {

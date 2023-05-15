@@ -2,16 +2,15 @@
 <html lang="eng">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='../Assets/css/cinema.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Assets/css/cinema.css">
 
 </head>
 
 <body>
-
 
     <header>
         <img src="../Assets/images/logo/logo.png" alt="logo5">
@@ -32,7 +31,6 @@
 
                 </div> 
             </div> -->
- 
 
             <!-- <div class="theatres">
                 <div class="pvr-grand-mall">
@@ -151,65 +149,59 @@
 
     </div>
 
-    <script>
+    <script>        const theatre_details=JSON.parse(localStorage.getItem("theatre_details"));
 
-        let theatre_details=JSON.parse(localStorage.getItem("theatre_details"));
-
-      let theatre_list= document.querySelector(".theatre-list")
+      const theatre_list= document.querySelector(".theatre-list")
    
       for(theatres_deta of theatre_details){
 
-      let theatres=document.createElement("div");
+      const theatres=document.createElement("div");
        theatres.setAttribute("class","theatres");
        theatre_list.append(theatres);
 
-      let theatre_det=document.createElement("div");
+      const theatre_det=document.createElement("div");
       theatre_det.setAttribute("class", "theatre_det");
       theatres.append(theatre_det);
 
-      let theatre_name_div=document.createElement("div");
+      const theatre_name_div=document.createElement("div");
       theatre_name_div.setAttribute("class","theatre_name_div")
       theatre_det.append(theatre_name_div);
 
-      let theatre_name=document.createElement("h2");
+      const theatre_name=document.createElement("h2");
       theatre_name.innerText=theatres_deta.theatre_name;
       theatre_name_div.append(theatre_name);
 
-      let see_shows= document.createElement("a")
+      const see_shows= document.createElement("a")
       see_shows.setAttribute("class","see_shows_button")
-      see_shows.setAttribute("href","theatre_details.html?name=" + theatres_deta.theatre_name)
+      see_shows.setAttribute("href",`theatre_details.html?name=${  theatres_deta.theatre_name}`)
       see_shows.innerText="See shows";
       theatre_name_div.append(see_shows)
 
       console.log(theatres);
 
-      let location_div=document.createElement("div");
+      const location_div=document.createElement("div");
       location_div.setAttribute("class","location-div")
       theatre_det.append(location_div);
 
-      let location_img=document.createElement("img");
+      const location_img=document.createElement("img");
       location_img.setAttribute("src","https://i.ibb.co/KLqpgm3/location-removebg-preview.png");
       location_img.setAttribute("alt","location_image");
       location_div.append(location_img);
 
-
-      let theatre_address=document.createElement("h2");
+      const theatre_address=document.createElement("h2");
       theatre_address.innerText=theatres_deta.theatre_address;
        location_div.append(theatre_address);
 
-       
-
-       let a=document.createElement("a")
+       const a=document.createElement("a")
        a.setAttribute("href", theatres_deta.theatre_map_location)
        location_div.append(a);
 
-       let navigation_img=document.createElement("img");
+       const navigation_img=document.createElement("img");
        navigation_img.setAttribute("src","https://i.ibb.co/djkn6F3/navigation.png")
        navigation_img.setAttribute("alt","navigation_image")
        a.append(navigation_img);
 
     }
-
     </script>
 
 </body>

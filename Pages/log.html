@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 
 <head lan="eng">
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="../Assets/css/log.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../Assets/css/log.css">
 
 </head>
 
 <body>
-
 
     <div class="main">
 
@@ -20,13 +19,13 @@
             <h2>Log in</h2>
 
             <div class="email">
-                <input required type="email" placeholder="Enter your email or phone" id="emailid" />
+                <input required type="email" placeholder="Enter your email or phone" id="emailid">
                 <label>Email</label>
             </div>
 
             <div class="email">
                 <input required type="password" pattern="[a-z]{8,}" title="Password must lowercase and 4-8 charecters"
-                    placeholder="Enter your password" id="password" />
+                    placeholder="Enter your password" id="password">
                 <label>Password</label>
             </div>
 
@@ -37,7 +36,9 @@
 
             <button onclick="check()">Submit</button>
 
-            <a href="signup.html"><h2>I don't have a account</h2></a>
+            <a href="signup.html">
+<h2>I don't have a account</h2>
+</a>
 
         </div>
 
@@ -46,29 +47,27 @@
     <script>
         // cammel case 
 
-
-
         function check() {
-            let email = document.getElementById("emailid").value
-            let pass = document.getElementById("password").value
-            let details = JSON.parse(localStorage.getItem("users"));
-            let datas = {
-                email: "email",
-                password: "pass",
-            }
+            const email = document.getElementById("emailid").value
+            const pass = document.getElementById("password").value
+            const details = JSON.parse(localStorage.getItem("users"));
+            const datas = {
+        email: "email",
+        password: "pass",
+    
+    }
             let res;
-
             
             details.find(element => {
-                if (element["email"] == email && element["password"] == pass) {
-                    localStorage.setItem("profile_details", JSON.stringify(element))
-                    console.log(element);
-                    return res = 1;
-                }
-                else {
-                    return res = 0;
-                }
-            })
+        if (element.email == email && element.password == pass) {
+            localStorage.setItem("profile_details", JSON.stringify(element))
+            console.log(element);
+            return res = 1;
+        }
+        
+            return res = 0;
+        
+    })
             if (res == 1) {
                 // alert("logged in")
                 window.location.href = "profile.html"
@@ -77,17 +76,6 @@
                 alert("Account not valid")
             }
         }
-
-
-
-        
-
-    
-
-
-
-
-
 
         // let tamil_ott_list = [
 
@@ -159,7 +147,6 @@
         //         name: {
         //             movie_name: "Vadachennai",
 
-
         //         },
         //         images: {
         //             main_image: "../../Assets/images/vada_chennai/vadachennai.jpg"
@@ -169,7 +156,6 @@
         //     {
         //         name: {
         //             movie_name: "Kaithi",
-
 
         //         },
         //         images: {
@@ -209,12 +195,6 @@
 
         // ]
         // localStorage.setItem("ott_movie_list", JSON.stringify(tamil_ott_list));
-
-
-
-
-
-
     </script>
 
 </body>

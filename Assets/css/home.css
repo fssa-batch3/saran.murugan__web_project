@@ -90,6 +90,12 @@ option{
     font-size: 15px;
 
 }
+#user_name{
+    background-color: #181818;
+    color:#edde3b;
+    padding: 10px;
+    border-radius: 10px;
+}
 #menu{
     width: 50px;
     height: 50px;
@@ -204,21 +210,21 @@ option{
 }
 .movie-list-container2{
     padding: 0 20px;
-    width:80%;
+    width:82%;
     margin-left: 115px;
 }
 .movie-list-container3{
     padding: 0 20px;
  margin-left: 40px;
-    width: 90%;
+    width: 100%;
 }
 
 .movie-list{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 1300px;
     height: 900px;
-    width: 1400px;
     margin-top: 40px;
     transform: translateX(0);
     transition: all 1s ease-in-out;
@@ -357,7 +363,6 @@ option{
 .movie-list2{
     display: flex;
     flex-wrap: wrap;
-    width:200%;
     margin-top: 50px;
     align-items: center;
     height: 500px;

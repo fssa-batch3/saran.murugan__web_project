@@ -2,16 +2,15 @@
 <html lan="eng">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>home page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../Assets/css/ottIndex.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
-
 
     <div class="navbar">
         <div class="navbar-container">
@@ -50,7 +49,6 @@
         <i class="left-menu-icon fa-regular fa-bookmark"></i>
     </div>
 
-
     <div class="content-container">
         <!-- <div class="banner-container">
 
@@ -73,22 +71,18 @@
                 
                     </div> -->
 
-
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
-
 
             <h1 class="movie-list-head">ENGLISH MOVIES</h1>
             <div class="movie-list-wrapper">
                 <div class="movie-list2">
-                   
 
                 </div>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
-
 
             <h1 class="movie-list-head">HINDI MOVIES</h1>
 
@@ -100,7 +94,6 @@
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
 
-
             <h1 class="movie-list-head">KANADA MOVIES</h1>
             <div class="movie-list-wrapper">
                 <div class="movie-list">
@@ -111,32 +104,29 @@
             </div>
         </div>
 
+        <script>          const ott_movie_lists= JSON.parse(localStorage.getItem("ott_movie_list"))
 
-        <script>
-
-          const ott_movie_lists= JSON.parse(localStorage.getItem("ott_movie_list"))
-
-          for(let ott of ott_movie_lists){
+          for(const ott of ott_movie_lists){
      
-            let movie_list_items = document.createElement("div")
+            const movie_list_items = document.createElement("div")
             movie_list_items.setAttribute("class", "movie-list-item");
 
-            let main_image = document.createElement("img");
+            const main_image = document.createElement("img");
             main_image.setAttribute("class", "movie-list-item-img");
             main_image.setAttribute("src", ott.images.main_image);
             movie_list_items.append(main_image);
 
-            let title = document.createElement("span");
+            const title = document.createElement("span");
             title.innerText = ott.name.movie_name;
             title.setAttribute("class", "movie-list-item-title");
             movie_list_items.append(title);
 
-            let description = document.createElement("p");
+            const description = document.createElement("p");
             description.innerText = ott.Description;
             description.setAttribute("class", "movie-list-item-desc");
             movie_list_items.append(description);
 
-            let movie_button = document.createElement("button");
+            const movie_button = document.createElement("button");
             movie_button.innerText = "Watch now";
             movie_button.setAttribute("class", "movie-list-item-button");
             movie_list_items.append(movie_button);
@@ -145,14 +135,11 @@
 
         }
 
-
-
             const arrows = document.querySelectorAll(".arrow");
             const movieLists = document.querySelectorAll(".movie-list")
 
-
             arrows.forEach((arrow, i) => {
-                let itemNumber = movieLists[i].querySelectorAll("img").length;
+                const itemNumber = movieLists[i].querySelectorAll("img").length;
                 let clickCounter = 0;
                 arrow.addEventListener("click", () => {
                     clickCounter++;
@@ -167,9 +154,7 @@
                 });
                 console.log(movieLists[i].querySelectorAll("img").length);
                 });
-
         </script>
-
 
 </body>
 

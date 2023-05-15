@@ -2,16 +2,14 @@
 <html lang="eng">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='../Assets/css/admin_update_list.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Assets/css/admin_update_list.css">
 </head>
 
 <body>
-
-
 
     <div class="movie-list-all">
         <h1 id="movie-list">Movie list update and delete</h1>
@@ -20,7 +18,6 @@
     <div class="update-form">
 
     </div>
-
 
     <div class="popup" id="movie-popup">
 
@@ -57,9 +54,7 @@
                 <label for="Movie_background_image">Movie background image:</label>
                 <input type="text" id="mbackimage" name="Movie_background_image" placeholder="Enter the image link..">
 
-
                 <div class="cast-image">
-                
 
                 </div>
 
@@ -92,8 +87,6 @@
                 <input type="text" id="producername" name="producer_name" placeholder="Enter the name..">
                 <input type="text" id="producerimage" name="producer_image" placeholder="Enter the image link.."> -->
 
-
-
                 <input type="submit" id="movie-submit" value="Submit">
                 <input id="closeBtn" type="button" value="close">
 
@@ -101,18 +94,13 @@
             <!-- <button id="closeBtn">Close</button> -->
         </div>
     </div>
-    <script>
-
-
-          
-          const movie_lists = JSON.parse(localStorage.getItem("show_movie_details"));
+    <script>          const movie_lists = JSON.parse(localStorage.getItem("show_movie_details"));
 
           console.log(movie_lists);
            
 //   console.log( movie_lists[4]["images"]["cast_image"].length)
 
             // for(let i=0; i< movie_lists[1]["images"]["cast_image"].length; i++){
-
    
             //     let cast_images_div=document.querySelector(".cast-image");
 
@@ -122,54 +110,44 @@
             //     cast_images_div.append(cast_image_content);
             // }
 
-
             movie_lists.forEach((element,index) => {
                 // console.log(index)
 
                 // console.log(element)
 
-                console.log(element["images"]["cast_image"].length);
+                console.log(element.images.cast_image.length);
 
-
-                if(element["images"]["cast_image"].length==undefined){
+                if(element.images.cast_image.length==undefined){
                     console.log("how")
                 }
                 if(index==element){
                     console.log(element)
                 }
-           
-
                 
             });
-            
-   
-          
-
 
         const movie_list = JSON.parse(localStorage.getItem("show_movie_details"));
 
-
-        for (let movie of movie_list) {
-            let movie_item = document.createElement("div")
+        for (const movie of movie_list) {
+            const movie_item = document.createElement("div")
             movie_item.setAttribute("class", "movie-item");
 
-            let movie_img = document.createElement("img");
+            const movie_img = document.createElement("img");
             movie_img.setAttribute("class", "movie_img");
             movie_img.setAttribute("src", movie.images.main_image)
             movie_item.append(movie_img);
 
-            let movie_name = document.createElement("h1");
+            const movie_name = document.createElement("h1");
             movie_name.innerText = movie.name.movie_name;
             movie_item.append(movie_name);
 
-            let update_delete = document.createElement("div");
+            const update_delete = document.createElement("div");
             update_delete.setAttribute("class", "update_delete");
             movie_item.append(update_delete);
 
-
             const popup = document.getElementById('movie-popup');
 
-            let update_button = document.createElement("button");
+            const update_button = document.createElement("button");
             update_button.setAttribute("class", "update-button");
             update_button.innerText = "Update";
             update_delete.append(update_button);
@@ -181,9 +159,7 @@
 
             }
 
-
-
-            let delete_button = document.createElement("button");
+            const delete_button = document.createElement("button");
             delete_button.setAttribute("class", "delete-button");
             delete_button.setAttribute("id", "delete-button")
             delete_button.innerText = "Delete";
@@ -192,17 +168,14 @@
             }
             update_delete.append(delete_button);
 
-
             document.querySelector(".movie-list-all").append(movie_item);
         }
-
 
         function delete_movie(movie_list) {
 
             const delete_movies = JSON.parse(localStorage.getItem("show_movie_details"));
 
             const index = delete_movies.findIndex((movie) => movie.name.movie_name === movie_list.name.movie_name)
-
 
             if (index !== -1) {
 
@@ -212,17 +185,12 @@
             }
         }
 
-
-
-
-
         const closeBtn = document.getElementById('closeBtn');
         const popup = document.getElementById('movie-popup');
 
-        closeBtn.addEventListener('click', function () {
+        closeBtn.addEventListener('click', () => {
             popup.style.display = 'none';
         })
-
 
         const movieform = document.getElementById("movie-form");
 
@@ -293,11 +261,9 @@
             // const producer_name = document.getElementById("producername").value
             // const producer_image = document.getElementById("producerimage").value
 
-
-
             const cinemadetails = {
                 name: {
-                    movie_name: movie_name,
+                    movie_name,
                     cast_images:cast_images_values,
                     // cast1_name: cast1_name,
                     // cast2_name: cast2_name,
@@ -309,30 +275,27 @@
                 },
                 images: {
                     main_image: movie_main_image,
-                    background_image: background_image,
+                    background_image,
                     // cast1_image: cast1_image,
                     // cast2_image: cast2_image,
                     // cast3_image: cast3_image,
                     // cast4_image: cast4_image,
 
                 },
-                movie_time: movie_time,
-                movie_certified:movie_certified,
-                movie_release_date:movie_release_date,
+                movie_time,
+                movie_certified,
+                movie_release_date,
                 language: movie_language,
-                movie_frame: movie_frame,
+                movie_frame,
                 movie_releasing:"false",
-                movie_type: movie_type,
-                Description: Description,
+                movie_type,
+                Description,
                 status: true,
 
             }
 
-            
-
             // find index of current  movie in details
             const index = movie_details.findIndex((mdetails) => mdetails.name.movie_name === movie_name);
-
 
             if (index !== -1) {
                 movie_details[index] = cinemadetails;
@@ -345,12 +308,6 @@
         }
 
         movieform.addEventListener("submit", handleSubmit);
-
-
-
-
-
-
     </script>
 </body>
 

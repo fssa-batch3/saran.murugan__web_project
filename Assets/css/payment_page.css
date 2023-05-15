@@ -238,6 +238,12 @@ aside{
     width: 350px;
     margin-left: 20px;
  }
+ #ticket_count{
+    margin-left: 20px;
+ }
+ #cab_count{
+    margin-left: 20px;
+ }
  .cab-total{
     display: flex;
     justify-content: space-between;

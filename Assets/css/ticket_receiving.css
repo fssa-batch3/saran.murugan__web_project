@@ -89,13 +89,22 @@ a button{
 #seat_names_div{
     font-size: 26px;
     margin-left: 100px;
-    margin-top:170px ;
+    margin-top:10px ;
     width:300px;
     color: white;
 }
 #booking_id_div{
     font-size: 30px;
-    margin-left: 60px;
+    margin-left: 90px;
     margin-top: 20px;
     color: white;
+}
+.seat_cab_total{
+    font-size: 30px;
+    color: white;
+    margin-top: 140px;
+    margin-left: 130px;
+}
+#seat_count{
+    margin-left: 10px;
 }

@@ -15,18 +15,14 @@
         <img src="../../Assets/images/logo/logo.png" alt="Error image">
     </header>
 
-
     <div class="mainimg">
-       
 
     </div>
 
    <div class="content">
 
-
     <hr>
     <div class="castandcrew">
-
     
     <div class="cast_head">
 
@@ -36,7 +32,6 @@
 
     <div class="casteh">
     </div>
-    
 
     <div class="casteh">
     </div>
@@ -47,8 +42,6 @@
     </div>
 
    </div>
-
-
    
     <div class="crew_head">
     </div>
@@ -64,16 +57,12 @@
     </div>
 </div>
 
-
-
-
 </div>
 
 </div>
 
 <script>
-   
-  movie_list = [
+     movie_list = [
 
   {
                 name: "Asuran",
@@ -103,7 +92,6 @@
                     music_dir:"G V prakash",
                     producer:"S kaipuli thanu"
                 },
-                
                
             },
             {
@@ -164,7 +152,6 @@
                 },
                 
             },
-           
             
             {
                 name: "Kaithi",
@@ -253,7 +240,6 @@
                 },
             },
 
-
             {
                 name: "Naane varuven",
                 language: "Tamil",
@@ -339,7 +325,6 @@
                     music_dir:"Anirudh",
                     producer:"Kalanithi maran"
                 },
-               
                 
             },
 
@@ -411,8 +396,6 @@
                 crew_category3: "Producer",
             },
 
-            
-
             {
                 name: "Vada chennai",
                 language: "Tamil",
@@ -446,7 +429,6 @@
                 crew_name1: "Vetrimaran",
                 crew_name2: "Santhosh narayanan",
                 crew_name3: "Dhanush",
-                
                 
             },
             {
@@ -488,16 +470,12 @@
                 // crew_category3: "Producer",
             },
 
-
   ]
-
-
 
 const url = window.location.search;                // ?name=Arun
         const urlParams = new URLSearchParams(url);    //"name":"ponniyinselvan"    // converting string into key value pair
         const username = urlParams.get("name")             // return value of the "name" key
         console.log(username);
-        
 
         // Array.find(  function(variableName){} )
         // const user = name_list.find(
@@ -516,14 +494,14 @@ const url = window.location.search;                // ?name=Arun
         //         }
         // )
         let res;
-        movie_list.find(function (e){
-            if (e["name"] == username) { //arr[0],arr[1]  =e
-                return res = e;
-            }
-            else {
-                return res = 0;
-            }
-        })
+        movie_list.find((e) =>{
+       if (e.name == username) { //arr[0],arr[1]  =e
+           return res = e;
+       }
+       
+           return res = 0;
+       
+   })
 
         // if (res) {
         //     console.log(res);
@@ -532,185 +510,166 @@ const url = window.location.search;                // ?name=Arun
         // else {
         //     console.log("not found")
         // }
-
-            
                 
-                let mainimg=document.querySelector(".mainimg");
-                mainimg.style.backgroundImage=res["back_ground_image"];
-                let time=document.createElement("div")
+                const mainimg=document.querySelector(".mainimg");
+                mainimg.style.backgroundImage=res.back_ground_image;
+                const time=document.createElement("div")
                 time.setAttribute("class","time")
                 mainimg.prepend(time);
-                let heading1=document.createElement("h2")
-                heading1.innerText=res["name"];
+                const heading1=document.createElement("h2")
+                heading1.innerText=res.name;
                 time.append(heading1)
-                let lan=document.createElement("div")
+                const lan=document.createElement("div")
                 lan.setAttribute("class","lan")
                 time.append(lan);
-                let language=document.createElement("h3")
-                language.innerText=res["language"];
+                const language=document.createElement("h3")
+                language.innerText=res.language;
                 lan.append(language);
-                let frame=document.createElement("h3")
-                frame.innerText=res["frame"];
+                const frame=document.createElement("h3")
+                frame.innerText=res.frame;
                 lan.append(frame);
-                let movie_time=document.createElement("p")
-                movie_time.innerText=res["movie_time"];
+                const movie_time=document.createElement("p")
+                movie_time.innerText=res.movie_time;
                 time.append(movie_time)
-                let movie_type=document.createElement("h4")
-                movie_type.innerText=res["movie_type"];
+                const movie_type=document.createElement("h4")
+                movie_type.innerText=res.movie_type;
                 time.append(movie_type)             
-                let book_button=document.createElement("button")
+                const book_button=document.createElement("button")
                 book_button.innerText="Watch now";
                 time.append(book_button);
 
-                let content=document.querySelector(".content");
-                let about_movie=document.createElement("div");
+                const content=document.querySelector(".content");
+                const about_movie=document.createElement("div");
                 about_movie.setAttribute("class","aboutmovie")
                 content.prepend(about_movie);
-                let about_head=document.createElement("h2")
+                const about_head=document.createElement("h2")
                 about_head.innerText="About movie";
                 about_movie.prepend(about_head);
 
-                let about_text=document.createElement("p")
-                about_text.innerText=res["Description"]
+                const about_text=document.createElement("p")
+                about_text.innerText=res.Description
                 about_movie.append(about_text);
-
 
                 // let cast_head=document.createElement("h1")
                 // // cast_head.innerText=res["cast_heading"]
                 // // about_movie.append(cast_head);
-                let castandcrew=document.querySelector(".castandcrew")
+                const castandcrew=document.querySelector(".castandcrew")
 
-                let cast_head=document.querySelector(".cast_head")
+                const cast_head=document.querySelector(".cast_head")
                 castandcrew.prepend(cast_head);
 
-                let cast_head_text=document.createElement("h1")
+                const cast_head_text=document.createElement("h1")
                 cast_head_text.innerText="cast";
                 cast_head.prepend(cast_head_text);
 
-                let cast1=document.querySelector(".cast")
+                const cast1=document.querySelector(".cast")
                 castandcrew.append("cast1");
 
-                let casteh=document.querySelectorAll(".casteh")
+                const casteh=document.querySelectorAll(".casteh")
                 cast1.prepend(casteh)
-        
                
-                let cast_image1 = document.createElement("img");
-                cast_image1.setAttribute("src",res["cast_image1"]);
+                const cast_image1 = document.createElement("img");
+                cast_image1.setAttribute("src",res.cast_image1);
                 cast_image1.setAttribute("alt", "image_placeholder");
                 casteh[0].prepend(cast_image1);
 
-                let cast_image2 = document.createElement("img");
-                cast_image2.setAttribute("src",res["cast_image2"]);
+                const cast_image2 = document.createElement("img");
+                cast_image2.setAttribute("src",res.cast_image2);
                 cast_image2.setAttribute("alt", "image_placeholder");
                 casteh[1].append(cast_image2);
                
-                let cast_image3 = document.createElement("img");
-                cast_image3.setAttribute("src",res["cast_image3"]);
+                const cast_image3 = document.createElement("img");
+                cast_image3.setAttribute("src",res.cast_image3);
                 cast_image3.setAttribute("alt", "image_placeholder");
                 casteh[2].append(cast_image3);
 
-                let cast_image4 = document.createElement("img");
-                cast_image4.setAttribute("src",res["cast_image4"]);
+                const cast_image4 = document.createElement("img");
+                cast_image4.setAttribute("src",res.cast_image4);
                 cast_image4.setAttribute("alt", "image_placeholder");
                 casteh[3].append(cast_image4);
-
             
-                let cast_name1=document.createElement("h2")
-                cast_name1.innerText=res["cast_name"]["cast1"]
+                const cast_name1=document.createElement("h2")
+                cast_name1.innerText=res.cast_name.cast1
                 casteh[0].append(cast_name1);
 
-                let cast_name2=document.createElement("h2")
-                cast_name2.innerText=res["cast_name"]["cast2"]
+                const cast_name2=document.createElement("h2")
+                cast_name2.innerText=res.cast_name.cast2
                 casteh[1].append(cast_name2);
 
-                let cast_name3=document.createElement("h2")
-                cast_name3.innerText=res["cast_name"]["cast3"]
+                const cast_name3=document.createElement("h2")
+                cast_name3.innerText=res.cast_name.cast3
                 casteh[2].append(cast_name3);
 
-                let cast_name4=document.createElement("h2")
-                cast_name4.innerText=res["cast_name"]["cast4"]
+                const cast_name4=document.createElement("h2")
+                cast_name4.innerText=res.cast_name.cast4
                 casteh[3].append(cast_name4);
 
-
-
-                let cast_category=document.createElement("p")
+                const cast_category=document.createElement("p")
                 cast_category.innerText= "Actor";
                 casteh[0].append(cast_category);
                 
-                let cast_category2=document.createElement("p")
+                const cast_category2=document.createElement("p")
                 cast_category2.innerText="Actor";
                 casteh[1].append(cast_category2);
-
                 
-                let cast_category3=document.createElement("p")
+                const cast_category3=document.createElement("p")
                 cast_category3.innerText="Actor";
                 casteh[2].append(cast_category3);
 
-                let cast_category4=document.createElement("p")
+                const cast_category4=document.createElement("p")
                 cast_category4.innerText="Actor";
                 casteh[3].append(cast_category4);
-    
 
-
-                let crew_head=document.querySelector(".crew_head")
-            
+                const crew_head=document.querySelector(".crew_head")
                 
-                let crew_head_text=document.createElement("h1")
+                const crew_head_text=document.createElement("h1")
                 crew_head_text.innerText="crew";
                 crew_head.prepend(crew_head_text);
 
-
-                 let crew=document.querySelector(".crew")
+                 const crew=document.querySelector(".crew")
                  castandcrew.append(crew);
 
-                 let creweh=document.querySelectorAll(".creweh")
+                 const creweh=document.querySelectorAll(".creweh")
                  crew.prepend(creweh);
 
-
-                 let crew_image1 = document.createElement("img");
-                crew_image1.setAttribute("src",res["crew_image1"]);
+                 const crew_image1 = document.createElement("img");
+                crew_image1.setAttribute("src",res.crew_image1);
                 crew_image1.setAttribute("alt", "image_placeholder");
                 creweh[0].prepend(crew_image1);
 
-                let crew_image2 = document.createElement("img");
-                crew_image2.setAttribute("src",res["crew_image2"]);
+                const crew_image2 = document.createElement("img");
+                crew_image2.setAttribute("src",res.crew_image2);
                 crew_image2.setAttribute("alt", "image_placeholder");
                 creweh[1].append(crew_image2);
                
-                let crew_image3 = document.createElement("img");
-                crew_image3.setAttribute("src",res["crew_image3"]);
+                const crew_image3 = document.createElement("img");
+                crew_image3.setAttribute("src",res.crew_image3);
                 crew_image3.setAttribute("alt", "image_placeholder");
                 creweh[2].append(crew_image3);
-
             
-                let crew_name1=document.createElement("h2")
-                crew_name1.innerText=res["crew_name"]["director"]
+                const crew_name1=document.createElement("h2")
+                crew_name1.innerText=res.crew_name.director
                 creweh[0].append(crew_name1);
 
-                let crew_name2=document.createElement("h2")
-                crew_name2.innerText=res["crew_name"]["music_dir"]
+                const crew_name2=document.createElement("h2")
+                crew_name2.innerText=res.crew_name.music_dir
                 creweh[1].append(crew_name2);
 
-                let crew_name3=document.createElement("h2")
-                crew_name3.innerText=res["crew_name"]["producer"]
+                const crew_name3=document.createElement("h2")
+                crew_name3.innerText=res.crew_name.producer
                 creweh[2].append(crew_name3);
 
-                let crew_category=document.createElement("p")
+                const crew_category=document.createElement("p")
                 crew_category.innerText="Director" 
                 creweh[0].append(crew_category);
                 
-                let crew_category2=document.createElement("p")
+                const crew_category2=document.createElement("p")
                 crew_category2.innerText="Music Director";
                 creweh[1].append(crew_category2);
-
-
                 
-                let crew_category3=document.createElement("p")
+                const crew_category3=document.createElement("p")
                 crew_category3.innerText="Producer";
                 creweh[2].append(crew_category3);
-
-              
-            
                 
                 console.log(mainimg);
                 console.log(content);

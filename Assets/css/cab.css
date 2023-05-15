@@ -14,96 +14,98 @@ header{
 }
 .main{
 
-    background-image: url(../images/cab/cab.jpg);
+    background-image: url(https://img.freepik.com/free-photo/beautiful-young-latin-woman-driving-her-brand-new-car-showing-her-thumb-up_231208-7751.jpg?w=1480&t=st=1683976921~exp=1683977521~hmac=8389d7c0f86ca32fa9a20c023d0e21b6444ca779913f034c12546d4d79068219);
+    background-position: 30%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 720px;
+    height: 320px;
     padding-top: 10%;
 
 }
-.cab{
-    padding-top: 10px;
-    background-color:white;
-    width: 30%;
-    margin-left: 3%;
-    height: 90%;
-    border-radius: 10px;
-    
+#head-title{
+    background-color: #ffffff;
+    width: 200px;
+    padding: 10px;
+    margin-top: 16%;
+    margin-left:20%;
 }
-.cab h1{
-    margin-left: 30%;
-    margin-top: 10px;
+.cab-details-div{
+    display: flex;
+    justify-content: space-around;
+    background-color:#f2f4f6;
+    height: 100px;
+    width:60%;
+   
+    margin-left: 20%;
+}
+.det-input{
+    
+    border: none;
+    font-size: 16px;
+    line-height: 40px;
+    width: 110%;
+    margin-top: 5px;
+    height: 50px;
+    margin-bottom: 0;
 }
 #theatre_name{
-    background-color: #f6f6f6;
-    width:180px;
-    height: 30px;
-    padding: 10px;
-    margin-left: 100px;
-    margin-top: 50px;
+    border: none;
+    font-size: 16px;
+    line-height: 27px;
+    width: 110%;
+    padding-left: 10px;
+    padding-top: 15px;
+    margin-top: 5px;
+    height: 35px;
+    margin-bottom: 0;
+    background-color: white;
 }
-#email{
-    background-color: #f6f6f6;
-    width:180px;
-    height: 30px;
-    padding: 10px;
-    margin-left: 100px;
-    margin-top: 50px;
+#search_cab{
+    background-color: black;
+    color: white;
+    width: 200px;
+    font-size: 17px;
+    text-align: start;
+    padding: 20px;
+    margin-left: 66%;
 }
-.cab h3{
-    margin-left: 70px;
-    position: relative;
-    top:50px;
+#cab_button_text{
+    color: #edde3b;
 }
-.pickup{
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 60px;
+.arrow{
+    margin-left: 20px;
 }
-#number{
-    padding: 10px;
-    background-color: #f6f6f6;
-    width:240px;
-    color: black;
-}
-#book-button{
-    margin-top: 80px;
-    padding: 15px;
-    font-size: 18px;
-    background-color: #edd605;
-    width:300px;
-    border-radius: 5px;
-    margin-left: 70px;
-}
-.cab button:hover{
-    transition:0.5s;
-    transform: scale(1.1);
-}
-.pickup{
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    gap: 20px;
-}
-#phone{
-    padding: 10px;
-    background-color: #f6f6f6;
-    width:220px;
-    color: black;
-}
-#done-button{
-    padding: 10px;
-    width: 100px;
+.cab-price{
+    background-color: #f2f4f6;
+    margin-top: 20px;
 
 }
-#rate{
-    display: none;
+.cab-price-div{
+    display: flex;
 }
-.places{
-    background-color: #f6f6f6;
-    width: 265px;
-    height: 40px;
-    overflow: scroll;
-    /* display: none; */
-    
+#email_text{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.cab-total{
+    margin-top: 20px;
+    font-size: 25px;
+    margin-left: 50px;
+}
+#confirm_button{
+    background-color: black;
+    color: #edde3b;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width:240px;
+    margin-left: 50px;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+}
+.confirm_button_a{
+    color: #edde3b;
+    text-decoration: none;
 }

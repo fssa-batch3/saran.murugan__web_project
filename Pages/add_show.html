@@ -2,14 +2,13 @@
 <html lang="eng">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <link rel="stylesheet" href="../Assets/css/add_show.css">
 </head>
 
 <body>
-
 
     <div class="popup-content">
 
@@ -98,7 +97,6 @@
                 </select>
             </div>
 
-
             <div class="show-times">
                 <label>choose show times</label>
                 <div class="button">
@@ -139,24 +137,24 @@
 
                 </div>
 
-
                 <label>enter show times</label>
                 <div class="shows" id="shows">
 
                 </div>
             </div>
 
-
             <div class="tickets_cost">
 
                 <label>Seat cost</label>
 
                 <div class="cost_seat">
-                    <h3>Budget seat</h3><input type="text" id="budget_cost" inputmode="numeric">
+                    <h3>Budget seat</h3>
+<input type="text" id="budget_cost" inputmode="numeric">
                 </div>
 
                 <div class="cost_seat">
-                    <h3>Premium seat</h3><input type="text" id="premium_cost" inputmode="numeric">
+                    <h3>Premium seat</h3>
+<input type="text" id="premium_cost" inputmode="numeric">
                 </div>
             </div>
             <button> submit</button>
@@ -164,29 +162,23 @@
 
     </form>
 
-    
-
     <script>
-        let show_times_option_button = document.getElementById("show-times-option-button")
+        const show_times_option_button = document.getElementById("show-times-option-button")
         show_times_option_button.addEventListener("click", e => {
             e.preventDefault()
-            let show_times_option = document.getElementById("show-times-option").value
+            const show_times_option = document.getElementById("show-times-option").value
 
             option = show_times_option
 
             for (i = 0; i < option; i++) {
-                let shows = document.getElementById("shows")
+                const shows = document.getElementById("shows")
 
-                let time_input = document.createElement("input");
+                const time_input = document.createElement("input");
                 time_input.setAttribute("class", "shows_timing");
                 time_input.setAttribute("type", "time");
                 shows.appendChild(time_input);
             }
         });
-
-
-
-
 
         const form_control = document.getElementById("movie-form");
         function formsubmit() {  
@@ -202,60 +194,56 @@
             const budget_cost = document.getElementById("budget_cost").value;
             const premium_cost = document.getElementById("premium_cost").value;
             
-            let show_timing_values = [];
+            const show_timing_values = [];
             show_times.forEach((e, ind) => {
                 console.log(e.value.slice(0, 2));
                 if (e.value.slice(0, 2) > 12) {
-                    let new_hour = e.value.slice(0, 2) - 12
-                    let old_min = e.value.slice(2, 5)
-                    let new_time = new_hour + old_min + " PM"
+                    const new_hour = e.value.slice(0, 2) - 12
+                    const old_min = e.value.slice(2, 5)
+                    const new_time = `${new_hour + old_min  } PM`
                     show_timing_values.push(new_time)
-
 
                     // console.log(show_times[ind],new_hour,old_min,"33333")
                     // console.log(new_hour+old_min+"PM","44444444444");
                 }
                 else if (e.value.slice(0, 2) == 12) {
-                    let new_time = show_times[ind].value + " PM"
+                    const new_time = `${show_times[ind].value  } PM`
                     show_timing_values.push(new_time)
                 }
 
                 else {
-                    let new_time = show_times[ind].value + " AM"
+                    const new_time = `${show_times[ind].value  } AM`
                     show_timing_values.push(new_time)
 
                 }
-
 
                 // console.log(show_times[ind].value,"efvd");
             })
             console.log(show_timing_values);
 
-
             console.log(show_times.length);
-            let show_timing = [];
+            const show_timing = [];
             for (let j = 0; j < show_times.length; j++) {
                 show_timing.push(show_times[j].value)
             }
 
-            let theatres = {
+            const theatres = {
 
+        name: {
+            movie_name,
+            theatre_name,
+            // theatre_address:theatre_address,
 
-                name: {
-                    movie_name: movie_name,
-                    theatre_name: theatre_name,
-                    // theatre_address:theatre_address,
-
-                },
-                show_times: show_timing_values,
-                show_date: show_date,
-                screen_frame:screen_frame,
-                movie_language:movie_language,
-                show_month: show_month,
-                budget_cost: budget_cost,
-                premium_cost: premium_cost,
-                status: true,
-            }
+        },
+        show_times: show_timing_values,
+        show_date,
+        screen_frame,
+        movie_language,
+        show_month,
+        budget_cost,
+        premium_cost,
+        status: true,
+    }
 
             const details_theatre = JSON.parse(localStorage.getItem("show_details")) ?? [];
 
@@ -266,17 +254,12 @@
             localStorage.setItem("show_details", JSON.stringify(details_theatre))
         };
 
-
         form_control.addEventListener("submit", e => {
             e.preventDefault();
 
             formsubmit()
         })
-
-
     </script>
-
-
 
 </body>
 

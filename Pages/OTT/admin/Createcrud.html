@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../Assets/css/ott/createcrud.css">
-    <script src='main.js'></script>
+    <script src="main.js"></script>
 </head>
 <body>
 
@@ -39,7 +39,6 @@
                 <label for="movie time">Movie release year</label>
                 <input type="text" required="true" id="movie_release_year" placeholder="Enter ">
             </div>
-
             
             <div class="movie_wrapper">
                 <label for="movie Certified"> Movie Certified</label>
@@ -50,7 +49,6 @@
                 <label for="Movie type"> Movie type</label>
                 <input type="text" required="true" id="movie_type" placeholder="Enter ">
             </div>
-
 
             <div class="movie_wrapper">
                 <label for="About Movie description">About movie description</label>
@@ -91,7 +89,6 @@
                 <input type="text" required="true" id="cast4_image" placeholder="Enter image link">
             </div>
 
-
             <div class="movie_wrapper">
                 <label for="Director ">Director </label>
                 <input type="text" required="true" id="director_name" placeholder="Enter director name">
@@ -116,10 +113,8 @@
     </div>
     
     <script>
- 
- const form_control = document.getElementById("movie_details-form");
+  const form_control = document.getElementById("movie_details-form");
         function formsubmit() {
-
 
             const movie_name = document.getElementById("movie_name").value
             const movie_language = document.getElementById("movie_language").value
@@ -146,37 +141,36 @@
             const producer_name = document.getElementById("producer_name").value
             const producer_image = document.getElementById("producer_image").value
 
-            let movie_details = {
+            const movie_details = {
 
-
-                name: {
-                    movie_name: movie_name,
-                    cast1_name: cast1_name,
-                    cast2_name: cast2_name,
-                    cast3_name: cast3_name,
-                    cast4_name: cast4_name,
-                    director_name: director_name,
-                    music_director_name: music_director_name,
-                    producer_name: producer_name,
-                },
-                images: {
-                    main_image: movie_main_image,
-                    background_image: movie_background_image,
-                    cast1_image: cast1_image,
-                    cast2_image: cast2_image,
-                    cast3_image: cast3_image,
-                    cast4_image: cast4_image,
-                    director_image: director_image,
-                    music_director_image: music_director_image,
-                    producer_image: producer_image,
-                },
-                movie_release_year: movie_release_year,
-                language: movie_language,
-                frame: movie_frame,
-                movie_type: movie_type,
-                Description: movie_description,
-                status:true,
-            }
+               name: {
+                   movie_name,
+                   cast1_name,
+                   cast2_name,
+                   cast3_name,
+                   cast4_name,
+                   director_name,
+                   music_director_name,
+                   producer_name,
+               },
+               images: {
+                   main_image: movie_main_image,
+                   background_image: movie_background_image,
+                   cast1_image,
+                   cast2_image,
+                   cast3_image,
+                   cast4_image,
+                   director_image,
+                   music_director_image,
+                   producer_image,
+               },
+               movie_release_year,
+               language: movie_language,
+               frame: movie_frame,
+               movie_type,
+               Description: movie_description,
+               status:true,
+           }
             const details_movie = JSON.parse(localStorage.getItem("ott_movie_list")) ?? [];
 
             details_movie.push(movie_details);
@@ -191,8 +185,6 @@
 
             formsubmit()
         })
-
-
     </script>
 </body>
 </html>
