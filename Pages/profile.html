@@ -83,14 +83,14 @@
 
         <div class="notification"></div>
 
-        <!-- <div class="cinemas">
+        <div class="cinemas">
 
-        </div> -->
+        </div>
 
     </div>
 
-    <script>        
-    
+    <script>
+
         const booking_history_head = document.getElementById("booking-history-head");
         let cinemas_head = document.getElementById("cinemas-head");
         // const notification_head = document.getElementById("notification-head");
@@ -105,18 +105,18 @@
 
         booking_history_head.addEventListener("click", () => {
             booking_history.style.display = "block";
-             cinemas.style.display="none";
+            cinemas.style.display = "none";
             // notification.style.display = "none";
             // help_support.style.display = "none";
             // about_us.style.display = "none";
         })
-         cinemas_head.addEventListener("click", function(){
-             booking_history.style.display="none";
-             cinemas.style.display="block";
+        cinemas_head.addEventListener("click", function () {
+            booking_history.style.display = "none";
+            cinemas.style.display = "block";
             //  notification.style.display="none";
             //  help_support.style.display="none";
             //  about_us.style.display="none";
-         })
+        })
         // notification_head.addEventListener("click", () => {
         //     booking_history.style.display = "none";
         //     //  cinemas.style.display="none";
@@ -125,134 +125,142 @@
         //     about_us.style.display = "none";
         // })
         // help_support_head.addEventListener("click", () => {
-            // booking_history.style.display = "none";
-            //  cinemas.style.display="none";
-            // notification.style.display = "none";
-            // help_support.style.display = "block";
-            // about_us.style.display = "none";
+        // booking_history.style.display = "none";
+        //  cinemas.style.display="none";
+        // notification.style.display = "none";
+        // help_support.style.display = "block";
+        // about_us.style.display = "none";
         // })
         // about_us_head.addEventListener("click", () => {
-            // booking_history.style.display = "none";
-            //  cinemas.style.display="none";
-            // notification.style.display = "none";
-            // help_support.style.display = "none";
-            // about_us.style.display = "block";
+        // booking_history.style.display = "none";
+        //  cinemas.style.display="none";
+        // notification.style.display = "none";
+        // help_support.style.display = "none";
+        // about_us.style.display = "block";
         // });
 
-        const booking_history_det = JSON.parse(localStorage.getItem("booking_history"))
+       
 
+        const profile_details = JSON.parse(localStorage.getItem("profile_details"))
         const booking_history_div = document.querySelector(".booking-history-div");
 
-    
-      if (booking_history_det !== null) {
-        for (booking_det of booking_history_det ) {
+        const booking_history_det = JSON.parse(localStorage.getItem("booking_history"));
 
-const booking_history_content = document.createElement("div");
-booking_history_content.setAttribute("class", "booking-history-div-content");
-booking_history_div.append(booking_history_content);
+        if (booking_history_det !== null) {
 
-const movie_image = document.createElement("img");
-movie_image.setAttribute("class", "movie_image")
-movie_image.setAttribute("src", booking_det.movie_image);
-booking_history_content.append(movie_image);
+            for (let i=0; i<booking_history_det.length; i++){
 
-const ticket_detail_div = document.createElement("div");
-ticket_detail_div.setAttribute("class", "ticket-detail-div");
-booking_history_content.append(ticket_detail_div);
+                if (profile_details.email == booking_history_det[i].email) {
 
-const movie_name = document.createElement("h1");
-movie_name.setAttribute("class", "movie_name");
-movie_name.innerText = booking_det.movie_name;
-ticket_detail_div.append(movie_name)
+                    const booking_history_content = document.createElement("div");
+                    booking_history_content.setAttribute("class", "booking-history-div-content");
+                    booking_history_div.append(booking_history_content);
 
-// const certified = document.createElement("span");
-// certified.innerText = "UA";
-// movie_name.append(certified);
+                    const movie_image = document.createElement("img");
+                    movie_image.setAttribute("class", "movie_image")
+                    movie_image.setAttribute("src", booking_history_det[i].movie_image);
+                    booking_history_content.append(movie_image);
 
-const movie_language = document.createElement("h3");
-movie_language.innerText = booking_det.movie_language;
-ticket_detail_div.append(movie_language);
+                    const ticket_detail_div = document.createElement("div");
+                    ticket_detail_div.setAttribute("class", "ticket-detail-div");
+                    booking_history_content.append(ticket_detail_div);
 
-const movie_frame = document.createElement("span");
-movie_frame.innerText = booking_det.movie_frame;
-movie_language.append(movie_frame);
+                    const movie_name = document.createElement("h1");
+                    movie_name.setAttribute("class", "movie_name");
+                    movie_name.innerText = booking_history_det[i].movie_name;
+                    ticket_detail_div.append(movie_name)
 
-const movie_day = document.createElement("h3");
-movie_day.innerText = booking_det.show_day;
-ticket_detail_div.append(movie_day);
+                    // const certified = document.createElement("span");
+                    // certified.innerText = "UA";
+                    // movie_name.append(certified);
 
-const show_date = document.createElement("span");
-show_date.innerText = booking_det.show_date;
-movie_day.append(show_date);
+                    const movie_language = document.createElement("h3");
+                    movie_language.innerText = booking_history_det[i].movie_language;
+                    ticket_detail_div.append(movie_language);
 
-const show_month = document.createElement("span");
-show_month.innerText = booking_det.show_month;
-movie_day.append(show_month);
+                    const movie_frame = document.createElement("span");
+                    movie_frame.innerText = booking_history_det[i].movie_frame;
+                    movie_language.append(movie_frame);
 
-const hr_line = document.createElement("span");
-hr_line.innerText = "|";
-movie_day.append(hr_line);
+                    const movie_day = document.createElement("h3");
+                    movie_day.innerText = booking_history_det[i].show_day;
+                    ticket_detail_div.append(movie_day);
 
-const show_time = document.createElement("span");
-show_time.innerText = booking_det.show_time;
-movie_day.append(show_time);
+                    const show_date = document.createElement("span");
+                    show_date.innerText = booking_history_det[i].show_date;
+                    movie_day.append(show_date);
 
-const theatre_name = document.createElement("h3");
-theatre_name.innerText = booking_det.theatre_name;
-ticket_detail_div.append(theatre_name);
+                    const show_month = document.createElement("span");
+                    show_month.innerText = booking_history_det[i].show_month;
+                    movie_day.append(show_month);
 
-const qr_ticket_div = document.createElement("div");
-qr_ticket_div.setAttribute("class", "qr_ticket_div")
-ticket_detail_div.append(qr_ticket_div);
+                    const hr_line = document.createElement("span");
+                    hr_line.innerText = "|";
+                    movie_day.append(hr_line);
 
-const ticket_total_div = document.createElement("div")
-ticket_total_div.setAttribute("class", "ticket_total_div");
-qr_ticket_div.append(ticket_total_div);
+                    const show_time = document.createElement("span");
+                    show_time.innerText = booking_history_det[i].show_time;
+                    movie_day.append(show_time);
 
-const tickets = document.createElement("h3");
-tickets.innerText = "tickets";
-ticket_total_div.append(tickets);
+                    const theatre_name = document.createElement("h3");
+                    theatre_name.innerText = booking_history_det[i].theatre_name;
+                    ticket_detail_div.append(theatre_name);
 
-//  const how_many_ticket=document.createElement("span");
-//    how_many_ticket.innerText="3";
-//    tickets.prepend(how_many_ticket);
+                    const qr_ticket_div = document.createElement("div");
+                    qr_ticket_div.setAttribute("class", "qr_ticket_div")
+                    ticket_detail_div.append(qr_ticket_div);
 
-const cab_div = document.createElement("p");
-cab_div.innerText = ",";
-tickets.append(cab_div);
+                    const ticket_total_div = document.createElement("div")
+                    ticket_total_div.setAttribute("class", "ticket_total_div");
+                    qr_ticket_div.append(ticket_total_div);
 
-if(booking_det.cab_name){
-const cab = document.createElement("span")
-cab.innerText = "cab";
-cab_div.append(cab);
-}
-const seats = document.createElement("h2");
-seats.innerText = "Seats";
-ticket_total_div.append(seats);
+                    const tickets = document.createElement("h3");
+                    tickets.innerText = "tickets";
+                    ticket_total_div.append(tickets);
 
-const seat_names = document.createElement("span");
-seat_names.innerText = booking_det.seat_name;
-seats.append(seat_names);
+                     const how_many_ticket=document.createElement("span");
+                       how_many_ticket.innerText="3";
+                       tickets.prepend(how_many_ticket);
 
-const booking_id_div = document.createElement("h3");
-booking_id_div.innerText = "BOOKING ID:"
-ticket_total_div.append(booking_id_div);
 
-const booking_id = document.createElement("span");
-booking_id.innerText = booking_det.booking_id;
-booking_id_div.append(booking_id)
+                    if (booking_history_det[i].cab_name) {
 
-const qr_code = document.createElement("img");
-qr_code.setAttribute("src", "https://i.ibb.co/1ZpnGvG/lets-show-QR-code.png");
-qr_code.setAttribute("class", "qrcode")
-qr_ticket_div.append(qr_code)
+                        const cab_div = document.createElement("p");
+                        cab_div.innerText = ",";
+                        tickets.append(cab_div);
 
-const hr = document.createElement("hr");
-ticket_detail_div.append(hr)
+                        const cab = document.createElement("span")
+                        cab.innerText = booking_history_det[i].cab_name;
+                        cab_div.append(cab);
+                    }
+                    const seats = document.createElement("h2");
+                    seats.innerText = "Seats";
+                    ticket_total_div.append(seats);
 
-}
+                    const seat_names = document.createElement("span");
+                    seat_names.innerText = booking_history_det[i].seat_name;
+                    seats.append(seat_names);
 
-      }
+                    const booking_id_div = document.createElement("h3");
+                    booking_id_div.innerText = "BOOKING ID:"
+                    ticket_total_div.append(booking_id_div);
+
+                    const booking_id = document.createElement("span");
+                    booking_id.innerText = booking_history_det[i].booking_id;
+                    booking_id_div.append(booking_id)
+
+                    const qr_code = document.createElement("img");
+                    qr_code.setAttribute("src", "https://i.ibb.co/1ZpnGvG/lets-show-QR-code.png");
+                    qr_code.setAttribute("class", "qrcode")
+                    qr_ticket_div.append(qr_code)
+
+                    const hr = document.createElement("hr");
+                    ticket_detail_div.append(hr)
+                }
+
+            }
+
+        }
 
         const users = JSON.parse(localStorage.getItem("users"));
 
@@ -272,7 +280,7 @@ ticket_detail_div.append(hr)
                 name.value = userobj.name
                 email.innerText = userobj.email
                 number.value = userobj.number
-                
+
                 return check = userobj;
             }
         })
@@ -299,14 +307,14 @@ ticket_detail_div.append(hr)
 
         })
         const userss = JSON.parse(localStorage.getItem("users"));
-        
-      let log_out=  document.getElementById("logout");
+
+        let log_out = document.getElementById("logout");
         log_out.addEventListener("click", (e) => {
-             
-            let deletefalse= delete userss
-            
-             localStorage.setItem("active_users", deletefalse)
-             window.location.href="../index.html"
+
+            let deletefalse = delete userss
+
+            localStorage.setItem("profile_details", deletefalse)
+            window.location.href = "../index.html"
         })
 
         // function deleteItem() {

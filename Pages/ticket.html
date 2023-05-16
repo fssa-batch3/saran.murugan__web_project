@@ -104,6 +104,7 @@
         const movie_frame = document.getElementById("frame")
         movie_frame.innerHTML = res.frame;
 
+        
         const users_booking = JSON.parse(localStorage.getItem("user_booking"));
 
 
@@ -152,102 +153,97 @@
 
             const booking_history = JSON.parse(localStorage.getItem("booking_history")) ?? []
 
-            if (JSON.parse(localStorage.getItem("booking_history"))) {
-                booking_history.find(e => {
-                    if (e.email == users.email) {
+            // if (JSON.parse(localStorage.getItem("booking_history"))) {
+            //     // booking_history.find(e => {
+            //     //     if (e.email == users.email) 
+            //                  let booking_hist= {
 
                       
-                            e.email= users.email
-                            e.theatre_name = theater_name.innerText,
-                            e.seat_name = seat_name.innerText,
-                            e.booking_id = booking_id.innerText,
-                            e.show_time = show_times.innerText,
-                            e.movie_frame=movie_frame.innerText,
-                            e.cab_name=users_booking[0].cab_name
-                            e.show_date = show_date.innerText,
-                            e.show_month = show_month.innerText,
-                            e.show_day = show_day.innerText,
-                            e.movie_name = movie_name.innerText,
-                            e.movie_language = movie_language.innerText,
-                            e.movie_image = show_image.src,
-                            e.ticket_price = users_booking[0].ticket_price,
+            //                 email: users.email,
+            //                 theatre_name : theater_name.innerText,
+            //                 seat_name : seat_name.innerText,
+            //                 booking_id : booking_id.innerText,
+            //                 show_time : show_times.innerText,
+            //                 movie_frame:movie_frame.innerText,
+            //                 cab_name:users_booking[0].cab_name,
+            //                 show_date : show_date.innerText,
+            //                 show_month : show_month.innerText,
+            //                 show_day : show_day.innerText,
+            //                 movie_name : movie_name.innerText,
+            //                 movie_language : movie_language.innerText,
+            //                 movie_image : show_image.src,
+            //                 ticket_price : users_booking[0].ticket_price,
+            //                 cab_money: users_booking[0].cab_money
+            //             }
 
+            //             localStorage.setItem("booking_history", JSON.stringify(booking_hist))
+ 
 
-                            localStorage.setItem("booking_history", JSON.stringify(booking_history))
+                        
+                    
+            //     }
 
-                    }
-                    else {
+            
+                    // else {
                         const booking = {
-                            "theatre_name": theater_name.innerText,
-                            "seat_name": seat_name.innerText,
-                            "booking_id": booking_id.innerText,
-                            "movie_language":movie_frame.innerText,
-                            "show_time": show_times.innerText,
-                            "show_date": show_date.innerText,
-                            "show_month": show_month.innerText,
-                            "show_day": show_day.innerText,
-                            "movie_name": movie_name.innerText,
-                            "movie_language": movie_language.innerText,
-                            "movie_image": show_image.src,
-                            "ticket_price": users_booking[0].ticket_price
-                        }
-                        booking_history.push(booking)
-
-                        // users.push(booking_data)
-
-                        localStorage.setItem("booking_history", JSON.stringify(booking_history))
-                    }
-                })
-            }
-            else{
-                 
-                const booking = {
+                            "email":users.email,
                             "theatre_name": theater_name.innerText,
                             "seat_name": seat_name.innerText,
                             "booking_id": booking_id.innerText,
                             "movie_frame":movie_frame.innerText,
                             "show_time": show_times.innerText,
                             "show_date": show_date.innerText,
+                            "cab_name":users_booking[0].cab_name,
+                            "cab_money": users_booking[0].cab_money,
                             "show_month": show_month.innerText,
                             "show_day": show_day.innerText,
                             "movie_name": movie_name.innerText,
                             "movie_language": movie_language.innerText,
+                            "ticket_count":ticket_count.innerText,
                             "movie_image": show_image.src,
                             "ticket_price": users_booking[0].ticket_price
                         }
                         booking_history.push(booking)
 
-                        // users.push(booking_data)
-
                         localStorage.setItem("booking_history", JSON.stringify(booking_history))
-
-                        
+                        // users.push(booking_data)
+                       
                         localStorage.removeItem("user_booking");
                         window.location.href="../index.html"
-            }
-            //     const booking_history = {
+                        
+                    //  }
 
-            //         theatre_name: theater_name.innerText,
-            //         seat_name: seat_name.innerText,
-            //         booking_id: booking_id.innerText,
-            //         show_time: show_times.innerText,
-            //         show_date: show_date.innerText,
-            //         show_month: show_month.innerText,
-            //         show_day: show_day.innerText,
-            //         movie_name: movie_name.innerText,
-            //         movie_language: movie_language.innerText,
-            //         movie_image: show_image.src,
-            //         ticket_price: users_booking[0].ticket_price,
+                    });
+            //     });
+                console.log(movie_frame.innerText);
+                
+            // }
+            // else{
+                 
+            //     const booking = {
+            //                 "email":users.email,
+            //                 "theatre_name": theater_name.innerText,
+            //                 "seat_name": seat_name.innerText,
+            //                 "booking_id": booking_id.innerText,
+            //                 "movie_frame":movie_frame.innerText,
+            //                 "show_time": show_times.innerText,
+            //                 "show_date": show_date.innerText,
+            //                 "show_month": show_month.innerText,
+            //                 "show_day": show_day.innerText,
+            //                 "cab_name":users_booking[0].cab_name,
+            //                 "cab_money": users_booking[0].cab_money,
+            //                 "movie_name": movie_name.innerText,
+            //                 "movie_language": movie_language.innerText,
+            //                 "movie_image": show_image.src,
+            //                 "ticket_price": users_booking[0].ticket_price
+            //             }
+            //             booking_history.push(booking)
 
-            //     }
-
-            //     const booking_history_det = JSON.parse(localStorage.getItem("booking_history")) ?? [];
-
-            //     booking_history_det.push(booking_history);
 
 
-            //     localStorage.setItem("booking_history", JSON.stringify(details_movie));
-        })
+        //     }
+            
+        // })
 
 
     </script>

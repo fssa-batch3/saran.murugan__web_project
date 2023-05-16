@@ -286,17 +286,48 @@ movie_lists.filter((movie) => {
 //   console.log(movieLists2[i].querySelectorAll("img").length);
 // });
 
+const loginUser = JSON.parse(localStorage.getItem("profile_details"));
+let log_in = document.getElementById("log-in-button");
+console.log(log_in);
 
-const users = JSON.parse(localStorage.getItem("profile_details"));
 
-let user_name = document.getElementById("user_name");
-// user_name.innerText=users.name;
+if (loginUser == null) {
+ console.log("ok");
 
-let a = document.createElement("a");
-a.setAttribute("href", "pages/profile.html");
-a.setAttribute("id", "user_name");
-a.innerText = users.name;
-user_name.append(a);
+}
+else if (loginUser !== false) {
+
+  let profile_details = JSON.parse(localStorage.getItem("profile_details"))
+  log_in.style.display ="none"
+
+
+  const profile = document.createElement("button");
+  profile.setAttribute("id", "user_name");
+  profile.innerText = "My Profile"
+  // profile.innerText ="sAND";
+  profile.addEventListener("click", () => {
+  window.location.href = "pages/profile.html";
+  });
+  document.querySelector(".profile-a").append(profile)
+ 
+
+}
+else {
+  log_in.style.display = "block"
+
+}
+
+
+// const users = JSON.parse(localStorage.getItem("profile_details"));
+
+// let user_name = document.getElementById("user_name");
+// // user_name.innerText=users.name;
+
+// let a = document.createElement("a");
+// a.setAttribute("href", "pages/profile.html");
+// a.setAttribute("id", "user_name");
+// a.innerText = users.name;
+// user_name.append(a);
 
 
 if (JSON.parse(localStorage.getItem("show_movie_details"))) {
