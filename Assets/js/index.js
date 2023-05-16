@@ -330,14 +330,7 @@ else {
 // user_name.append(a);
 
 
-if (JSON.parse(localStorage.getItem("show_movie_details"))) {
-
-}
-
-else {
-  localStorage.setItem("show_movie_details", JSON.stringify(
-
-    [
+let movie_list= [
       {
         "name": {
           "movie_name": "Custody",
@@ -347,7 +340,7 @@ else {
             "Aravind Swamy",
             "Priyamani",
             "Premgi Amaren",
-            ""
+            
           ],
           "cast_role": [
             "Actor",
@@ -355,7 +348,6 @@ else {
             "Actor",
             "Actor",
             "Actor",
-            "Actor"
           ],
           "crew_name": [
             "Venkat Prabhu",
@@ -777,6 +769,6 @@ else {
         "status": true
       }
     ]
-  ))
+ 
 
-}
+     localStorage.setItem("show_movie_details",JSON.stringify(movie_list))
