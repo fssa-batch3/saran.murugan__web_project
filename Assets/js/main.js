@@ -771,4 +771,4 @@ let movie_list= [
     ]
  
 
-     localStorage.setItem("show_movie_details",JSON.stringify(movie_list))
+     localStorage.setItem("show_movie_details",JSON.stringify(movie_list));
