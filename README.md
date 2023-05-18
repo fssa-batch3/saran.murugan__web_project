@@ -119,6 +119,10 @@ ott_module	watch_movie
         6. Now user in home page.
      - Expected Result:
          - User Succesfully Logged out.
+         
+
+  ### Movie card module [completed ✅];
+  
 
    
    
