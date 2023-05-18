@@ -122,7 +122,7 @@ ott_module	watch_movie
          
 
   ### View Movie list[completed ✅];
-   - Scenario: Successfully view products/items.
+   - Scenario: Successfully view now showing/ Upcoming movies.
       - Steps:
         1. Log in as a user.
         2. Navigate to the movie listing page.
