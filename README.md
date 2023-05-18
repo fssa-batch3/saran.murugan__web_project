@@ -121,13 +121,14 @@ ott_module	watch_movie
          - User Succesfully Logged out.
          
 
-  ### Movie card module [completed ✅];
-  
+  ### View Movie list[completed ✅];
+   - Scenario: Successfully view products/items.
+      - Steps:
+        1. Log in as a user.
+        2. Navigate to the movie listing page.
+        3. View the list of movie now showing /upcoming movies.
+      - Expected Result:
+        - The user can view the list of movie now shwoing / upcoming movies.
 
    
    
-   
-
-
-    
->>>>>>> 6d75b07e6a3c5ff360896d4117d6e3e145f351c1
