@@ -8,6 +8,9 @@ movie_payments.html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../Assets/css/seat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <style>
     .banner {
@@ -69,10 +72,10 @@ movie_payments.html>
         left: 10px;
         top: 50px;
     }
+
     /* #select-length{
         color: black;
         background-color: white; */
-    
 </style>
 
 <body>
@@ -94,16 +97,16 @@ movie_payments.html>
 
         <div class="show-case">
             <p class="seat-prime selected"></p>
-<label style="color: white;">SEAT SELECTED</label>
+            <label style="color: white;">SEAT SELECTED</label>
         </div>
 
         <div class="show-case">
             <p class="seat-prime"></p>
- <label style="color: white;">SEAT AVAILABLE</label>
+            <label style="color: white;">SEAT AVAILABLE</label>
         </div>
         <div class="show-case">
             <p class="seat-prime occupied"></p>
-<label style="color: white;">SEAT BOOKED</label>
+            <label style="color: white;">SEAT BOOKED</label>
         </div>
 
     </div>
@@ -194,9 +197,9 @@ movie_payments.html>
 
             <div class="seat_total">
                 <div class="seat_info">
-                <h3>SEAT INFO</h3>
-                 <!-- <p>Seats<span "></span></p> -->
-                 </div>
+                    <h3>SEAT INFO</h3>
+                    <!-- <p>Seats<span "></span></p> -->
+                </div>
                 <p id="selected-seats" style="color: black; "></p>
             </div>
 
@@ -220,7 +223,11 @@ movie_payments.html>
 
     </div>
 
-    <script>        const movie_list = JSON.parse(localStorage.getItem("show_movie_details"))
+    <script>
+
+
+
+        const movie_list = JSON.parse(localStorage.getItem("show_movie_details"))
 
         const url = window.location.search;                // ?name=Arun
         const urlParams = new URLSearchParams(url);    //"name":"ponniyinselvan"    // converting string into key value pair
@@ -229,13 +236,13 @@ movie_payments.html>
 
         let res;
         movie_list.find((e) => {
-    if (e.name.movie_name == username) { //arr[0],arr[1]  =e
-        return res = e;
-    }
-    
-        return res = 0;
-    
-});
+            if (e.name.movie_name == username) { //arr[0],arr[1]  =e
+                return res = e;
+            }
+
+            return res = 0;
+
+        });
 
         // let button= document.getElementById("button");
 
@@ -265,8 +272,29 @@ movie_payments.html>
         const selectedSeatsList = document.getElementById("selected-seats");
         const total = document.getElementById("total");
         const ticketprice = document.getElementById("movie").value;
-        
+
         let selectedSeats = [];
+
+
+
+        console.log(show_time.innerText);
+
+
+
+        let booking_history = JSON.parse(localStorage.getItem("booking_history"));
+
+        for (i = 0; i < booking_history.length; i++) {
+
+            console.log(booking_history[i].seat_name);
+            // if(curr_date == booking_history[i].show_date && curr_month == show_month&& ){
+
+            // }
+        }
+
+
+
+
+
 
         const seats = document.querySelectorAll(".seat");
         seats.forEach(seat => {
@@ -274,13 +302,19 @@ movie_payments.html>
                 if (seat.classList.contains("selected")) {
                     seat.classList.remove("selected");
                     selectedSeats = selectedSeats.filter(name => name !== seat.dataset.name);
+
+
                 } else {
                     seat.classList.add("selected");
                     selectedSeats.push(seat.dataset.name);
                 }
                 updateSelectedSeatsList();
             });
+
+            // console.log(seat.dataset.name
         });
+
+
 
         function updateSelectedSeatsList() {
             selectedSeatsList.innerHTML = "";
@@ -293,9 +327,9 @@ movie_payments.html>
 
             // const selectedSeatCount = selectedSeats.length;
 
-            const selectseatcount=document.getElementById("seat-length").innerText=selectedSeats.length;
-         
-             
+            const selectseatcount = document.getElementById("seat-length").innerText = selectedSeats.length;
+
+
             total.innerText = selectseatcount * ticketprice;
 
         }
@@ -308,7 +342,7 @@ movie_payments.html>
             for (let i = 0; i < 5; i++) {
                 result += characters.charAt(Math.floor(Math.random() * charactersLength));
             }
-            for (let j = 0; j <1; j++) {
+            for (let j = 0; j < 1; j++) {
                 num += Math.floor(Math.random() * 100)
             }
 
@@ -318,11 +352,11 @@ movie_payments.html>
 
         function bookSeats() {
             if (selectedSeats.length === 0) {
-                alert("Please select at least one seat!");
+                swal("Please select at least one seat!");
             } else {
                 alert(`You have selected seats ${selectedSeats.join(", ")}.`);
                 console.log(selectedSeats);
-                window.location.href = `movie_payment_page.html?name=${ res.name.movie_name}`;
+                window.location.href = `movie_payment_page.html?name=${res.name.movie_name}`;
 
                 const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
                 if (JSON.parse(localStorage.getItem("user_booking"))) {
@@ -330,24 +364,24 @@ movie_payments.html>
                         if (e.email == e.email) {
                             e.seat_names = selectedSeats
                             e.booking_id = randomString
-                            e.seat_count= selectedSeats.length
-                            e.seat_price =total.innerText
+                            e.seat_count = selectedSeats.length
+                            e.seat_price = total.innerText
                             localStorage.setItem("user_booking", JSON.stringify(user_booking))
 
                         }
                         else {
                             const booking_data = {
-                        "email": users.booking,
-                        "show_day": day,
-                        "show_date": date,
-                        "show_month": month,
-                        "theatre_name":theatre_name,
-                        "seat_names": selectedSeats,
-                        "booking_id": randomString,
-                        "seat_count":selectedSeats.length,
-                        "seat_price":total.innerText,
-                        "show_time":show_time,
-                    }
+                                "email": users.booking,
+                                "show_day": day,
+                                "show_date": date,
+                                "show_month": month,
+                                "theatre_name": theatre_name,
+                                "seat_names": selectedSeats,
+                                "booking_id": randomString,
+                                "seat_count": selectedSeats.length,
+                                "seat_price": total.innerText,
+                                "show_time": show_time,
+                            }
                             user_booking.push(booking_data)
 
                             // users.push(booking_data)

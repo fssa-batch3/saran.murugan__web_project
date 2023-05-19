@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../Assets/css/profilesettings.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -139,7 +142,7 @@
         // about_us.style.display = "block";
         // });
 
-       
+
 
         const profile_details = JSON.parse(localStorage.getItem("profile_details"))
         const booking_history_div = document.querySelector(".booking-history-div");
@@ -148,7 +151,7 @@
 
         if (booking_history_det !== null) {
 
-            for (let i=0; i<booking_history_det.length; i++){
+            for (let i = 0; i < booking_history_det.length; i++) {
 
                 if (profile_details.email == booking_history_det[i].email) {
 
@@ -218,9 +221,9 @@
                     tickets.innerText = "tickets";
                     ticket_total_div.append(tickets);
 
-                     const how_many_ticket=document.createElement("span");
-                       how_many_ticket.innerText="3";
-                       tickets.prepend(how_many_ticket);
+                    const how_many_ticket = document.createElement("span");
+                    how_many_ticket.innerText = "3";
+                    tickets.prepend(how_many_ticket);
 
 
                     if (booking_history_det[i].cab_name) {
@@ -314,7 +317,27 @@
             let deletefalse = delete userss
 
             localStorage.setItem("profile_details", deletefalse)
-            window.location.href = "../index.html"
+
+            swal({
+                title: "Are you sure?",
+                text: " Your log out your account !",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Poof! Your account as log outed !", {
+                            icon: "success",
+                        });
+                        window.location.href = "../index.html"
+                    } else {
+                        swal("Your account is not log outed!");
+                    }
+                    
+                });
+                
+            
         })
 
         // function deleteItem() {

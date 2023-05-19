@@ -195,18 +195,26 @@
             const premium_cost = document.getElementById("premium_cost").value;
             
             const show_timing_values = [];
+
             show_times.forEach((e, ind) => {
-                console.log(e.value.slice(0, 2));
+                // console.log(e.value.slice(0, 2));
+                // console.log(e.value.slice(2,5));
+                
                 if (e.value.slice(0, 2) > 12) {
-                    const new_hour = e.value.slice(0, 2) - 12
+                    let new_hour = e.value.slice(0, 2) - 12
                     const old_min = e.value.slice(2, 5)
+                    if(new_hour<10){
+                        new_hour="0"+new_hour
+                    }
+                    
+        
                     const new_time = `${new_hour + old_min  } PM`
                     show_timing_values.push(new_time)
 
-                    // console.log(show_times[ind],new_hour,old_min,"33333")
-                    // console.log(new_hour+old_min+"PM","44444444444");
+                    console.log(new_hour);
+
                 }
-                else if (e.value.slice(0, 2) == 12) {
+                 else if (e.value.slice(0, 2) == 12) {
                     const new_time = `${show_times[ind].value  } PM`
                     show_timing_values.push(new_time)
                 }
@@ -221,7 +229,7 @@
             })
             console.log(show_timing_values);
 
-            console.log(show_times.length);
+            // console.log(show_times.length);
             const show_timing = [];
             for (let j = 0; j < show_times.length; j++) {
                 show_timing.push(show_times[j].value)

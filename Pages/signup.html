@@ -44,7 +44,7 @@
                 <label>Confirm </label>
             </div>
 
-            <button onclick="submit()">Submit</button>
+            <button type="submit">Submit</button>
 
             <!-- <div class="check">
                 <input type="checkbox" required>
@@ -61,7 +61,8 @@
 
     </div>
 
-    <script>const form=document.querySelector("form");
+    <script>
+    const form=document.querySelector("form");
 form.addEventListener("submit",e=>{
     e.preventDefault();
     submit();
