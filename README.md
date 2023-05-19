@@ -41,9 +41,6 @@ Features:
 	2. theatre_update
 	3. theatre_delete
 	
-	
-	
-	
 -booking_module	
    1. theatre_selecting
    2. seat_selection
@@ -119,11 +116,39 @@ ott_module	watch_movie
         6. Now user in home page.
      - Expected Result:
          - User Succesfully Logged out.
+         
+
+  ### View Movie list[completed ✅];
+   - Scenario 1: Successfully view now showing/ Upcoming movies.
+      - Steps:
+        1. Log in as a user.
+        2. Navigate to the movie listing page.
+        3. View the list of movie now showing /upcoming movies.
+        4. Clicks book now button.
+      - Expected Result:
+        - The user can view the list of movie now shwoing / upcoming movies.
+
+
+  ### View now showing/upcoming movie details[Completed✅]
+   - Scenario 1: Successfully view product/item details.
+      - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the movie listing page.
+        3. Select a product/item to view its details.
+        4. Clicks the book ticket button.
+       - Expected Result:
+         - The user can view the details of the movie now showing / upcoming movies.
+
+
+ ### Theatre list module[completed ✅];
+   - Scenario 1: Successfully view theatre list.
+      - Steps:
+        1. Log in as a user.
+        2. Navigate to the theatre listing page.
+        3. View the list of theatre list.
+      - Expected Result:
+        - The user can view the list of theatre list.
+
 
    
    
-   
-
-
-    
->>>>>>> 6d75b07e6a3c5ff360896d4117d6e3e145f351c1
