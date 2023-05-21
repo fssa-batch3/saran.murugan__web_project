@@ -380,23 +380,24 @@
 
         for (i = 0; i < theatres.show_times.length; i++) {
 
+          
+
+
+
           // const para2 = document.createElement("p");
           // para2.setAttribute("class", "show_times")
           // // para2.innerText = theatres.show_times[i];
           // showtime.append(para2);
+
+          
 
           const a = document.createElement("a");
           a.innerText = theatres.show_times[i];
           a.setAttribute("class", "show_times1")
           a.setAttribute("href", `movie_seats.html?name=${res.name.movie_name}`);
           showtime.append(a);
-
-  
-  
-    
-          
-
          
+      
         }
    
 
@@ -407,7 +408,7 @@
 
   
 
-      const para2 = document.querySelectorAll(".show_time1 p")
+      const para2 = document.querySelectorAll(".show_time1 a")
       const theatre_dev = document.querySelectorAll(".theatre_det");
 
       // const users = JSON.parse(localStorage.getItem("profile_details"));
@@ -417,7 +418,8 @@
         e.addEventListener("click", (el) => {
           // console.log(el.target.children[0].children[0].innerText + el.target.children[0].children[1].innerText + el.target.children[0].children[2].innerText);
           const show_time = el.target.innerText;
-          const theatre_name = el.target.parentElement.parentElement.parentElement.children[0].innerText;
+        
+          const theatre_name = el.target.parentElement.parentElement.children[0].innerText;
 
           const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
           if (JSON.parse(localStorage.getItem("user_booking"))) {

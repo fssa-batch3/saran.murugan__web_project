@@ -141,10 +141,9 @@ header img {
 #day7_shows{
     display: none;
 }
-
-
-
-
+.show_times{
+    background-color: black;
+}
 .theatre_name{
     color: white;
     margin-left: 50px;

@@ -472,8 +472,6 @@ if(JSON.parse(localStorage.getItem("show_details"))){
 
 else{
   localStorage.setItem("show_details", JSON.stringify(
-
-
     [
       {
         "name": {
@@ -2573,7 +2571,7 @@ function togglemenu(){
   document.getElementById('sidebar').classList.toggle('active');
  }
 
- 
+
 
  if(JSON.parse(localStorage.getItem("theatre_details"))){
   // return

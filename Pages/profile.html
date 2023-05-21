@@ -60,12 +60,8 @@
     <div class="setting-option">
         <ul>
             <li id="booking-history-head">Booking history</li>
-            <a href="../Pages/cinema_page.html" style="text-decoration: none; color: white;">
-                <li id="cinemas-head">Cinemas</li>
-            </a>
-            <!-- <li id="notification-head">Notification</li> -->
-            <!-- <li id="help-support-head">Help and support</li>
-            <li id="about-us-head">About us</li> -->
+
+
         </ul>
     </div>
 
@@ -75,46 +71,42 @@
 
         </div>
 
-        <div class="help-support"></div>
+        
 
-        <div class="about-us"></div>
+    
 
         <div class="notification"></div>
 
-        <div class="cinemas">
 
         </div>
 
-    </div>
+
 
     <script>
 
         const booking_history_head = document.getElementById("booking-history-head");
-        let cinemas_head = document.getElementById("cinemas-head");
         // const notification_head = document.getElementById("notification-head");
         // const help_support_head = document.getElementById("help-support-head");
         // const about_us_head = document.getElementById("about-us-head");
 
         const booking_history = document.querySelector(".booking-history-div");
-        let cinemas = document.querySelector(".cinemas");
         // const notification = document.querySelector(".notification");
         // const help_support = document.querySelector(".help-support");
         // const about_us = document.querySelector(".about-us");
 
         booking_history_head.addEventListener("click", () => {
             booking_history.style.display = "block";
-            cinemas.style.display = "none";
+        
             // notification.style.display = "none";
             // help_support.style.display = "none";
             // about_us.style.display = "none";
         })
-        cinemas_head.addEventListener("click", function () {
-            booking_history.style.display = "none";
-            cinemas.style.display = "block";
-            //  notification.style.display="none";
-            //  help_support.style.display="none";
-            //  about_us.style.display="none";
-        })
+        // cinemas_head.addEventListener("click", function () {
+        //     booking_history.style.display = "none";
+        //     //  notification.style.display="none";
+        //     //  help_support.style.display="none";
+        //     //  about_us.style.display="none";
+        // })
         // notification_head.addEventListener("click", () => {
         //     booking_history.style.display = "none";
         //     //  cinemas.style.display="none";
