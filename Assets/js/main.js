@@ -2574,3 +2574,75 @@ function togglemenu(){
  }
 
  
+
+ if(JSON.parse(localStorage.getItem("theatre_details"))){
+  // return
+}
+
+else{
+  localStorage.setItem("theatre_details", JSON.stringify(
+    [
+      {
+        "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai",
+        "theatre_address": "No. 34/1, East Coast Road, Kanathur, Near Toll Plaza, Chennai, Tamil Nadu 603112, India",
+        "theatre_map_location": "https://goo.gl/maps/jiq2hVTk3SfwL4xx9?coh=178572&entry=tt",
+        "theatre_lat_long": "12.847991,80.240136"
+      },
+      {
+        "theatre_name": "PVR: Grand Mall, Velachery",
+        "theatre_address": "3rd Floor, Grand Square Mall, No.137, Tambaram Velachery Road, V.O.C Nagar, Doctor Seetaram Nagar, Chennai, Tamil Nadu 600042, India\n",
+        "theatre_map_location": "https://goo.gl/maps/6DPHubRXDaTWxKQp7?coh=178572&entry=tt",
+        "theatre_lat_long": "12.971962,80.220429"
+      },
+      {
+        "theatre_name": "INOX: The Marina Mall, OMR",
+        "theatre_address": "3rd Floor, The Marina Mall, Old Mahabalipuram Road, Egatoor, Navalur, Chennai, Tamil Nadu 603103, India",
+        "theatre_map_location": "https://goo.gl/maps/q1AfmcJ94mTgnYWF9?coh=178572&entry=tt",
+        "theatre_lat_long": "12.836170,80.229571"
+      },
+      {
+        "theatre_name": "INOX: LUXE Phoenix Market City, Velachery",
+        "theatre_address": "Formerly Jazz Cinemas, 2nd Floor, Phoenix Market City, Velachery Main Road, Velachery, Chennai, Tamil Nadu 600042, India",
+        "theatre_map_location": "https://goo.gl/maps/dyZ4PmF5v1wDSiw47?coh=178572&entry=tt",
+        "theatre_lat_long": "12.992071,80.217159"
+      },
+      {
+        "theatre_name": "Rohini Silver Screens: Koyambedu",
+        "theatre_address": "141/2, Poonamallee High Road, Koyembedu, Near St. Thomas College Of Arts And Science, Chennai, Tamil Nadu 600107, India\n",
+        "theatre_map_location": "https://goo.gl/maps/2thRrTnNTvdP1LiE8?coh=178572&entry=tt",
+        "theatre_lat_long": "13.075767,80.195872"
+      },
+      {
+        "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "theatre_address": "No-4, Pillaiyar Koil St, Jafferkhanpet, Chennai, Tamil Nadu 600083, India",
+        "theatre_map_location": "https://goo.gl/maps/Xf3shLAYwrnvY4di7?coh=178572&entry=tt",
+        "theatre_lat_long": "13.031586,80.206537"
+      },
+      {
+        "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai",
+        "theatre_address": "60, LB Road, Ranganatha Puram, Thiruvanmiyur, Chennai, Tamil Nadu 600041, India\n",
+        "theatre_map_location": "https://goo.gl/maps/Sh6ZEV7XCeVDq761A?coh=178572&entry=tt",
+        "theatre_lat_long": "12.989515,80.256437"
+      },
+      {
+        "theatre_name": "PVR: VR Chennai, Anna Nagar",
+        "theatre_address": "3rd Floor, VR Mall, MetroZone, No 44, Pillaiyar Koil Street, Jawaharlal Nehru Road, Anna Nagar, Chennai, Tamil Nadu 600040, India",
+        "theatre_map_location": "https://goo.gl/maps/Xmas7EfzB34uSrby7?coh=178572&entry=tt",
+        "theatre_lat_long": "13.082561,80.194803"
+      },
+      {
+        "theatre_name": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "theatre_address": "BSR Mall, Thoraipakkam, Seevaram, Oggiyamduraipakkam, Chennai, Tamil Nadu 600097, India",
+        "theatre_map_location": "https://goo.gl/maps/zXba7rFBAYZcKMS58?coh=178572&entry=tt",
+        "theatre_lat_long": "12.949551,80.240281"
+      },
+      {
+        "theatre_name": "SPI: Sathyam Cinemas - Royapettah, Chennai",
+        "theatre_address": "8, Thiru Vi Ka Road, Royapettah, Chennai, Tamil Nadu 600014, India",
+        "theatre_map_location": "https://goo.gl/maps/CYN6xi9T7qtfG2XCA?coh=178572&entry=tt",
+        "theatre_lat_long": "13.055369,80.257966"
+      }
+    ])
+
+    )
+    }
