@@ -76,15 +76,19 @@ movie_type.innerText = res.movie_type;
 time.append(movie_type);
 
 if(res.movie_releasing == "true"){
-const book_button = document.createElement("button");
-// book_button.innerText="book_button";
-time.append(book_button);
 
-const a = document.createElement("a");
+  const a = document.createElement("a");
+a.setAttribute("class","button_a")
 //  url.html?key=value&key=value
 a.setAttribute("href", `movie_show_time.html?name=${res.name.movie_name}`);
-a.innerText = "Book tickets";
-book_button.append(a);
+time.append(a);
+
+const book_button = document.createElement("button");
+// book_button.innerText="book_button";
+book_button.innerText = "Book tickets";
+a.append(book_button);
+
+
 
 }
 

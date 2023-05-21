@@ -362,11 +362,11 @@
         const seat = document.getElementById("seat")
         seat.innerText = users_booking[0].seat_names;
 
-        const seat_count=document.getElementById("ticket_count")
-        seat_count.innerText=users_booking[0].seat_count;
+        const seat_count = document.getElementById("ticket_count")
+        seat_count.innerText = users_booking[0].seat_count;
 
-        const cab_count =document.getElementById("cab_count")
-        cab_count.innerText=users_booking[0].seat_count;
+        // const cab_count = document.getElementById("cab_count")
+        // cab_count.innerText = users_booking[0].seat_count;
 
 
         const cab = document.querySelector(".cab")
@@ -395,17 +395,17 @@
 
             const total_payment = document.getElementById("total-payment")
             total_payment.innerText = ticket_total
-        } else{
-        const ticket_price = document.getElementById("ticket-price")
-        ticket_price.innerText = users_booking[0].seat_price
+        } else {
+            const ticket_price = document.getElementById("ticket-price")
+            ticket_price.innerText = users_booking[0].seat_price
 
-        const ticket_payment = document.getElementById("total-payment")
-        ticket_payment.innerText = users_booking[0].seat_price;
+            const ticket_payment = document.getElementById("total-payment")
+            ticket_payment.innerText = users_booking[0].seat_price;
 
-    }
+        }
 
-   
-    
+
+
 
 
 
@@ -539,6 +539,41 @@
         paytm_a.setAttribute("href", `ticket.html?name=${res.name.movie_name}`);
         paytm_button.append(paytm_a);
 
+        paytm_button.addEventListener("click", function () {
+
+            const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
+            if (JSON.parse(localStorage.getItem("user_booking"))) {
+                user_booking.find(e => {
+                    if (e.email == e.email) {
+                        e.ticket_price = ticket_total
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+
+                    }
+                    else {
+                        const booking_data = {
+                            "email": users.booking,
+                            "show_day": day,
+                            "show_date": date,
+                            "show_month": month,
+                            "theatre_name": theatre_name,
+                            "seat_names": selectedSeats,
+                            "booking_id": randomString,
+                            // "seat_count":selectseatcount,
+                            "seat_price": total.innerText,
+                            "ticket_price": ticket_total,
+                            "show_time": show_time,
+                        }
+                        user_booking.push(booking_data)
+
+                        // users.push(booking_data)
+
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+                    }
+                })
+            }
+
+        })
+
         const debit_button_div = document.querySelector(".debit-button-div")
 
         const debit_button = document.createElement("button");
@@ -550,6 +585,42 @@
         debit_a.setAttribute("class", "a_button")
         debit_a.setAttribute("href", `ticket.html?name=${res.name.movie_name}`);
         debit_button.append(debit_a);
+
+        debit_button.addEventListener("click", function () {
+
+            const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
+            if (JSON.parse(localStorage.getItem("user_booking"))) {
+                user_booking.find(e => {
+                    if (e.email == e.email) {
+                        e.ticket_price = ticket_total
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+
+                    }
+                    else {
+                        const booking_data = {
+                            "email": users.booking,
+                            "show_day": day,
+                            "show_date": date,
+                            "show_month": month,
+                            "theatre_name": theatre_name,
+                            "seat_names": selectedSeats,
+                            "booking_id": randomString,
+                            // "seat_count":selectseatcount,
+                            "seat_price": total.innerText,
+                            "ticket_price": ticket_total,
+                            "show_time": show_time,
+                        }
+                        user_booking.push(booking_data)
+
+                        // users.push(booking_data)
+
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+                    }
+                })
+
+            }
+        })
+
 
         const phonepe_button_div = document.querySelector(".phonepe-button-div");
 
@@ -563,6 +634,41 @@
         phonepe_a.setAttribute("href", `ticket.html?name=${res.name.movie_name}`);
         phonepe_button.append(phonepe_a);
 
+        phonepe_button.addEventListener("click", function () {
+
+            const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
+            if (JSON.parse(localStorage.getItem("user_booking"))) {
+                user_booking.find(e => {
+                    if (e.email == e.email) {
+                        e.ticket_price = ticket_total
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+
+                    }
+                    else {
+                        const booking_data = {
+                            "email": users.booking,
+                            "show_day": day,
+                            "show_date": date,
+                            "show_month": month,
+                            "theatre_name": theatre_name,
+                            "seat_names": selectedSeats,
+                            "booking_id": randomString,
+                            // "seat_count":selectseatcount,
+                            "seat_price": total.innerText,
+                            "ticket_price": ticket_total,
+                            "show_time": show_time,
+                        }
+                        user_booking.push(booking_data)
+
+                        // users.push(booking_data)
+
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+                    }
+                })
+            }
+
+        })
+
         const upi_button_div = document.querySelector(".upi-button-div");
 
         const upi_button = document.createElement("button");
@@ -575,6 +681,42 @@
         upi_a.setAttribute("href", `ticket.html?name=${res.name.movie_name}`);
         upi_button.append(upi_a);
 
+
+        upi_button.addEventListener("click", function () {
+
+            const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
+            if (JSON.parse(localStorage.getItem("user_booking"))) {
+                user_booking.find(e => {
+                    if (e.email == e.email) {
+                        e.ticket_price = ticket_total
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+
+                    }
+                    else {
+                        const booking_data = {
+                            "email": users.booking,
+                            "show_day": day,
+                            "show_date": date,
+                            "show_month": month,
+                            "theatre_name": theatre_name,
+                            "seat_names": selectedSeats,
+                            "booking_id": randomString,
+                            // "seat_count":selectseatcount,
+                            "seat_price": total.innerText,
+                            "ticket_price": ticket_total,
+                            "show_time": show_time,
+                        }
+                        user_booking.push(booking_data)
+
+                        // users.push(booking_data)
+
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+                    }
+                })
+            }
+
+        })
+
         const net_button_div = document.querySelector(".net-button-div")
 
         const net_button = document.createElement("button");
@@ -586,6 +728,41 @@
         net_a.setAttribute("class", "a_button")
         net_a.setAttribute("href", `ticket.html?name=${res.name.movie_name}`);
         net_button.append(net_a);
+
+        net_button.addEventListener("click", function () {
+
+            const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
+            if (JSON.parse(localStorage.getItem("user_booking"))) {
+                user_booking.find(e => {
+                    if (e.email == e.email) {
+                        e.ticket_price = ticket_total
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+
+                    }
+                    else {
+                        const booking_data = {
+                            "email": users.booking,
+                            "show_day": day,
+                            "show_date": date,
+                            "show_month": month,
+                            "theatre_name": theatre_name,
+                            "seat_names": selectedSeats,
+                            "booking_id": randomString,
+                            // "seat_count":selectseatcount,
+                            "seat_price": total.innerText,
+                            "ticket_price": ticket_total,
+                            "show_time": show_time,
+                        }
+                        user_booking.push(booking_data)
+
+                        // users.push(booking_data)
+
+                        localStorage.setItem("user_booking", JSON.stringify(user_booking))
+                    }
+                })
+            }
+
+        })
     </script>
 
 </body>

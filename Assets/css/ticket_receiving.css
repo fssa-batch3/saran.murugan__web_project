@@ -108,3 +108,12 @@ a button{
 #seat_count{
     margin-left: 10px;
 }
+#booking-history-button{
+
+    background-color: #edd605;
+    color: black;
+    width:100px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 53%;
+}
