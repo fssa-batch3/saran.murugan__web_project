@@ -14,15 +14,15 @@
 <body>
   <!-- Heading content -->
 
-  </div>
-  
-  <header>
+  <main>
+    <div class="all-content">
+      <header>
 
-    <img src="Assets/images/logo/logo.png" alt="logo5">
+        <img src="Assets/images/logo/logo.png" alt="logo5">
 
-    <input type="search" id="searchbar" placeholder="Search your movie">
+        <input type="search" id="searchbar" placeholder="Search your movie">
 
-    <!-- <select>
+        <!-- <select>
       <option selected>Chennai</option>
       <option>Villupuram</option>
       <option>Madurai</option>
@@ -33,88 +33,102 @@
       <option>Kanyakumari</option>
     </select> -->
 
-    <div class="buttons">
-    <a href="Pages/log.html">
-<button id="log-in-button">Log in </button>
-</a>
-<br>
-    <!-- <a href="Pages/signup.html">
-<button id="sign-in-button">sign up</button>
-</a> -->
-
-     </div>
-     <div class="profile-a">
-
-      <!-- <h2 id="user_name"></h2> -->
-
-
-     </div>
-    <!-- <a href="Pages/profile.html">
- <img src="Assets/images/logo/Menu logo.png" alt="menu" id="menu">
-</a> -->
-
-  </header>
-
-  <!-- website banner -->
-  <div class="image-slider">
-    <figure>
-      <img src="Assets/images/logo/Picsart_22-12-18_18-28-01-829.jpg" alt="image not found" id="banner1">
-      <img src="Assets/images/logo/captain_miller_banner.jpg" alt="image not found">
-      <img src="Assets/images/logo/thunivu_banner.jpg" alt="image not found">
-      <img src="Assets/images/logo/leo_banner.jpg" alt="image not found">
-      <img src="Assets/images/logo/captain_miller_banner.jpg" alt="image not found">
-      <img src="Assets/images/logo/Picsart_22-12-18_18-28-01-829.jpg" alt="image not found" id="banner1">
-    </figure>
-
-  </div>
-
-  <!-- upcoming movie /review anchor tag -->
-  <div class="various" style="display: none;">
-    <!-- <a href="Pages/upcomingmovies.html">Upcoming movies</a> -->
-    <a href="Pages/OTT/ottindex.html">OTT</a>
-    <a href="Pages/movie_reviews.html">Movie reviews</a>
-  </div>
-  
-  <div class="crud-button">
-  <a href="Pages/crud.html">
-<button >Add</button>
-</a> 
-  <a href="Pages/admin_update_crud.html">
- <button >Update</button>
-</a>
-  </div>
-
-  <div class="show-button">
-    <h2> Released Movies </h2>
-<button>Now showing</button>
-  </div>
-
-  <div class="movie-list-container1">
-
-    <div class="movie-list-wrapper">
-        <div class="movie-list">
+        <div class="buttons">
+          <a href="Pages/log.html">
+            <button id="log-in-button">Log in </button>
+          </a>
+          <br>
+       
 
         </div>
-       
-      </div> 
+
+        
+        <div id="sidebar">
+        
+          <div class="toggle-btn" onclick="togglemenu()">
+  
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+  
+                  <div class="profile-a">
+
+        </div>
+          <ul>
+              <li>Profile</li>
+              <li>Cinemas</li>
+              <li>About us</li>
+              <li>Contact</li>
+              <li>booking history</li>
+          </ul>
+  
+      </div>
+
       
-    </div> 
+        <!-- <img src="Assets/images/logo/Menu logo.png" alt="menu"  onclick="togglemenu()" id="toggle-btn"> -->
 
-     <div class="show-button">
-      <h2>Upcoming movies</h2>
-    </div> 
 
-    <div class="movie-list-container2">
-    <div class="movie-list-wrapper2">
-    <div class="movie-list2">
+      </header>
 
-       </div> 
-      
-       <!-- <i class="fa-solid fa-chevron-right arrow2"></i> -->
-    </div>
-    </div>
+      <!-- website banner -->
+      <div class="image-slider">
+        <figure>
+          <img src="Assets/images/logo/Picsart_22-12-18_18-28-01-829.jpg" alt="image not found" id="banner1">
+          <img src="https://th-i.thgim.com/public/entertainment/movies/g08gz7/article65596261.ece/alternates/FREE_1200/captainmiller.jpg" alt="image not found">
+          <img src="https://i.ytimg.com/vi/qN3wfuPYTI4/maxresdefault.jpg" alt="image not found">
+          <img src="Assets/images/logo/Picsart_22-12-18_18-28-01-829.jpg" alt="image not found" id="banner1">
+        </figure>
 
-<!-- <div class="watch-now2">
+      </div>
+
+      <!-- upcoming movie /review anchor tag -->
+      <div class="various" style="display: none;">
+        <!-- <a href="Pages/upcomingmovies.html">Upcoming movies</a> -->
+        <a href="Pages/OTT/ottindex.html">OTT</a>
+        <a href="Pages/movie_reviews.html">Movie reviews</a>
+      </div>
+
+      <div class="crud-button">
+        <a href="Pages/crud.html">
+          <button>Add</button>
+        </a>
+        <a href="Pages/admin_update_crud.html">
+          <button>Update</button>
+        </a>
+      </div>
+
+      <div class="show-button">
+        <h2> Released Movies </h2>
+        <button>Now showing</button>
+      </div>
+
+      <div class="movie-list-container1">
+
+        <div class="movie-list-wrapper">
+          <div class="movie-list">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="show-button">
+        <h2>Upcoming movies</h2>
+      </div>
+
+      <div class="movie-list-container2">
+        <div class="movie-list-wrapper2">
+          <div class="movie-list2">
+
+          </div>
+
+          <!-- <i class="fa-solid fa-chevron-right arrow2"></i> -->
+        </div>
+      </div>
+
+      <!-- <div class="watch-now2">
       <h2>Released movies </h2> <a href="Pages/OTT/ottindex.html"> <button> Watch now</button> </a>
     </div>
 
@@ -144,31 +158,37 @@
 
 </div> -->
 
-  <footer>
-    <!-- footer of my page -->
-    <img src="Assets/images/logo/logo.png"alt="logo6" id="logo1">
-    <div class="logos">
-      <a href="https://www.facebook.com/">
- <img
-          src="https://cdn-icons-png.flaticon.com/512/2168/2168281.png"
-          alt="logo1" id="logo2"></a>
-      <a href="https://www.instagram.com/">
- <img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="logo2" id="logo2">
-</a>
-      <a href="https://twitter.com/i/flow/login">
- <img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="logo3"
-          id="logo2"></a>
-      <a href="https://www.linkedin.com/">
- <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="logo4"
-          id="logo2"></a>
+      <footer>
+        <!-- footer of my page -->
+        <img src="Assets/images/logo/logo.png" alt="logo6" id="logo1">
+        <div class="logos">
+          <a href="https://www.facebook.com/">
+            <img src="https://cdn-icons-png.flaticon.com/512/2168/2168281.png" alt="logo1" id="logo2"></a>
+          <a href="https://www.instagram.com/">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="logo2" id="logo2">
+          </a>
+          <a href="https://twitter.com/i/flow/login">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="logo3" id="logo2"></a>
+          <a href="https://www.linkedin.com/">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="logo4" id="logo2"></a>
+        </div>
+
+        <div class="about_copy_right">
+          <p>Copyright 2023 @google images and banner.All rights reserved.
+            The content and images used on this site are copy right protected and copyrights vests with the respestive
+            owners. The usage of the content and images on this website is intended to promote the works and no
+            endorsement
+            of the artist shall be implied. Unauthorized use is prohibited and punishable by law
+          </p>
+        </div>
+      </footer>
+
     </div>
 
-    <div class="about_copy_right">
-      <p>Copyright 2023 @google images and banner.All rights reserved.
-        The content and images used on this site are copy right protected and copyrights vests with the respestive owners. The usage of the content and images on   this website is intended to promote the works and no endorsement of the artist shall be implied. Unauthorized use is prohibited and punishable by law
-      </p>
-    </div>
-  </footer>
+
+  </main>
+
+
 
   <script src="Assets/js/main.js"> </script>
 </body>

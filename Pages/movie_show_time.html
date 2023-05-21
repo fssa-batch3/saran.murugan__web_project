@@ -119,9 +119,9 @@
 
     </div>
 
-    <a href="Add_theatre.html">
+    <!-- <a href="Add_theatre.html">
 <button style="padding: 3px; color: black; border-radius: 5px;">Add theatre</button>
-</a>
+</a> -->
 
     <div class="theatres_lists">
 
@@ -254,16 +254,16 @@
   
 })
 
-    let live_live_time;
+    // let live_live_time;
 
-    const getIndiaTime = function () {
-  const live_time = document.getElementById("IndiaTime").innerText = new Date().toLocaleString("en-US", { timeZone: 'Asia/Kolkata', timeStyle: 'short', hourCycle: 'h12' });
-  return live_live_time = live_time
-}
-    getIndiaTime();
-    setInterval(getIndiaTime, 1000);
+    // const getIndiaTime = function () {
+  // const live_time = document.getElementById("IndiaTime").innerText = new Date().toLocaleString("en-US", { timeZone: 'Asia/Kolkata', timeStyle: 'short', hourCycle: 'h12' });
+  // return live_live_time = live_time
+// }
+    // getIndiaTime();
+    // setInterval(getIndiaTime, 1000);
 
-    console.log(live_live_time);
+    // console.log(live_live_time);
 
     // BANNER SECTION //
     const banner = document.querySelector(".banner");
@@ -380,26 +380,32 @@
 
         for (i = 0; i < theatres.show_times.length; i++) {
 
-          const para2 = document.createElement("p");
-          para2.setAttribute("class", "show_times")
-          // para2.innerText = theatres.show_times[i];
-          showtime.append(para2);
+          // const para2 = document.createElement("p");
+          // para2.setAttribute("class", "show_times")
+          // // para2.innerText = theatres.show_times[i];
+          // showtime.append(para2);
 
           const a = document.createElement("a");
           a.innerText = theatres.show_times[i];
           a.setAttribute("class", "show_times1")
-          a.setAttribute("href", `movie_seats.html?name=${  res.name.movie_name}`);
-          para2.append(a);
+          a.setAttribute("href", `movie_seats.html?name=${res.name.movie_name}`);
+          showtime.append(a);
 
+  
+  
+    
+          
 
-             const showtiming= theatres.show_times[i];
-             
+         
         }
+   
 
         const hr = document.createElement("hr");
         theatre_det.append(hr);
 
       }
+
+  
 
       const para2 = document.querySelectorAll(".show_time1 p")
       const theatre_dev = document.querySelectorAll(".theatre_det");
@@ -438,7 +444,55 @@
 
         })
       });
+    };
+
+      
+    //day display none code
+
+    const current_time= new Date()
+
+  const showtimings=document.getElementsByClassName("show_times1");
+
+
+   for(let i=0; i< showtimings.length; i++){
+     let showTiming =showtimings[i]
+
+
+   
+     let timing = showTiming.innerHTML;
+     
+
+     let timingParts= timing.split(" ");
+     let time= timingParts[0];
+     let ampm =timingParts[1];
+      
+
+     let timingPart= time.split(":")
+     let showHour = parseInt(timingPart[0]);
+     let showMinute=parseInt(timingPart[1]);
+
+     if(ampm === "PM" && showHour !== 12){
+      showHour +=12;
+     }
+     if(ampm === "AM" && showHour === 12 ){
+      showHour =0;
+     }
+      
+      let showTime= new Date();
+      showTime.setHours(showHour);
+      showTime.setMinutes(showMinute);
+
+    
+
+
+    if(showTime <= current_time){
+
+      showTiming.style.display="none";
     }
+
+
+   }
+
 
     // let show_times = document.querySelectorAll(".show_times1");
 

@@ -466,6 +466,1763 @@ else{
 )
 }
 
+if(JSON.parse(localStorage.getItem("show_details"))){
+  // return
+}
+
+else{
+  localStorage.setItem("show_details", JSON.stringify(
+
+
+    [
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai"
+        },
+        "show_times": [
+          "10:00 AM",
+          "11:00 AM",
+          "01:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "26",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai"
+        },
+        "show_times": [
+          "10:00 AM",
+          "11:00 AM",
+          "01:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "25",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai"
+        },
+        "show_times": [
+          "10:00 AM",
+          "11:00 AM",
+          "01:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "24",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai"
+        },
+        "show_times": [
+          "10:00 AM",
+          "11:00 AM",
+          "01:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai"
+        },
+        "show_times": [
+          "10:00 AM",
+          "11:00 AM",
+          "01:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "22",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai"
+        },
+        "show_times": [
+          "10:00 AM",
+          "11:00 AM",
+          "01:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "21",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai"
+        },
+        "show_times": [
+          "10:00 AM",
+          "11:00 AM",
+          "01:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "20",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "MAYAJAAL Multiplex: ECR, Chennai"
+        },
+        "show_times": [
+          "10:00 AM",
+          "11:00 AM",
+          "01:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "19",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "21",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "22",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "24",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "25",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "26",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "27",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "28",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "29",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "30",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: Grand Mall, Velachery"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM"
+        ],
+        "show_date": "31",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "",
+        "premium_cost": "",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "21",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "22",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "24",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "25",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "26",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "27",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "28",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "29",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: The Marina Mall, OMR"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "03:00 PM",
+          "07:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "30",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "21",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "22",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "24",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "25",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "26",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "27",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "28",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "INOX: LUXE Phoenix Market City, Velachery"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "29",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "21",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "22",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "24",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "25",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "26",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "27",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "28",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "29",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Rohini Silver Screens: Koyambedu"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "30",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "21",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "22",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "24",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "25",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "26",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "27",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "28",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "29",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "Kasi Talkies Dolby Atmos: Ashok Nagar"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "30",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "21",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "22",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "24",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "25",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "26",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "27",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "28",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "29",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "SPI: S2 Theyagaraja - Thiruvanmiyur, Chennai"
+        },
+        "show_times": [
+          "07:00 AM",
+          "10:00 AM",
+          "12:00 PM",
+          "02:00 PM",
+          "04:00 PM",
+          "07:00 PM",
+          "08:00 PM",
+          "10:00 PM",
+          "11:00 PM"
+        ],
+        "show_date": "30",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "21",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "22",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "23",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "24",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "25",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "26",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "27",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "28",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "29",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      },
+      {
+        "name": {
+          "movie_name": "Ponniyin selvan part-2",
+          "theatre_name": "PVR: VR Chennai, Anna Nagar"
+        },
+        "show_times": [
+          "10:00 AM",
+          "12:00 PM",
+          "04:00 PM",
+          "07:00 PM"
+        ],
+        "show_date": "30",
+        "screen_frame": "2D",
+        "movie_language": "Tamil",
+        "show_month": "May",
+        "budget_cost": "60",
+        "premium_cost": "190",
+        "status": true
+      }
+    ])
+
+    )
+    }
+
 
 const movie_lists = JSON.parse(localStorage.getItem("show_movie_details"));
 
@@ -744,8 +2501,8 @@ movie_lists.filter((movie) => {
 // });
 
 const loginUser = JSON.parse(localStorage.getItem("profile_details"));
+
 let log_in = document.getElementById("log-in-button");
-console.log(log_in);
 
 
 if (loginUser == null) {
@@ -755,17 +2512,35 @@ if (loginUser == null) {
 else if (loginUser !== false) {
 
   let profile_details = JSON.parse(localStorage.getItem("profile_details"))
-  log_in.style.display = "none"
+  log_in.style.display = "none";
+
+  const profile_div=document.createElement("div");
+  profile_div.setAttribute("class","profile_div")
+  
+  const user_div=document.createElement("div");
+  user_div.setAttribute("class","user_div")
+  profile_div.append(user_div);
+
+  const user_image=document.createElement("img")
+  user_image.setAttribute("src","https://i.ibb.co/2gJ5Wgb/user.png");
+  user_image.setAttribute("class","user_image")
+  user_div.append(user_image)
+
+  const profile_name = document.createElement("h2");
+  profile_name.setAttribute("id", "user_name");
+  profile_name.innerText = profile_details.name;
+  user_div.append(profile_name);
+
+ const profile=document.createElement("button");
+ profile.setAttribute("class","profile_a")
+ profile.innerText="View profile";
+ profile_div.append(profile)
 
 
-  const profile = document.createElement("button");
-  profile.setAttribute("id", "user_name");
-  profile.innerText = "My Profile"
-  // profile.innerText ="sAND";
-  profile.addEventListener("click", () => {
+  profile.addEventListener("click", ()=> {
     window.location.href = "pages/profile.html";
   });
-  document.querySelector(".profile-a").append(profile)
+  document.querySelector(".profile-a").append(profile_div);
 
 
 }
@@ -787,3 +2562,15 @@ else {
 // user_name.append(a);
 
 
+// if(JSON.parse(localStorage.getItem(""))){
+//   // return
+// }
+
+// else{
+//   localStorage.setItem("show_movie_details", JSON.stringify(
+
+function togglemenu(){
+  document.getElementById('sidebar').classList.toggle('active');
+ }
+
+ 

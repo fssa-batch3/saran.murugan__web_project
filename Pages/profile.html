@@ -16,22 +16,23 @@
     <header>
         <img src="../Assets/images/logo/logo.png" alt="logo5">
     </header>
-
+    <form>
     <div class="main1">
+        
         <div class="name-user">
             <i class="user-img fa-solid fa-user"></i>
-            <input type="text" id="name" disabled>
+            <input type="text" required id="name" disabled>
 
             <div class="logout">
-                <button id="logout"> log out</button>
+                <button type="button" id="logout"> log out</button>
             </div>
         </div>
 
         <div class="email-num">
-            <form>
+      
                 <div class="phone-num">
                     <h3>Phone:</h3>
-                    <input type="text" id="number" pattern="[0-9]{10,10}" inputmode="numeric" minlength="10"
+                    <input type="text" required id="number" pattern="[0-9]{10,10}" inputmode="numeric" minlength="10"
                         maxlength="10" disabled>
                 </div>
 
@@ -40,19 +41,13 @@
                     <p id="email" style="color:white;"></p>
                 </div>
 
-                <!-- <div class="whatsapp-msg">
-
-                    <input type="checkbox">
-                    <h3>WhatsApp notification</h3>
-                </div> -->
-
-            </form>
-
         </div>
         <div class="edit">
-            <button onclick="edit()" id="edit">Edit</button>
-            <buttonn id="save">Save</button>
+            <button type="button" id="edit">Edit</button>
+            <button type="submit" id="save">Save</button>
         </div>
+
+        </form>
 
         <div class="Home-a-tag">
             <a href="../index.html">
@@ -291,13 +286,18 @@
         // console.log(check)
         // console.log(check["name"])
         // name.value=check["name"];
+        let edit = document.getElementById("edit");
 
-        function edit() {
+
+        edit.addEventListener("click", function () {
             document.getElementById("name").disabled = false;
             document.getElementById("number").disabled = false;
-        }
+        });
 
-        document.getElementById("save").addEventListener("click", (e) => {
+
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", (e) => {
 
             check.name = document.getElementById("name").value;
             check.number = document.getElementById("number").value;
@@ -312,7 +312,10 @@
         const userss = JSON.parse(localStorage.getItem("users"));
 
         let log_out = document.getElementById("logout");
+        
         log_out.addEventListener("click", (e) => {
+
+        
 
             let deletefalse = delete userss
 
@@ -327,17 +330,18 @@
             })
                 .then((willDelete) => {
                     if (willDelete) {
-                        swal("Poof! Your account as log outed !", {
+                        swal("Your account as log in!", {
                             icon: "success",
                         });
-                        window.location.href = "../index.html"
+                        
+                         window.location.href = "../index.html"
                     } else {
                         swal("Your account is not log outed!");
                     }
-                    
+
                 });
-                
-            
+          
+                   
         })
 
         // function deleteItem() {

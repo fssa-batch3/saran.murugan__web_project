@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');                         
 
-
+main{
+    display: flex;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -13,7 +15,6 @@ header{
     background-color:#edde3b;
     height: 100px;
     display: flex;
-    
     flex-direction: row;    
     justify-content: space-evenly;
     align-items: center;
@@ -93,11 +94,12 @@ option{
 
 }
 #user_name{
-    background-color: #181818;
-    color:#edde3b;
+
+    color:white;
+    background-color:black;
     width:90px;
     height: 50px;
-    font-size: 15px;
+    font-size: 25px;
     border-radius: 10px;
 }
 #menu{
@@ -107,23 +109,88 @@ option{
     position: relative;
     right:60px;
     top: 3px;
+
 }
+.user_div{
+    display: flex;
+    gap: 10px;
+}
+.user_image{
+    width: 30px;
+    height: 30px;
+}
+.profile_a{
+    background-color: white;
+    width: 300px;
+    height: 30px;
+    padding-top: 10px;
+    margin-left: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+.profile_div{
+    display: flex;
+    flex-direction: column;
+    
+}
+#sidebar {
+    margin-left: 75%;
+    padding-top: 100px;
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    right: -30%;
+    z-index: 2;
+    margin-top: 55%;
+    background-color: black;
+}
+
+#sidebar li {
+    color: white;
+    font-size: 30px;
+    padding: 30px;
+    list-style: none;
+    /* border-bottom: 1px solid gray; */
+    text-align: center;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 130%;
+    top: 80px;
+}
+
+.toggle-btn span {
+    
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    margin-top: 3px;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
 .image-slider{
     width: 100%;
     height: 500px;
     margin: 50px auto;
     box-shadow: -1px 1px 10px #00000021;
-    /* border-radius: 30px; */
+     border-radius: 30px;
     overflow: hidden; 
 }
 .image-slider figure img{
     float: left;
-    width:1300px;
-    padding-left: 60px;
+    width:1190px;
+    padding-left: 70px;
+    padding-right: 100px;
+    margin-left: 50px;
 }
 .image-slider figure{
     position: relative; 
-    width:460%;
+    width:400%;
     animation-name:slide;
     animation-duration: 10s;
     animation-direction: alternate;
