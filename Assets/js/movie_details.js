@@ -38,6 +38,7 @@ name_list.find((e) => {
 //     console.log("not found")
 // }
 
+
 const mainimg = document.querySelector(".mainimg");
 mainimg.style.backgroundImage = res.images.background_image;
 const time = document.createElement("div");
@@ -74,6 +75,7 @@ const movie_type = document.createElement("h4");
 movie_type.innerText = res.movie_type;
 time.append(movie_type);
 
+if(res.movie_releasing == "true"){
 const book_button = document.createElement("button");
 // book_button.innerText="book_button";
 time.append(book_button);
@@ -83,6 +85,8 @@ const a = document.createElement("a");
 a.setAttribute("href", `movie_show_time.html?name=${res.name.movie_name}`);
 a.innerText = "Book tickets";
 book_button.append(a);
+
+}
 
 const content = document.querySelector(".content");
 

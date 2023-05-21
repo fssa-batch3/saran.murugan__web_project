@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body.active .wrapper .sidebar {
+    left: -225px;
+}
+
+body.active .wrapper .section {
+    margin-left: 0;
+    width: 100%;
+}
+
+body {
+    background: black;
+}
+
+.wrapper .sidebar {
+    background: #1b1b1b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3 {
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p {
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.wrapper .sidebar ul li a {
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon {
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+
+.wrapper .sidebar ul li a:hover {
+    color: #edde3b;
+    /* background:white; */
+    border-right: 2px solid;
+}
+
+/* 
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+
+} */
+.wrapper .sidebar ul li a:focus {
+    background-color: white;
+    color: black;
+}
+
+/* 
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+} */
+.wrapper .section {
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar {
+    background: #333333;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+}
+
+.wrapper .section .top_navbar .hamburger a {
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover {
+    color: #edde3b;
+}
+
+.main {
+    background-color: black;
+}
+
+.movie_details_section {
+    background-color:black;
+    width: 50%;
+    margin-left: 20%;
+}
+#movie_details-form{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.movie_details_section h1 {
+    margin-left: 30%;
+}
+
+.movie_wrapper {
+    margin-left: 25%;
+}
+
+label {
+    padding-right: 10%;
+}
+
+.theatre-details-section {
+    background-color: #ffffff;
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 10px;
+}
+
+.theatre-details-section h1 {
+    margin-left: 30%;
+}
+
+#movie_details-form label {
+    display: block;
+    margin-top: 30px;
+    color: white;
+    font-weight: bold;
+    width: 300px;
+    font-size: 20px;
+}
+
+#movie_details-form input[type="submit"] {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content {
+    margin-top: 100px;
+    background-color: black;
+    padding: 10px;
+    height: 100%;
+    border-radius: 5px;
+    width: 30%;
+    margin-left: 30%;
+
+}
+
+input[type="text"] {
+    /* width: 100%; */
+    padding: 15px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+select {
+    padding: 10px;
+    border-color: black;
+}
+
+.cast_crew {
+    margin-left: 180px;
+}
+
+#casts {
+    margin-left: 60px;
+}
+
+.casts {
+    margin-left: 180px;
+}
+#submit_button{
+    background-color: #edde3b;
+    color: black;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 150px;
+}

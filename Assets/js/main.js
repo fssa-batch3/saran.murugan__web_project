@@ -2548,6 +2548,28 @@ else {
 }
 
 
+
+let profile_details=JSON.parse(localStorage.getItem("profile_details"));
+
+
+console.log(profile_details.email);
+  if (profile_details.email == "letsshow@gmail.com") {
+
+  let admin=document.createElement("li");
+  admin.setAttribute("id","admin_tag");
+  admin.innerText="Admin";
+
+
+
+
+  document.querySelector(".navigation").append(admin);
+
+  admin.addEventListener("click", function(){
+
+     window.location.href="../../Pages/admin/adminHome.html";
+  })
+
+}
 // const users = JSON.parse(localStorage.getItem("profile_details"));
 
 // let user_name = document.getElementById("user_name");

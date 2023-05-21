@@ -1,0 +1,508 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+
+                <div>
+                    <h2 style="color: #edde3b; margin-left: 20px;"> LetsShow Admin page</h2>
+                </div>
+            </div>
+
+            <div class="main">
+
+                <div id="home_div" style="display: block;">
+
+                    <h1 style="color: white;">Hello admin... welcome to our LetsShow admin page</h1>
+
+                </div>
+
+                <div id="add_movies_div" style="display: none;">
+
+                    <div class="movie_details_section">
+
+                        <h1>Movie details</h1>
+                
+                        <form id="movie_details-form">
+                            <div class="movie_wrapper">
+                                <label for="moviename">Movie name</label>
+                                <input type="text" required="true" id="movie_name" placeholder="Enter movie name">
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="Movie language">Movie language</label>
+                                <select id="movie_language">
+                                    <option value="TAMIL">TAMIL</option>
+                                    <option value="ENGLISH">ENGLISH</option>
+                                    <option value="KANADA">KANADA</option>
+                                    <option value="TELUGU">TELUGU</option>
+                                    <option value="HINDI">HINDI</option>
+                                    <option value="MALAYALAM">MALAYALAM</option>
+                                </select>
+                                <!-- <input type="text" required="true" id="movie_language" placeholder="Enter "> -->
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="Movie frame">Movie frame</label>
+                                <select id="movie_frame">
+                                    <option value="2D">2D</option>
+                                    <option value="3D">3D</option>
+                                </select>
+                                <!-- <input type="text" required="true" id="movie_frame" placeholder="Enter "> -->
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="movie time">Movie time</label>
+                                <input type="text" required="true" id="movie_time" placeholder="Enter ">
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="movie Certified"> Movie Certified</label>
+                                <select id="movie_certified">
+                                    <option value="U">U</option>
+                                    <option value="A">A</option>
+                                    <option value="UA">UA</option>
+                
+                                </select>
+                                <!-- <input type="text" required="true" id="movie_certified" placeholder="Enter "> -->
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="Movie type"> Movie type</label>
+                
+                                <select id="movie_type">
+                                    <option value="ACTION,THRILLER,DRAMA">ACTION,THRILLER,DRAMA</option>
+                                    <option value="HORROR,THRILLER">HORROR,THRILLER</option>
+                                    <option value="LOVE,ROMANCE,THRILLER">LOVE,ROMANCE,THRILLER</option>
+                                    <option value="LOVE,ROMANCE">LOVE,ROMANCE</option>
+                                    <option value="SCI-FI,FANTACY,DRAMA">SCI-FI,FANTACY,DRAMA</option>
+                                    <option value="MUSICAL,ROMANCE,DRAMA">MUSICAL,ROMANCE,DRAMA</option>
+                                    <option value="HISTORICAL,FANTACY">HISTORICAL,FANTACY</option>
+                                    <option value="CRIME,THRILLER,DRAMA">CRIME,THRILLER,DRAMA</option>
+                                    <option value="COMEDY,DRAMA,FAMILY">COMEDY,DRAMA,FAMILY</option>
+                                    <option value="FANTACY,ADVENTURE,SCI-FI">FANTACY,ADVENTURE,SCI-FI</option>
+                                </select>
+                                <!-- <input type="text" required="true" id="movie_type" placeholder="Enter "> -->
+                            </div>
+                            <div class="movie_wrapper">
+                                <label for="movie release date">Movie release date</label>
+                                <input type="type" required="true" id="movie_release_date" placeholder="like, MAY 03 ">
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="movie release date">releasing now or upcoming(true / false)</label>
+                                <select id="releasing">
+                                    <option value="true">true</option>
+                                    <option value="false">false</option>
+                                </select>
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="About Movie description">About movie description</label>
+                                <textarea id="movie_description" rows="8" cols="65"></textarea>
+                                <!-- <input type="text" required="true" id="movie_description" placeholder="Enter ">  -->
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="Movie main image ">Movie main image </label>
+                                <input type="text" required="true" id="movie_main_image" placeholder="Enter the image link">
+                            </div>
+                
+                            <div class="movie_wrapper">
+                                <label for="Movie background image ">Movie background image </label>
+                                <input type="text" required="true" id="movie_background_image" placeholder="Enter the image link">
+                            </div>
+                
+                            <div class="cast_crew">
+                
+                                <label>Choose how many cast </label>
+                                <select id="cast-select-option">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+                                <button id="cast-select-option-button">Add casts</button>
+                
+                                <!-- <label class="casts">Enter cast details</label> -->
+                
+                                 <div id="casts"></div>
+                
+                                 <label>Choose how many cast </label>
+                                 <select id="crew-select-option">
+                                     <option value="1">1</option>
+                                     <option value="2">2</option>
+                                     <option value="3">3</option>
+                                     <option value="4">4</option>
+                                     <option value="5">5</option>
+                                     <option value="6">6</option>
+                                     <option value="7">7</option>
+                                     <option value="8">8</option>
+                                     <option value="9">9</option>
+                                     <option value="10">10</option>
+                                     <option value="12">12</option>
+                                     <option value="13">13</option>
+                                     <option value="14">14</option>
+                                     <option value="15">15</option>
+                                     <option value="16">16</option>
+                                     <option value="17">17</option>
+                                     <option value="18">18</option>
+                                     <option value="19">19</option>
+                                     <option value="20">20</option>
+                                 </select>
+                                 <button id="crew-select-option-button">Add casts</button>
+                 
+                                 <!-- <label class="crews">Enter cast details</label> -->
+                
+                                 <div id="crews"></div>
+                            </div>
+                
+                         
+                            <button type="submit" id="submit_button">Submit</button>
+                
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <!--profile image & text-->
+
+            <div class="profile">
+                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg"
+                    alt="profile_picture">
+                <h3>Anamika Roy</h3>
+                <!-- <p>Designer</p> -->
+            </div>
+            <!--menu item-->
+            <!-- class="active" -->
+
+            <ul>
+                <li>
+                    <a href="#" id="home">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="add_movies">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">Add movies</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">People</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Perfomance</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Development</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li> -->
+
+
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            document.querySelector("body").classList.toggle("active");
+        })
+
+
+
+        let home = document.getElementById("home");
+        let home_div = document.getElementById("home_div");
+
+
+        let add_movies = document.getElementById("add_movies");
+        let add_movies_div = document.getElementById("add_movies_div");
+
+        home.addEventListener("click", function () {
+
+            home_div.style.display = "block";
+            add_movies_div.style.display = "none"
+        })
+
+        add_movies.addEventListener("click", function () {
+            add_movies_div.style.display = "block";
+            home_div.style.display = "none";
+        });
+
+
+        const cast_select_option_button = document.getElementById("cast-select-option-button").addEventListener("click", e => {
+    e.preventDefault()
+    const cast_select_option = document.getElementById("cast-select-option").value;
+
+    const option = cast_select_option
+
+    console.log(option);
+
+    for (i = 0; i < option.length; i++) {
+
+        const casts = document.getElementById("casts")
+
+        const label=document.createElement("label")
+        label.innerText="Cast";
+        casts.append(label)
+
+        const cast_image = document.createElement("input");
+        cast_image.setAttribute("type", "text");
+        //   cast_image.setAttribute("id","cast_image")
+        cast_image.setAttribute("class", "cast_image")
+        cast_image.setAttribute("placeholder", "Enter image https: link")
+        casts.appendChild(cast_image);
+
+        const cast_name = document.createElement("input");
+        cast_name.setAttribute("type", "text");
+        //   cast_name.setAttribute("id","cast_name");
+        cast_name.setAttribute("class", "cast_name");
+        cast_name.setAttribute("placeholder", "Enter cast name")
+        casts.appendChild(cast_name);
+
+        const cast_role = document.createElement("input")
+        cast_role.setAttribute("type", "text");
+        cast_role.setAttribute("class", "cast_role")
+        //   cast_role.setAttribute("id","cast_role");
+        cast_role.setAttribute("value", "Actor");
+        casts.appendChild(cast_role);
+
+        console.log()
+    }
+});
+
+        const crew_select_option_button = document.getElementById("crew-select-option-button").addEventListener("click", e => {
+    e.preventDefault()
+    const crew_select_option = document.getElementById("crew-select-option").value;
+
+    const option2 = crew_select_option
+
+    console.log(option2);
+
+    for (i = 0; i < option2; i++) {
+
+        const crewts = document.getElementById("crews")
+
+        const label=document.createElement("label")
+        label.innerText="Crew";
+        crews.append(label)
+
+        const crew_image = document.createElement("input");
+        crew_image.setAttribute("type", "text");
+        //   cast_image.setAttribute("id","cast_image")
+        crew_image.setAttribute("class", "crew_image")
+        crew_image.setAttribute("placeholder", "Enter image https: link")
+        crews.appendChild(crew_image);
+
+        const crew_name = document.createElement("input");
+        crew_name.setAttribute("type", "text");
+        //   cast_name.setAttribute("id","cast_name");
+        crew_name.setAttribute("class", "crew_name");
+        crew_name.setAttribute("placeholder", "Enter crew name")
+        crews.appendChild(crew_name);
+
+        const crew_role = document.createElement("input")
+        crew_role.setAttribute("type", "text");
+        crew_role.setAttribute("class", "crew_role")
+        crew_role.setAttribute("placeholder","Enter crew role name")
+        crews.appendChild(crew_role);
+
+        console.log()
+    }
+});
+
+        function formsubmit() {
+
+            const movie_name = document.getElementById("movie_name").value;
+            const movie_language = document.getElementById("movie_language").value;
+            const movie_frame = document.getElementById("movie_frame").value;
+            const movie_time = document.getElementById("movie_time").value;
+            const movie_certified = document.getElementById("movie_certified").value;
+            const movie_type = document.getElementById("movie_type").value;
+            const movie_release_date = document.getElementById("movie_release_date").value;
+            const movie_releasing=document.getElementById("releasing").value;
+            const movie_description = document.getElementById("movie_description").value;
+            const movie_main_image = document.getElementById("movie_main_image").value;
+            const movie_background_image = document.getElementById("movie_background_image").value;
+            const cast_images = document.querySelectorAll(".cast_image");
+            const cast_names=document.querySelectorAll(".cast_name");
+            const cast_roles=document.querySelectorAll(".cast_role");
+            const crew_images = document.querySelectorAll(".crew_image");
+            const crew_names=document.querySelectorAll(".crew_name");
+            const crew_roles=document.querySelectorAll(".crew_role");
+            // const cast_name=document.querySelectorAll("cast_name");
+            // const cast_role=document.querySelectorAll("cast_role");
+            // const cast1_name = document.getElementById("cast1_name").value
+            // const cast1_image = document.getElementById("cast1_image").value
+            // const cast2_name = document.getElementById("cast2_name").value
+            // const cast2_image = document.getElementById("cast2_image").value
+            // const cast3_name = document.getElementById("cast3_name").value
+            // const cast3_image = document.getElementById("cast3_image").value
+            // const cast4_name = document.getElementById("cast4_name").value
+            // const cast4_image = document.getElementById("cast4_image").value
+            // const director_name = document.getElementById("director_name").value
+            // const director_image = document.getElementById("director_image").value
+            // const music_director_name = document.getElementById("music_director_name").value
+            // const music_director_image = document.getElementById("music_director_image").value
+            // const producer_name = document.getElementById("producer_name").value
+            // const producer_image = document.getElementById("producer_image").value
+
+            console.log(cast_images.length)
+            const cast_image_values = []
+            for (let i = 0; i < cast_images.length; i++) {
+                cast_image_values.push(cast_images[i].value)
+            }
+
+            const cast_name_values=[]
+            for(let i=0; i< cast_names.length;i++){
+                cast_name_values.push(cast_names[i].value)
+            }
+
+            const cast_role_values=[]
+            for(let i=0; i<cast_roles.length;i++){
+                cast_role_values.push(cast_roles[i].value)
+            }
+
+            const crew_image_values = []
+            for (let i = 0; i < crew_images.length; i++) {
+                crew_image_values.push(crew_images[i].value)
+            }
+
+            const crew_name_values=[]
+            for(let i=0; i< crew_names.length;i++){
+                crew_name_values.push(crew_names[i].value)
+            }
+
+            const crew_role_values=[]
+            for(let i=0; i<crew_roles.length;i++){
+                crew_role_values.push(crew_roles[i].value)
+            }
+
+            const movie_details = {
+
+        name: {
+            movie_name,
+             cast_name:cast_name_values,
+             cast_role:cast_role_values,
+             crew_name:crew_name_values,
+             crew_role:crew_role_values,
+            // cast2_name: cast2_name,
+            // cast3_name: cast3_name,
+            // cast4_name: cast4_name,
+            // director_name: director_name,
+            // music_director_name: music_director_name,
+            // producer_name: producer_name,
+        },
+        images: {
+            main_image: movie_main_image,
+            background_image: movie_background_image,
+            cast_image: cast_image_values,
+            crew_image:crew_image_values,
+            // cast1_image: cast1_image,
+            // cast2_image: cast2_image,
+            // cast3_image: cast3_image,
+            // cast4_image: cast4_image,
+            //     director_image: director_image,
+            //     music_director_image: music_director_image,
+            //     producer_image: producer_image,
+        },
+        movie_time,
+        language: movie_language,
+        frame: movie_frame,
+        movie_certified,
+        movie_type,
+        movie_release_date,
+        movie_releasing,
+        Description: movie_description,
+        status: true,
+    }
+
+            const details_movie = JSON.parse(localStorage.getItem("show_movie_details")) ?? [];
+
+            details_movie.push(movie_details);
+
+            alert('movie list created successfully!')
+
+            localStorage.setItem("show_movie_details", JSON.stringify(details_movie));
+
+        }
+        const form_control = document.getElementById("movie_details-form");
+
+        form_control.addEventListener("submit", e => {
+
+            formsubmit()
+        })
+
+
+    </script>
+</body>
+
+</html>

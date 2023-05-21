@@ -122,8 +122,8 @@ option{
 .profile_a{
     background-color: white;
     width: 300px;
-    height: 30px;
-    padding-top: 10px;
+    height: 50px;
+    padding-top: 6px;
     margin-left: 40px;
     text-align: center;
     border-radius: 10px;
@@ -147,13 +147,15 @@ option{
 
 #sidebar li {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     padding: 30px;
     list-style: none;
     /* border-bottom: 1px solid gray; */
     text-align: center;
 }
-
+#sidebar li:hover{
+    color: #edde3b;
+}
 .toggle-btn {
     position: absolute;
     right: 130%;
@@ -279,12 +281,12 @@ option{
 }
 .movie-list-container2{
     padding: 0 20px;
-    width:82%;
+    width:85%;
     margin-left: 115px;
 }
 .movie-list-container3{
     padding: 0 20px;
- margin-left: 40px;
+    margin-left: 40px;
     width: 100%;
 }
 
