@@ -18,22 +18,19 @@ header {
     background-color: #edde3b;
     height: 100px;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; 
 }
 
 body {
     background-color: black;
-    /* font-family: 'Poppins'; */
     width: 100%;
 }
 
 header img {
     width: 120px;
-
     margin-bottom: 20px;
-    margin-left: 50px;
+    margin-left: 10px;
     bottom: 20px;
     height: 130px;
 }
@@ -46,7 +43,6 @@ header input {
     background-repeat: no-repeat;
     width: 35%;
     border-radius: 7px;
-    margin-left: 50px;
     font-size: 18px;
     border-color: #edde3b;
 }
@@ -184,7 +180,6 @@ option {
 }
 
 .toggle-btn span {
-
     display: block;
     background-color: black;
     width: 30px;
@@ -207,7 +202,7 @@ option {
 
 .image-slider figure img {
     float: left;
-    width: 1190px;
+    width: 1240px;
     padding-left: 70px;
     padding-right: 100px;
     margin-left: 50px;

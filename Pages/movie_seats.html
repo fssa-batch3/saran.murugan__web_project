@@ -354,8 +354,9 @@ movie_payments.html>
             if (selectedSeats.length === 0) {
                 swal("Please select at least one seat!");
             } else {
-                alert(`You have selected seats ${selectedSeats.join(", ")}.`);
-                console.log(selectedSeats);
+                
+                // (`You have selected seats ${selectedSeats.join(", ")}.`);
+                // console.log(selectedSeats);
                 window.location.href = `movie_payment_page.html?name=${res.name.movie_name}`;
 
                 const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []

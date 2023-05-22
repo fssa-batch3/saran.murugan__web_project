@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../Assets/css/payment_page.css">
 
+
 </head>
 
 <body>
@@ -490,13 +491,19 @@
 
             const user_booking = JSON.parse(localStorage.getItem("user_booking")) ?? []
             if (JSON.parse(localStorage.getItem("user_booking"))) {
+
+
                 user_booking.find(e => {
                     if (e.email == e.email) {
+                      
                         e.ticket_price = ticket_total
                         localStorage.setItem("user_booking", JSON.stringify(user_booking))
 
+
                     }
                     else {
+                     
+
                         const booking_data = {
                             "email": users.booking,
                             "show_day": day,
@@ -517,13 +524,15 @@
                         localStorage.setItem("user_booking", JSON.stringify(user_booking))
                     }
                 })
+
+                
             }
 
         })
 
         let credit_a = document.createElement("a");
         credit_a.innerText = "MAKE PAYMENT"
-        credit_a.setAttribute("class", "a_button")
+        credit_a.setAttribute("class", "a_button");
         credit_a.setAttribute("href", `ticket.html?name=${res.name.movie_name}`);
         credit_button.append(credit_a);
 

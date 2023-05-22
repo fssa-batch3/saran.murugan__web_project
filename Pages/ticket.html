@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../../Assets/css/ticket_receiving.css">
 </head>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <body>
     <header>
         <img src="../../Assets/images/logo/logo.png" alt="seat image">
@@ -69,6 +72,8 @@
     </div>
 
     <script>
+        
+        swal("Success!", "Your ticket is booked click okay to navigate home page. Thank you!");
 
         const movie_list = JSON.parse(localStorage.getItem("show_movie_details"))
 
