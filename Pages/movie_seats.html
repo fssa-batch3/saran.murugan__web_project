@@ -8,7 +8,7 @@ movie_payments.html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../Assets/css/seat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
@@ -17,6 +17,7 @@ movie_payments.html>
         /* background-image:linear-gradient(to bottom, rgba(0,0,0,0), #151515); */
         height: 300px;
         width: 60%;
+        background: fixed;
         background-repeat: no-repeat;
         margin-left: 20%;
     }
@@ -105,7 +106,7 @@ movie_payments.html>
             <label style="color: white;">SEAT AVAILABLE</label>
         </div>
         <div class="show-case">
-            <p class="seat-prime occupied"></p>
+            <p class="seat-prime occupied" style="color:black; background-color:#535353">A1</p>
             <label style="color: white;">SEAT BOOKED</label>
         </div>
 
@@ -205,8 +206,15 @@ movie_payments.html>
 
             <div class="theatre_details">
                 <h3 id="theater_name" style="color:black"></h3>
-                <span id="show_time"></span>
-                <span id="count_details"></span>
+                <div class="date">
+                    <span id="show_time"></span>
+                    <span style="font-size: 18px;">|</span>
+                    <span id="show_date"></span>
+                    <span id="show_day"></span>
+                    <span id="show_month"></span>
+                </div>
+
+                <!-- <span id="count_details"></span> -->
             </div>
 
             <div class="cost_total">
@@ -266,44 +274,77 @@ movie_payments.html>
         theater_name.innerHTML = users_booking[0].theatre_name;
 
         const show_time = document.getElementById("show_time");
-        show_time.innerHTML = users_booking[0].show_time
+        show_time.innerHTML = users_booking[0].show_time;
+
+        const show_date = document.getElementById("show_date");
+        show_date.innerHTML = users_booking[0].show_date
+
+        const show_day = document.getElementById("show_day");
+        show_day.innerHTML = users_booking[0].show_day
+
+        const show_month = document.getElementById("show_month");
+        show_month.innerHTML = users_booking[0].show_month
 
         const container = document.querySelectorAll("#container");
         const selectedSeatsList = document.getElementById("selected-seats");
         const total = document.getElementById("total");
         const ticketprice = document.getElementById("movie").value;
 
+
+
+
         let selectedSeats = [];
 
 
 
-        // console.log(show_time.innerText);
 
 
 
-        // let booking_history = JSON.parse(localStorage.getItem("booking_history"));
-
-        // for (i = 0; i < booking_history.length; i++) {
-
-        //     console.log(booking_history[i].seat_name);
-        //     // if(curr_date == booking_history[i].show_date && curr_month == show_month&& ){
-
-        //     // }
-        // }
 
 
+
+
+
+
+        // const booking_history = JSON.parse(localStorage.getItem("booking_history"));
+
+
+        // console.log(booking_history);
+        // let seats_name= booking_history[i].seat_name
 
 
 
 
         const seats = document.querySelectorAll(".seat");
+
+        let booking_history = JSON.parse(localStorage.getItem("booking_history"));
+
+
+       let seatss= seats.forEach((el) => {
+
+            for (i = 0; i < booking_history.length; i++) {
+
+                let seat = booking_history[i].seat_name.split(",");
+
+                
+                if (movie_name == res.name.movie_name && theater_name == booking_history[i].theatre_name && show_time == booking_history[i].show_time && show_date == booking_history[i].show_date && show_day == booking_history[i].show_day && show_month == booking_history.show_month) {
+
+                
+                }
+
+
+            }
+
+            
+
+        })
+
+
         seats.forEach(seat => {
             seat.addEventListener("click", () => {
                 if (seat.classList.contains("selected")) {
                     seat.classList.remove("selected");
                     selectedSeats = selectedSeats.filter(name => name !== seat.dataset.name);
-
-
                 } else {
                     seat.classList.add("selected");
                     selectedSeats.push(seat.dataset.name);
@@ -353,8 +394,11 @@ movie_payments.html>
         function bookSeats() {
             if (selectedSeats.length === 0) {
                 swal("Please select at least one seat!");
-            } else {
-                
+            } else if (selectedSeats.length == 11) {
+                alert(" You have select 10 seats only!");
+            }
+            else {
+
                 // (`You have selected seats ${selectedSeats.join(", ")}.`);
                 // console.log(selectedSeats);
                 window.location.href = `movie_payment_page.html?name=${res.name.movie_name}`;

@@ -182,6 +182,18 @@ h3{
     margin-right: 40px;
     
 }
+.date{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-size: 22px;
+}
+ #theater_name{
+    font-size: 24px;
+} 
+#show_time{
+   font-size: 20px;
+} 
 .foot{
     display: flex;
 }
@@ -202,7 +214,7 @@ button{
     border-radius: 10px;
     margin-top: 50px;
     margin-left: 10px;
-}  */
+}  
 
 /* .seatbudget{
     display: flex;

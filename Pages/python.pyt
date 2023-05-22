@@ -1,3 +1,3 @@
-let s= "saran"
+ s= "saran"
 
 print(s)
