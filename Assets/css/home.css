@@ -176,7 +176,7 @@ option {
 .toggle-btn {
     position: absolute;
     right: 130%;
-    top: 80px;
+    top: 120px;
 }
 
 .toggle-btn span {
@@ -870,138 +870,6 @@ footer img {
     font-weight: bold;
 }
 
-@media (max-width:768px) {
-
-    header {
-        width: 100%;
-        display: flex;
-    }
-
-    header img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .movies #img1 {
-        width: 230px;
-        height: 300px;
-    }
-
-    .movies {
-        gap: 30px;
-        overflow: hidden;
-        overflow-x: scroll;
-    }
-
-    .dubmovies #img1 {
-        gap: 30px;
-        width: 230px;
-        height: 300px;
-    }
-
-    header input {
-        width: 60px;
-        height: 45px;
-        margin: 0px;
-        font-size: 20px;
-        text-align: start;
-    }
-
-    select {
-        font-size: 10px;
-        width: 22%;
-    }
-
-    a button {
-        width: 60px;
-        height: 15px;
-        padding-right: 9px;
-        padding-left: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 10px;
-    }
-
-    .various a {
-        width: 60%;
-        margin-bottom: 200px;
-        text-align: center;
-    }
-
-    .image-slider {
-        width: 90%;
-        height: 260px;
-    }
-
-    .image-slider figure img {
-        width: 440px
-    }
-
-    .image-slider figure {
-        width: 600%;
-        background-repeat: no-repeat;
-    }
-
-    .now button {
-        font-size: 18px;
-    }
-
-    .now h2 {
-        font-size: 20px;
-    }
-
-    footer #logo1 {
-        width: 120px;
-    }
-
-    footer #logo2 {
-        width: 20px;
-        height: 30px;
-    }
-}
-
-
-
-
-.main {
-    background-color: black;
-    width: 30%;
-    height: 890px;
-    /* display: none; */
-    transform: translateX(-500px);
-
-}
-
-.content {
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 60px;
-
-}
-
-.hide {
-    /* animation-name: move; */
-    transform: translateX(0px);
-    transition: 3s;
-
-}
-
-@keyframes move {
-    0% {
-        transform: translateX(-500px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-
-}
-
 .content h3 {
     color: white;
 }
@@ -1009,3 +877,21 @@ footer img {
 .content h3:hover {
     color: yellow;
 }
+
+@media (max-width:768px) {
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header img {
+        width: 150px;
+        height: 70px;
+
+    }
+
+
+}
+

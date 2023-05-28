@@ -13,6 +13,10 @@ movie_payments.html>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <style>
+    .occupied{
+        /* color:black; */
+         background-color:#535353
+    }
     .banner {
         /* background-image:linear-gradient(to bottom, rgba(0,0,0,0), #151515); */
         height: 300px;
@@ -283,7 +287,8 @@ movie_payments.html>
         show_day.innerHTML = users_booking[0].show_day
 
         const show_month = document.getElementById("show_month");
-        show_month.innerHTML = users_booking[0].show_month
+        show_month.innerHTML = users_booking[0].show_month;
+        console.log();
 
         const container = document.querySelectorAll("#container");
         const selectedSeatsList = document.getElementById("selected-seats");
@@ -315,34 +320,59 @@ movie_payments.html>
 
 
 
+
+
         const seats = document.querySelectorAll(".seat");
 
+
         let booking_history = JSON.parse(localStorage.getItem("booking_history"));
+        let profile = JSON.parse(localStorage.getItem("profile_details"));
 
 
-       let seatss= seats.forEach((el) => {
-
-            for (i = 0; i < booking_history.length; i++) {
-
-                let seat = booking_history[i].seat_name.split(",");
-
-                
-                if (movie_name == res.name.movie_name && theater_name == booking_history[i].theatre_name && show_time == booking_history[i].show_time && show_date == booking_history[i].show_date && show_day == booking_history[i].show_day && show_month == booking_history.show_month) {
-
-                
-                }
 
 
+        //    let seatss= seats.forEach((el) => {
+
+        for (i = 0; i < booking_history.length; i++) {
+
+            // let seat = booking_history[i].seat_name.split(",");
+
+
+            // console.log(seat);
+            if (booking_history[i].movie_name == res.name.movie_name && theater_name.innerText == booking_history[i].theatre_name && show_time.innerText == booking_history[i].show_time && show_date.innerText == booking_history[i].show_date && show_day.innerText == booking_history[i].show_day && show_month.innerHTML == booking_history[i].show_month) {
+
+                console.log("hiii");
+            //  booking_history[i].forEach(e => {
+                    
+                    
+            //     });
+            console.log(booking_history[i].seat_name.split(','))
+            seats.forEach((e)=>{
+                // console.log(e.innerText)
+         
+            booking_history[i].seat_name.split(',').find((el)=>{
+                    if(el==e.innerText){
+                        e.classList.add('occupied')
+                        e.style.backgroundColor="grey"
+                        // e.setAttribute("disabled","")
+                        e.style.pointerEvents = "none";
+                    }
+
+            })
+        })
             }
 
-            
 
-        })
+        }
+
+
+
+        // })
 
 
         seats.forEach(seat => {
             seat.addEventListener("click", () => {
-                if (seat.classList.contains("selected")) {
+                if (seat.classList.contains("selected") ) {
                     seat.classList.remove("selected");
                     selectedSeats = selectedSeats.filter(name => name !== seat.dataset.name);
                 } else {
