@@ -163,7 +163,7 @@ option {
     margin-top: 3px;
 }
   .burger{
-    z-index: 4;
+    /* z-index: 100; */
     /* margin-left: 90%; */
     left: 1;
     top: 0;
@@ -172,20 +172,24 @@ option {
     place-items: center; 
     width: 50px;
     height: 50px; 
-    /* background-image: url("https://i.ibb.co/mq1jgTY/burger-bar-removebg-preview-removebg-preview.png"); */
+    background-image: url("https://i.ibb.co/mq1jgTY/burger-bar-removebg-preview-removebg-preview.png");
      background-size: 50px;
     background-repeat: no-repeat;
      right: 10px; 
     background-position: center; 
+    border: none;
+    background-color: #edde3b;
   }
   /* #close_image{
     display: none;
   } */
   body.open .burger{
-    z-index: 8;
     background-image: url("https://i.ibb.co/m0MMvZB/close-2.png");
     background-repeat: no-repeat;
-    right: 7px;
+    z-index: 10;
+    opacity: 0.8;
+    background-color: #07030a;
+    
   }
   .background{
     position: fixed;
@@ -203,6 +207,7 @@ option {
   body.open .background{
     height: 300vh;
     opacity: 0.8;
+    /* z-index: -15; */
   }
   body.open .menu{
     opacity: 1;
