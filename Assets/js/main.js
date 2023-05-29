@@ -1,24 +1,15 @@
-// function searchPages() {
 
-//     let searchBar =document.getElementById("searchbar").value;
-
-//     if ('movies' == searchBar) {
-//         window.open('index.html')
-//     } else if ('leo' == searchBar) {
-//         window.open('pages/movie_details.html?name=Leo')
-//     }
-
-// }
+const toggleMenu = () =>
+      document.body.classList.toggle("open");
 
 
 
 
-
-if(JSON.parse(localStorage.getItem("show_movie_details"))){
+if (JSON.parse(localStorage.getItem("show_movie_details"))) {
   // return
 }
 
-else{
+else {
   localStorage.setItem("show_movie_details", JSON.stringify(
 
 
@@ -654,7 +645,7 @@ else{
         },
         "images": {
           "main_image": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/maaveeran-et00357966-1682333861.jpg",
-          "background_image":"https://i.ibb.co/vx069DJ/MV5-BY2-Rk-YWEx-ODIt-Yj-Uy-Ni00-Yzkx-LTg1-MTkt-NWZi-Zm-M2-ODAw-ZWQz-Xk-Ey-Xk-Fqc-Gde-QXVy-MTU4-Mzg1.jpg",
+          "background_image": "https://i.ibb.co/vx069DJ/MV5-BY2-Rk-YWEx-ODIt-Yj-Uy-Ni00-Yzkx-LTg1-MTkt-NWZi-Zm-M2-ODAw-ZWQz-Xk-Ey-Xk-Fqc-Gde-QXVy-MTU4-Mzg1.jpg",
 
           "cast_image": [
             "https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/sivakarthikeyan-1042969-18-09-2017-03-37-23.jpg",
@@ -681,7 +672,7 @@ else{
       }
     ])
 
-)
+  )
 };
 
 
@@ -726,9 +717,9 @@ movie_lists.filter((movie) => {
     movie_button.append(a);
 
     document.querySelector(".movie-list").append(movie_list_items);
- 
-    
-  
+
+
+
   }
 
 
@@ -982,33 +973,39 @@ else if (loginUser !== false) {
   let profile_details = JSON.parse(localStorage.getItem("profile_details"))
   log_in.style.display = "none";
 
-  const profile_div=document.createElement("div");
-  profile_div.setAttribute("class","profile_div")
-  
-  const user_div=document.createElement("div");
-  user_div.setAttribute("class","user_div")
-  profile_div.append(user_div);
+  // const profile_div=document.createElement("div");
+  // profile_div.setAttribute("class","profile_div")
 
-  const user_image=document.createElement("img")
-  user_image.setAttribute("src","https://i.ibb.co/2gJ5Wgb/user.png");
-  user_image.setAttribute("class","user_image")
-  user_div.append(user_image)
+  // const user_div=document.createElement("div");
+  // user_div.setAttribute("class","user_div")
+  // profile_div.append(user_div);
 
-  const profile_name = document.createElement("h2");
-  profile_name.setAttribute("id", "user_name");
-  profile_name.innerText = profile_details.name;
-  user_div.append(profile_name);
+  // const user_image=document.createElement("img")
+  // user_image.setAttribute("src","https://i.ibb.co/2gJ5Wgb/user.png");
+  // user_image.setAttribute("class","user_image")
+  // user_div.append(user_image)
 
- const profile=document.createElement("button");
- profile.setAttribute("class","profile_a")
- profile.innerText="View profile";
- profile_div.append(profile)
+  // const profile_name = document.createElement("h2");
+  // profile_name.setAttribute("id", "user_name");
+  // profile_name.innerText = profile_details.name;
+  // user_div.append(profile_name);
+
+  //  const profile=document.createElement("button");
+  //  profile.setAttribute("class","profile_a")
+  //  profile.innerText="View profile";
+  //  profile_div.append(profile)
+
+  const profile = document.createElement("a");
+  profile.innerText="Profile"
+  profile.setAttribute("id","a-menu")
+  // profile.style("animation-delay: 0.2s")
 
 
-  profile.addEventListener("click", ()=> {
+
+  profile.addEventListener("click", () => {
     window.location.href = "pages/profile.html";
   });
-  document.querySelector(".profile-a").append(profile_div);
+  document.querySelector(".profile-a").prepend(profile);
 
 
 }
@@ -1019,27 +1016,30 @@ else {
 
 
 
-let profile_details=JSON.parse(localStorage.getItem("profile_details"));
+
+let profile_details = JSON.parse(localStorage.getItem("profile_details"));
 
 
 console.log(profile_details.email);
-  if (profile_details.email == "letsshow@gmail.com") {
+if (profile_details.email == "letsshow@gmail.com") {
 
-  let admin=document.createElement("li");
-  admin.setAttribute("id","admin_tag");
-  admin.innerText="Admin";
+  let admin = document.createElement("a");
+  // admin.setAttribute("id", "admin_tag");
+  admin.setAttribute("id","a-menu")
+  admin.innerText = "Admin";
+  document.querySelector(".profile-a").prepend(admin);
 
+  console.log("hi");
+ 
 
+  admin.addEventListener("click", function () {
 
-
-  document.querySelector(".navigation").append(admin);
-
-  admin.addEventListener("click", function(){
-
-     window.location.href="../../Pages/admin/adminHome.html";
+    window.location.href = "../../Pages/admin/adminHome.html";
   })
 
 }
+
+
 // const users = JSON.parse(localStorage.getItem("profile_details"));
 
 // let user_name = document.getElementById("user_name");
@@ -1059,16 +1059,16 @@ console.log(profile_details.email);
 // else{
 //   localStorage.setItem("show_movie_details", JSON.stringify(
 
-function togglemenu(){
+function togglemenu() {
   document.getElementById('sidebar').classList.toggle('active');
- }
+}
 
 
-if(JSON.parse(localStorage.getItem("show_details"))){
+if (JSON.parse(localStorage.getItem("show_details"))) {
   // return
 }
 
-else{
+else {
   localStorage.setItem("show_details", JSON.stringify(
     [
       {
@@ -8660,18 +8660,18 @@ else{
       }
     ])
 
-    )
-    }
+  )
+}
 
 
 
 
 
- if(JSON.parse(localStorage.getItem("theatre_details"))){
+if (JSON.parse(localStorage.getItem("theatre_details"))) {
   // return
 }
 
-else{
+else {
   localStorage.setItem("theatre_details", JSON.stringify(
     [
       {
@@ -8736,5 +8736,5 @@ else{
       }
     ])
 
-    )
-    }
+  )
+}

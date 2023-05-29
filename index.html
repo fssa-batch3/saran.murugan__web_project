@@ -22,6 +22,7 @@
 
         <input type="search" id="search" placeholder="Search your movie">
 
+        <p style="font-size: 18px;">Chennai</p>
         <!-- <select>
       <option selected>Chennai</option>
       <option>Villupuram</option>
@@ -38,35 +39,52 @@
             <button id="log-in-button">Log in </button>
           </a>
           <br>
-       
+
 
         </div>
 
-        
-        <div id="sidebar">
-        
-          <div class="toggle-btn" onclick="togglemenu()">
+
+        <!-- <div id="sidebar"> -->
+
+        <!-- <div class="toggle-btn" onclick="togglemenu()">
   
               <span></span>
               <span></span>
               <span></span>
-          </div>
-  
-                  <div class="profile-a">
+          </div> -->
 
+        <!-- <div class="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div> -->
+
+        <img src="https://i.ibb.co/mq1jgTY/burger-bar-removebg-preview-removebg-preview.png" class="burger" onclick="toggleMenu()">
+ <!-- <button class="burger"  onclick="toggleMenu()"></button> -->
+          
+
+
+        <div class="background"></div>
+        <div class="menu">
+
+          <nav class="profile-a">
+            <a id="a-menu">Cinemas</a>
+            <a id="a-menu">About us </a>
+            <a id="a-menu">Help and support</a>
+          </nav>
         </div>
-          <ul>
+        <!-- <ul>
             <div class="navigation">
               <a href="Pages/cinema_page.html"><li>Cinemas</li> </a>
               <li>About us</li>
               <li>Help and support</li>
             </div>
-              <!-- <li>booking history</li> -->
-          </ul>
-  
-      </div>
+              <-- <li>booking history</li> -->
+        <!-- </ul>  -->
 
-      
+        <!-- </div> -->
+
+
         <!-- <img src="Assets/images/logo/Menu logo.png" alt="menu"  onclick="togglemenu()" id="toggle-btn"> -->
 
 
@@ -76,7 +94,9 @@
       <div class="image-slider">
         <figure>
           <img src="Assets/images/logo/Picsart_22-12-18_18-28-01-829.jpg" alt="image not found" id="banner1">
-          <img src="https://th-i.thgim.com/public/entertainment/movies/g08gz7/article65596261.ece/alternates/FREE_1200/captainmiller.jpg" alt="image not found">
+          <img
+            src="https://th-i.thgim.com/public/entertainment/movies/g08gz7/article65596261.ece/alternates/FREE_1200/captainmiller.jpg"
+            alt="image not found">
           <img src="https://i.ytimg.com/vi/qN3wfuPYTI4/maxresdefault.jpg" alt="image not found">
           <img src="Assets/images/logo/Picsart_22-12-18_18-28-01-829.jpg" alt="image not found" id="banner1">
         </figure>
@@ -90,26 +110,6 @@
         <a href="Pages/movie_reviews.html">Movie reviews</a>
       </div>
 
-      <!-- <div class="crud-button">
-        <a href="Pages/crud.html">
-          <button>Add</button>
-        </a>
-        <a href="Pages/admin_update_crud.html">
-          <button>Update</button>
-        </a>
-      </div> -->
-      <!-- <h2 class="filter">Filters</h2>
-      <details class="detail">
-          <summary>
-              Languages
-          </summary>
-          <div class="tamil list1 active1" data-filter="all1">Languages</div>
-          <div class="english list1" data-filter="english1">English</div>
-          <div class="hindi list1" data-filter="hindi1">Hindi</div>
-          <div class="telugu list1" data-filter="telugu1">Telugu</div>
-          <div class="malai list1" data-filter="malayalam1">Malayalam</div>
-          <div class="kannada list1" data-filter="tamil1">Tamil</div>
-      </details> -->
 
       <div class="show-button">
         <h2> Released Movies </h2>
@@ -129,6 +129,7 @@
 
       <div class="show-button">
         <h2>Upcoming movies</h2>
+        <button>Soon</button>
       </div>
 
       <div class="movie-list-container2">
@@ -203,7 +204,11 @@
 
 
 
-  <script src="Assets/js/main.js"> </script>
+  <script src="Assets/js/main.js">
+
+
+
+  </script>
 </body>
 
 </html>
