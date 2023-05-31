@@ -11,9 +11,6 @@ if (JSON.parse(localStorage.getItem("show_movie_details"))) {
 
 else {
   localStorage.setItem("show_movie_details", JSON.stringify(
-
-
-
     [
       {
         "name": {
